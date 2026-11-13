@@ -1,0 +1,32 @@
+# Environnement de développement : base PostgreSQL et API.
+#   docker compose up --build
+# L'API répond sur http://localhost:8000 ; sa documentation sur /docs.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: intellia
+      POSTGRES_PASSWORD: intellia
+      POSTGRES_DB: intellia
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U intellia -d intellia"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ./backend
+    environment:
+      IK_ENVIRONMENT: development
+      IK_DATABASE_URL: postgresql+psycopg://intellia:intellia@db:5432/intellia
+      IK_SECRET_KEY: cle-de-developpement-a-remplacer-avant-la-production
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db-data:
