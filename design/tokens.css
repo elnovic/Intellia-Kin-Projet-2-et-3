@@ -1,0 +1,101 @@
+/*
+ * Intellia Kin — charte graphique en code (version 1.0, 2026).
+ * Source : « Charte graphique & guide d'identité visuelle ».
+ * Toute interface du projet importe ce fichier et n'utilise que ces variables.
+ */
+
+:root {
+  /* Couleurs officielles */
+  --ik-bleu-nuit: #0a2540;        /* institutionnel : titres, structure */
+  --ik-bleu-electrique: #0066ff;  /* technologie : boutons, liens, accents */
+  --ik-cyan-tech: #00c9a7;        /* impact : réussite, croissance, chiffres clés */
+  --ik-ardoise: #1a202c;          /* texte principal sur fond clair */
+  --ik-gris-fond: #f8fafc;        /* arrière-plans, cartes, tableaux */
+  --ik-blanc: #ffffff;
+
+  /* Rôles */
+  --ik-texte: var(--ik-ardoise);
+  --ik-texte-inverse: var(--ik-blanc);
+  --ik-titre: var(--ik-bleu-nuit);
+  --ik-fond: var(--ik-gris-fond);
+  --ik-surface: var(--ik-blanc);
+  --ik-action: var(--ik-bleu-electrique);
+  --ik-succes: var(--ik-cyan-tech);
+  --ik-bordure: #e2e8f0;
+  --ik-texte-discret: #4a5568;
+  --ik-erreur: #c53030;
+
+  /* Typographie */
+  --ik-police-titres: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --ik-police-texte: "Inter", "Roboto", Arial, system-ui, sans-serif;
+  --ik-police-donnees: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+  /* Hiérarchie écran (charte : H1 32-40 px, H2 20-24 px, H3 16-18 px, texte 14-16 px) */
+  --ik-taille-h1: clamp(2rem, 1.6rem + 1.6vw, 2.5rem);
+  --ik-taille-h2: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --ik-taille-h3: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --ik-taille-texte: 1rem;
+  --ik-taille-petit: 0.875rem;
+
+  --ik-graisse-h1: 700;
+  --ik-graisse-h2: 600;
+  --ik-graisse-h3: 500;
+  --ik-graisse-texte: 400;
+
+  /* Espacements et formes */
+  --ik-espace-1: 0.25rem;
+  --ik-espace-2: 0.5rem;
+  --ik-espace-3: 0.75rem;
+  --ik-espace-4: 1rem;
+  --ik-espace-6: 1.5rem;
+  --ik-espace-8: 2rem;
+  --ik-espace-12: 3rem;
+
+  --ik-rayon: 10px;
+  --ik-rayon-petit: 6px;
+  /* Charte : « ombre portée très légère » pour les encadrés et chiffres clés */
+  --ik-ombre: 0 1px 2px rgba(10, 37, 64, 0.06), 0 4px 12px rgba(10, 37, 64, 0.05);
+}
+
+body {
+  margin: 0;
+  background: var(--ik-fond);
+  color: var(--ik-texte);
+  font-family: var(--ik-police-texte);
+  font-size: var(--ik-taille-texte);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--ik-titre);
+  font-family: var(--ik-police-titres);
+  line-height: 1.2;
+}
+h1 { font-size: var(--ik-taille-h1); font-weight: var(--ik-graisse-h1); }
+h2 { font-size: var(--ik-taille-h2); font-weight: var(--ik-graisse-h2); }
+h3 { font-size: var(--ik-taille-h3); font-weight: var(--ik-graisse-h3); }
+
+/* Encadré de chiffre clé : bloc blanc, ombre légère, bordure gauche Cyan Tech */
+.ik-chiffre-cle {
+  background: var(--ik-surface);
+  border-left: 4px solid var(--ik-cyan-tech);
+  border-radius: var(--ik-rayon-petit);
+  box-shadow: var(--ik-ombre);
+  padding: var(--ik-espace-4) var(--ik-espace-6);
+  font-family: var(--ik-police-donnees);
+}
+
+.ik-bouton {
+  background: var(--ik-action);
+  color: var(--ik-texte-inverse);
+  border: 0;
+  border-radius: var(--ik-rayon-petit);
+  padding: var(--ik-espace-3) var(--ik-espace-6);
+  font-family: var(--ik-police-titres);
+  font-weight: 600;
+  cursor: pointer;
+}
+.ik-bouton:focus-visible {
+  outline: 3px solid var(--ik-cyan-tech);
+  outline-offset: 2px;
+}

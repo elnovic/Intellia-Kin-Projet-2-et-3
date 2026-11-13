@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Données et secrets locaux
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+.next/
+
+# Divers
+.DS_Store
+.idea/
+.vscode/
