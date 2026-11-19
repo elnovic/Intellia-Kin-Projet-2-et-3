@@ -1,0 +1,132 @@
+title: Image professionnelle : CV, LinkedIn et portfolio
+summary: Construisez une image professionnelle claire et cohérente : un CV qui donne envie, une lettre ciblée, un profil LinkedIn solide et un portfolio qui prouve vos compétences.
+audience: jeune_diplome
+parcours: carriere
+level: debutant
+duration: 75
+position: 7
+prerequisites: Aucun. Le cours « Bien formuler ses demandes à l'IA » est conseillé.
+description: Votre diplôme ne suffit pas toujours à vous faire remarquer. Les recruteurs parcourent les candidatures en quelques secondes et vérifient souvent ce qu'on trouve sur vous en ligne.
+description: Ce cours vous accompagne pas à pas pour construire un CV clair et ciblé, rédiger une lettre de motivation qui parle au recruteur, créer un profil LinkedIn solide, monter un portfolio même sans grande expérience, et garder une image cohérente. L'IA vous aide sur la forme ; vous apportez la matière.
+objective: Comprendre ce qu'un recruteur regarde en premier
+objective: Rédiger un CV clair avec des réalisations concrètes
+objective: Écrire une lettre de motivation ciblée
+objective: Créer un profil LinkedIn complet
+objective: Monter un portfolio adapté à son métier
+objective: Garder une image cohérente et une présentation en trente secondes
+skill: Rédiger un CV et une lettre de motivation efficaces
+skill: Construire sa présence professionnelle en ligne
+skill: Présenter ses réalisations
+module: Les fondamentaux
+lesson: recruteur | Ce que voit un recruteur | 01-ce-que-voit-un-recruteur.md | Comprendre comment un recruteur lit une candidature. | 10 | apercu
+? Quelles questions un recruteur se pose-t-il en parcourant un CV ?
++ Le candidat correspond-il au poste ?
++ Est-il sérieux ?
++ A-t-il quelque chose de plus ?
+- Quelle est sa couleur préférée ?
+> Adéquation, sérieux et petit plus : rendez ces réponses évidentes.
+? Laquelle de ces erreurs coûte cher ?
++ Envoyer le même CV à toutes les offres
+- Adapter son titre au poste
+- Mettre des résultats chiffrés honnêtes
+- Relire son CV
+> Un CV unique ne parle à personne en particulier.
+lesson: cv | Un CV qui donne envie | 02-un-cv-qui-donne-envie.md | Rédiger un CV clair et ciblé. | 14
+? Quelle formule transforme une tâche en réalisation ?
++ Verbe d'action + ce que vous avez fait + résultat
+- Nom de l'entreprise + adresse
+- Date + lieu
+- Diplôme + mention
+> Exemple : « Préparé 40 devis par mois… ».
+? Vrai ou faux : on peut ajouter un chiffre inventé pour rendre une expérience plus impressionnante.
+- Vrai
++ Faux
+> N'inventez jamais : une question en entretien suffit à faire tomber un mensonge.
+lesson: lettre | La lettre de motivation | 03-la-lettre-de-motivation.md | Écrire une lettre courte, personnelle et ciblée. | 12
+? Quelle structure en trois paragraphes est recommandée ?
++ L'entreprise, moi, nous
+- Bonjour, merci, au revoir
+- Diplômes, loisirs, famille
+- Salaire, horaires, congés
+> Elle montre pourquoi vous, pour ce poste, dans cette entreprise.
+module: Être visible
+lesson: linkedin | Un profil LinkedIn solide | 04-un-profil-linkedin-solide.md | Créer un profil LinkedIn complet. | 13
+? Quel titre LinkedIn est le plus efficace ?
++ « Assistante comptable | Excel, Sage | À la recherche d'un poste à Kinshasa »
+- « Étudiant »
+- Aucun titre
+- « Je cherche du travail, n'importe lequel »
+> Le titre dit ce que vous faites et ce que vous visez.
+lesson: portfolio | Le portfolio | 05-le-portfolio.md | Montrer ses réalisations, même en débutant. | 13
+? Que peut contenir le portfolio d'un débutant ?
++ Des travaux universitaires aboutis
++ Des projets personnels créés pour l'occasion
++ Des projets bénévoles
+- Des documents confidentiels de son ancien employeur
+> Respectez toujours la confidentialité.
+lesson: coherence | Une image cohérente | 06-une-image-coherente.md | Harmoniser ses supports et se présenter en trente secondes. | 13
+? Que vérifier pour une image cohérente ?
++ Les dates et intitulés identiques sur le CV et LinkedIn
+- Que le CV soit le plus long possible
+- Que chaque support ait une photo différente
+- Rien, les recruteurs ne comparent pas
+> Une incohérence installe un doute.
+exam:
+? Combien de temps un recruteur consacre-t-il souvent à la première lecture d'un CV ?
++ Quelques dizaines de secondes
+- Une heure
+- Une journée
+- Il lit tout en détail à chaque fois
+? Quelle adresse e-mail est la plus professionnelle ?
++ prenom.nom@exemple.com
+- bogoss243@exemple.com
+- princesse_du_love@exemple.com
+- xx_killer_xx@exemple.com
+? Quelles sont les parties d'un CV clair ?
++ L'en-tête
++ Le profil
++ Les expériences
+- La liste de vos films préférés
+? Quelle formulation est la meilleure pour une expérience ?
++ « Géré un budget annuel de 2 000 dollars et présenté les comptes en assemblée générale »
+- « Trésorier »
+- « J'ai fait plein de choses à l'association »
+- « Membre »
+? Pourquoi reprendre les mots-clés de l'offre dans son CV ?
++ Parce que certains logiciels trient les CV selon ces mots
+- Pour copier l'offre
+- Ce n'est pas utile
+- Pour allonger le CV
+? Que doit fournir le candidat lorsqu'il utilise l'IA pour sa lettre ?
++ Des informations sur l'entreprise et ses propres expériences
+- Rien, l'IA sait tout
+- Uniquement son nom
+- La lettre d'un ami
+? Vrai ou faux : une lettre générée sans effort se reconnaît souvent car elle est polie mais vide.
++ Vrai
+- Faux
+? Où ajouter vos attestations de l'Académie sur LinkedIn ?
++ Dans la section des certifications
+- Dans le titre uniquement
+- Nulle part
+- Dans un message privé à tous vos contacts
+? Quelle photo convient à un profil LinkedIn ?
++ Un portrait net, de face, sur fond simple
+- Une photo de groupe en soirée
+- Le logo de son équipe de football
+- Aucune photo
+? Un comptable débutant peut mettre dans son portfolio :
++ Un tableau de bord Excel qu'il a conçu
+- Les comptes confidentiels d'un client
+- Les mots de passe de son stage
+- Rien, les portfolios sont réservés aux graphistes
+? Comment présenter une réalisation dans un portfolio ?
++ Contexte, rôle, méthode et outils, résultat
+- Uniquement une photo
+- Uniquement le nom du client
+- Une liste de logiciels
+? À quoi sert une phrase de marque personnelle ?
++ À résumer ce que vous apportez et guider tous vos supports
+- À remplacer le CV
+- À indiquer son salaire
+- À rien

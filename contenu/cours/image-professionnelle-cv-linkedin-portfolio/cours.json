@@ -1,0 +1,538 @@
+{
+ "slug": "image-professionnelle-cv-linkedin-portfolio",
+ "format": "self_paced",
+ "objectives": [
+  "Comprendre ce qu'un recruteur regarde en premier",
+  "Rédiger un CV clair avec des réalisations concrètes",
+  "Écrire une lettre de motivation ciblée",
+  "Créer un profil LinkedIn complet",
+  "Monter un portfolio adapté à son métier",
+  "Garder une image cohérente et une présentation en trente secondes"
+ ],
+ "skills": [
+  "Rédiger un CV et une lettre de motivation efficaces",
+  "Construire sa présence professionnelle en ligne",
+  "Présenter ses réalisations"
+ ],
+ "modules": [
+  {
+   "title": "Les fondamentaux",
+   "lessons": [
+    {
+     "key": "recruteur",
+     "title": "Ce que voit un recruteur",
+     "file": "01-ce-que-voit-un-recruteur.md",
+     "objective": "Comprendre comment un recruteur lit une candidature.",
+     "duration_minutes": 10,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quelles questions un recruteur se pose-t-il en parcourant un CV ?",
+       "options": [
+        {
+         "text": "Le candidat correspond-il au poste ?",
+         "correct": true
+        },
+        {
+         "text": "Est-il sérieux ?",
+         "correct": true
+        },
+        {
+         "text": "A-t-il quelque chose de plus ?",
+         "correct": true
+        },
+        {
+         "text": "Quelle est sa couleur préférée ?",
+         "correct": false
+        }
+       ],
+       "explanation": "Adéquation, sérieux et petit plus : rendez ces réponses évidentes.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Laquelle de ces erreurs coûte cher ?",
+       "options": [
+        {
+         "text": "Envoyer le même CV à toutes les offres",
+         "correct": true
+        },
+        {
+         "text": "Adapter son titre au poste",
+         "correct": false
+        },
+        {
+         "text": "Mettre des résultats chiffrés honnêtes",
+         "correct": false
+        },
+        {
+         "text": "Relire son CV",
+         "correct": false
+        }
+       ],
+       "explanation": "Un CV unique ne parle à personne en particulier.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "cv",
+     "title": "Un CV qui donne envie",
+     "file": "02-un-cv-qui-donne-envie.md",
+     "objective": "Rédiger un CV clair et ciblé.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle formule transforme une tâche en réalisation ?",
+       "options": [
+        {
+         "text": "Verbe d'action + ce que vous avez fait + résultat",
+         "correct": true
+        },
+        {
+         "text": "Nom de l'entreprise + adresse",
+         "correct": false
+        },
+        {
+         "text": "Date + lieu",
+         "correct": false
+        },
+        {
+         "text": "Diplôme + mention",
+         "correct": false
+        }
+       ],
+       "explanation": "Exemple : « Préparé 40 devis par mois… ».",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : on peut ajouter un chiffre inventé pour rendre une expérience plus impressionnante.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "N'inventez jamais : une question en entretien suffit à faire tomber un mensonge.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "lettre",
+     "title": "La lettre de motivation",
+     "file": "03-la-lettre-de-motivation.md",
+     "objective": "Écrire une lettre courte, personnelle et ciblée.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle structure en trois paragraphes est recommandée ?",
+       "options": [
+        {
+         "text": "L'entreprise, moi, nous",
+         "correct": true
+        },
+        {
+         "text": "Bonjour, merci, au revoir",
+         "correct": false
+        },
+        {
+         "text": "Diplômes, loisirs, famille",
+         "correct": false
+        },
+        {
+         "text": "Salaire, horaires, congés",
+         "correct": false
+        }
+       ],
+       "explanation": "Elle montre pourquoi vous, pour ce poste, dans cette entreprise.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Être visible",
+   "lessons": [
+    {
+     "key": "linkedin",
+     "title": "Un profil LinkedIn solide",
+     "file": "04-un-profil-linkedin-solide.md",
+     "objective": "Créer un profil LinkedIn complet.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel titre LinkedIn est le plus efficace ?",
+       "options": [
+        {
+         "text": "« Assistante comptable | Excel, Sage | À la recherche d'un poste à Kinshasa »",
+         "correct": true
+        },
+        {
+         "text": "« Étudiant »",
+         "correct": false
+        },
+        {
+         "text": "Aucun titre",
+         "correct": false
+        },
+        {
+         "text": "« Je cherche du travail, n'importe lequel »",
+         "correct": false
+        }
+       ],
+       "explanation": "Le titre dit ce que vous faites et ce que vous visez.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "portfolio",
+     "title": "Le portfolio",
+     "file": "05-le-portfolio.md",
+     "objective": "Montrer ses réalisations, même en débutant.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que peut contenir le portfolio d'un débutant ?",
+       "options": [
+        {
+         "text": "Des travaux universitaires aboutis",
+         "correct": true
+        },
+        {
+         "text": "Des projets personnels créés pour l'occasion",
+         "correct": true
+        },
+        {
+         "text": "Des projets bénévoles",
+         "correct": true
+        },
+        {
+         "text": "Des documents confidentiels de son ancien employeur",
+         "correct": false
+        }
+       ],
+       "explanation": "Respectez toujours la confidentialité.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "coherence",
+     "title": "Une image cohérente",
+     "file": "06-une-image-coherente.md",
+     "objective": "Harmoniser ses supports et se présenter en trente secondes.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que vérifier pour une image cohérente ?",
+       "options": [
+        {
+         "text": "Les dates et intitulés identiques sur le CV et LinkedIn",
+         "correct": true
+        },
+        {
+         "text": "Que le CV soit le plus long possible",
+         "correct": false
+        },
+        {
+         "text": "Que chaque support ait une photo différente",
+         "correct": false
+        },
+        {
+         "text": "Rien, les recruteurs ne comparent pas",
+         "correct": false
+        }
+       ],
+       "explanation": "Une incohérence installe un doute.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Image professionnelle : CV, LinkedIn et portfolio",
+ "summary": "Construisez une image professionnelle claire et cohérente : un CV qui donne envie, une lettre ciblée, un profil LinkedIn solide et un portfolio qui prouve vos compétences.",
+ "audience": "jeune_diplome",
+ "parcours": "carriere",
+ "level": "debutant",
+ "duration_minutes": 75,
+ "position": 7,
+ "prerequisites": "Aucun. Le cours « Bien formuler ses demandes à l'IA » est conseillé.",
+ "description": "Votre diplôme ne suffit pas toujours à vous faire remarquer. Les recruteurs parcourent les candidatures en quelques secondes et vérifient souvent ce qu'on trouve sur vous en ligne.\n\nCe cours vous accompagne pas à pas pour construire un CV clair et ciblé, rédiger une lettre de motivation qui parle au recruteur, créer un profil LinkedIn solide, monter un portfolio même sans grande expérience, et garder une image cohérente. L'IA vous aide sur la forme ; vous apportez la matière.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Combien de temps un recruteur consacre-t-il souvent à la première lecture d'un CV ?",
+    "options": [
+     {
+      "text": "Quelques dizaines de secondes",
+      "correct": true
+     },
+     {
+      "text": "Une heure",
+      "correct": false
+     },
+     {
+      "text": "Une journée",
+      "correct": false
+     },
+     {
+      "text": "Il lit tout en détail à chaque fois",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle adresse e-mail est la plus professionnelle ?",
+    "options": [
+     {
+      "text": "prenom.nom@exemple.com",
+      "correct": true
+     },
+     {
+      "text": "bogoss243@exemple.com",
+      "correct": false
+     },
+     {
+      "text": "princesse_du_love@exemple.com",
+      "correct": false
+     },
+     {
+      "text": "xx_killer_xx@exemple.com",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles sont les parties d'un CV clair ?",
+    "options": [
+     {
+      "text": "L'en-tête",
+      "correct": true
+     },
+     {
+      "text": "Le profil",
+      "correct": true
+     },
+     {
+      "text": "Les expériences",
+      "correct": true
+     },
+     {
+      "text": "La liste de vos films préférés",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quelle formulation est la meilleure pour une expérience ?",
+    "options": [
+     {
+      "text": "« Géré un budget annuel de 2 000 dollars et présenté les comptes en assemblée générale »",
+      "correct": true
+     },
+     {
+      "text": "« Trésorier »",
+      "correct": false
+     },
+     {
+      "text": "« J'ai fait plein de choses à l'association »",
+      "correct": false
+     },
+     {
+      "text": "« Membre »",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi reprendre les mots-clés de l'offre dans son CV ?",
+    "options": [
+     {
+      "text": "Parce que certains logiciels trient les CV selon ces mots",
+      "correct": true
+     },
+     {
+      "text": "Pour copier l'offre",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas utile",
+      "correct": false
+     },
+     {
+      "text": "Pour allonger le CV",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que doit fournir le candidat lorsqu'il utilise l'IA pour sa lettre ?",
+    "options": [
+     {
+      "text": "Des informations sur l'entreprise et ses propres expériences",
+      "correct": true
+     },
+     {
+      "text": "Rien, l'IA sait tout",
+      "correct": false
+     },
+     {
+      "text": "Uniquement son nom",
+      "correct": false
+     },
+     {
+      "text": "La lettre d'un ami",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : une lettre générée sans effort se reconnaît souvent car elle est polie mais vide.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Où ajouter vos attestations de l'Académie sur LinkedIn ?",
+    "options": [
+     {
+      "text": "Dans la section des certifications",
+      "correct": true
+     },
+     {
+      "text": "Dans le titre uniquement",
+      "correct": false
+     },
+     {
+      "text": "Nulle part",
+      "correct": false
+     },
+     {
+      "text": "Dans un message privé à tous vos contacts",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle photo convient à un profil LinkedIn ?",
+    "options": [
+     {
+      "text": "Un portrait net, de face, sur fond simple",
+      "correct": true
+     },
+     {
+      "text": "Une photo de groupe en soirée",
+      "correct": false
+     },
+     {
+      "text": "Le logo de son équipe de football",
+      "correct": false
+     },
+     {
+      "text": "Aucune photo",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un comptable débutant peut mettre dans son portfolio :",
+    "options": [
+     {
+      "text": "Un tableau de bord Excel qu'il a conçu",
+      "correct": true
+     },
+     {
+      "text": "Les comptes confidentiels d'un client",
+      "correct": false
+     },
+     {
+      "text": "Les mots de passe de son stage",
+      "correct": false
+     },
+     {
+      "text": "Rien, les portfolios sont réservés aux graphistes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment présenter une réalisation dans un portfolio ?",
+    "options": [
+     {
+      "text": "Contexte, rôle, méthode et outils, résultat",
+      "correct": true
+     },
+     {
+      "text": "Uniquement une photo",
+      "correct": false
+     },
+     {
+      "text": "Uniquement le nom du client",
+      "correct": false
+     },
+     {
+      "text": "Une liste de logiciels",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "À quoi sert une phrase de marque personnelle ?",
+    "options": [
+     {
+      "text": "À résumer ce que vous apportez et guider tous vos supports",
+      "correct": true
+     },
+     {
+      "text": "À remplacer le CV",
+      "correct": false
+     },
+     {
+      "text": "À indiquer son salaire",
+      "correct": false
+     },
+     {
+      "text": "À rien",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

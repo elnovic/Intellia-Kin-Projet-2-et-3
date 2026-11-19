@@ -1,0 +1,589 @@
+{
+ "slug": "de-l-ia-a-un-business-rentable",
+ "format": "self_paced",
+ "objectives": [
+  "Repérer des services rentables qui reposent sur l'IA",
+  "Construire une offre claire avec des formules et des prix",
+  "Trouver ses trois premiers clients",
+  "Organiser sa production avec des modèles réutilisables",
+  "Vendre, facturer et fidéliser",
+  "Établir un plan de croissance à 90 jours"
+ ],
+ "skills": [
+  "Concevoir une offre de services fondée sur l'IA",
+  "Prospecter et fidéliser des clients",
+  "Organiser une activité indépendante"
+ ],
+ "modules": [
+  {
+   "title": "Trouver son offre",
+   "lessons": [
+    {
+     "key": "opportunites",
+     "title": "Les opportunités de services IA",
+     "file": "01-les-opportunites.md",
+     "objective": "Repérer des services que les clients paient.",
+     "duration_minutes": 12,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Qu'achètent réellement les clients ?",
+       "options": [
+        {
+         "text": "Un résultat concret",
+         "correct": true
+        },
+        {
+         "text": "De l'intelligence artificielle",
+         "correct": false
+        },
+        {
+         "text": "Des heures de travail",
+         "correct": false
+        },
+        {
+         "text": "Un logiciel",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA n'est que l'outil qui produit le résultat.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Pourquoi combiner l'IA avec une compétence humaine ?",
+       "options": [
+        {
+         "text": "Pour proposer un service difficile à copier",
+         "correct": true
+        },
+        {
+         "text": "Pour payer moins d'impôts",
+         "correct": false
+        },
+        {
+         "text": "Parce que l'IA ne fonctionne pas seule",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas utile",
+         "correct": false
+        }
+       ],
+       "explanation": "Votre combinaison unique de compétences fait votre différence.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "offre",
+     "title": "Construire son offre",
+     "file": "02-construire-son-offre.md",
+     "objective": "Formuler une offre claire avec des formules et des prix.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que doit préciser une offre claire ?",
+       "options": [
+        {
+         "text": "Pour qui",
+         "correct": true
+        },
+        {
+         "text": "Quel résultat",
+         "correct": true
+        },
+        {
+         "text": "En combien de temps",
+         "correct": true
+        },
+        {
+         "text": "La marque de votre téléphone",
+         "correct": false
+        }
+       ],
+       "explanation": "Pour qui, quoi, comment, en combien de temps et à quel prix.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Vrai ou faux : il faut fixer des prix très bas puisque l'IA fait tout.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Le client paie votre jugement, votre relecture et votre responsabilité.",
+       "kind": "true_false"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Vendre",
+   "lessons": [
+    {
+     "key": "clients",
+     "title": "Trouver ses premiers clients",
+     "file": "03-trouver-ses-premiers-clients.md",
+     "objective": "Décrocher ses trois premiers clients.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Où se trouvent généralement les premiers clients ?",
+       "options": [
+        {
+         "text": "Dans l'entourage proche et son réseau",
+         "correct": true
+        },
+        {
+         "text": "Uniquement à l'étranger",
+         "correct": false
+        },
+        {
+         "text": "Grâce à une grande campagne publicitaire",
+         "correct": false
+        },
+        {
+         "text": "Nulle part au début",
+         "correct": false
+        }
+       ],
+       "explanation": "Famille, voisins, anciens camarades, commerces fréquentés.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Qu'est-ce qu'un bon projet vitrine ?",
+       "options": [
+        {
+         "text": "Un projet limité dans le temps, en échange d'un témoignage et de recommandations",
+         "correct": true
+        },
+        {
+         "text": "Un travail gratuit sans fin",
+         "correct": false
+        },
+        {
+         "text": "Un projet sans engagement de qualité",
+         "correct": false
+        },
+        {
+         "text": "Un projet fictif",
+         "correct": false
+        }
+       ],
+       "explanation": "Il a un début, une fin et des contreparties claires.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "produire",
+     "title": "Produire mieux et plus vite",
+     "file": "04-produire-mieux-et-plus-vite.md",
+     "objective": "Organiser sa production avec l'IA.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle étape fait votre valeur auprès du client ?",
+       "options": [
+        {
+         "text": "La relecture et l'amélioration du contenu produit",
+         "correct": true
+        },
+        {
+         "text": "L'envoi de la facture",
+         "correct": false
+        },
+        {
+         "text": "Le choix de la police",
+         "correct": false
+        },
+        {
+         "text": "Aucune",
+         "correct": false
+        }
+       ],
+       "explanation": "Ne livrez jamais un contenu que vous n'avez pas relu.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "fideliser",
+     "title": "Vendre et fidéliser",
+     "file": "05-vendre-et-fideliser.md",
+     "objective": "Facturer correctement et garder ses clients.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelles pratiques réduisent les impayés ?",
+       "options": [
+        {
+         "text": "Demander un acompte",
+         "correct": true
+        },
+        {
+         "text": "Facturer à date fixe",
+         "correct": true
+        },
+        {
+         "text": "Attendre trois mois avant de facturer",
+         "correct": false
+        },
+        {
+         "text": "Ne jamais rien écrire",
+         "correct": false
+        }
+       ],
+       "explanation": "Acompte et facturation régulière protègent votre activité.",
+       "kind": "multiple"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Grandir",
+   "lessons": [
+    {
+     "key": "echelle",
+     "title": "Passer à l'échelle",
+     "file": "06-passer-a-l-echelle.md",
+     "objective": "Faire grandir son activité étape par étape.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle est la condition pour pouvoir déléguer ?",
+       "options": [
+        {
+         "text": "Avoir écrit ses processus étape par étape",
+         "correct": true
+        },
+        {
+         "text": "Avoir beaucoup d'argent",
+         "correct": false
+        },
+        {
+         "text": "Avoir un bureau",
+         "correct": false
+        },
+        {
+         "text": "Travailler seul",
+         "correct": false
+        }
+       ],
+       "explanation": "Standardiser permet de transmettre son savoir-faire.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Pourquoi séparer l'argent personnel et celui de l'activité ?",
+       "options": [
+        {
+         "text": "Pour savoir ce que l'activité rapporte vraiment",
+         "correct": true
+        },
+        {
+         "text": "Pour cacher ses revenus",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas utile",
+         "correct": false
+        },
+        {
+         "text": "Pour payer plus d'impôts",
+         "correct": false
+        }
+       ],
+       "explanation": "Une comptabilité simple commence par cette séparation.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "De l'IA à un business rentable",
+ "summary": "Transformez vos compétences en IA en services que des clients paient : choisir une offre, fixer ses prix, trouver ses premiers clients, livrer avec qualité et grandir.",
+ "audience": "jeune_diplome",
+ "parcours": "carriere",
+ "level": "intermediaire",
+ "duration_minutes": 80,
+ "position": 6,
+ "prerequisites": "Le tronc commun (cours 1 à 5) est conseillé.",
+ "description": "Beaucoup de jeunes diplômés maîtrisent déjà les outils d'IA mieux que les entreprises qui les entourent. Ce cours vous montre comment transformer cette compétence en revenus réels.\n\nVous apprendrez à repérer des opportunités, à construire une offre claire avec des prix justes, à trouver vos premiers clients dans votre entourage, à produire mieux et plus vite grâce à l'IA, à fidéliser vos clients et à faire grandir votre activité étape par étape.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Merveille propose de gérer les réseaux sociaux d'un salon de coiffure. Que vend-elle réellement ?",
+    "options": [
+     {
+      "text": "Des publications régulières qui attirent des clients",
+      "correct": true
+     },
+     {
+      "text": "De l'intelligence artificielle",
+      "correct": false
+     },
+     {
+      "text": "Un abonnement à Facebook",
+      "correct": false
+     },
+     {
+      "text": "Des heures de connexion",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi privilégier un besoin récurrent ?",
+    "options": [
+     {
+      "text": "Il crée un revenu régulier",
+      "correct": true
+     },
+     {
+      "text": "Il est plus facile à copier",
+      "correct": false
+     },
+     {
+      "text": "Il ne demande aucun effort",
+      "correct": false
+     },
+     {
+      "text": "Il évite de facturer",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Complétez : « J'aide [type de client] à [résultat] grâce à [méthode], en [délai]. » À quoi sert cette phrase ?",
+    "options": [
+     {
+      "text": "À présenter une offre claire",
+      "correct": true
+     },
+     {
+      "text": "À rédiger une facture",
+      "correct": false
+     },
+     {
+      "text": "À choisir un statut juridique",
+      "correct": false
+     },
+     {
+      "text": "À remplir un CV",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels repères utiliser pour fixer un premier prix ?",
+    "options": [
+     {
+      "text": "Le temps réellement passé",
+      "correct": true
+     },
+     {
+      "text": "Les prix du marché",
+      "correct": true
+     },
+     {
+      "text": "La valeur pour le client",
+      "correct": true
+     },
+     {
+      "text": "Le prix le plus bas possible",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Vous n'avez aucune référence. Que faire ?",
+    "options": [
+     {
+      "text": "Proposer un projet vitrine limité, contre témoignage et recommandations",
+      "correct": true
+     },
+     {
+      "text": "Inventer des références",
+      "correct": false
+     },
+     {
+      "text": "Travailler gratuitement pour tout le monde",
+      "correct": false
+     },
+     {
+      "text": "Attendre d'avoir de l'expérience",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle est la meilleure première phrase d'un message de prospection ?",
+    "options": [
+     {
+      "text": "Une remarque personnalisée qui montre qu'on connaît le client",
+      "correct": true
+     },
+     {
+      "text": "« Bonjour, je vends des services IA. »",
+      "correct": false
+     },
+     {
+      "text": "Une liste de tous ses diplômes",
+      "correct": false
+     },
+     {
+      "text": "Le prix de ses formules",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que contient une bonne boîte à outils de production ?",
+    "options": [
+     {
+      "text": "Des modèles de demande testés, des fiches clients et des modèles de documents",
+      "correct": true
+     },
+     {
+      "text": "Uniquement un abonnement payant",
+      "correct": false
+     },
+     {
+      "text": "Des contenus copiés chez les concurrents",
+      "correct": false
+     },
+     {
+      "text": "Rien, il vaut mieux improviser",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : on peut livrer un contenu produit par l'IA sans le relire si le client est pressé.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Qu'est-ce qu'un portfolio ?",
+    "options": [
+     {
+      "text": "Une sélection de vos meilleures réalisations",
+      "correct": true
+     },
+     {
+      "text": "Un compte bancaire",
+      "correct": false
+     },
+     {
+      "text": "Un contrat de travail",
+      "correct": false
+     },
+     {
+      "text": "Un logiciel d'IA",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que mettre par écrit avec un client, même ami ?",
+    "options": [
+     {
+      "text": "Le contenu, le prix, les délais et les modifications incluses",
+      "correct": true
+     },
+     {
+      "text": "Uniquement le prix",
+      "correct": false
+     },
+     {
+      "text": "Rien, la confiance suffit",
+      "correct": false
+     },
+     {
+      "text": "Ses horaires de sommeil",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Laquelle de ces actions est une manière de grandir sans y passer plus de temps ?",
+    "options": [
+     {
+      "text": "Créer des produits comme des modèles ou une mini-formation",
+      "correct": true
+     },
+     {
+      "text": "Travailler toutes les nuits",
+      "correct": false
+     },
+     {
+      "text": "Refuser de déléguer",
+      "correct": false
+     },
+     {
+      "text": "Baisser ses prix",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Avant de choisir un statut pour son activité, que faire ?",
+    "options": [
+     {
+      "text": "Se renseigner auprès du guichet unique, de la chambre de commerce ou d'un comptable de son pays",
+      "correct": true
+     },
+     {
+      "text": "Copier le statut d'un ami dans un autre pays",
+      "correct": false
+     },
+     {
+      "text": "Ne rien faire, ce n'est jamais nécessaire",
+      "correct": false
+     },
+     {
+      "text": "Demander uniquement à l'IA et suivre sa réponse sans vérifier",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

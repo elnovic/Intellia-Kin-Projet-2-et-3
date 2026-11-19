@@ -1,0 +1,145 @@
+title: De l'IA à un business rentable
+summary: Transformez vos compétences en IA en services que des clients paient : choisir une offre, fixer ses prix, trouver ses premiers clients, livrer avec qualité et grandir.
+audience: jeune_diplome
+parcours: carriere
+level: intermediaire
+duration: 80
+position: 6
+prerequisites: Le tronc commun (cours 1 à 5) est conseillé.
+description: Beaucoup de jeunes diplômés maîtrisent déjà les outils d'IA mieux que les entreprises qui les entourent. Ce cours vous montre comment transformer cette compétence en revenus réels.
+description: Vous apprendrez à repérer des opportunités, à construire une offre claire avec des prix justes, à trouver vos premiers clients dans votre entourage, à produire mieux et plus vite grâce à l'IA, à fidéliser vos clients et à faire grandir votre activité étape par étape.
+objective: Repérer des services rentables qui reposent sur l'IA
+objective: Construire une offre claire avec des formules et des prix
+objective: Trouver ses trois premiers clients
+objective: Organiser sa production avec des modèles réutilisables
+objective: Vendre, facturer et fidéliser
+objective: Établir un plan de croissance à 90 jours
+skill: Concevoir une offre de services fondée sur l'IA
+skill: Prospecter et fidéliser des clients
+skill: Organiser une activité indépendante
+module: Trouver son offre
+lesson: opportunites | Les opportunités de services IA | 01-les-opportunites.md | Repérer des services que les clients paient. | 12 | apercu
+? Qu'achètent réellement les clients ?
++ Un résultat concret
+- De l'intelligence artificielle
+- Des heures de travail
+- Un logiciel
+> L'IA n'est que l'outil qui produit le résultat.
+? Pourquoi combiner l'IA avec une compétence humaine ?
++ Pour proposer un service difficile à copier
+- Pour payer moins d'impôts
+- Parce que l'IA ne fonctionne pas seule
+- Ce n'est pas utile
+> Votre combinaison unique de compétences fait votre différence.
+lesson: offre | Construire son offre | 02-construire-son-offre.md | Formuler une offre claire avec des formules et des prix. | 14
+? Que doit préciser une offre claire ?
++ Pour qui
++ Quel résultat
++ En combien de temps
+- La marque de votre téléphone
+> Pour qui, quoi, comment, en combien de temps et à quel prix.
+? Vrai ou faux : il faut fixer des prix très bas puisque l'IA fait tout.
+- Vrai
++ Faux
+> Le client paie votre jugement, votre relecture et votre responsabilité.
+module: Vendre
+lesson: clients | Trouver ses premiers clients | 03-trouver-ses-premiers-clients.md | Décrocher ses trois premiers clients. | 13
+? Où se trouvent généralement les premiers clients ?
++ Dans l'entourage proche et son réseau
+- Uniquement à l'étranger
+- Grâce à une grande campagne publicitaire
+- Nulle part au début
+> Famille, voisins, anciens camarades, commerces fréquentés.
+? Qu'est-ce qu'un bon projet vitrine ?
++ Un projet limité dans le temps, en échange d'un témoignage et de recommandations
+- Un travail gratuit sans fin
+- Un projet sans engagement de qualité
+- Un projet fictif
+> Il a un début, une fin et des contreparties claires.
+lesson: produire | Produire mieux et plus vite | 04-produire-mieux-et-plus-vite.md | Organiser sa production avec l'IA. | 13
+? Quelle étape fait votre valeur auprès du client ?
++ La relecture et l'amélioration du contenu produit
+- L'envoi de la facture
+- Le choix de la police
+- Aucune
+> Ne livrez jamais un contenu que vous n'avez pas relu.
+lesson: fideliser | Vendre et fidéliser | 05-vendre-et-fideliser.md | Facturer correctement et garder ses clients. | 13
+? Quelles pratiques réduisent les impayés ?
++ Demander un acompte
++ Facturer à date fixe
+- Attendre trois mois avant de facturer
+- Ne jamais rien écrire
+> Acompte et facturation régulière protègent votre activité.
+module: Grandir
+lesson: echelle | Passer à l'échelle | 06-passer-a-l-echelle.md | Faire grandir son activité étape par étape. | 15
+? Quelle est la condition pour pouvoir déléguer ?
++ Avoir écrit ses processus étape par étape
+- Avoir beaucoup d'argent
+- Avoir un bureau
+- Travailler seul
+> Standardiser permet de transmettre son savoir-faire.
+? Pourquoi séparer l'argent personnel et celui de l'activité ?
++ Pour savoir ce que l'activité rapporte vraiment
+- Pour cacher ses revenus
+- Ce n'est pas utile
+- Pour payer plus d'impôts
+> Une comptabilité simple commence par cette séparation.
+exam:
+? Merveille propose de gérer les réseaux sociaux d'un salon de coiffure. Que vend-elle réellement ?
++ Des publications régulières qui attirent des clients
+- De l'intelligence artificielle
+- Un abonnement à Facebook
+- Des heures de connexion
+? Pourquoi privilégier un besoin récurrent ?
++ Il crée un revenu régulier
+- Il est plus facile à copier
+- Il ne demande aucun effort
+- Il évite de facturer
+? Complétez : « J'aide [type de client] à [résultat] grâce à [méthode], en [délai]. » À quoi sert cette phrase ?
++ À présenter une offre claire
+- À rédiger une facture
+- À choisir un statut juridique
+- À remplir un CV
+? Quels repères utiliser pour fixer un premier prix ?
++ Le temps réellement passé
++ Les prix du marché
++ La valeur pour le client
+- Le prix le plus bas possible
+? Vous n'avez aucune référence. Que faire ?
++ Proposer un projet vitrine limité, contre témoignage et recommandations
+- Inventer des références
+- Travailler gratuitement pour tout le monde
+- Attendre d'avoir de l'expérience
+? Quelle est la meilleure première phrase d'un message de prospection ?
++ Une remarque personnalisée qui montre qu'on connaît le client
+- « Bonjour, je vends des services IA. »
+- Une liste de tous ses diplômes
+- Le prix de ses formules
+? Que contient une bonne boîte à outils de production ?
++ Des modèles de demande testés, des fiches clients et des modèles de documents
+- Uniquement un abonnement payant
+- Des contenus copiés chez les concurrents
+- Rien, il vaut mieux improviser
+? Vrai ou faux : on peut livrer un contenu produit par l'IA sans le relire si le client est pressé.
+- Vrai
++ Faux
+? Qu'est-ce qu'un portfolio ?
++ Une sélection de vos meilleures réalisations
+- Un compte bancaire
+- Un contrat de travail
+- Un logiciel d'IA
+? Que mettre par écrit avec un client, même ami ?
++ Le contenu, le prix, les délais et les modifications incluses
+- Uniquement le prix
+- Rien, la confiance suffit
+- Ses horaires de sommeil
+? Laquelle de ces actions est une manière de grandir sans y passer plus de temps ?
++ Créer des produits comme des modèles ou une mini-formation
+- Travailler toutes les nuits
+- Refuser de déléguer
+- Baisser ses prix
+? Avant de choisir un statut pour son activité, que faire ?
++ Se renseigner auprès du guichet unique, de la chambre de commerce ou d'un comptable de son pays
+- Copier le statut d'un ami dans un autre pays
+- Ne rien faire, ce n'est jamais nécessaire
+- Demander uniquement à l'IA et suivre sa réponse sans vérifier
