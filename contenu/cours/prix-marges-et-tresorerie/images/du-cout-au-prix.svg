@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="300" fill="#F8FAFC"/>
+<text x="30" y="45" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">Du coût au prix de vente</text>
+<rect x="30" y="75" width="164" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="62" cy="108" r="17" fill="#0066FF"/><text x="62" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">1</text>
+<text x="48" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Coût d'achat</text>
+<text x="48" y="208" font-size="13.5" fill="#4A5568">ou de fabrication</text>
+<path d="M198 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="224" y="75" width="164" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="256" cy="108" r="17" fill="#0066FF"/><text x="256" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">2</text>
+<text x="242" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">+ Frais</text>
+<text x="242" y="179" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">directs</text>
+<text x="242" y="208" font-size="13.5" fill="#4A5568">transport,</text>
+<text x="242" y="227" font-size="13.5" fill="#4A5568">emballage</text>
+<path d="M392 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="418" y="75" width="164" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="450" cy="108" r="17" fill="#0066FF"/><text x="450" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">3</text>
+<text x="436" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">= Prix de</text>
+<text x="436" y="179" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">revient</text>
+<text x="436" y="208" font-size="13.5" fill="#4A5568">ce que coûte le</text>
+<text x="436" y="227" font-size="13.5" fill="#4A5568">produit</text>
+<path d="M586 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="612" y="75" width="164" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="644" cy="108" r="17" fill="#0066FF"/><text x="644" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">4</text>
+<text x="630" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">+ Marge</text>
+<text x="630" y="208" font-size="13.5" fill="#4A5568">pour couvrir les</text>
+<text x="630" y="227" font-size="13.5" fill="#4A5568">frais fixes et</text>
+<text x="630" y="246" font-size="13.5" fill="#4A5568">gagner</text>
+<path d="M780 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="806" y="75" width="164" height="190" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<circle cx="838" cy="108" r="17" fill="#00C9A7"/><text x="838" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">5</text>
+<text x="824" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">= Prix de</text>
+<text x="824" y="179" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">vente</text>
+<text x="824" y="208" font-size="13.5" fill="#4A5568">vérifié face au</text>
+<text x="824" y="227" font-size="13.5" fill="#4A5568">marché</text>
+</svg>

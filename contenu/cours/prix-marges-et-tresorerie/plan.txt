@@ -1,0 +1,144 @@
+title: Prix, marges et trésorerie
+summary: Fixez des prix justes et gérez votre argent sereinement : connaître ses coûts, calculer ses marges, choisir ses prix, gérer le taux de change, prévoir sa trésorerie et piloter avec des chiffres simples.
+audience: entrepreneur
+parcours: entrepreneuriat
+level: intermediaire
+duration: 85
+position: 15
+prerequisites: Savoir faire des calculs simples. Le cours « Du concept au plan d'affaires » est conseillé.
+description: Beaucoup de commerces vendent beaucoup sans gagner d'argent, parce que leurs prix ne couvrent pas tous leurs coûts, ou parce que la trésorerie manque au mauvais moment.
+description: Ce cours vous apprend, avec des exemples concrets en dollars et en francs, à recenser vos coûts, calculer vos marges et votre seuil de rentabilité, fixer des prix justes, protéger vos marges des variations du taux de change, prévoir votre trésorerie et suivre quelques chiffres clés. Vous utiliserez le « Calculateur de prix et de marge » de l'Académie.
+objective: Recenser ses coûts directs et ses coûts fixes
+objective: Calculer prix de revient, marge, taux de marge et taux de marque
+objective: Fixer ses prix en tenant compte des coûts, du marché et de la valeur
+objective: Protéger ses marges des variations du taux de change
+objective: Construire un plan de trésorerie
+objective: Piloter son activité avec un tableau de bord simple
+skill: Calculer des prix et des marges
+skill: Gérer sa trésorerie
+skill: Piloter une activité avec des indicateurs financiers
+module: Coûts, marges et prix
+lesson: couts | Connaître ses coûts | 01-connaitre-ses-couts.md | Recenser coûts directs et coûts fixes. | 13 | apercu
+? Lequel est un coût fixe ?
++ Le loyer de la boutique
+- Le prix d'achat de la marchandise
+- Les sachets d'emballage
+- La commission sur chaque vente
+> Il est payé même sans vendre.
+? Quel coût est le plus souvent oublié ?
++ La rémunération du propriétaire de l'activité
+- Le prix d'achat de la marchandise
+- Le loyer
+- Le transport de la marchandise
+> Sans compter votre temps, vous travaillez peut-être gratuitement.
+lesson: marge | Calculer sa marge | 02-calculer-sa-marge.md | Calculer prix de revient, marge et seuil de rentabilité. | 15
+? Prix de revient 32 dollars, prix de vente 40 dollars. Quelle est la marge ?
++ 8 dollars
+- 72 dollars
+- 40 dollars
+- 1,25 dollar
+> 40 − 32 = 8.
+? Avec ces chiffres, quel est le taux de marque (marge ÷ prix de vente) ?
++ 20 %
+- 25 %
+- 8 %
+- 80 %
+> 8 ÷ 40 = 0,20.
+lesson: prix | Fixer ses prix | 03-fixer-ses-prix.md | Choisir un prix juste. | 14
+? Qu'est-ce que le prix plancher ?
++ Le prix de revient plus la marge nécessaire, en dessous duquel on perd de l'argent
+- Le prix le plus bas du marché
+- Le prix du voisin
+- Le prix de gros
+> En dessous, chaque vente vous coûte.
+? Vrai ou faux : copier le prix du voisin est une méthode fiable.
+- Vrai
++ Faux
+> Ses coûts ne sont pas forcément les vôtres.
+module: Argent et pilotage
+lesson: devises | Gérer plusieurs devises | 04-gerer-plusieurs-devises.md | Protéger sa marge des variations du taux de change. | 14
+? Un sac acheté 32 dollars : combien coûte-t-il en francs au taux de 3 000 francs pour 1 dollar ?
++ 96 000 francs
+- 89 600 francs
+- 32 000 francs
+- 3 032 francs
+> 32 × 3 000 = 96 000.
+? Où trouver le taux de change du jour ?
++ Auprès d'une source actuelle et fiable comme la banque centrale ou une banque
+- Auprès d'un assistant IA, sans vérifier
+- Dans un vieux journal
+- En le devinant
+> Un taux ancien fausse tous les calculs.
+lesson: tresorerie | La trésorerie | 05-la-tresorerie.md | Prévoir les entrées et sorties d'argent. | 15
+? Pourquoi Didier ne peut-il pas payer ses ouvriers alors qu'il est rentable ?
++ Il a payé le bois avant d'être payé par ses clients
+- Ses commandes ne rapportent rien
+- Il n'a pas de clients
+- Ses ouvriers sont trop nombreux
+> Rentabilité et trésorerie sont deux choses différentes.
+lesson: piloter | Piloter avec des chiffres simples | 06-piloter-avec-des-chiffres-simples.md | Suivre un tableau de bord financier. | 14
+? Lequel est un signal d'alerte ?
++ La trésorerie baisse plusieurs mois de suite
+- Les ventes augmentent avec une marge stable
+- Les impayés diminuent
+- La réserve de trésorerie grandit
+> Réagissez avant que la situation s'installe.
+exam:
+? Pourquoi Maman Chantal ne gagnait-elle presque rien malgré de nombreuses ventes ?
++ Elle ne connaissait pas tous ses coûts et vendait certains produits à perte
+- Elle n'avait pas assez de clients
+- Ses prix étaient trop élevés
+- Elle vendait trop de riz
+? Quels sont des coûts directs ?
++ Le prix d'achat de la marchandise
++ L'emballage
++ Le transport de la marchandise
+- Le loyer mensuel
+? Comment calcule-t-on le prix de revient ?
++ Coût d'achat + frais directs
+- Prix de vente − marge des concurrents
+- Loyer + salaires
+- Prix de vente × 2
+? Coûts fixes de 400 dollars, marge de 8 dollars par sac. Combien de sacs pour atteindre le seuil de rentabilité ?
++ 50
+- 408
+- 3 200
+- 8
+? Prix de revient 32 dollars et marge 8 dollars : quel est le taux de marge (marge ÷ prix de revient) ?
++ 25 %
+- 20 %
+- 8 %
+- 40 %
+? Pourquoi vérifier ses calculs avec un tableur ou une calculatrice plutôt qu'avec un assistant conversationnel ?
++ Les assistants conversationnels peuvent faire des erreurs d'arithmétique
+- Les tableurs sont plus jolis
+- L'IA refuse de calculer
+- Ce n'est pas nécessaire
+? Quels éléments faut-il prendre en compte pour fixer un prix ?
++ Les coûts
++ Les prix des concurrents
++ La valeur perçue par le client
+- L'humeur du jour
+? Le taux de change passe de 2 800 à 3 000 francs pour 1 dollar et le prix de vente en francs ne change pas. Que devient la marge d'un produit acheté en dollars ?
++ Elle diminue
+- Elle augmente
+- Elle ne change pas
+- Elle double
+? Qu'est-ce que la trésorerie ?
++ L'argent réellement disponible à un moment donné
+- Le chiffre d'affaires annuel
+- La valeur du stock
+- Le bénéfice prévu
+? Quelles actions améliorent la trésorerie ?
++ Demander des acomptes
++ Relancer rapidement les impayés
++ Limiter les stocks dormants
+- Accorder du crédit à tous les clients sans limite
+? Vrai ou faux : l'IA peut remplacer un comptable pour les déclarations fiscales.
+- Vrai
++ Faux
+? À quelle fréquence revoir ses prix, au minimum ?
++ Chaque trimestre, et plus souvent en cas de forte variation des coûts ou du taux
+- Une fois tous les dix ans
+- Jamais
+- Uniquement quand un client se plaint

@@ -1,0 +1,584 @@
+{
+ "slug": "prix-marges-et-tresorerie",
+ "format": "self_paced",
+ "objectives": [
+  "Recenser ses coûts directs et ses coûts fixes",
+  "Calculer prix de revient, marge, taux de marge et taux de marque",
+  "Fixer ses prix en tenant compte des coûts, du marché et de la valeur",
+  "Protéger ses marges des variations du taux de change",
+  "Construire un plan de trésorerie",
+  "Piloter son activité avec un tableau de bord simple"
+ ],
+ "skills": [
+  "Calculer des prix et des marges",
+  "Gérer sa trésorerie",
+  "Piloter une activité avec des indicateurs financiers"
+ ],
+ "modules": [
+  {
+   "title": "Coûts, marges et prix",
+   "lessons": [
+    {
+     "key": "couts",
+     "title": "Connaître ses coûts",
+     "file": "01-connaitre-ses-couts.md",
+     "objective": "Recenser coûts directs et coûts fixes.",
+     "duration_minutes": 13,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Lequel est un coût fixe ?",
+       "options": [
+        {
+         "text": "Le loyer de la boutique",
+         "correct": true
+        },
+        {
+         "text": "Le prix d'achat de la marchandise",
+         "correct": false
+        },
+        {
+         "text": "Les sachets d'emballage",
+         "correct": false
+        },
+        {
+         "text": "La commission sur chaque vente",
+         "correct": false
+        }
+       ],
+       "explanation": "Il est payé même sans vendre.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quel coût est le plus souvent oublié ?",
+       "options": [
+        {
+         "text": "La rémunération du propriétaire de l'activité",
+         "correct": true
+        },
+        {
+         "text": "Le prix d'achat de la marchandise",
+         "correct": false
+        },
+        {
+         "text": "Le loyer",
+         "correct": false
+        },
+        {
+         "text": "Le transport de la marchandise",
+         "correct": false
+        }
+       ],
+       "explanation": "Sans compter votre temps, vous travaillez peut-être gratuitement.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "marge",
+     "title": "Calculer sa marge",
+     "file": "02-calculer-sa-marge.md",
+     "objective": "Calculer prix de revient, marge et seuil de rentabilité.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Prix de revient 32 dollars, prix de vente 40 dollars. Quelle est la marge ?",
+       "options": [
+        {
+         "text": "8 dollars",
+         "correct": true
+        },
+        {
+         "text": "72 dollars",
+         "correct": false
+        },
+        {
+         "text": "40 dollars",
+         "correct": false
+        },
+        {
+         "text": "1,25 dollar",
+         "correct": false
+        }
+       ],
+       "explanation": "40 − 32 = 8.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Avec ces chiffres, quel est le taux de marque (marge ÷ prix de vente) ?",
+       "options": [
+        {
+         "text": "20 %",
+         "correct": true
+        },
+        {
+         "text": "25 %",
+         "correct": false
+        },
+        {
+         "text": "8 %",
+         "correct": false
+        },
+        {
+         "text": "80 %",
+         "correct": false
+        }
+       ],
+       "explanation": "8 ÷ 40 = 0,20.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "prix",
+     "title": "Fixer ses prix",
+     "file": "03-fixer-ses-prix.md",
+     "objective": "Choisir un prix juste.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce que le prix plancher ?",
+       "options": [
+        {
+         "text": "Le prix de revient plus la marge nécessaire, en dessous duquel on perd de l'argent",
+         "correct": true
+        },
+        {
+         "text": "Le prix le plus bas du marché",
+         "correct": false
+        },
+        {
+         "text": "Le prix du voisin",
+         "correct": false
+        },
+        {
+         "text": "Le prix de gros",
+         "correct": false
+        }
+       ],
+       "explanation": "En dessous, chaque vente vous coûte.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : copier le prix du voisin est une méthode fiable.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Ses coûts ne sont pas forcément les vôtres.",
+       "kind": "true_false"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Argent et pilotage",
+   "lessons": [
+    {
+     "key": "devises",
+     "title": "Gérer plusieurs devises",
+     "file": "04-gerer-plusieurs-devises.md",
+     "objective": "Protéger sa marge des variations du taux de change.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Un sac acheté 32 dollars : combien coûte-t-il en francs au taux de 3 000 francs pour 1 dollar ?",
+       "options": [
+        {
+         "text": "96 000 francs",
+         "correct": true
+        },
+        {
+         "text": "89 600 francs",
+         "correct": false
+        },
+        {
+         "text": "32 000 francs",
+         "correct": false
+        },
+        {
+         "text": "3 032 francs",
+         "correct": false
+        }
+       ],
+       "explanation": "32 × 3 000 = 96 000.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Où trouver le taux de change du jour ?",
+       "options": [
+        {
+         "text": "Auprès d'une source actuelle et fiable comme la banque centrale ou une banque",
+         "correct": true
+        },
+        {
+         "text": "Auprès d'un assistant IA, sans vérifier",
+         "correct": false
+        },
+        {
+         "text": "Dans un vieux journal",
+         "correct": false
+        },
+        {
+         "text": "En le devinant",
+         "correct": false
+        }
+       ],
+       "explanation": "Un taux ancien fausse tous les calculs.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "tresorerie",
+     "title": "La trésorerie",
+     "file": "05-la-tresorerie.md",
+     "objective": "Prévoir les entrées et sorties d'argent.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi Didier ne peut-il pas payer ses ouvriers alors qu'il est rentable ?",
+       "options": [
+        {
+         "text": "Il a payé le bois avant d'être payé par ses clients",
+         "correct": true
+        },
+        {
+         "text": "Ses commandes ne rapportent rien",
+         "correct": false
+        },
+        {
+         "text": "Il n'a pas de clients",
+         "correct": false
+        },
+        {
+         "text": "Ses ouvriers sont trop nombreux",
+         "correct": false
+        }
+       ],
+       "explanation": "Rentabilité et trésorerie sont deux choses différentes.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "piloter",
+     "title": "Piloter avec des chiffres simples",
+     "file": "06-piloter-avec-des-chiffres-simples.md",
+     "objective": "Suivre un tableau de bord financier.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Lequel est un signal d'alerte ?",
+       "options": [
+        {
+         "text": "La trésorerie baisse plusieurs mois de suite",
+         "correct": true
+        },
+        {
+         "text": "Les ventes augmentent avec une marge stable",
+         "correct": false
+        },
+        {
+         "text": "Les impayés diminuent",
+         "correct": false
+        },
+        {
+         "text": "La réserve de trésorerie grandit",
+         "correct": false
+        }
+       ],
+       "explanation": "Réagissez avant que la situation s'installe.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Prix, marges et trésorerie",
+ "summary": "Fixez des prix justes et gérez votre argent sereinement : connaître ses coûts, calculer ses marges, choisir ses prix, gérer le taux de change, prévoir sa trésorerie et piloter avec des chiffres simples.",
+ "audience": "entrepreneur",
+ "parcours": "entrepreneuriat",
+ "level": "intermediaire",
+ "duration_minutes": 85,
+ "position": 15,
+ "prerequisites": "Savoir faire des calculs simples. Le cours « Du concept au plan d'affaires » est conseillé.",
+ "description": "Beaucoup de commerces vendent beaucoup sans gagner d'argent, parce que leurs prix ne couvrent pas tous leurs coûts, ou parce que la trésorerie manque au mauvais moment.\n\nCe cours vous apprend, avec des exemples concrets en dollars et en francs, à recenser vos coûts, calculer vos marges et votre seuil de rentabilité, fixer des prix justes, protéger vos marges des variations du taux de change, prévoir votre trésorerie et suivre quelques chiffres clés. Vous utiliserez le « Calculateur de prix et de marge » de l'Académie.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Pourquoi Maman Chantal ne gagnait-elle presque rien malgré de nombreuses ventes ?",
+    "options": [
+     {
+      "text": "Elle ne connaissait pas tous ses coûts et vendait certains produits à perte",
+      "correct": true
+     },
+     {
+      "text": "Elle n'avait pas assez de clients",
+      "correct": false
+     },
+     {
+      "text": "Ses prix étaient trop élevés",
+      "correct": false
+     },
+     {
+      "text": "Elle vendait trop de riz",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels sont des coûts directs ?",
+    "options": [
+     {
+      "text": "Le prix d'achat de la marchandise",
+      "correct": true
+     },
+     {
+      "text": "L'emballage",
+      "correct": true
+     },
+     {
+      "text": "Le transport de la marchandise",
+      "correct": true
+     },
+     {
+      "text": "Le loyer mensuel",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Comment calcule-t-on le prix de revient ?",
+    "options": [
+     {
+      "text": "Coût d'achat + frais directs",
+      "correct": true
+     },
+     {
+      "text": "Prix de vente − marge des concurrents",
+      "correct": false
+     },
+     {
+      "text": "Loyer + salaires",
+      "correct": false
+     },
+     {
+      "text": "Prix de vente × 2",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Coûts fixes de 400 dollars, marge de 8 dollars par sac. Combien de sacs pour atteindre le seuil de rentabilité ?",
+    "options": [
+     {
+      "text": "50",
+      "correct": true
+     },
+     {
+      "text": "408",
+      "correct": false
+     },
+     {
+      "text": "3 200",
+      "correct": false
+     },
+     {
+      "text": "8",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Prix de revient 32 dollars et marge 8 dollars : quel est le taux de marge (marge ÷ prix de revient) ?",
+    "options": [
+     {
+      "text": "25 %",
+      "correct": true
+     },
+     {
+      "text": "20 %",
+      "correct": false
+     },
+     {
+      "text": "8 %",
+      "correct": false
+     },
+     {
+      "text": "40 %",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi vérifier ses calculs avec un tableur ou une calculatrice plutôt qu'avec un assistant conversationnel ?",
+    "options": [
+     {
+      "text": "Les assistants conversationnels peuvent faire des erreurs d'arithmétique",
+      "correct": true
+     },
+     {
+      "text": "Les tableurs sont plus jolis",
+      "correct": false
+     },
+     {
+      "text": "L'IA refuse de calculer",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas nécessaire",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels éléments faut-il prendre en compte pour fixer un prix ?",
+    "options": [
+     {
+      "text": "Les coûts",
+      "correct": true
+     },
+     {
+      "text": "Les prix des concurrents",
+      "correct": true
+     },
+     {
+      "text": "La valeur perçue par le client",
+      "correct": true
+     },
+     {
+      "text": "L'humeur du jour",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Le taux de change passe de 2 800 à 3 000 francs pour 1 dollar et le prix de vente en francs ne change pas. Que devient la marge d'un produit acheté en dollars ?",
+    "options": [
+     {
+      "text": "Elle diminue",
+      "correct": true
+     },
+     {
+      "text": "Elle augmente",
+      "correct": false
+     },
+     {
+      "text": "Elle ne change pas",
+      "correct": false
+     },
+     {
+      "text": "Elle double",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Qu'est-ce que la trésorerie ?",
+    "options": [
+     {
+      "text": "L'argent réellement disponible à un moment donné",
+      "correct": true
+     },
+     {
+      "text": "Le chiffre d'affaires annuel",
+      "correct": false
+     },
+     {
+      "text": "La valeur du stock",
+      "correct": false
+     },
+     {
+      "text": "Le bénéfice prévu",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles actions améliorent la trésorerie ?",
+    "options": [
+     {
+      "text": "Demander des acomptes",
+      "correct": true
+     },
+     {
+      "text": "Relancer rapidement les impayés",
+      "correct": true
+     },
+     {
+      "text": "Limiter les stocks dormants",
+      "correct": true
+     },
+     {
+      "text": "Accorder du crédit à tous les clients sans limite",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Vrai ou faux : l'IA peut remplacer un comptable pour les déclarations fiscales.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "À quelle fréquence revoir ses prix, au minimum ?",
+    "options": [
+     {
+      "text": "Chaque trimestre, et plus souvent en cas de forte variation des coûts ou du taux",
+      "correct": true
+     },
+     {
+      "text": "Une fois tous les dix ans",
+      "correct": false
+     },
+     {
+      "text": "Jamais",
+      "correct": false
+     },
+     {
+      "text": "Uniquement quand un client se plaint",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}
