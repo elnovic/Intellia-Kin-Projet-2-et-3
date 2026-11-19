@@ -1,0 +1,142 @@
+title: Réussir ses entretiens et tests de recrutement
+summary: Préparez-vous avec méthode aux entretiens et aux tests de recrutement : connaître l'entreprise, répondre avec la méthode STAR, déjouer les questions pièges et s'entraîner avec l'IA.
+audience: jeune_diplome
+parcours: carriere
+level: debutant
+duration: 75
+position: 8
+prerequisites: Le cours « Image professionnelle : CV, LinkedIn et portfolio » est conseillé.
+description: Décrocher un entretien est une première victoire. Le transformer en offre d'emploi demande de la préparation, de l'entraînement et un peu de méthode.
+description: Ce cours vous apprend à préparer chaque entretien, à raconter vos expériences avec la méthode STAR, à répondre aux questions classiques, à réussir les tests de logique, de langue et d'Excel, à gérer votre stress le jour J et à assurer le suivi après l'entretien. L'IA devient votre partenaire d'entraînement, avec le simulateur d'entretien et les tests de recrutement de l'Académie.
+objective: Préparer un entretien : entreprise, poste et parcours
+objective: Répondre avec la méthode STAR
+objective: Répondre aux questions classiques et inappropriées
+objective: S'entraîner efficacement aux tests de recrutement
+objective: Gérer son stress et sa communication non verbale
+objective: Assurer le suivi après l'entretien
+skill: Se préparer à un entretien d'embauche
+skill: Raconter ses expériences de façon convaincante
+skill: Réussir des tests de recrutement
+module: Préparer
+lesson: preparer | Se préparer | 01-se-preparer.md | Connaître l'entreprise, le poste et son parcours. | 12 | apercu
+? Quelles sont les trois choses à connaître parfaitement avant un entretien ?
++ L'entreprise
++ Le poste
++ Votre propre parcours
+- Le salaire de tous les employés
+> L'entreprise, le poste et vous-même.
+? Pourquoi vérifier les informations sur l'entreprise fournies par l'IA ?
++ L'IA peut confondre des entreprises ou donner des informations anciennes
+- L'IA ne connaît aucune entreprise
+- Ce n'est pas nécessaire
+- Pour perdre du temps
+> Vérifiez à la source : site, page officielle, presse.
+lesson: star | Répondre avec la méthode STAR | 02-repondre-avec-la-methode-star.md | Raconter ses expériences de façon convaincante. | 13
+? Que signifie STAR ?
++ Situation, Tâche, Action, Résultat
+- Sourire, Tenue, Attitude, Respect
+- Salaire, Temps, Avantages, Retraite
+- Style, Talent, Ambition, Réussite
+> La partie Action est la plus importante.
+? Vrai ou faux : dans la partie Action, il vaut mieux dire « je » que seulement « nous ».
++ Vrai
+- Faux
+> Le recruteur veut savoir ce que vous avez fait personnellement.
+lesson: questions | Les questions pièges | 03-les-questions-pieges.md | Répondre aux questions classiques avec recul. | 13
+? Comment répondre à « Quels sont vos défauts ? »
++ Un vrai point d'amélioration, avec ce que vous faites pour progresser
+- « Je n'ai aucun défaut. »
+- « Je suis trop perfectionniste. »
+- Un défaut rédhibitoire pour le poste
+> Honnêteté et recul sont appréciés.
+? Que répondre à « Avez-vous des questions ? »
++ Poser deux ou trois questions préparées sur le poste ou l'équipe
+- « Non, merci. »
+- « Combien de jours de congé ? » uniquement
+- Rien
+> C'est une occasion de montrer votre intérêt.
+module: S'entraîner et convaincre
+lesson: tests | Les tests de recrutement | 04-les-tests-de-recrutement.md | S'entraîner aux principaux types de tests. | 13
+? Quelle préparation est la plus efficace pour les tests ?
++ Vingt minutes par jour pendant deux semaines, chronométrées
+- Cinq heures la veille
+- Aucune, cela ne sert à rien
+- Lire des romans
+> La régularité et la gestion du temps font la différence.
+? Vrai ou faux : on peut utiliser l'IA pendant un test si personne ne regarde.
+- Vrai
++ Faux
+> Utiliser l'IA quand c'est interdit est une fraude.
+lesson: jour-j | Le jour J | 05-le-jour-j.md | Gérer son stress et sa communication. | 12
+? En entretien en ligne, où regarder quand vous parlez ?
++ La caméra
+- Votre propre image à l'écran
+- Le plafond
+- Votre téléphone
+> C'est ainsi que l'interlocuteur se sent regardé.
+lesson: apres | Après l'entretien | 06-apres-l-entretien.md | Assurer le suivi et rebondir. | 12
+? Quand envoyer un message de remerciement ?
++ Dans les vingt-quatre heures
+- Un mois plus tard
+- Jamais
+- Avant l'entretien
+> Court, personnalisé, sans insister.
+exam:
+? Que faire pour un entretien en ligne ?
++ Tester connexion, caméra et micro
++ Choisir un endroit calme et lumineux
++ Prévoir des données mobiles en secours
+- Garder la télévision allumée
+? Quelle est la bonne heure d'arrivée à un entretien en présentiel ?
++ Environ dix minutes en avance
+- Une heure en avance
+- Pile à l'heure, en courant
+- Avec quelques minutes de retard
+? Dans la méthode STAR, quelle partie est la plus importante ?
++ L'action personnelle
+- La situation
+- Le nom de l'entreprise
+- La date
+? Un candidat débutant pense n'avoir aucune histoire STAR. Que lui conseiller ?
++ Puiser dans ses études, sa vie associative, ses petits boulots ou sa vie familiale
+- Inventer des expériences
+- Refuser de répondre
+- Parler uniquement de ses diplômes
+? Comment répondre à « Parlez-moi de vous » ?
++ Une présentation structurée : formation, expériences clés, compétences, motivation
+- Raconter toute son enfance
+- « Tout est dans mon CV. »
+- Parler de ses loisirs uniquement
+? Comment se préparer à la question sur le salaire ?
++ Se renseigner sur les salaires pratiqués pour ce poste et proposer une fourchette réaliste
+- Demander le double de ce qu'on espère
+- Dire qu'on accepte n'importe quoi
+- Refuser de répondre
+? Un recruteur vous interroge sur vos projets de grossesse. Que faire ?
++ Répondre poliment en ramenant la discussion sur vos compétences
+- Quitter la salle en criant
+- Mentir
+- Raconter toute sa vie privée
+? Quels sont des types courants de tests de recrutement ?
++ Logique et raisonnement
++ Langue
++ Tests techniques comme Excel
+- Tests de cuisine pour tous les postes
+? Pendant un test, une question vous bloque. Que faire ?
++ Passer à la suivante et y revenir à la fin
+- Rester bloqué jusqu'à trouver
+- Abandonner le test
+- Demander la réponse à son voisin
+? Vrai ou faux : il est recommandé de critiquer un ancien employeur pour montrer son honnêteté.
+- Vrai
++ Faux
+? Combien de relances après un entretien, si le délai annoncé est dépassé ?
++ Une, éventuellement deux, espacées d'une semaine
+- Une par jour
+- Aucune, jamais
+- Dix
+? Après un refus, quelle attitude est la plus utile ?
++ Remercier, demander un retour et continuer à postuler
+- Envoyer un message en colère
+- Arrêter de chercher
+- Ne pas répondre

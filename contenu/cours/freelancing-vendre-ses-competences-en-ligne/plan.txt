@@ -1,0 +1,138 @@
+title: Freelancing : vendre ses compétences en ligne
+summary: Lancez-vous comme freelance : choisir ses canaux, créer un profil qui convertit, répondre aux offres, cadrer ses missions, se faire payer en sécurité et durer.
+audience: jeune_diplome
+parcours: carriere
+level: intermediaire
+duration: 80
+position: 9
+prerequisites: Le cours « Image professionnelle : CV, LinkedIn et portfolio » est conseillé.
+description: Internet permet de travailler pour des clients du monde entier, depuis chez soi. Mais le freelancing a ses codes, ses pièges et ses arnaques.
+description: Ce cours vous guide pas à pas : comprendre le freelancing à l'heure de l'IA, choisir les bons canaux, créer un profil qui donne envie, rédiger des propositions qui décrochent des missions, cadrer et livrer avec professionnalisme, être payé en toute sécurité et construire une activité durable.
+objective: Comprendre le freelancing et l'impact de l'IA
+objective: Choisir ses canaux et éviter les arnaques
+objective: Créer un profil qui donne envie
+objective: Rédiger des propositions personnalisées
+objective: Cadrer une mission et sécuriser ses paiements
+objective: Construire une activité durable
+skill: Trouver des missions en ligne
+skill: Gérer la relation avec des clients à distance
+skill: Sécuriser ses revenus de freelance
+module: Se lancer
+lesson: freelancing | Le freelancing aujourd'hui | 01-le-freelancing-aujourd-hui.md | Comprendre le freelancing à l'heure de l'IA. | 12 | apercu
+? Comment l'IA change-t-elle le freelancing ?
++ Elle rend certaines tâches simples moins chères
++ Elle avantage les freelances qui la maîtrisent
+- Elle supprime tous les métiers freelance
+- Elle n'a aucun effet
+> Maîtriser l'IA et apporter un jugement humain donne un avantage.
+lesson: canaux | Choisir ses canaux | 02-choisir-ses-canaux.md | Trouver où chercher ses clients. | 13
+? Que vérifier avant de s'inscrire sur une plateforme internationale ?
++ Qu'elle accepte les freelances de votre pays
++ Qu'il existe un moyen de retrait qui fonctionne pour vous
+- La couleur du logo
+- Le nombre de publicités
+> Les conditions changent : lisez la page d'aide officielle.
+? Laquelle de ces offres est probablement une arnaque ?
++ On vous demande de payer des frais d'inscription pour obtenir la mission
+- Un client pose des questions sur votre expérience
+- Une ONG publie un appel à consultants avec un dossier à remplir
+- Une plateforme propose un paiement sécurisé
+> Un vrai client ne vous demande pas de payer pour travailler.
+lesson: profil | Un profil qui convertit | 03-un-profil-qui-convertit.md | Rédiger un profil qui donne envie. | 13
+? Quel titre de profil est le plus efficace ?
++ « Traductrice anglais-français spécialisée dans les documents d'ONG »
+- « Freelance polyvalent »
+- « Je fais tout »
+- « Disponible »
+> Un titre précis rend visible.
+module: Décrocher et livrer
+lesson: propositions | Répondre aux offres | 04-repondre-aux-offres.md | Rédiger des propositions qui décrochent des missions. | 14
+? Que doit montrer la première phrase d'une proposition ?
++ Que vous avez lu et compris l'offre
+- Votre date de naissance
+- La liste de tous vos diplômes
+- Votre prix
+> Reprenez un détail précis de l'offre.
+? Vrai ou faux : accepter d'être payé hors de la plateforme est sans risque.
+- Vrai
++ Faux
+> Vous perdez la protection en cas de litige et risquez la fermeture du compte.
+lesson: cadrer | Cadrer, livrer, se faire payer | 05-cadrer-livrer-se-faire-payer.md | Sécuriser chaque mission. | 14
+? Que faire face à une demande hors périmètre ?
++ Proposer courtoisement un nouveau devis
+- Accepter gratuitement à chaque fois
+- Ignorer le client
+- Annuler la mission
+> Toute demande supplémentaire se chiffre.
+? Quelles pratiques sécurisent les paiements hors plateforme ?
++ Demander un acompte
++ Prévoir des paiements par étapes
+- Livrer tout avant de parler d'argent
++ Envoyer une facture claire
+> Acompte, étapes et facture protègent votre travail.
+lesson: durer | Durer en freelance | 06-durer-en-freelance.md | Construire une activité stable. | 14
+? Pourquoi mettre de côté une partie de chaque paiement ?
++ Pour faire face aux mois creux, aux impôts et à l'équipement
+- Pour ne jamais rien dépenser
+- Ce n'est pas utile
+- Pour payer la plateforme deux fois
+> Les revenus d'un freelance sont irréguliers.
+exam:
+? Qu'est-ce qu'un freelance ?
++ Un indépendant qui vend ses compétences à plusieurs clients, mission par mission
+- Un salarié d'une seule entreprise
+- Un stagiaire non payé
+- Un fonctionnaire
+? Quelles qualités font un bon freelance ?
++ La fiabilité
++ La communication
++ L'organisation
+- L'improvisation permanente
+? Pourquoi se concentrer sur un ou deux canaux au début ?
++ Un profil soigné vaut mieux que dix profils à moitié remplis
+- Les autres canaux sont interdits
+- Pour avoir moins de clients
+- Ce n'est pas recommandé
+? Un inconnu vous propose un salaire élevé pour très peu de travail, à condition d'acheter d'abord du matériel. Que faire ?
++ Refuser : c'est une arnaque classique
+- Accepter vite avant qu'un autre le fasse
+- Payer la moitié
+- Lui envoyer vos codes bancaires
+? Dans quel ordre une bonne description de profil est-elle construite ?
++ Problème du client, offre, preuves, appel à l'action
+- Diplômes, loisirs, famille
+- Prix, horaires, congés
+- Photo, adresse, âge
+? Vrai ou faux : on peut indiquer un niveau d'anglais supérieur au sien pour obtenir plus de missions.
+- Vrai
++ Faux
+? Que faire d'une proposition rédigée avec l'aide de l'IA ?
++ La personnaliser avec des détails précis de l'offre
+- L'envoyer telle quelle à toutes les offres
+- La traduire en dix langues
+- La supprimer
+? Quels éléments cadrer par écrit avant une mission ?
++ Le périmètre
++ Le délai
++ Le prix et le nombre de révisions
+- Le prénom de vos voisins
+? À quoi sert le système de séquestre d'une plateforme ?
++ L'argent est réservé avant la mission puis libéré à la validation
+- À payer moins d'impôts
+- À cacher son identité
+- À choisir ses clients
+? Que faire en cas de retard prévisible sur une livraison ?
++ Prévenir immédiatement le client avec une solution
+- Ne rien dire et espérer qu'il ne remarque pas
+- Disparaître
+- Livrer un travail non relu
+? Comment augmenter ses tarifs ?
++ Progressivement, d'abord pour les nouveaux clients, en justifiant par la valeur
+- Doubler du jour au lendemain pour tout le monde sans prévenir
+- Jamais
+- En fonction de ses dépenses personnelles uniquement
+? Comment faire face aux coupures d'électricité et d'internet ?
++ Prévoir batterie, données de secours, lieu de repli, et prévenir le client si besoin
+- Manquer les délais sans explication
+- Abandonner le freelancing
+- Ce n'est pas un problème

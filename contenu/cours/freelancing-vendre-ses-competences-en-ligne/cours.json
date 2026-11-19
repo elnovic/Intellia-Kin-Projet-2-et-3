@@ -1,0 +1,561 @@
+{
+ "slug": "freelancing-vendre-ses-competences-en-ligne",
+ "format": "self_paced",
+ "objectives": [
+  "Comprendre le freelancing et l'impact de l'IA",
+  "Choisir ses canaux et éviter les arnaques",
+  "Créer un profil qui donne envie",
+  "Rédiger des propositions personnalisées",
+  "Cadrer une mission et sécuriser ses paiements",
+  "Construire une activité durable"
+ ],
+ "skills": [
+  "Trouver des missions en ligne",
+  "Gérer la relation avec des clients à distance",
+  "Sécuriser ses revenus de freelance"
+ ],
+ "modules": [
+  {
+   "title": "Se lancer",
+   "lessons": [
+    {
+     "key": "freelancing",
+     "title": "Le freelancing aujourd'hui",
+     "file": "01-le-freelancing-aujourd-hui.md",
+     "objective": "Comprendre le freelancing à l'heure de l'IA.",
+     "duration_minutes": 12,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Comment l'IA change-t-elle le freelancing ?",
+       "options": [
+        {
+         "text": "Elle rend certaines tâches simples moins chères",
+         "correct": true
+        },
+        {
+         "text": "Elle avantage les freelances qui la maîtrisent",
+         "correct": true
+        },
+        {
+         "text": "Elle supprime tous les métiers freelance",
+         "correct": false
+        },
+        {
+         "text": "Elle n'a aucun effet",
+         "correct": false
+        }
+       ],
+       "explanation": "Maîtriser l'IA et apporter un jugement humain donne un avantage.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "canaux",
+     "title": "Choisir ses canaux",
+     "file": "02-choisir-ses-canaux.md",
+     "objective": "Trouver où chercher ses clients.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que vérifier avant de s'inscrire sur une plateforme internationale ?",
+       "options": [
+        {
+         "text": "Qu'elle accepte les freelances de votre pays",
+         "correct": true
+        },
+        {
+         "text": "Qu'il existe un moyen de retrait qui fonctionne pour vous",
+         "correct": true
+        },
+        {
+         "text": "La couleur du logo",
+         "correct": false
+        },
+        {
+         "text": "Le nombre de publicités",
+         "correct": false
+        }
+       ],
+       "explanation": "Les conditions changent : lisez la page d'aide officielle.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Laquelle de ces offres est probablement une arnaque ?",
+       "options": [
+        {
+         "text": "On vous demande de payer des frais d'inscription pour obtenir la mission",
+         "correct": true
+        },
+        {
+         "text": "Un client pose des questions sur votre expérience",
+         "correct": false
+        },
+        {
+         "text": "Une ONG publie un appel à consultants avec un dossier à remplir",
+         "correct": false
+        },
+        {
+         "text": "Une plateforme propose un paiement sécurisé",
+         "correct": false
+        }
+       ],
+       "explanation": "Un vrai client ne vous demande pas de payer pour travailler.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "profil",
+     "title": "Un profil qui convertit",
+     "file": "03-un-profil-qui-convertit.md",
+     "objective": "Rédiger un profil qui donne envie.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel titre de profil est le plus efficace ?",
+       "options": [
+        {
+         "text": "« Traductrice anglais-français spécialisée dans les documents d'ONG »",
+         "correct": true
+        },
+        {
+         "text": "« Freelance polyvalent »",
+         "correct": false
+        },
+        {
+         "text": "« Je fais tout »",
+         "correct": false
+        },
+        {
+         "text": "« Disponible »",
+         "correct": false
+        }
+       ],
+       "explanation": "Un titre précis rend visible.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Décrocher et livrer",
+   "lessons": [
+    {
+     "key": "propositions",
+     "title": "Répondre aux offres",
+     "file": "04-repondre-aux-offres.md",
+     "objective": "Rédiger des propositions qui décrochent des missions.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que doit montrer la première phrase d'une proposition ?",
+       "options": [
+        {
+         "text": "Que vous avez lu et compris l'offre",
+         "correct": true
+        },
+        {
+         "text": "Votre date de naissance",
+         "correct": false
+        },
+        {
+         "text": "La liste de tous vos diplômes",
+         "correct": false
+        },
+        {
+         "text": "Votre prix",
+         "correct": false
+        }
+       ],
+       "explanation": "Reprenez un détail précis de l'offre.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : accepter d'être payé hors de la plateforme est sans risque.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Vous perdez la protection en cas de litige et risquez la fermeture du compte.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "cadrer",
+     "title": "Cadrer, livrer, se faire payer",
+     "file": "05-cadrer-livrer-se-faire-payer.md",
+     "objective": "Sécuriser chaque mission.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que faire face à une demande hors périmètre ?",
+       "options": [
+        {
+         "text": "Proposer courtoisement un nouveau devis",
+         "correct": true
+        },
+        {
+         "text": "Accepter gratuitement à chaque fois",
+         "correct": false
+        },
+        {
+         "text": "Ignorer le client",
+         "correct": false
+        },
+        {
+         "text": "Annuler la mission",
+         "correct": false
+        }
+       ],
+       "explanation": "Toute demande supplémentaire se chiffre.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelles pratiques sécurisent les paiements hors plateforme ?",
+       "options": [
+        {
+         "text": "Demander un acompte",
+         "correct": true
+        },
+        {
+         "text": "Prévoir des paiements par étapes",
+         "correct": true
+        },
+        {
+         "text": "Livrer tout avant de parler d'argent",
+         "correct": false
+        },
+        {
+         "text": "Envoyer une facture claire",
+         "correct": true
+        }
+       ],
+       "explanation": "Acompte, étapes et facture protègent votre travail.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "durer",
+     "title": "Durer en freelance",
+     "file": "06-durer-en-freelance.md",
+     "objective": "Construire une activité stable.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi mettre de côté une partie de chaque paiement ?",
+       "options": [
+        {
+         "text": "Pour faire face aux mois creux, aux impôts et à l'équipement",
+         "correct": true
+        },
+        {
+         "text": "Pour ne jamais rien dépenser",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas utile",
+         "correct": false
+        },
+        {
+         "text": "Pour payer la plateforme deux fois",
+         "correct": false
+        }
+       ],
+       "explanation": "Les revenus d'un freelance sont irréguliers.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Freelancing : vendre ses compétences en ligne",
+ "summary": "Lancez-vous comme freelance : choisir ses canaux, créer un profil qui convertit, répondre aux offres, cadrer ses missions, se faire payer en sécurité et durer.",
+ "audience": "jeune_diplome",
+ "parcours": "carriere",
+ "level": "intermediaire",
+ "duration_minutes": 80,
+ "position": 9,
+ "prerequisites": "Le cours « Image professionnelle : CV, LinkedIn et portfolio » est conseillé.",
+ "description": "Internet permet de travailler pour des clients du monde entier, depuis chez soi. Mais le freelancing a ses codes, ses pièges et ses arnaques.\n\nCe cours vous guide pas à pas : comprendre le freelancing à l'heure de l'IA, choisir les bons canaux, créer un profil qui donne envie, rédiger des propositions qui décrochent des missions, cadrer et livrer avec professionnalisme, être payé en toute sécurité et construire une activité durable.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Qu'est-ce qu'un freelance ?",
+    "options": [
+     {
+      "text": "Un indépendant qui vend ses compétences à plusieurs clients, mission par mission",
+      "correct": true
+     },
+     {
+      "text": "Un salarié d'une seule entreprise",
+      "correct": false
+     },
+     {
+      "text": "Un stagiaire non payé",
+      "correct": false
+     },
+     {
+      "text": "Un fonctionnaire",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles qualités font un bon freelance ?",
+    "options": [
+     {
+      "text": "La fiabilité",
+      "correct": true
+     },
+     {
+      "text": "La communication",
+      "correct": true
+     },
+     {
+      "text": "L'organisation",
+      "correct": true
+     },
+     {
+      "text": "L'improvisation permanente",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Pourquoi se concentrer sur un ou deux canaux au début ?",
+    "options": [
+     {
+      "text": "Un profil soigné vaut mieux que dix profils à moitié remplis",
+      "correct": true
+     },
+     {
+      "text": "Les autres canaux sont interdits",
+      "correct": false
+     },
+     {
+      "text": "Pour avoir moins de clients",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas recommandé",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un inconnu vous propose un salaire élevé pour très peu de travail, à condition d'acheter d'abord du matériel. Que faire ?",
+    "options": [
+     {
+      "text": "Refuser : c'est une arnaque classique",
+      "correct": true
+     },
+     {
+      "text": "Accepter vite avant qu'un autre le fasse",
+      "correct": false
+     },
+     {
+      "text": "Payer la moitié",
+      "correct": false
+     },
+     {
+      "text": "Lui envoyer vos codes bancaires",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Dans quel ordre une bonne description de profil est-elle construite ?",
+    "options": [
+     {
+      "text": "Problème du client, offre, preuves, appel à l'action",
+      "correct": true
+     },
+     {
+      "text": "Diplômes, loisirs, famille",
+      "correct": false
+     },
+     {
+      "text": "Prix, horaires, congés",
+      "correct": false
+     },
+     {
+      "text": "Photo, adresse, âge",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : on peut indiquer un niveau d'anglais supérieur au sien pour obtenir plus de missions.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Que faire d'une proposition rédigée avec l'aide de l'IA ?",
+    "options": [
+     {
+      "text": "La personnaliser avec des détails précis de l'offre",
+      "correct": true
+     },
+     {
+      "text": "L'envoyer telle quelle à toutes les offres",
+      "correct": false
+     },
+     {
+      "text": "La traduire en dix langues",
+      "correct": false
+     },
+     {
+      "text": "La supprimer",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels éléments cadrer par écrit avant une mission ?",
+    "options": [
+     {
+      "text": "Le périmètre",
+      "correct": true
+     },
+     {
+      "text": "Le délai",
+      "correct": true
+     },
+     {
+      "text": "Le prix et le nombre de révisions",
+      "correct": true
+     },
+     {
+      "text": "Le prénom de vos voisins",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "À quoi sert le système de séquestre d'une plateforme ?",
+    "options": [
+     {
+      "text": "L'argent est réservé avant la mission puis libéré à la validation",
+      "correct": true
+     },
+     {
+      "text": "À payer moins d'impôts",
+      "correct": false
+     },
+     {
+      "text": "À cacher son identité",
+      "correct": false
+     },
+     {
+      "text": "À choisir ses clients",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faire en cas de retard prévisible sur une livraison ?",
+    "options": [
+     {
+      "text": "Prévenir immédiatement le client avec une solution",
+      "correct": true
+     },
+     {
+      "text": "Ne rien dire et espérer qu'il ne remarque pas",
+      "correct": false
+     },
+     {
+      "text": "Disparaître",
+      "correct": false
+     },
+     {
+      "text": "Livrer un travail non relu",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment augmenter ses tarifs ?",
+    "options": [
+     {
+      "text": "Progressivement, d'abord pour les nouveaux clients, en justifiant par la valeur",
+      "correct": true
+     },
+     {
+      "text": "Doubler du jour au lendemain pour tout le monde sans prévenir",
+      "correct": false
+     },
+     {
+      "text": "Jamais",
+      "correct": false
+     },
+     {
+      "text": "En fonction de ses dépenses personnelles uniquement",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment faire face aux coupures d'électricité et d'internet ?",
+    "options": [
+     {
+      "text": "Prévoir batterie, données de secours, lieu de repli, et prévenir le client si besoin",
+      "correct": true
+     },
+     {
+      "text": "Manquer les délais sans explication",
+      "correct": false
+     },
+     {
+      "text": "Abandonner le freelancing",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas un problème",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

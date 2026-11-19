@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="300" fill="#F8FAFC"/>
+<text x="30" y="45" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">La méthode STAR pour répondre</text>
+<rect x="30" y="75" width="212" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="62" cy="108" r="17" fill="#0066FF"/><text x="62" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">1</text>
+<text x="48" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Situation</text>
+<text x="48" y="208" font-size="13.5" fill="#4A5568">le contexte, en une</text>
+<text x="48" y="227" font-size="13.5" fill="#4A5568">phrase</text>
+<path d="M246 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="272" y="75" width="212" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="304" cy="108" r="17" fill="#0066FF"/><text x="304" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">2</text>
+<text x="290" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Tâche</text>
+<text x="290" y="208" font-size="13.5" fill="#4A5568">ce que vous deviez</text>
+<text x="290" y="227" font-size="13.5" fill="#4A5568">faire</text>
+<path d="M489 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="515" y="75" width="212" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="547" cy="108" r="17" fill="#0066FF"/><text x="547" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">3</text>
+<text x="533" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Action</text>
+<text x="533" y="208" font-size="13.5" fill="#4A5568">ce que vous avez fait,</text>
+<text x="533" y="227" font-size="13.5" fill="#4A5568">vous</text>
+<path d="M732 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="758" y="75" width="212" height="190" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<circle cx="790" cy="108" r="17" fill="#00C9A7"/><text x="790" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">4</text>
+<text x="776" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Résultat</text>
+<text x="776" y="208" font-size="13.5" fill="#4A5568">ce qui a changé,</text>
+<text x="776" y="227" font-size="13.5" fill="#4A5568">chiffré si possible</text>
+</svg>

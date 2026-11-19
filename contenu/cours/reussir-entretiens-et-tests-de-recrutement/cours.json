@@ -1,0 +1,576 @@
+{
+ "slug": "reussir-entretiens-et-tests-de-recrutement",
+ "format": "self_paced",
+ "objectives": [
+  "Préparer un entretien : entreprise, poste et parcours",
+  "Répondre avec la méthode STAR",
+  "Répondre aux questions classiques et inappropriées",
+  "S'entraîner efficacement aux tests de recrutement",
+  "Gérer son stress et sa communication non verbale",
+  "Assurer le suivi après l'entretien"
+ ],
+ "skills": [
+  "Se préparer à un entretien d'embauche",
+  "Raconter ses expériences de façon convaincante",
+  "Réussir des tests de recrutement"
+ ],
+ "modules": [
+  {
+   "title": "Préparer",
+   "lessons": [
+    {
+     "key": "preparer",
+     "title": "Se préparer",
+     "file": "01-se-preparer.md",
+     "objective": "Connaître l'entreprise, le poste et son parcours.",
+     "duration_minutes": 12,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quelles sont les trois choses à connaître parfaitement avant un entretien ?",
+       "options": [
+        {
+         "text": "L'entreprise",
+         "correct": true
+        },
+        {
+         "text": "Le poste",
+         "correct": true
+        },
+        {
+         "text": "Votre propre parcours",
+         "correct": true
+        },
+        {
+         "text": "Le salaire de tous les employés",
+         "correct": false
+        }
+       ],
+       "explanation": "L'entreprise, le poste et vous-même.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Pourquoi vérifier les informations sur l'entreprise fournies par l'IA ?",
+       "options": [
+        {
+         "text": "L'IA peut confondre des entreprises ou donner des informations anciennes",
+         "correct": true
+        },
+        {
+         "text": "L'IA ne connaît aucune entreprise",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas nécessaire",
+         "correct": false
+        },
+        {
+         "text": "Pour perdre du temps",
+         "correct": false
+        }
+       ],
+       "explanation": "Vérifiez à la source : site, page officielle, presse.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "star",
+     "title": "Répondre avec la méthode STAR",
+     "file": "02-repondre-avec-la-methode-star.md",
+     "objective": "Raconter ses expériences de façon convaincante.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que signifie STAR ?",
+       "options": [
+        {
+         "text": "Situation, Tâche, Action, Résultat",
+         "correct": true
+        },
+        {
+         "text": "Sourire, Tenue, Attitude, Respect",
+         "correct": false
+        },
+        {
+         "text": "Salaire, Temps, Avantages, Retraite",
+         "correct": false
+        },
+        {
+         "text": "Style, Talent, Ambition, Réussite",
+         "correct": false
+        }
+       ],
+       "explanation": "La partie Action est la plus importante.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : dans la partie Action, il vaut mieux dire « je » que seulement « nous ».",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": true
+        },
+        {
+         "text": "Faux",
+         "correct": false
+        }
+       ],
+       "explanation": "Le recruteur veut savoir ce que vous avez fait personnellement.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "questions",
+     "title": "Les questions pièges",
+     "file": "03-les-questions-pieges.md",
+     "objective": "Répondre aux questions classiques avec recul.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Comment répondre à « Quels sont vos défauts ? »",
+       "options": [
+        {
+         "text": "Un vrai point d'amélioration, avec ce que vous faites pour progresser",
+         "correct": true
+        },
+        {
+         "text": "« Je n'ai aucun défaut. »",
+         "correct": false
+        },
+        {
+         "text": "« Je suis trop perfectionniste. »",
+         "correct": false
+        },
+        {
+         "text": "Un défaut rédhibitoire pour le poste",
+         "correct": false
+        }
+       ],
+       "explanation": "Honnêteté et recul sont appréciés.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que répondre à « Avez-vous des questions ? »",
+       "options": [
+        {
+         "text": "Poser deux ou trois questions préparées sur le poste ou l'équipe",
+         "correct": true
+        },
+        {
+         "text": "« Non, merci. »",
+         "correct": false
+        },
+        {
+         "text": "« Combien de jours de congé ? » uniquement",
+         "correct": false
+        },
+        {
+         "text": "Rien",
+         "correct": false
+        }
+       ],
+       "explanation": "C'est une occasion de montrer votre intérêt.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "S'entraîner et convaincre",
+   "lessons": [
+    {
+     "key": "tests",
+     "title": "Les tests de recrutement",
+     "file": "04-les-tests-de-recrutement.md",
+     "objective": "S'entraîner aux principaux types de tests.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle préparation est la plus efficace pour les tests ?",
+       "options": [
+        {
+         "text": "Vingt minutes par jour pendant deux semaines, chronométrées",
+         "correct": true
+        },
+        {
+         "text": "Cinq heures la veille",
+         "correct": false
+        },
+        {
+         "text": "Aucune, cela ne sert à rien",
+         "correct": false
+        },
+        {
+         "text": "Lire des romans",
+         "correct": false
+        }
+       ],
+       "explanation": "La régularité et la gestion du temps font la différence.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : on peut utiliser l'IA pendant un test si personne ne regarde.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Utiliser l'IA quand c'est interdit est une fraude.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "jour-j",
+     "title": "Le jour J",
+     "file": "05-le-jour-j.md",
+     "objective": "Gérer son stress et sa communication.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "En entretien en ligne, où regarder quand vous parlez ?",
+       "options": [
+        {
+         "text": "La caméra",
+         "correct": true
+        },
+        {
+         "text": "Votre propre image à l'écran",
+         "correct": false
+        },
+        {
+         "text": "Le plafond",
+         "correct": false
+        },
+        {
+         "text": "Votre téléphone",
+         "correct": false
+        }
+       ],
+       "explanation": "C'est ainsi que l'interlocuteur se sent regardé.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "apres",
+     "title": "Après l'entretien",
+     "file": "06-apres-l-entretien.md",
+     "objective": "Assurer le suivi et rebondir.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quand envoyer un message de remerciement ?",
+       "options": [
+        {
+         "text": "Dans les vingt-quatre heures",
+         "correct": true
+        },
+        {
+         "text": "Un mois plus tard",
+         "correct": false
+        },
+        {
+         "text": "Jamais",
+         "correct": false
+        },
+        {
+         "text": "Avant l'entretien",
+         "correct": false
+        }
+       ],
+       "explanation": "Court, personnalisé, sans insister.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Réussir ses entretiens et tests de recrutement",
+ "summary": "Préparez-vous avec méthode aux entretiens et aux tests de recrutement : connaître l'entreprise, répondre avec la méthode STAR, déjouer les questions pièges et s'entraîner avec l'IA.",
+ "audience": "jeune_diplome",
+ "parcours": "carriere",
+ "level": "debutant",
+ "duration_minutes": 75,
+ "position": 8,
+ "prerequisites": "Le cours « Image professionnelle : CV, LinkedIn et portfolio » est conseillé.",
+ "description": "Décrocher un entretien est une première victoire. Le transformer en offre d'emploi demande de la préparation, de l'entraînement et un peu de méthode.\n\nCe cours vous apprend à préparer chaque entretien, à raconter vos expériences avec la méthode STAR, à répondre aux questions classiques, à réussir les tests de logique, de langue et d'Excel, à gérer votre stress le jour J et à assurer le suivi après l'entretien. L'IA devient votre partenaire d'entraînement, avec le simulateur d'entretien et les tests de recrutement de l'Académie.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Que faire pour un entretien en ligne ?",
+    "options": [
+     {
+      "text": "Tester connexion, caméra et micro",
+      "correct": true
+     },
+     {
+      "text": "Choisir un endroit calme et lumineux",
+      "correct": true
+     },
+     {
+      "text": "Prévoir des données mobiles en secours",
+      "correct": true
+     },
+     {
+      "text": "Garder la télévision allumée",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quelle est la bonne heure d'arrivée à un entretien en présentiel ?",
+    "options": [
+     {
+      "text": "Environ dix minutes en avance",
+      "correct": true
+     },
+     {
+      "text": "Une heure en avance",
+      "correct": false
+     },
+     {
+      "text": "Pile à l'heure, en courant",
+      "correct": false
+     },
+     {
+      "text": "Avec quelques minutes de retard",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Dans la méthode STAR, quelle partie est la plus importante ?",
+    "options": [
+     {
+      "text": "L'action personnelle",
+      "correct": true
+     },
+     {
+      "text": "La situation",
+      "correct": false
+     },
+     {
+      "text": "Le nom de l'entreprise",
+      "correct": false
+     },
+     {
+      "text": "La date",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un candidat débutant pense n'avoir aucune histoire STAR. Que lui conseiller ?",
+    "options": [
+     {
+      "text": "Puiser dans ses études, sa vie associative, ses petits boulots ou sa vie familiale",
+      "correct": true
+     },
+     {
+      "text": "Inventer des expériences",
+      "correct": false
+     },
+     {
+      "text": "Refuser de répondre",
+      "correct": false
+     },
+     {
+      "text": "Parler uniquement de ses diplômes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment répondre à « Parlez-moi de vous » ?",
+    "options": [
+     {
+      "text": "Une présentation structurée : formation, expériences clés, compétences, motivation",
+      "correct": true
+     },
+     {
+      "text": "Raconter toute son enfance",
+      "correct": false
+     },
+     {
+      "text": "« Tout est dans mon CV. »",
+      "correct": false
+     },
+     {
+      "text": "Parler de ses loisirs uniquement",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment se préparer à la question sur le salaire ?",
+    "options": [
+     {
+      "text": "Se renseigner sur les salaires pratiqués pour ce poste et proposer une fourchette réaliste",
+      "correct": true
+     },
+     {
+      "text": "Demander le double de ce qu'on espère",
+      "correct": false
+     },
+     {
+      "text": "Dire qu'on accepte n'importe quoi",
+      "correct": false
+     },
+     {
+      "text": "Refuser de répondre",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un recruteur vous interroge sur vos projets de grossesse. Que faire ?",
+    "options": [
+     {
+      "text": "Répondre poliment en ramenant la discussion sur vos compétences",
+      "correct": true
+     },
+     {
+      "text": "Quitter la salle en criant",
+      "correct": false
+     },
+     {
+      "text": "Mentir",
+      "correct": false
+     },
+     {
+      "text": "Raconter toute sa vie privée",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels sont des types courants de tests de recrutement ?",
+    "options": [
+     {
+      "text": "Logique et raisonnement",
+      "correct": true
+     },
+     {
+      "text": "Langue",
+      "correct": true
+     },
+     {
+      "text": "Tests techniques comme Excel",
+      "correct": true
+     },
+     {
+      "text": "Tests de cuisine pour tous les postes",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Pendant un test, une question vous bloque. Que faire ?",
+    "options": [
+     {
+      "text": "Passer à la suivante et y revenir à la fin",
+      "correct": true
+     },
+     {
+      "text": "Rester bloqué jusqu'à trouver",
+      "correct": false
+     },
+     {
+      "text": "Abandonner le test",
+      "correct": false
+     },
+     {
+      "text": "Demander la réponse à son voisin",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : il est recommandé de critiquer un ancien employeur pour montrer son honnêteté.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Combien de relances après un entretien, si le délai annoncé est dépassé ?",
+    "options": [
+     {
+      "text": "Une, éventuellement deux, espacées d'une semaine",
+      "correct": true
+     },
+     {
+      "text": "Une par jour",
+      "correct": false
+     },
+     {
+      "text": "Aucune, jamais",
+      "correct": false
+     },
+     {
+      "text": "Dix",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Après un refus, quelle attitude est la plus utile ?",
+    "options": [
+     {
+      "text": "Remercier, demander un retour et continuer à postuler",
+      "correct": true
+     },
+     {
+      "text": "Envoyer un message en colère",
+      "correct": false
+     },
+     {
+      "text": "Arrêter de chercher",
+      "correct": false
+     },
+     {
+      "text": "Ne pas répondre",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}
