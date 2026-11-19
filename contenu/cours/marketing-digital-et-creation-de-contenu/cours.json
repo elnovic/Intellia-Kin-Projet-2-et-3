@@ -1,0 +1,561 @@
+{
+ "slug": "marketing-digital-et-creation-de-contenu",
+ "format": "self_paced",
+ "objectives": [
+  "Définir une stratégie de marketing digital simple",
+  "Équilibrer contenus utiles, humains et commerciaux",
+  "Rédiger des publications avec la structure AIDA",
+  "Créer des visuels cohérents avec des outils gratuits et l'IA",
+  "Construire et tenir un calendrier éditorial",
+  "Mesurer les résultats et ajuster"
+ ],
+ "skills": [
+  "Élaborer une stratégie de contenu",
+  "Rédiger et créer des contenus avec l'IA",
+  "Analyser les performances sur les réseaux sociaux"
+ ],
+ "modules": [
+  {
+   "title": "Stratégie et contenus",
+   "lessons": [
+    {
+     "key": "bases",
+     "title": "Les bases du marketing digital",
+     "file": "01-les-bases-du-marketing-digital.md",
+     "objective": "Définir sa cible, son objectif et ses canaux.",
+     "duration_minutes": 12,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quelles sont les étapes du parcours client ?",
+       "options": [
+        {
+         "text": "Découverte, intérêt, confiance, achat, fidélité",
+         "correct": true
+        },
+        {
+         "text": "Prix, promotion, prix, promotion",
+         "correct": false
+        },
+        {
+         "text": "Achat uniquement",
+         "correct": false
+        },
+        {
+         "text": "Publicité, publicité, publicité",
+         "correct": false
+        }
+       ],
+       "explanation": "Chaque contenu doit servir une étape.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Pourquoi mettre un lien vers WhatsApp dans ses publications ?",
+       "options": [
+        {
+         "text": "Parce que la vente se conclut souvent sur WhatsApp",
+         "correct": true
+        },
+        {
+         "text": "Pour avoir plus de groupes",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas utile",
+         "correct": false
+        },
+        {
+         "text": "Pour éviter les clients",
+         "correct": false
+        }
+       ],
+       "explanation": "Facilitez le passage vers la conversation.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "quoi-publier",
+     "title": "Quoi publier",
+     "file": "02-quoi-publier.md",
+     "objective": "Trouver et équilibrer ses idées de contenus.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelles sont les trois familles de contenus ?",
+       "options": [
+        {
+         "text": "Utile",
+         "correct": true
+        },
+        {
+         "text": "Humain",
+         "correct": true
+        },
+        {
+         "text": "Commercial",
+         "correct": true
+        },
+        {
+         "text": "Secret",
+         "correct": false
+        }
+       ],
+       "explanation": "Ne publiez pas uniquement des promotions.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "textes",
+     "title": "Écrire des textes qui donnent envie",
+     "file": "03-ecrire-des-textes-qui-donnent-envie.md",
+     "objective": "Rédiger des accroches et des publications efficaces.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que signifie AIDA ?",
+       "options": [
+        {
+         "text": "Attention, Intérêt, Désir, Action",
+         "correct": true
+        },
+        {
+         "text": "Achat, Image, Données, Annonce",
+         "correct": false
+        },
+        {
+         "text": "Avis, Idée, Date, Adresse",
+         "correct": false
+        },
+        {
+         "text": "Accueil, Information, Départ, Arrivée",
+         "correct": false
+        }
+       ],
+       "explanation": "Une structure simple pour les publications commerciales.",
+       "kind": "single"
+      },
+      {
+       "prompt": "L'IA ajoute « ce jus guérit le diabète » à votre texte. Que faire ?",
+       "options": [
+        {
+         "text": "Supprimer cette promesse trompeuse",
+         "correct": true
+        },
+        {
+         "text": "La garder, elle fera vendre",
+         "correct": false
+        },
+        {
+         "text": "Ajouter d'autres promesses",
+         "correct": false
+        },
+        {
+         "text": "Publier sans relire",
+         "correct": false
+        }
+       ],
+       "explanation": "Restez honnête : pas de promesses santé exagérées.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Produire, publier, mesurer",
+   "lessons": [
+    {
+     "key": "visuels",
+     "title": "Créer des visuels avec l'IA",
+     "file": "04-creer-des-visuels-avec-l-ia.md",
+     "objective": "Créer des visuels cohérents et respectueux des droits.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que contient un kit de marque simple ?",
+       "options": [
+        {
+         "text": "Le logo",
+         "correct": true
+        },
+        {
+         "text": "Deux ou trois couleurs",
+         "correct": true
+        },
+        {
+         "text": "Une ou deux polices",
+         "correct": true
+        },
+        {
+         "text": "Les mots de passe des réseaux sociaux",
+         "correct": false
+        }
+       ],
+       "explanation": "La cohérence rend la marque reconnaissable.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Vrai ou faux : on peut utiliser une image générée pour montrer un produit plus beau que celui livré.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Le client doit recevoir ce qu'il a vu.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "planifier",
+     "title": "Planifier et publier",
+     "file": "05-planifier-et-publier.md",
+     "objective": "Construire et tenir un calendrier éditorial.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce qui compte le plus ?",
+       "options": [
+        {
+         "text": "La régularité",
+         "correct": true
+        },
+        {
+         "text": "Publier dix fois par jour pendant une semaine",
+         "correct": false
+        },
+        {
+         "text": "Publier uniquement quand on a le temps",
+         "correct": false
+        },
+        {
+         "text": "Le nombre de hashtags",
+         "correct": false
+        }
+       ],
+       "explanation": "Un rythme tenable sur la durée.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "mesurer",
+     "title": "Mesurer et améliorer",
+     "file": "06-mesurer-et-ameliorer.md",
+     "objective": "Suivre ses résultats et ajuster sa stratégie.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel est l'indicateur final le plus important ?",
+       "options": [
+        {
+         "text": "Les ventes",
+         "correct": true
+        },
+        {
+         "text": "Le nombre de « j'aime »",
+         "correct": false
+        },
+        {
+         "text": "Le nombre d'abonnés",
+         "correct": false
+        },
+        {
+         "text": "Le nombre de hashtags",
+         "correct": false
+        }
+       ],
+       "explanation": "Une publication qui vend vaut mieux qu'une publication virale qui ne vend rien.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Marketing digital et création de contenu",
+ "summary": "Attirez et fidélisez des clients sur les réseaux sociaux : stratégie, idées de contenus, textes qui donnent envie, visuels créés avec l'IA, calendrier éditorial et mesure des résultats.",
+ "audience": "entrepreneur",
+ "parcours": "entrepreneuriat",
+ "level": "debutant",
+ "duration_minutes": 80,
+ "position": 13,
+ "prerequisites": "Aucun. Le cours « Bien formuler ses demandes à l'IA » est conseillé.",
+ "description": "Les réseaux sociaux et WhatsApp sont devenus la vitrine de milliers d'entreprises. Mais publier sans stratégie, c'est souvent beaucoup d'efforts pour peu de résultats.\n\nCe cours vous apprend à définir votre stratégie, à trouver quoi publier, à écrire des textes qui donnent envie, à créer de beaux visuels avec des outils gratuits et l'IA, à planifier vos publications et à mesurer ce qui marche vraiment. Vous pourrez vous aider de l'outil « Générateur de publications » de l'Académie.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Pourquoi Prisca vendait-elle peu au début ?",
+    "options": [
+     {
+      "text": "Elle ne publiait que des photos de produits avec le prix",
+      "correct": true
+     },
+     {
+      "text": "Elle n'avait pas de produits",
+      "correct": false
+     },
+     {
+      "text": "Elle publiait trop de conseils",
+      "correct": false
+     },
+     {
+      "text": "Elle n'était pas sur Facebook",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels canaux choisir ?",
+    "options": [
+     {
+      "text": "Deux ou trois canaux où se trouvent ses clients",
+      "correct": true
+     },
+     {
+      "text": "Tous les réseaux existants",
+      "correct": false
+     },
+     {
+      "text": "Uniquement celui à la mode",
+      "correct": false
+     },
+     {
+      "text": "Aucun",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quel contenu est « humain » ?",
+    "options": [
+     {
+      "text": "Les coulisses de la préparation et le témoignage d'une cliente",
+      "correct": true
+     },
+     {
+      "text": "Une promotion de fin de mois",
+      "correct": false
+     },
+     {
+      "text": "La liste des prix",
+      "correct": false
+     },
+     {
+      "text": "Un lien vers le catalogue",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Où trouver des idées de publications ?",
+    "options": [
+     {
+      "text": "Dans les questions posées par vos clients",
+      "correct": true
+     },
+     {
+      "text": "En demandant une banque d'idées à l'IA",
+      "correct": true
+     },
+     {
+      "text": "En copiant les publications d'un concurrent",
+      "correct": false
+     },
+     {
+      "text": "Dans les temps forts du calendrier",
+      "correct": true
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quelle accroche est la plus efficace ?",
+    "options": [
+     {
+      "text": "« Fatiguée dès 15 heures au bureau ? »",
+      "correct": true
+     },
+     {
+      "text": "« Bonjour à tous »",
+      "correct": false
+     },
+     {
+      "text": "« Nouvelle publication »",
+      "correct": false
+     },
+     {
+      "text": "« Voici nos produits »",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment obtenir de l'IA un texte qui vous ressemble ?",
+    "options": [
+     {
+      "text": "Décrire son ton et donner des exemples de ses publications",
+      "correct": true
+     },
+     {
+      "text": "Lui demander « écris un texte »",
+      "correct": false
+     },
+     {
+      "text": "Utiliser le plus d'émojis possible",
+      "correct": false
+     },
+     {
+      "text": "Ne jamais retoucher",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quel conseil pour photographier ses produits ?",
+    "options": [
+     {
+      "text": "Lumière naturelle, fond simple, téléphone stable",
+      "correct": true
+     },
+     {
+      "text": "Flash puissant dans le noir",
+      "correct": false
+     },
+     {
+      "text": "Fond très chargé",
+      "correct": false
+     },
+     {
+      "text": "Photo floue pour l'ambiance",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : ajouter une chanson connue sans autorisation à une vidéo peut entraîner son blocage.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Qu'est-ce qu'un calendrier éditorial ?",
+    "options": [
+     {
+      "text": "Un tableau qui planifie les publications par jour, canal, sujet et format",
+      "correct": true
+     },
+     {
+      "text": "Un agenda personnel",
+      "correct": false
+     },
+     {
+      "text": "La liste des fêtes nationales",
+      "correct": false
+     },
+     {
+      "text": "Un logiciel de comptabilité",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faire d'un commentaire sous une publication ?",
+    "options": [
+     {
+      "text": "Y répondre rapidement",
+      "correct": true
+     },
+     {
+      "text": "L'ignorer",
+      "correct": false
+     },
+     {
+      "text": "Le supprimer systématiquement",
+      "correct": false
+     },
+     {
+      "text": "Attendre une semaine",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment débuter avec la publicité payante ?",
+    "options": [
+     {
+      "text": "Petit budget, publication qui marche déjà, ciblage précis, mesure des résultats",
+      "correct": true
+     },
+     {
+      "text": "Dépenser tout son budget dès le premier jour",
+      "correct": false
+     },
+     {
+      "text": "Booster une publication qui ne plaît à personne",
+      "correct": false
+     },
+     {
+      "text": "Cibler le monde entier",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que demander à chaque nouveau client ?",
+    "options": [
+     {
+      "text": "Comment il vous a connu",
+      "correct": true
+     },
+     {
+      "text": "Son mot de passe",
+      "correct": false
+     },
+     {
+      "text": "Son salaire",
+      "correct": false
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

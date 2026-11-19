@@ -1,0 +1,561 @@
+{
+ "slug": "vente-relation-client-et-automatisation",
+ "format": "self_paced",
+ "objectives": [
+  "Mener un échange de vente fondé sur l'écoute",
+  "Répondre aux objections avec honnêteté",
+  "Gérer les réclamations et fidéliser",
+  "Tenir et exploiter un fichier clients dans le respect des données",
+  "Automatiser les tâches répétitives sans perdre le contact",
+  "Suivre ses indicateurs de vente"
+ ],
+ "skills": [
+  "Conduire une vente conseil",
+  "Gérer la relation client",
+  "Automatiser les échanges avec les clients"
+ ],
+ "modules": [
+  {
+   "title": "Vendre et fidéliser",
+   "lessons": [
+    {
+     "key": "vendre",
+     "title": "L'art de vendre",
+     "file": "01-l-art-de-vendre.md",
+     "objective": "Écouter le client et proposer une solution adaptée.",
+     "duration_minutes": 13,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Par quoi commencer un échange de vente ?",
+       "options": [
+        {
+         "text": "Comprendre le besoin du client avec des questions ouvertes",
+         "correct": true
+        },
+        {
+         "text": "Présenter tout le catalogue",
+         "correct": false
+        },
+        {
+         "text": "Annoncer une promotion",
+         "correct": false
+        },
+        {
+         "text": "Parler de soi",
+         "correct": false
+        }
+       ],
+       "explanation": "Écouter avant de proposer.",
+       "kind": "single"
+      },
+      {
+       "prompt": "« Classe énergétique A+ » est une caractéristique. Quel est le bénéfice correspondant ?",
+       "options": [
+        {
+         "text": "Une facture d'électricité plus légère",
+         "correct": true
+        },
+        {
+         "text": "La couleur de l'appareil",
+         "correct": false
+        },
+        {
+         "text": "Le nom du fabricant",
+         "correct": false
+        },
+        {
+         "text": "Le poids du carton",
+         "correct": false
+        }
+       ],
+       "explanation": "Reliez chaque caractéristique à un bénéfice pour le client.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "objections",
+     "title": "Répondre aux objections",
+     "file": "02-repondre-aux-objections.md",
+     "objective": "Lever les doutes avec honnêteté.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle est la méthode pour répondre à une objection ?",
+       "options": [
+        {
+         "text": "Écouter, valider, clarifier, répondre",
+         "correct": true
+        },
+        {
+         "text": "Interrompre, contredire, insister",
+         "correct": false
+        },
+        {
+         "text": "Ignorer et changer de sujet",
+         "correct": false
+        },
+        {
+         "text": "Baisser immédiatement le prix",
+         "correct": false
+        }
+       ],
+       "explanation": "Cherchez la vraie préoccupation.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : dire « il n'en reste qu'un » alors que c'est faux est une bonne technique.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Le mensonge fait perdre le client et la réputation.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "service",
+     "title": "Le service client qui fidélise",
+     "file": "03-le-service-client-qui-fidelise.md",
+     "objective": "Gérer les réclamations et fidéliser.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Un client se plaint publiquement. Que faire ?",
+       "options": [
+        {
+         "text": "Répondre calmement, s'excuser et proposer de poursuivre en privé",
+         "correct": true
+        },
+        {
+         "text": "Répondre à chaud pour se défendre",
+         "correct": false
+        },
+        {
+         "text": "Supprimer son commentaire et le bloquer",
+         "correct": false
+        },
+        {
+         "text": "Ne pas répondre",
+         "correct": false
+        }
+       ],
+       "explanation": "Les autres clients jugent votre réaction.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Organiser et automatiser",
+   "lessons": [
+    {
+     "key": "fichier",
+     "title": "Organiser son fichier clients",
+     "file": "04-organiser-son-fichier-clients.md",
+     "objective": "Tenir et exploiter un fichier clients.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que faire avant d'analyser son fichier clients avec un assistant IA grand public ?",
+       "options": [
+        {
+         "text": "L'anonymiser",
+         "correct": true
+        },
+        {
+         "text": "Rien",
+         "correct": false
+        },
+        {
+         "text": "Ajouter les mots de passe des clients",
+         "correct": false
+        },
+        {
+         "text": "Le publier sur Facebook",
+         "correct": false
+        }
+       ],
+       "explanation": "Les données des clients sont des données personnelles.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "automatiser",
+     "title": "Automatiser sans perdre le contact",
+     "file": "05-automatiser-sans-perdre-le-contact.md",
+     "objective": "Automatiser les tâches répétitives.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelles tâches automatiser en priorité ?",
+       "options": [
+        {
+         "text": "Le message d'accueil",
+         "correct": true
+        },
+        {
+         "text": "Les réponses aux questions fréquentes",
+         "correct": true
+        },
+        {
+         "text": "Le message d'absence",
+         "correct": true
+        },
+        {
+         "text": "Les réponses aux réclamations graves",
+         "correct": false
+        }
+       ],
+       "explanation": "Les réclamations demandent une réponse humaine.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Que doit faire un assistant IA de service client face à un cas complexe ?",
+       "options": [
+        {
+         "text": "Passer la main à un humain",
+         "correct": true
+        },
+        {
+         "text": "Inventer une réponse",
+         "correct": false
+        },
+        {
+         "text": "Ignorer le client",
+         "correct": false
+        },
+        {
+         "text": "Proposer un remboursement automatique",
+         "correct": false
+        }
+       ],
+       "explanation": "L'humain reste responsable des décisions.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "piloter",
+     "title": "Piloter ses ventes",
+     "file": "06-piloter-ses-ventes.md",
+     "objective": "Suivre ses indicateurs et agir.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "20 ventes pour 80 contacts : quel est le taux de conversion ?",
+       "options": [
+        {
+         "text": "25 %",
+         "correct": true
+        },
+        {
+         "text": "80 %",
+         "correct": false
+        },
+        {
+         "text": "20 %",
+         "correct": false
+        },
+        {
+         "text": "4 %",
+         "correct": false
+        }
+       ],
+       "explanation": "20 ÷ 80 = 0,25.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Vente, relation client et automatisation",
+ "summary": "Vendez avec méthode et fidélisez vos clients : écouter, répondre aux objections, gérer les réclamations, tenir un fichier clients, automatiser les tâches répétitives et piloter ses ventes.",
+ "audience": "entrepreneur",
+ "parcours": "entrepreneuriat",
+ "level": "intermediaire",
+ "duration_minutes": 80,
+ "position": 14,
+ "prerequisites": "Le cours « Marketing digital et création de contenu » est conseillé.",
+ "description": "Attirer des clients ne suffit pas : il faut savoir transformer un contact en vente, puis un acheteur en client fidèle. C'est souvent là que se joue la rentabilité d'une petite entreprise.\n\nCe cours vous donne une méthode de vente fondée sur l'écoute, des réponses honnêtes aux objections, un service client qui fidélise, un fichier clients bien tenu, des automatisations simples avec WhatsApp Business et l'IA, et un tableau de bord pour piloter vos ventes.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Quel est le secret de Papa Ousmane ?",
+    "options": [
+     {
+      "text": "Écouter, bien conseiller et répondre en cas de problème",
+      "correct": true
+     },
+     {
+      "text": "Vendre le plus cher possible",
+      "correct": false
+     },
+     {
+      "text": "Insister jusqu'à ce que le client cède",
+      "correct": false
+     },
+     {
+      "text": "Ne jamais rembourser",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Combien d'options présenter à un client ?",
+    "options": [
+     {
+      "text": "Deux ou trois adaptées à son besoin",
+      "correct": true
+     },
+     {
+      "text": "Tout le catalogue",
+      "correct": false
+     },
+     {
+      "text": "Une seule, imposée",
+      "correct": false
+     },
+     {
+      "text": "Aucune",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "« C'est trop cher » signifie souvent :",
+    "options": [
+     {
+      "text": "« Je ne vois pas encore assez la valeur »",
+      "correct": true
+     },
+     {
+      "text": "« Je n'achèterai jamais »",
+      "correct": false
+     },
+     {
+      "text": "« Je suis fâché »",
+      "correct": false
+     },
+     {
+      "text": "« Baissez le prix de moitié »",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Face à « j'ai vu moins cher ailleurs », que faire ?",
+    "options": [
+     {
+      "text": "Comparer ce qui est réellement inclus, sans dénigrer le concurrent",
+      "correct": true
+     },
+     {
+      "text": "Dire que le concurrent est malhonnête",
+      "correct": false
+     },
+     {
+      "text": "Baisser immédiatement son prix",
+      "correct": false
+     },
+     {
+      "text": "Mettre fin à la conversation",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi beaucoup de ventes se perdent-elles ?",
+    "options": [
+     {
+      "text": "Le vendeur n'a jamais proposé de conclure",
+      "correct": true
+     },
+     {
+      "text": "Le client est toujours de mauvaise foi",
+      "correct": false
+     },
+     {
+      "text": "Les prix sont toujours trop bas",
+      "correct": false
+     },
+     {
+      "text": "Les produits sont inutiles",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles sont les étapes de gestion d'une réclamation ?",
+    "options": [
+     {
+      "text": "Répondre vite et calmement",
+      "correct": true
+     },
+     {
+      "text": "Proposer une solution concrète",
+      "correct": true
+     },
+     {
+      "text": "Tenir parole et vérifier la satisfaction",
+      "correct": true
+     },
+     {
+      "text": "Accuser le client",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Que contient un fichier clients utile ?",
+    "options": [
+     {
+      "text": "Contacts, achats, dates, préférences et accord pour les messages",
+      "correct": true
+     },
+     {
+      "text": "Les mots de passe des clients",
+      "correct": false
+     },
+     {
+      "text": "Uniquement les noms",
+      "correct": false
+     },
+     {
+      "text": "Les ragots du quartier",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : on peut ajouter un client à une liste de diffusion commerciale sans son accord.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Pourquoi sauvegarder son fichier clients ?",
+    "options": [
+     {
+      "text": "Pour ne pas tout perdre en cas de vol ou de panne",
+      "correct": true
+     },
+     {
+      "text": "Pour le vendre",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas utile",
+      "correct": false
+     },
+     {
+      "text": "Pour le publier",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un assistant IA de service client doit :",
+    "options": [
+     {
+      "text": "S'appuyer sur vos informations vérifiées et être présenté comme automatique",
+      "correct": true
+     },
+     {
+      "text": "Se faire passer pour un humain",
+      "correct": false
+     },
+     {
+      "text": "Inventer les prix",
+      "correct": false
+     },
+     {
+      "text": "Prendre toutes les décisions de remboursement",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Beaucoup de contacts mais peu de ventes : où agir ?",
+    "options": [
+     {
+      "text": "Sur l'écoute, la présentation et les objections",
+      "correct": true
+     },
+     {
+      "text": "Sur le logo",
+      "correct": false
+     },
+     {
+      "text": "Sur la couleur du site",
+      "correct": false
+     },
+     {
+      "text": "Nulle part",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment calculer le panier moyen ?",
+    "options": [
+     {
+      "text": "Chiffre d'affaires divisé par le nombre de ventes",
+      "correct": true
+     },
+     {
+      "text": "Nombre de ventes divisé par le nombre de clients",
+      "correct": false
+     },
+     {
+      "text": "Chiffre d'affaires multiplié par le nombre de ventes",
+      "correct": false
+     },
+     {
+      "text": "Nombre de contacts divisé par le nombre de ventes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

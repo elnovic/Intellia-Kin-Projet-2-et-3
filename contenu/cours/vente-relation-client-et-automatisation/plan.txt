@@ -1,0 +1,138 @@
+title: Vente, relation client et automatisation
+summary: Vendez avec méthode et fidélisez vos clients : écouter, répondre aux objections, gérer les réclamations, tenir un fichier clients, automatiser les tâches répétitives et piloter ses ventes.
+audience: entrepreneur
+parcours: entrepreneuriat
+level: intermediaire
+duration: 80
+position: 14
+prerequisites: Le cours « Marketing digital et création de contenu » est conseillé.
+description: Attirer des clients ne suffit pas : il faut savoir transformer un contact en vente, puis un acheteur en client fidèle. C'est souvent là que se joue la rentabilité d'une petite entreprise.
+description: Ce cours vous donne une méthode de vente fondée sur l'écoute, des réponses honnêtes aux objections, un service client qui fidélise, un fichier clients bien tenu, des automatisations simples avec WhatsApp Business et l'IA, et un tableau de bord pour piloter vos ventes.
+objective: Mener un échange de vente fondé sur l'écoute
+objective: Répondre aux objections avec honnêteté
+objective: Gérer les réclamations et fidéliser
+objective: Tenir et exploiter un fichier clients dans le respect des données
+objective: Automatiser les tâches répétitives sans perdre le contact
+objective: Suivre ses indicateurs de vente
+skill: Conduire une vente conseil
+skill: Gérer la relation client
+skill: Automatiser les échanges avec les clients
+module: Vendre et fidéliser
+lesson: vendre | L'art de vendre | 01-l-art-de-vendre.md | Écouter le client et proposer une solution adaptée. | 13 | apercu
+? Par quoi commencer un échange de vente ?
++ Comprendre le besoin du client avec des questions ouvertes
+- Présenter tout le catalogue
+- Annoncer une promotion
+- Parler de soi
+> Écouter avant de proposer.
+? « Classe énergétique A+ » est une caractéristique. Quel est le bénéfice correspondant ?
++ Une facture d'électricité plus légère
+- La couleur de l'appareil
+- Le nom du fabricant
+- Le poids du carton
+> Reliez chaque caractéristique à un bénéfice pour le client.
+lesson: objections | Répondre aux objections | 02-repondre-aux-objections.md | Lever les doutes avec honnêteté. | 13
+? Quelle est la méthode pour répondre à une objection ?
++ Écouter, valider, clarifier, répondre
+- Interrompre, contredire, insister
+- Ignorer et changer de sujet
+- Baisser immédiatement le prix
+> Cherchez la vraie préoccupation.
+? Vrai ou faux : dire « il n'en reste qu'un » alors que c'est faux est une bonne technique.
+- Vrai
++ Faux
+> Le mensonge fait perdre le client et la réputation.
+lesson: service | Le service client qui fidélise | 03-le-service-client-qui-fidelise.md | Gérer les réclamations et fidéliser. | 13
+? Un client se plaint publiquement. Que faire ?
++ Répondre calmement, s'excuser et proposer de poursuivre en privé
+- Répondre à chaud pour se défendre
+- Supprimer son commentaire et le bloquer
+- Ne pas répondre
+> Les autres clients jugent votre réaction.
+module: Organiser et automatiser
+lesson: fichier | Organiser son fichier clients | 04-organiser-son-fichier-clients.md | Tenir et exploiter un fichier clients. | 13
+? Que faire avant d'analyser son fichier clients avec un assistant IA grand public ?
++ L'anonymiser
+- Rien
+- Ajouter les mots de passe des clients
+- Le publier sur Facebook
+> Les données des clients sont des données personnelles.
+lesson: automatiser | Automatiser sans perdre le contact | 05-automatiser-sans-perdre-le-contact.md | Automatiser les tâches répétitives. | 14
+? Quelles tâches automatiser en priorité ?
++ Le message d'accueil
++ Les réponses aux questions fréquentes
++ Le message d'absence
+- Les réponses aux réclamations graves
+> Les réclamations demandent une réponse humaine.
+? Que doit faire un assistant IA de service client face à un cas complexe ?
++ Passer la main à un humain
+- Inventer une réponse
+- Ignorer le client
+- Proposer un remboursement automatique
+> L'humain reste responsable des décisions.
+lesson: piloter | Piloter ses ventes | 06-piloter-ses-ventes.md | Suivre ses indicateurs et agir. | 14
+? 20 ventes pour 80 contacts : quel est le taux de conversion ?
++ 25 %
+- 80 %
+- 20 %
+- 4 %
+> 20 ÷ 80 = 0,25.
+exam:
+? Quel est le secret de Papa Ousmane ?
++ Écouter, bien conseiller et répondre en cas de problème
+- Vendre le plus cher possible
+- Insister jusqu'à ce que le client cède
+- Ne jamais rembourser
+? Combien d'options présenter à un client ?
++ Deux ou trois adaptées à son besoin
+- Tout le catalogue
+- Une seule, imposée
+- Aucune
+? « C'est trop cher » signifie souvent :
++ « Je ne vois pas encore assez la valeur »
+- « Je n'achèterai jamais »
+- « Je suis fâché »
+- « Baissez le prix de moitié »
+? Face à « j'ai vu moins cher ailleurs », que faire ?
++ Comparer ce qui est réellement inclus, sans dénigrer le concurrent
+- Dire que le concurrent est malhonnête
+- Baisser immédiatement son prix
+- Mettre fin à la conversation
+? Pourquoi beaucoup de ventes se perdent-elles ?
++ Le vendeur n'a jamais proposé de conclure
+- Le client est toujours de mauvaise foi
+- Les prix sont toujours trop bas
+- Les produits sont inutiles
+? Quelles sont les étapes de gestion d'une réclamation ?
++ Répondre vite et calmement
++ Proposer une solution concrète
++ Tenir parole et vérifier la satisfaction
+- Accuser le client
+? Que contient un fichier clients utile ?
++ Contacts, achats, dates, préférences et accord pour les messages
+- Les mots de passe des clients
+- Uniquement les noms
+- Les ragots du quartier
+? Vrai ou faux : on peut ajouter un client à une liste de diffusion commerciale sans son accord.
+- Vrai
++ Faux
+? Pourquoi sauvegarder son fichier clients ?
++ Pour ne pas tout perdre en cas de vol ou de panne
+- Pour le vendre
+- Ce n'est pas utile
+- Pour le publier
+? Un assistant IA de service client doit :
++ S'appuyer sur vos informations vérifiées et être présenté comme automatique
+- Se faire passer pour un humain
+- Inventer les prix
+- Prendre toutes les décisions de remboursement
+? Beaucoup de contacts mais peu de ventes : où agir ?
++ Sur l'écoute, la présentation et les objections
+- Sur le logo
+- Sur la couleur du site
+- Nulle part
+? Comment calculer le panier moyen ?
++ Chiffre d'affaires divisé par le nombre de ventes
+- Nombre de ventes divisé par le nombre de clients
+- Chiffre d'affaires multiplié par le nombre de ventes
+- Nombre de contacts divisé par le nombre de ventes

@@ -1,0 +1,138 @@
+title: Marketing digital et création de contenu
+summary: Attirez et fidélisez des clients sur les réseaux sociaux : stratégie, idées de contenus, textes qui donnent envie, visuels créés avec l'IA, calendrier éditorial et mesure des résultats.
+audience: entrepreneur
+parcours: entrepreneuriat
+level: debutant
+duration: 80
+position: 13
+prerequisites: Aucun. Le cours « Bien formuler ses demandes à l'IA » est conseillé.
+description: Les réseaux sociaux et WhatsApp sont devenus la vitrine de milliers d'entreprises. Mais publier sans stratégie, c'est souvent beaucoup d'efforts pour peu de résultats.
+description: Ce cours vous apprend à définir votre stratégie, à trouver quoi publier, à écrire des textes qui donnent envie, à créer de beaux visuels avec des outils gratuits et l'IA, à planifier vos publications et à mesurer ce qui marche vraiment. Vous pourrez vous aider de l'outil « Générateur de publications » de l'Académie.
+objective: Définir une stratégie de marketing digital simple
+objective: Équilibrer contenus utiles, humains et commerciaux
+objective: Rédiger des publications avec la structure AIDA
+objective: Créer des visuels cohérents avec des outils gratuits et l'IA
+objective: Construire et tenir un calendrier éditorial
+objective: Mesurer les résultats et ajuster
+skill: Élaborer une stratégie de contenu
+skill: Rédiger et créer des contenus avec l'IA
+skill: Analyser les performances sur les réseaux sociaux
+module: Stratégie et contenus
+lesson: bases | Les bases du marketing digital | 01-les-bases-du-marketing-digital.md | Définir sa cible, son objectif et ses canaux. | 12 | apercu
+? Quelles sont les étapes du parcours client ?
++ Découverte, intérêt, confiance, achat, fidélité
+- Prix, promotion, prix, promotion
+- Achat uniquement
+- Publicité, publicité, publicité
+> Chaque contenu doit servir une étape.
+? Pourquoi mettre un lien vers WhatsApp dans ses publications ?
++ Parce que la vente se conclut souvent sur WhatsApp
+- Pour avoir plus de groupes
+- Ce n'est pas utile
+- Pour éviter les clients
+> Facilitez le passage vers la conversation.
+lesson: quoi-publier | Quoi publier | 02-quoi-publier.md | Trouver et équilibrer ses idées de contenus. | 13
+? Quelles sont les trois familles de contenus ?
++ Utile
++ Humain
++ Commercial
+- Secret
+> Ne publiez pas uniquement des promotions.
+lesson: textes | Écrire des textes qui donnent envie | 03-ecrire-des-textes-qui-donnent-envie.md | Rédiger des accroches et des publications efficaces. | 14
+? Que signifie AIDA ?
++ Attention, Intérêt, Désir, Action
+- Achat, Image, Données, Annonce
+- Avis, Idée, Date, Adresse
+- Accueil, Information, Départ, Arrivée
+> Une structure simple pour les publications commerciales.
+? L'IA ajoute « ce jus guérit le diabète » à votre texte. Que faire ?
++ Supprimer cette promesse trompeuse
+- La garder, elle fera vendre
+- Ajouter d'autres promesses
+- Publier sans relire
+> Restez honnête : pas de promesses santé exagérées.
+module: Produire, publier, mesurer
+lesson: visuels | Créer des visuels avec l'IA | 04-creer-des-visuels-avec-l-ia.md | Créer des visuels cohérents et respectueux des droits. | 14
+? Que contient un kit de marque simple ?
++ Le logo
++ Deux ou trois couleurs
++ Une ou deux polices
+- Les mots de passe des réseaux sociaux
+> La cohérence rend la marque reconnaissable.
+? Vrai ou faux : on peut utiliser une image générée pour montrer un produit plus beau que celui livré.
+- Vrai
++ Faux
+> Le client doit recevoir ce qu'il a vu.
+lesson: planifier | Planifier et publier | 05-planifier-et-publier.md | Construire et tenir un calendrier éditorial. | 13
+? Qu'est-ce qui compte le plus ?
++ La régularité
+- Publier dix fois par jour pendant une semaine
+- Publier uniquement quand on a le temps
+- Le nombre de hashtags
+> Un rythme tenable sur la durée.
+lesson: mesurer | Mesurer et améliorer | 06-mesurer-et-ameliorer.md | Suivre ses résultats et ajuster sa stratégie. | 14
+? Quel est l'indicateur final le plus important ?
++ Les ventes
+- Le nombre de « j'aime »
+- Le nombre d'abonnés
+- Le nombre de hashtags
+> Une publication qui vend vaut mieux qu'une publication virale qui ne vend rien.
+exam:
+? Pourquoi Prisca vendait-elle peu au début ?
++ Elle ne publiait que des photos de produits avec le prix
+- Elle n'avait pas de produits
+- Elle publiait trop de conseils
+- Elle n'était pas sur Facebook
+? Quels canaux choisir ?
++ Deux ou trois canaux où se trouvent ses clients
+- Tous les réseaux existants
+- Uniquement celui à la mode
+- Aucun
+? Quel contenu est « humain » ?
++ Les coulisses de la préparation et le témoignage d'une cliente
+- Une promotion de fin de mois
+- La liste des prix
+- Un lien vers le catalogue
+? Où trouver des idées de publications ?
++ Dans les questions posées par vos clients
++ En demandant une banque d'idées à l'IA
+- En copiant les publications d'un concurrent
++ Dans les temps forts du calendrier
+? Quelle accroche est la plus efficace ?
++ « Fatiguée dès 15 heures au bureau ? »
+- « Bonjour à tous »
+- « Nouvelle publication »
+- « Voici nos produits »
+? Comment obtenir de l'IA un texte qui vous ressemble ?
++ Décrire son ton et donner des exemples de ses publications
+- Lui demander « écris un texte »
+- Utiliser le plus d'émojis possible
+- Ne jamais retoucher
+? Quel conseil pour photographier ses produits ?
++ Lumière naturelle, fond simple, téléphone stable
+- Flash puissant dans le noir
+- Fond très chargé
+- Photo floue pour l'ambiance
+? Vrai ou faux : ajouter une chanson connue sans autorisation à une vidéo peut entraîner son blocage.
++ Vrai
+- Faux
+? Qu'est-ce qu'un calendrier éditorial ?
++ Un tableau qui planifie les publications par jour, canal, sujet et format
+- Un agenda personnel
+- La liste des fêtes nationales
+- Un logiciel de comptabilité
+? Que faire d'un commentaire sous une publication ?
++ Y répondre rapidement
+- L'ignorer
+- Le supprimer systématiquement
+- Attendre une semaine
+? Comment débuter avec la publicité payante ?
++ Petit budget, publication qui marche déjà, ciblage précis, mesure des résultats
+- Dépenser tout son budget dès le premier jour
+- Booster une publication qui ne plaît à personne
+- Cibler le monde entier
+? Que demander à chaque nouveau client ?
++ Comment il vous a connu
+- Son mot de passe
+- Son salaire
+- Rien
