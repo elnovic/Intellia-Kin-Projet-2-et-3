@@ -1,0 +1,592 @@
+{
+ "slug": "analyse-de-donnees-et-aide-a-la-decision",
+ "format": "self_paced",
+ "objectives": [
+  "Formuler une question de décision et identifier les données utiles",
+  "Repérer et corriger les problèmes de qualité des données",
+  "Calculer et interpréter les indicateurs de base",
+  "Choisir et concevoir des graphiques clairs et honnêtes",
+  "Construire un tableau de bord avec des indicateurs pertinents",
+  "Rédiger une note de décision qui assume l'incertitude"
+ ],
+ "skills": [
+  "Analyser des données avec un tableur et l'IA",
+  "Visualiser des données",
+  "Formuler des recommandations fondées sur les données"
+ ],
+ "modules": [
+  {
+   "title": "Des données fiables",
+   "lessons": [
+    {
+     "key": "decider",
+     "title": "Décider avec des données",
+     "file": "01-decider-avec-des-donnees.md",
+     "objective": "Comprendre le cycle de l'analyse de données.",
+     "duration_minutes": 14,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Par quoi commence le cycle de l'analyse de données ?",
+       "options": [
+        {
+         "text": "Une question de décision",
+         "correct": true
+        },
+        {
+         "text": "La création d'un graphique",
+         "correct": false
+        },
+        {
+         "text": "L'achat d'un logiciel",
+         "correct": false
+        },
+        {
+         "text": "La collecte de toutes les données possibles",
+         "correct": false
+        }
+       ],
+       "explanation": "Sans question claire, on se perd dans les chiffres.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelle étape prend souvent le plus de temps ?",
+       "options": [
+        {
+         "text": "Le nettoyage des données",
+         "correct": true
+        },
+        {
+         "text": "Le choix des couleurs",
+         "correct": false
+        },
+        {
+         "text": "L'impression du rapport",
+         "correct": false
+        },
+        {
+         "text": "La rédaction du titre",
+         "correct": false
+        }
+       ],
+       "explanation": "Les données brutes contiennent presque toujours des erreurs.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "fiables",
+     "title": "Des données fiables",
+     "file": "02-des-donnees-fiables.md",
+     "objective": "Repérer et corriger les problèmes de qualité.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "« Kin », « Kinshasa » et « KINSHASA » dans une même colonne posent quel problème ?",
+       "options": [
+        {
+         "text": "Des catégories incohérentes",
+         "correct": true
+        },
+        {
+         "text": "Un problème de couleur",
+         "correct": false
+        },
+        {
+         "text": "Un problème de police",
+         "correct": false
+        },
+        {
+         "text": "Aucun",
+         "correct": false
+        }
+       ],
+       "explanation": "Le tableur les compte comme trois villes différentes.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que faire avant de nettoyer des données ?",
+       "options": [
+        {
+         "text": "Garder une copie des données brutes",
+         "correct": true
+        },
+        {
+         "text": "Supprimer les lignes difficiles",
+         "correct": false
+        },
+        {
+         "text": "Inventer les valeurs manquantes",
+         "correct": false
+        },
+        {
+         "text": "Rien",
+         "correct": false
+        }
+       ],
+       "explanation": "Et notez chaque modification.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "tableur",
+     "title": "Analyser avec un tableur",
+     "file": "03-analyser-avec-un-tableur.md",
+     "objective": "Calculer et interpréter les indicateurs de base.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Neuf employés gagnent 300 dollars et le directeur 5 000. Quel indicateur représente le mieux le salaire typique ?",
+       "options": [
+        {
+         "text": "La médiane",
+         "correct": true
+        },
+        {
+         "text": "La moyenne",
+         "correct": false
+        },
+        {
+         "text": "Le maximum",
+         "correct": false
+        },
+        {
+         "text": "La somme",
+         "correct": false
+        }
+       ],
+       "explanation": "La médiane résiste aux valeurs extrêmes.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : si deux phénomènes augmentent en même temps, l'un cause forcément l'autre.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Corrélation n'est pas causalité.",
+       "kind": "true_false"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Communiquer et décider",
+   "lessons": [
+    {
+     "key": "graphiques",
+     "title": "Des graphiques qui parlent",
+     "file": "04-des-graphiques-qui-parlent.md",
+     "objective": "Choisir et concevoir des graphiques clairs.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel graphique pour montrer l'évolution des ventes mois par mois ?",
+       "options": [
+        {
+         "text": "Une courbe",
+         "correct": true
+        },
+        {
+         "text": "Un graphique en secteurs",
+         "correct": false
+        },
+        {
+         "text": "Un tableau de 500 lignes",
+         "correct": false
+        },
+        {
+         "text": "Un nuage de mots",
+         "correct": false
+        }
+       ],
+       "explanation": "La courbe montre l'évolution dans le temps.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Pourquoi l'axe d'un graphique en barres doit-il commencer à zéro ?",
+       "options": [
+        {
+         "text": "Parce que la longueur de la barre porte l'information",
+         "correct": true
+        },
+        {
+         "text": "Pour faire joli",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est jamais nécessaire",
+         "correct": false
+        },
+        {
+         "text": "Pour gagner de la place",
+         "correct": false
+        }
+       ],
+       "explanation": "Sinon, une petite différence paraît énorme.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "tableau-de-bord",
+     "title": "Le tableau de bord",
+     "file": "05-le-tableau-de-bord.md",
+     "objective": "Construire un tableau de bord utile.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Combien d'indicateurs un bon tableau de bord compte-t-il, environ ?",
+       "options": [
+        {
+         "text": "Cinq à dix",
+         "correct": true
+        },
+        {
+         "text": "Cent",
+         "correct": false
+        },
+        {
+         "text": "Un seul",
+         "correct": false
+        },
+        {
+         "text": "Le maximum possible",
+         "correct": false
+        }
+       ],
+       "explanation": "Liés aux objectifs, actionnables et fiables.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "decision",
+     "title": "Des chiffres à la décision",
+     "file": "06-des-chiffres-a-la-decision.md",
+     "objective": "Rédiger une note de décision.",
+     "duration_minutes": 16,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelles sont les trois étapes d'une bonne communication d'analyse ?",
+       "options": [
+        {
+         "text": "Constat, interprétation, recommandation",
+         "correct": true
+        },
+        {
+         "text": "Introduction, développement, conclusion",
+         "correct": false
+        },
+        {
+         "text": "Chiffres, chiffres, chiffres",
+         "correct": false
+        },
+        {
+         "text": "Problème, excuse, oubli",
+         "correct": false
+        }
+       ],
+       "explanation": "Une analyse doit aider à décider.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Analyse de données et aide à la décision",
+ "summary": "Transformez vos données en décisions : poser la bonne question, fiabiliser les données, analyser avec un tableur et l'IA, créer des graphiques clairs, construire un tableau de bord et rédiger une note de décision.",
+ "audience": "pme",
+ "parcours": "organisations",
+ "level": "avance",
+ "duration_minutes": 90,
+ "position": 17,
+ "prerequisites": "Maîtriser les bases d'Excel ou d'un tableur. Le cours « Productivité professionnelle : bureautique et IA » est conseillé.",
+ "description": "Les organisations accumulent des données (ventes, stocks, bénéficiaires, paiements) sans toujours les exploiter. Pourtant, bien analysées, elles éclairent les décisions et évitent des erreurs coûteuses.\n\nCe cours vous apprend à partir d'une question de décision, à fiabiliser vos données, à les analyser avec un tableur et l'IA en évitant les pièges d'interprétation, à créer des graphiques honnêtes et clairs, à construire un tableau de bord et à transformer vos analyses en recommandations utiles aux décideurs.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Pourquoi le directeur des pharmacies s'était-il trompé ?",
+    "options": [
+     {
+      "text": "Il confondait fréquentation et rentabilité, sans vérifier les données",
+      "correct": true
+     },
+     {
+      "text": "Il avait trop de données",
+      "correct": false
+     },
+     {
+      "text": "Ses pharmacies étaient fermées",
+      "correct": false
+     },
+     {
+      "text": "Il n'avait pas d'intuition",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faire avant de charger des données de patients dans un assistant IA ?",
+    "options": [
+     {
+      "text": "Les anonymiser ou les agréger, et vérifier que l'outil est autorisé",
+      "correct": true
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     },
+     {
+      "text": "Les envoyer telles quelles",
+      "correct": false
+     },
+     {
+      "text": "Ajouter les numéros de téléphone",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles mesures préviennent les erreurs dès la collecte ?",
+    "options": [
+     {
+      "text": "Des formulaires avec listes déroulantes",
+      "correct": true
+     },
+     {
+      "text": "Des règles de saisie communes",
+      "correct": true
+     },
+     {
+      "text": "Un responsable par base de données",
+      "correct": true
+     },
+     {
+      "text": "Le texte libre partout",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Une hausse de 50 % des clients d'une agence peut être trompeuse si :",
+    "options": [
+     {
+      "text": "Elle correspond à un passage de 2 à 3 clients",
+      "correct": true
+     },
+     {
+      "text": "Elle concerne une grande agence",
+      "correct": false
+     },
+     {
+      "text": "Elle est vérifiée",
+      "correct": false
+     },
+     {
+      "text": "Elle est durable",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi comparer décembre à décembre de l'année précédente plutôt qu'à novembre ?",
+    "options": [
+     {
+      "text": "Pour tenir compte des effets de saison",
+      "correct": true
+     },
+     {
+      "text": "Parce que novembre n'existe pas dans les données",
+      "correct": false
+     },
+     {
+      "text": "Pour avoir moins de calculs",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas utile",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faire d'un chiffre produit par l'IA avant de le présenter à la direction ?",
+    "options": [
+     {
+      "text": "Le vérifier en refaisant les calculs principaux dans le tableur",
+      "correct": true
+     },
+     {
+      "text": "Le présenter tel quel",
+      "correct": false
+     },
+     {
+      "text": "L'arrondir au chiffre supérieur",
+      "correct": false
+     },
+     {
+      "text": "Le multiplier par deux",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quel titre de graphique est le meilleur ?",
+    "options": [
+     {
+      "text": "« Les ventes de l'agence de Limete ont doublé en un an »",
+      "correct": true
+     },
+     {
+      "text": "« Graphique 3 »",
+      "correct": false
+     },
+     {
+      "text": "« Ventes »",
+      "correct": false
+     },
+     {
+      "text": "« Données »",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quel graphique pour comparer les ventes de cinq agences ?",
+    "options": [
+     {
+      "text": "Des barres classées de la plus grande à la plus petite",
+      "correct": true
+     },
+     {
+      "text": "Une courbe",
+      "correct": false
+     },
+     {
+      "text": "Un graphique en secteurs en 3D",
+      "correct": false
+     },
+     {
+      "text": "Un tableau de 1 000 lignes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels critères pour choisir un indicateur de tableau de bord ?",
+    "options": [
+     {
+      "text": "Lié aux objectifs",
+      "correct": true
+     },
+     {
+      "text": "Actionnable",
+      "correct": true
+     },
+     {
+      "text": "Mesurable de façon fiable",
+      "correct": true
+     },
+     {
+      "text": "Le plus impressionnant possible",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Pourquoi combiner indicateurs de quantité et de qualité ?",
+    "options": [
+     {
+      "text": "Pour éviter qu'un indicateur soit amélioré au détriment du vrai objectif",
+      "correct": true
+     },
+     {
+      "text": "Pour avoir plus de couleurs",
+      "correct": false
+     },
+     {
+      "text": "Pour allonger le tableau de bord",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas utile",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que doit contenir une note de décision d'une page ?",
+    "options": [
+     {
+      "text": "La question, la réponse courte, les constats, les options, la recommandation et les limites",
+      "correct": true
+     },
+     {
+      "text": "Uniquement des tableaux de chiffres",
+      "correct": false
+     },
+     {
+      "text": "La liste de toutes les données collectées",
+      "correct": false
+     },
+     {
+      "text": "Le CV de l'analyste",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Les données contredisent une idée chère à la direction. Que faire ?",
+    "options": [
+     {
+      "text": "Le dire avec tact, en présentant les faits et les limites de l'analyse",
+      "correct": true
+     },
+     {
+      "text": "Modifier les données",
+      "correct": false
+     },
+     {
+      "text": "Cacher les résultats",
+      "correct": false
+     },
+     {
+      "text": "Choisir une autre période pour obtenir le résultat souhaité",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

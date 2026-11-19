@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 308" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="308" fill="#F8FAFC"/>
+<text x="30" y="45" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">Quel graphique pour quel message ?</text>
+<rect x="30" y="70" width="297" height="218" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="30" y="70" width="297" height="7" rx="3" fill="#0066FF"/>
+<text x="50" y="112" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Évolution</text>
+<circle cx="56" cy="145" r="5" fill="#0066FF"/>
+<text x="70" y="150" font-size="14.5" fill="#1A202C">Courbe</text>
+<circle cx="56" cy="191" r="5" fill="#0066FF"/>
+<text x="70" y="196" font-size="14.5" fill="#1A202C">Ventes mois par mois</text>
+<circle cx="56" cy="237" r="5" fill="#0066FF"/>
+<text x="70" y="242" font-size="14.5" fill="#1A202C">Fréquentation par semaine</text>
+<rect x="352" y="70" width="297" height="218" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="352" y="70" width="297" height="7" rx="3" fill="#0A2540"/>
+<text x="372" y="112" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Comparaison</text>
+<circle cx="378" cy="145" r="5" fill="#0A2540"/>
+<text x="392" y="150" font-size="14.5" fill="#1A202C">Barres</text>
+<circle cx="378" cy="191" r="5" fill="#0A2540"/>
+<text x="392" y="196" font-size="14.5" fill="#1A202C">Ventes par agence</text>
+<circle cx="378" cy="237" r="5" fill="#0A2540"/>
+<text x="392" y="242" font-size="14.5" fill="#1A202C">Résultats par projet</text>
+<rect x="673" y="70" width="297" height="218" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="673" y="70" width="297" height="7" rx="3" fill="#00C9A7"/>
+<text x="693" y="112" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Répartition</text>
+<circle cx="699" cy="145" r="5" fill="#00C9A7"/>
+<text x="713" y="150" font-size="14.5" fill="#1A202C">Barres empilées ou secteurs</text>
+<circle cx="699" cy="191" r="5" fill="#00C9A7"/>
+<text x="713" y="196" font-size="14.5" fill="#1A202C">Part de chaque produit</text>
+<circle cx="699" cy="237" r="5" fill="#00C9A7"/>
+<text x="713" y="242" font-size="14.5" fill="#1A202C">Peu de catégories</text>
+</svg>

@@ -1,0 +1,146 @@
+title: Automatiser les tâches administratives
+summary: Libérez des heures de travail dans votre organisation : repérer les tâches à automatiser, utiliser formulaires et modèles, créer des flux sans code, intégrer l'IA, organiser les documents et accompagner le changement.
+audience: pme
+parcours: organisations
+level: intermediaire
+duration: 85
+position: 16
+prerequisites: Être à l'aise avec la bureautique. Le cours « Productivité professionnelle : bureautique et IA » est conseillé.
+description: Saisies en double, relances manuelles, documents introuvables, rapports compilés à la main : les tâches administratives répétitives coûtent cher aux PME, aux ONG et aux administrations.
+description: Ce cours vous montre comment repérer les tâches à automatiser, utiliser des formulaires en ligne et des modèles, créer des flux automatiques sans programmer, intégrer l'IA dans les processus avec une vérification humaine, organiser les documents partagés et réussir le changement auprès des équipes.
+objective: Repérer et prioriser les tâches automatisables
+objective: Utiliser formulaires en ligne, modèles et publipostage
+objective: Concevoir des flux automatiques sans code
+objective: Intégrer l'IA dans les processus avec une vérification humaine
+objective: Organiser les documents partagés et leurs accès
+objective: Accompagner les équipes dans le changement
+skill: Automatiser des processus administratifs
+skill: Organiser l'information d'une organisation
+skill: Conduire un projet d'automatisation
+module: Repérer et outiller
+lesson: reperer | Repérer ce qui peut être automatisé | 01-reperer-ce-qui-peut-etre-automatise.md | Identifier et prioriser les tâches automatisables. | 13 | apercu
+? Quelles caractéristiques rendent une tâche automatisable ?
++ Elle est répétitive
++ Elle suit des règles claires
++ Elle porte sur des informations numériques ou numérisables
+- Elle demande de négocier avec un client mécontent
+> Le jugement et l'empathie restent humains.
+? Que faire avant d'automatiser un processus ?
++ Le simplifier
+- Acheter le logiciel le plus cher
+- Licencier une partie de l'équipe
+- Rien
+> Automatiser le désordre produit du désordre plus vite.
+lesson: formulaires | Formulaires et modèles | 02-formulaires-et-modeles.md | Utiliser formulaires en ligne, modèles et publipostage. | 14
+? À quoi sert le publipostage ?
++ À générer automatiquement des documents personnalisés à partir d'un modèle et d'un tableau
+- À envoyer du courrier par la poste
+- À publier sur les réseaux sociaux
+- À protéger un document
+> Cent attestations en quelques minutes.
+? Quelles données un formulaire doit-il collecter ?
++ Uniquement celles qui sont nécessaires
+- Le maximum possible, au cas où
+- Les mots de passe des personnes
+- Aucune
+> Moins de données, c'est moins de risques.
+lesson: flux | Les flux automatiques | 03-les-flux-automatiques.md | Concevoir des automatisations sans code. | 14
+? Quelle est la logique d'une automatisation ?
++ Déclencheur, condition, action
+- Achat, installation, oubli
+- Question, réponse, fin
+- Début, milieu, fin
+> Exemple : quand un formulaire est rempli, envoyer une confirmation.
+? Que faire avant d'activer un flux automatique ?
++ Le tester avec des données fictives
+- L'activer directement sur toutes les données réelles
+- Ne prévenir personne
+- Le supprimer
+> Une erreur de règle peut toucher des centaines de personnes.
+module: L'IA, les documents et les équipes
+lesson: ia | L'IA dans les processus | 04-l-ia-dans-les-processus.md | Intégrer l'IA avec une vérification humaine. | 14
+? Pourquoi garder une vérification humaine dans un processus utilisant l'IA ?
++ L'IA peut mal lire un chiffre ou mal classer un message
++ Les décisions qui engagent l'organisation doivent rester humaines
+- Parce que l'IA est toujours fausse
+- Ce n'est pas nécessaire
+> L'humain reste responsable.
+lesson: documents | Organiser les documents | 05-organiser-les-documents.md | Structurer l'espace partagé et protéger les documents. | 15
+? Quel nom de fichier est le mieux construit ?
++ 2026-11-15_Contrat_Fournisseur-Kabila_v2
+- contrat final final (3)
+- Document1
+- nouveau
+> La date à l'envers permet le classement chronologique.
+? Quelle est la règle de sauvegarde recommandée ?
++ Trois copies, deux supports, une hors du bureau
+- Une seule copie sur l'ordinateur du directeur
+- Aucune sauvegarde
+- Une copie sur une clé USB dans le même tiroir
+> Les pannes, vols et erreurs arrivent.
+lesson: changement | Conduire le changement | 06-conduire-le-changement.md | Réussir l'adoption par les équipes. | 15
+? Pourquoi fixer une date de bascule ?
++ Pour éviter que l'ancien et le nouveau système coexistent indéfiniment
+- Pour sanctionner les équipes
+- Pour changer d'outil chaque mois
+- Ce n'est pas utile
+> Sans date, les anciennes habitudes reviennent.
+exam:
+? Quel était le vrai problème de Mme Kalala ?
++ Un problème de méthode : saisies manuelles et recopies
+- Un manque de compétence
+- Un manque de parents
+- Un ordinateur trop récent
+? Comment prioriser les tâches à automatiser ?
++ Selon le temps gagné et la facilité de mise en place
+- Par ordre alphabétique
+- En commençant par les plus complexes
+- Au hasard
+? Quels sont les avantages d'un formulaire en ligne ?
++ Plus de recopie
++ Des informations complètes grâce aux champs obligatoires
++ Des données directement exploitables dans un tableur
+- Il permet de collecter des données sans en informer les personnes
+? Dans « chaque 10 du mois, si le paiement n'est pas enregistré, envoyer un rappel », quelle est la condition ?
++ Le paiement n'est pas enregistré
+- Chaque 10 du mois
+- Envoyer un rappel
+- Le mois
+? Quels outils permettent de créer des flux automatiques sans programmer ?
++ Power Automate, Zapier ou Make
+- Un cahier et un stylo
+- Une calculatrice
+- Un fax
+? Vrai ou faux : il faut désigner une personne responsable de chaque automatisation.
++ Vrai
+- Faux
+? Quel usage de l'IA est approprié dans le traitement des factures ?
++ Extraire les informations clés, puis faire valider par le comptable avant paiement
+- Payer automatiquement toutes les factures sans contrôle
+- Inventer les montants manquants
+- Supprimer les factures difficiles à lire
+? Avant de faire traiter des documents par une IA, que vérifier ?
++ Que l'outil est autorisé et que les conditions de stockage des données sont conformes
+- La couleur de l'interface
+- Le nombre de documents
+- Rien
+? Quand retirer les accès d'une personne qui quitte l'organisation ?
++ Le jour même de son départ
+- Un an plus tard
+- Jamais
+- Quand on y pense
+? Pourquoi les automatisations échouent-elles le plus souvent ?
++ Faute d'accompagnement des équipes
+- Parce que les outils sont toujours mauvais
+- Parce que l'IA refuse de travailler
+- Parce que les tâches sont trop simples
+? Comment rassurer les équipes sur l'emploi ?
++ Expliquer à quoi servira le temps gagné : mieux servir, développer, se former
+- Ne rien dire
+- Annoncer des suppressions de postes
+- Cacher le projet
+? Pourquoi documenter chaque automatisation ?
++ Pour qu'elle ne devienne pas une boîte noire quand son créateur s'en va
+- Pour allonger les procédures
+- Ce n'est pas utile
+- Pour la vendre

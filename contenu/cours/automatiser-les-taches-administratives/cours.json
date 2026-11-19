@@ -1,0 +1,592 @@
+{
+ "slug": "automatiser-les-taches-administratives",
+ "format": "self_paced",
+ "objectives": [
+  "Repérer et prioriser les tâches automatisables",
+  "Utiliser formulaires en ligne, modèles et publipostage",
+  "Concevoir des flux automatiques sans code",
+  "Intégrer l'IA dans les processus avec une vérification humaine",
+  "Organiser les documents partagés et leurs accès",
+  "Accompagner les équipes dans le changement"
+ ],
+ "skills": [
+  "Automatiser des processus administratifs",
+  "Organiser l'information d'une organisation",
+  "Conduire un projet d'automatisation"
+ ],
+ "modules": [
+  {
+   "title": "Repérer et outiller",
+   "lessons": [
+    {
+     "key": "reperer",
+     "title": "Repérer ce qui peut être automatisé",
+     "file": "01-reperer-ce-qui-peut-etre-automatise.md",
+     "objective": "Identifier et prioriser les tâches automatisables.",
+     "duration_minutes": 13,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quelles caractéristiques rendent une tâche automatisable ?",
+       "options": [
+        {
+         "text": "Elle est répétitive",
+         "correct": true
+        },
+        {
+         "text": "Elle suit des règles claires",
+         "correct": true
+        },
+        {
+         "text": "Elle porte sur des informations numériques ou numérisables",
+         "correct": true
+        },
+        {
+         "text": "Elle demande de négocier avec un client mécontent",
+         "correct": false
+        }
+       ],
+       "explanation": "Le jugement et l'empathie restent humains.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Que faire avant d'automatiser un processus ?",
+       "options": [
+        {
+         "text": "Le simplifier",
+         "correct": true
+        },
+        {
+         "text": "Acheter le logiciel le plus cher",
+         "correct": false
+        },
+        {
+         "text": "Licencier une partie de l'équipe",
+         "correct": false
+        },
+        {
+         "text": "Rien",
+         "correct": false
+        }
+       ],
+       "explanation": "Automatiser le désordre produit du désordre plus vite.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "formulaires",
+     "title": "Formulaires et modèles",
+     "file": "02-formulaires-et-modeles.md",
+     "objective": "Utiliser formulaires en ligne, modèles et publipostage.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "À quoi sert le publipostage ?",
+       "options": [
+        {
+         "text": "À générer automatiquement des documents personnalisés à partir d'un modèle et d'un tableau",
+         "correct": true
+        },
+        {
+         "text": "À envoyer du courrier par la poste",
+         "correct": false
+        },
+        {
+         "text": "À publier sur les réseaux sociaux",
+         "correct": false
+        },
+        {
+         "text": "À protéger un document",
+         "correct": false
+        }
+       ],
+       "explanation": "Cent attestations en quelques minutes.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelles données un formulaire doit-il collecter ?",
+       "options": [
+        {
+         "text": "Uniquement celles qui sont nécessaires",
+         "correct": true
+        },
+        {
+         "text": "Le maximum possible, au cas où",
+         "correct": false
+        },
+        {
+         "text": "Les mots de passe des personnes",
+         "correct": false
+        },
+        {
+         "text": "Aucune",
+         "correct": false
+        }
+       ],
+       "explanation": "Moins de données, c'est moins de risques.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "flux",
+     "title": "Les flux automatiques",
+     "file": "03-les-flux-automatiques.md",
+     "objective": "Concevoir des automatisations sans code.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle est la logique d'une automatisation ?",
+       "options": [
+        {
+         "text": "Déclencheur, condition, action",
+         "correct": true
+        },
+        {
+         "text": "Achat, installation, oubli",
+         "correct": false
+        },
+        {
+         "text": "Question, réponse, fin",
+         "correct": false
+        },
+        {
+         "text": "Début, milieu, fin",
+         "correct": false
+        }
+       ],
+       "explanation": "Exemple : quand un formulaire est rempli, envoyer une confirmation.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que faire avant d'activer un flux automatique ?",
+       "options": [
+        {
+         "text": "Le tester avec des données fictives",
+         "correct": true
+        },
+        {
+         "text": "L'activer directement sur toutes les données réelles",
+         "correct": false
+        },
+        {
+         "text": "Ne prévenir personne",
+         "correct": false
+        },
+        {
+         "text": "Le supprimer",
+         "correct": false
+        }
+       ],
+       "explanation": "Une erreur de règle peut toucher des centaines de personnes.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "L'IA, les documents et les équipes",
+   "lessons": [
+    {
+     "key": "ia",
+     "title": "L'IA dans les processus",
+     "file": "04-l-ia-dans-les-processus.md",
+     "objective": "Intégrer l'IA avec une vérification humaine.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi garder une vérification humaine dans un processus utilisant l'IA ?",
+       "options": [
+        {
+         "text": "L'IA peut mal lire un chiffre ou mal classer un message",
+         "correct": true
+        },
+        {
+         "text": "Les décisions qui engagent l'organisation doivent rester humaines",
+         "correct": true
+        },
+        {
+         "text": "Parce que l'IA est toujours fausse",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas nécessaire",
+         "correct": false
+        }
+       ],
+       "explanation": "L'humain reste responsable.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "documents",
+     "title": "Organiser les documents",
+     "file": "05-organiser-les-documents.md",
+     "objective": "Structurer l'espace partagé et protéger les documents.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel nom de fichier est le mieux construit ?",
+       "options": [
+        {
+         "text": "2026-11-15_Contrat_Fournisseur-Kabila_v2",
+         "correct": true
+        },
+        {
+         "text": "contrat final final (3)",
+         "correct": false
+        },
+        {
+         "text": "Document1",
+         "correct": false
+        },
+        {
+         "text": "nouveau",
+         "correct": false
+        }
+       ],
+       "explanation": "La date à l'envers permet le classement chronologique.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelle est la règle de sauvegarde recommandée ?",
+       "options": [
+        {
+         "text": "Trois copies, deux supports, une hors du bureau",
+         "correct": true
+        },
+        {
+         "text": "Une seule copie sur l'ordinateur du directeur",
+         "correct": false
+        },
+        {
+         "text": "Aucune sauvegarde",
+         "correct": false
+        },
+        {
+         "text": "Une copie sur une clé USB dans le même tiroir",
+         "correct": false
+        }
+       ],
+       "explanation": "Les pannes, vols et erreurs arrivent.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "changement",
+     "title": "Conduire le changement",
+     "file": "06-conduire-le-changement.md",
+     "objective": "Réussir l'adoption par les équipes.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi fixer une date de bascule ?",
+       "options": [
+        {
+         "text": "Pour éviter que l'ancien et le nouveau système coexistent indéfiniment",
+         "correct": true
+        },
+        {
+         "text": "Pour sanctionner les équipes",
+         "correct": false
+        },
+        {
+         "text": "Pour changer d'outil chaque mois",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas utile",
+         "correct": false
+        }
+       ],
+       "explanation": "Sans date, les anciennes habitudes reviennent.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Automatiser les tâches administratives",
+ "summary": "Libérez des heures de travail dans votre organisation : repérer les tâches à automatiser, utiliser formulaires et modèles, créer des flux sans code, intégrer l'IA, organiser les documents et accompagner le changement.",
+ "audience": "pme",
+ "parcours": "organisations",
+ "level": "intermediaire",
+ "duration_minutes": 85,
+ "position": 16,
+ "prerequisites": "Être à l'aise avec la bureautique. Le cours « Productivité professionnelle : bureautique et IA » est conseillé.",
+ "description": "Saisies en double, relances manuelles, documents introuvables, rapports compilés à la main : les tâches administratives répétitives coûtent cher aux PME, aux ONG et aux administrations.\n\nCe cours vous montre comment repérer les tâches à automatiser, utiliser des formulaires en ligne et des modèles, créer des flux automatiques sans programmer, intégrer l'IA dans les processus avec une vérification humaine, organiser les documents partagés et réussir le changement auprès des équipes.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Quel était le vrai problème de Mme Kalala ?",
+    "options": [
+     {
+      "text": "Un problème de méthode : saisies manuelles et recopies",
+      "correct": true
+     },
+     {
+      "text": "Un manque de compétence",
+      "correct": false
+     },
+     {
+      "text": "Un manque de parents",
+      "correct": false
+     },
+     {
+      "text": "Un ordinateur trop récent",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment prioriser les tâches à automatiser ?",
+    "options": [
+     {
+      "text": "Selon le temps gagné et la facilité de mise en place",
+      "correct": true
+     },
+     {
+      "text": "Par ordre alphabétique",
+      "correct": false
+     },
+     {
+      "text": "En commençant par les plus complexes",
+      "correct": false
+     },
+     {
+      "text": "Au hasard",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels sont les avantages d'un formulaire en ligne ?",
+    "options": [
+     {
+      "text": "Plus de recopie",
+      "correct": true
+     },
+     {
+      "text": "Des informations complètes grâce aux champs obligatoires",
+      "correct": true
+     },
+     {
+      "text": "Des données directement exploitables dans un tableur",
+      "correct": true
+     },
+     {
+      "text": "Il permet de collecter des données sans en informer les personnes",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Dans « chaque 10 du mois, si le paiement n'est pas enregistré, envoyer un rappel », quelle est la condition ?",
+    "options": [
+     {
+      "text": "Le paiement n'est pas enregistré",
+      "correct": true
+     },
+     {
+      "text": "Chaque 10 du mois",
+      "correct": false
+     },
+     {
+      "text": "Envoyer un rappel",
+      "correct": false
+     },
+     {
+      "text": "Le mois",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels outils permettent de créer des flux automatiques sans programmer ?",
+    "options": [
+     {
+      "text": "Power Automate, Zapier ou Make",
+      "correct": true
+     },
+     {
+      "text": "Un cahier et un stylo",
+      "correct": false
+     },
+     {
+      "text": "Une calculatrice",
+      "correct": false
+     },
+     {
+      "text": "Un fax",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : il faut désigner une personne responsable de chaque automatisation.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Quel usage de l'IA est approprié dans le traitement des factures ?",
+    "options": [
+     {
+      "text": "Extraire les informations clés, puis faire valider par le comptable avant paiement",
+      "correct": true
+     },
+     {
+      "text": "Payer automatiquement toutes les factures sans contrôle",
+      "correct": false
+     },
+     {
+      "text": "Inventer les montants manquants",
+      "correct": false
+     },
+     {
+      "text": "Supprimer les factures difficiles à lire",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Avant de faire traiter des documents par une IA, que vérifier ?",
+    "options": [
+     {
+      "text": "Que l'outil est autorisé et que les conditions de stockage des données sont conformes",
+      "correct": true
+     },
+     {
+      "text": "La couleur de l'interface",
+      "correct": false
+     },
+     {
+      "text": "Le nombre de documents",
+      "correct": false
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quand retirer les accès d'une personne qui quitte l'organisation ?",
+    "options": [
+     {
+      "text": "Le jour même de son départ",
+      "correct": true
+     },
+     {
+      "text": "Un an plus tard",
+      "correct": false
+     },
+     {
+      "text": "Jamais",
+      "correct": false
+     },
+     {
+      "text": "Quand on y pense",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi les automatisations échouent-elles le plus souvent ?",
+    "options": [
+     {
+      "text": "Faute d'accompagnement des équipes",
+      "correct": true
+     },
+     {
+      "text": "Parce que les outils sont toujours mauvais",
+      "correct": false
+     },
+     {
+      "text": "Parce que l'IA refuse de travailler",
+      "correct": false
+     },
+     {
+      "text": "Parce que les tâches sont trop simples",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment rassurer les équipes sur l'emploi ?",
+    "options": [
+     {
+      "text": "Expliquer à quoi servira le temps gagné : mieux servir, développer, se former",
+      "correct": true
+     },
+     {
+      "text": "Ne rien dire",
+      "correct": false
+     },
+     {
+      "text": "Annoncer des suppressions de postes",
+      "correct": false
+     },
+     {
+      "text": "Cacher le projet",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi documenter chaque automatisation ?",
+    "options": [
+     {
+      "text": "Pour qu'elle ne devienne pas une boîte noire quand son créateur s'en va",
+      "correct": true
+     },
+     {
+      "text": "Pour allonger les procédures",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas utile",
+      "correct": false
+     },
+     {
+      "text": "Pour la vendre",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

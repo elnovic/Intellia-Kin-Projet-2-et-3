@@ -1,0 +1,146 @@
+title: Analyse de données et aide à la décision
+summary: Transformez vos données en décisions : poser la bonne question, fiabiliser les données, analyser avec un tableur et l'IA, créer des graphiques clairs, construire un tableau de bord et rédiger une note de décision.
+audience: pme
+parcours: organisations
+level: avance
+duration: 90
+position: 17
+prerequisites: Maîtriser les bases d'Excel ou d'un tableur. Le cours « Productivité professionnelle : bureautique et IA » est conseillé.
+description: Les organisations accumulent des données (ventes, stocks, bénéficiaires, paiements) sans toujours les exploiter. Pourtant, bien analysées, elles éclairent les décisions et évitent des erreurs coûteuses.
+description: Ce cours vous apprend à partir d'une question de décision, à fiabiliser vos données, à les analyser avec un tableur et l'IA en évitant les pièges d'interprétation, à créer des graphiques honnêtes et clairs, à construire un tableau de bord et à transformer vos analyses en recommandations utiles aux décideurs.
+objective: Formuler une question de décision et identifier les données utiles
+objective: Repérer et corriger les problèmes de qualité des données
+objective: Calculer et interpréter les indicateurs de base
+objective: Choisir et concevoir des graphiques clairs et honnêtes
+objective: Construire un tableau de bord avec des indicateurs pertinents
+objective: Rédiger une note de décision qui assume l'incertitude
+skill: Analyser des données avec un tableur et l'IA
+skill: Visualiser des données
+skill: Formuler des recommandations fondées sur les données
+module: Des données fiables
+lesson: decider | Décider avec des données | 01-decider-avec-des-donnees.md | Comprendre le cycle de l'analyse de données. | 14 | apercu
+? Par quoi commence le cycle de l'analyse de données ?
++ Une question de décision
+- La création d'un graphique
+- L'achat d'un logiciel
+- La collecte de toutes les données possibles
+> Sans question claire, on se perd dans les chiffres.
+? Quelle étape prend souvent le plus de temps ?
++ Le nettoyage des données
+- Le choix des couleurs
+- L'impression du rapport
+- La rédaction du titre
+> Les données brutes contiennent presque toujours des erreurs.
+lesson: fiables | Des données fiables | 02-des-donnees-fiables.md | Repérer et corriger les problèmes de qualité. | 15
+? « Kin », « Kinshasa » et « KINSHASA » dans une même colonne posent quel problème ?
++ Des catégories incohérentes
+- Un problème de couleur
+- Un problème de police
+- Aucun
+> Le tableur les compte comme trois villes différentes.
+? Que faire avant de nettoyer des données ?
++ Garder une copie des données brutes
+- Supprimer les lignes difficiles
+- Inventer les valeurs manquantes
+- Rien
+> Et notez chaque modification.
+lesson: tableur | Analyser avec un tableur | 03-analyser-avec-un-tableur.md | Calculer et interpréter les indicateurs de base. | 15
+? Neuf employés gagnent 300 dollars et le directeur 5 000. Quel indicateur représente le mieux le salaire typique ?
++ La médiane
+- La moyenne
+- Le maximum
+- La somme
+> La médiane résiste aux valeurs extrêmes.
+? Vrai ou faux : si deux phénomènes augmentent en même temps, l'un cause forcément l'autre.
+- Vrai
++ Faux
+> Corrélation n'est pas causalité.
+module: Communiquer et décider
+lesson: graphiques | Des graphiques qui parlent | 04-des-graphiques-qui-parlent.md | Choisir et concevoir des graphiques clairs. | 15
+? Quel graphique pour montrer l'évolution des ventes mois par mois ?
++ Une courbe
+- Un graphique en secteurs
+- Un tableau de 500 lignes
+- Un nuage de mots
+> La courbe montre l'évolution dans le temps.
+? Pourquoi l'axe d'un graphique en barres doit-il commencer à zéro ?
++ Parce que la longueur de la barre porte l'information
+- Pour faire joli
+- Ce n'est jamais nécessaire
+- Pour gagner de la place
+> Sinon, une petite différence paraît énorme.
+lesson: tableau-de-bord | Le tableau de bord | 05-le-tableau-de-bord.md | Construire un tableau de bord utile. | 15
+? Combien d'indicateurs un bon tableau de bord compte-t-il, environ ?
++ Cinq à dix
+- Cent
+- Un seul
+- Le maximum possible
+> Liés aux objectifs, actionnables et fiables.
+lesson: decision | Des chiffres à la décision | 06-des-chiffres-a-la-decision.md | Rédiger une note de décision. | 16
+? Quelles sont les trois étapes d'une bonne communication d'analyse ?
++ Constat, interprétation, recommandation
+- Introduction, développement, conclusion
+- Chiffres, chiffres, chiffres
+- Problème, excuse, oubli
+> Une analyse doit aider à décider.
+exam:
+? Pourquoi le directeur des pharmacies s'était-il trompé ?
++ Il confondait fréquentation et rentabilité, sans vérifier les données
+- Il avait trop de données
+- Ses pharmacies étaient fermées
+- Il n'avait pas d'intuition
+? Que faire avant de charger des données de patients dans un assistant IA ?
++ Les anonymiser ou les agréger, et vérifier que l'outil est autorisé
+- Rien
+- Les envoyer telles quelles
+- Ajouter les numéros de téléphone
+? Quelles mesures préviennent les erreurs dès la collecte ?
++ Des formulaires avec listes déroulantes
++ Des règles de saisie communes
++ Un responsable par base de données
+- Le texte libre partout
+? Une hausse de 50 % des clients d'une agence peut être trompeuse si :
++ Elle correspond à un passage de 2 à 3 clients
+- Elle concerne une grande agence
+- Elle est vérifiée
+- Elle est durable
+? Pourquoi comparer décembre à décembre de l'année précédente plutôt qu'à novembre ?
++ Pour tenir compte des effets de saison
+- Parce que novembre n'existe pas dans les données
+- Pour avoir moins de calculs
+- Ce n'est pas utile
+? Que faire d'un chiffre produit par l'IA avant de le présenter à la direction ?
++ Le vérifier en refaisant les calculs principaux dans le tableur
+- Le présenter tel quel
+- L'arrondir au chiffre supérieur
+- Le multiplier par deux
+? Quel titre de graphique est le meilleur ?
++ « Les ventes de l'agence de Limete ont doublé en un an »
+- « Graphique 3 »
+- « Ventes »
+- « Données »
+? Quel graphique pour comparer les ventes de cinq agences ?
++ Des barres classées de la plus grande à la plus petite
+- Une courbe
+- Un graphique en secteurs en 3D
+- Un tableau de 1 000 lignes
+? Quels critères pour choisir un indicateur de tableau de bord ?
++ Lié aux objectifs
++ Actionnable
++ Mesurable de façon fiable
+- Le plus impressionnant possible
+? Pourquoi combiner indicateurs de quantité et de qualité ?
++ Pour éviter qu'un indicateur soit amélioré au détriment du vrai objectif
+- Pour avoir plus de couleurs
+- Pour allonger le tableau de bord
+- Ce n'est pas utile
+? Que doit contenir une note de décision d'une page ?
++ La question, la réponse courte, les constats, les options, la recommandation et les limites
+- Uniquement des tableaux de chiffres
+- La liste de toutes les données collectées
+- Le CV de l'analyste
+? Les données contredisent une idée chère à la direction. Que faire ?
++ Le dire avec tact, en présentant les faits et les limites de l'analyse
+- Modifier les données
+- Cacher les résultats
+- Choisir une autre période pour obtenir le résultat souhaité
