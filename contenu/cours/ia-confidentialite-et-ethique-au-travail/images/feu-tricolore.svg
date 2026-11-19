@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 354" font-family="Inter, Arial, sans-serif">
 <rect width="1000" height="354" fill="#F8FAFC"/>
 <text x="30" y="45" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">Que peut-on confier à un assistant IA grand public ?</text>
-<rect x="30" y="70" width="297" height="264" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="30" y="70" width="297" height="7" rx="3" fill="#0066FF"/>
+<rect x="30" y="70" width="297" height="264" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="30" y="70" width="297" height="7" rx="3" fill="#16A34A"/>
 <text x="50" y="112" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Vert, sans risque</text>
-<circle cx="56" cy="145" r="5" fill="#0066FF"/>
+<circle cx="56" cy="145" r="5" fill="#16A34A"/>
 <text x="70" y="150" font-size="14.5" fill="#1A202C">Idées et brainstorming</text>
-<circle cx="56" cy="191" r="5" fill="#0066FF"/>
+<circle cx="56" cy="191" r="5" fill="#16A34A"/>
 <text x="70" y="196" font-size="14.5" fill="#1A202C">Textes publics</text>
-<circle cx="56" cy="237" r="5" fill="#0066FF"/>
+<circle cx="56" cy="237" r="5" fill="#16A34A"/>
 <text x="70" y="242" font-size="14.5" fill="#1A202C">Questions générales</text>
-<circle cx="56" cy="283" r="5" fill="#0066FF"/>
+<circle cx="56" cy="283" r="5" fill="#16A34A"/>
 <text x="70" y="288" font-size="14.5" fill="#1A202C">Données anonymisées</text>
-<rect x="352" y="70" width="297" height="264" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="352" y="70" width="297" height="7" rx="3" fill="#0A2540"/>
+<rect x="352" y="70" width="297" height="264" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="352" y="70" width="297" height="7" rx="3" fill="#F59E0B"/>
 <text x="372" y="112" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Orange, avec précaution</text>
-<circle cx="378" cy="145" r="5" fill="#0A2540"/>
+<circle cx="378" cy="145" r="5" fill="#F59E0B"/>
 <text x="392" y="150" font-size="14.5" fill="#1A202C">Documents internes non sensibles</text>
-<circle cx="378" cy="191" r="5" fill="#0A2540"/>
+<circle cx="378" cy="191" r="5" fill="#F59E0B"/>
 <text x="392" y="196" font-size="14.5" fill="#1A202C">Chiffres sans noms</text>
-<circle cx="378" cy="237" r="5" fill="#0A2540"/>
+<circle cx="378" cy="237" r="5" fill="#F59E0B"/>
 <text x="392" y="242" font-size="14.5" fill="#1A202C">Brouillons de contrats</text>
 <text x="392" y="260" font-size="14.5" fill="#1A202C">anonymisés</text>
-<rect x="673" y="70" width="297" height="264" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="673" y="70" width="297" height="7" rx="3" fill="#00C9A7"/>
+<rect x="673" y="70" width="297" height="264" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="673" y="70" width="297" height="7" rx="3" fill="#DC2626"/>
 <text x="693" y="112" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Rouge, jamais</text>
-<circle cx="699" cy="145" r="5" fill="#00C9A7"/>
+<circle cx="699" cy="145" r="5" fill="#DC2626"/>
 <text x="713" y="150" font-size="14.5" fill="#1A202C">Mots de passe et codes</text>
-<circle cx="699" cy="191" r="5" fill="#00C9A7"/>
+<circle cx="699" cy="191" r="5" fill="#DC2626"/>
 <text x="713" y="196" font-size="14.5" fill="#1A202C">Données de clients et de</text>
 <text x="713" y="214" font-size="14.5" fill="#1A202C">salariés</text>
-<circle cx="699" cy="237" r="5" fill="#00C9A7"/>
+<circle cx="699" cy="237" r="5" fill="#DC2626"/>
 <text x="713" y="242" font-size="14.5" fill="#1A202C">Santé, salaires, comptes</text>
 <text x="713" y="260" font-size="14.5" fill="#1A202C">bancaires</text>
-<circle cx="699" cy="283" r="5" fill="#00C9A7"/>
+<circle cx="699" cy="283" r="5" fill="#DC2626"/>
 <text x="713" y="288" font-size="14.5" fill="#1A202C">Secrets de l'entreprise</text>
 </svg>
