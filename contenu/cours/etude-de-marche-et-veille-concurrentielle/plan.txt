@@ -1,0 +1,138 @@
+title: Étude de marché et veille concurrentielle
+summary: Connaissez vos clients et vos concurrents pour décider sur des faits : observer, interroger, trouver des chiffres fiables, analyser la concurrence, organiser une veille et transformer l'analyse en décisions.
+audience: entrepreneur
+parcours: entrepreneuriat
+level: intermediaire
+duration: 80
+position: 12
+prerequisites: Le cours « Du concept au plan d'affaires » est conseillé.
+description: Lancer ou développer une activité sans connaître son marché, c'est avancer les yeux fermés. Une bonne étude de marché ne demande pas forcément un gros budget, mais de la méthode.
+description: Ce cours vous apprend à poser les bonnes questions, à connaître vos clients par l'observation, l'entretien et le questionnaire, à trouver des chiffres fiables, à analyser vos concurrents, à mettre en place une veille simple et à tirer des décisions de vos analyses. L'IA vous aide à préparer et analyser, tout en restant vigilant sur ses limites concernant les marchés locaux.
+objective: Définir les questions d'une étude de marché
+objective: Connaître ses clients par l'observation, l'entretien et le questionnaire
+objective: Trouver et vérifier des chiffres fiables
+objective: Analyser la concurrence et trouver sa différence
+objective: Mettre en place une veille régulière
+objective: Transformer l'analyse en décisions
+skill: Réaliser une étude de marché
+skill: Analyser la concurrence
+skill: Organiser une veille
+module: Comprendre son marché
+lesson: pourquoi | Pourquoi étudier son marché | 01-pourquoi-etudier-son-marche.md | Comprendre l'intérêt et les limites de l'étude de marché. | 12 | apercu
+? Quelles sont les trois questions centrales d'une étude de marché ?
++ La demande
++ L'offre
++ L'environnement
+- La décoration
+> Clients, concurrents, contexte.
+? Vrai ou faux : on peut se fier à l'IA pour connaître la taille exacte d'un marché local.
+- Vrai
++ Faux
+> Ses chiffres peuvent être anciens, approximatifs ou inventés.
+lesson: clients | Connaître ses clients | 02-connaitre-ses-clients.md | Observer, interroger et dresser des portraits de clients. | 14
+? Laquelle de ces questions est orientée, donc à éviter ?
++ « Ne trouvez-vous pas que les prix actuels sont trop élevés ? »
+- « Où achetez-vous habituellement vos pagnes ? »
+- « Combien dépensez-vous par mois pour ce produit ? »
+- « Comment avez-vous connu ce magasin ? »
+> Une question neutre ne suggère pas la réponse.
+lesson: sources | Trouver des informations fiables | 03-trouver-des-informations-fiables.md | Chercher et vérifier des chiffres. | 14
+? Que noter pour chaque chiffre trouvé ?
++ La source et la date
+- Uniquement le chiffre
+- Le nom de l'IA utilisée
+- Rien
+> Un chiffre ancien peut être loin de la réalité actuelle.
+? Que faire quand l'IA cite une source pour un chiffre ?
++ Ouvrir la source et vérifier que le chiffre y figure
+- Le recopier directement
+- Le multiplier par deux
+- L'ignorer
+> L'IA peut attribuer à une source un chiffre qu'elle ne contient pas.
+module: Analyser et décider
+lesson: concurrence | Analyser la concurrence | 04-analyser-la-concurrence.md | Comparer les concurrents et trouver sa différence. | 14
+? Une coiffeuse à domicile, pour un salon de beauté, est :
++ Un concurrent indirect
+- Un fournisseur
+- Un concurrent sans importance
+- Un client
+> Elle répond au même besoin autrement.
+? Que révèlent les reproches fréquents dans les avis sur vos concurrents ?
++ Des attentes non satisfaites, donc des opportunités
+- Rien d'utile
+- Qu'il faut copier les concurrents
+- Que le marché n'existe pas
+> Faites mieux là où les autres déçoivent.
+lesson: veille | Mettre en place une veille | 05-mettre-en-place-une-veille.md | Surveiller les évolutions de son marché. | 13
+? Quelle est la bonne organisation d'une veille ?
++ Peu de sources utiles, un moment fixe chaque semaine, un document unique
+- Suivre toutes les sources possibles en permanence
+- Ne rien noter
+- Faire la veille une fois tous les cinq ans
+> Une veille désorganisée devient une perte de temps.
+lesson: decision | De l'analyse à la décision | 06-de-l-analyse-a-la-decision.md | Transformer l'étude en actions. | 13
+? Dans l'analyse forces, faiblesses, opportunités, menaces, où classer une hausse des prix des produits importés ?
++ Menaces
+- Forces
+- Faiblesses
+- Opportunités
+> C'est un facteur externe négatif.
+exam:
+? Qu'a permis l'étude de marché de Sandrine ?
++ Adapter son offre à la demande réelle avant d'ouvrir
+- Augmenter ses prix
+- Copier un concurrent
+- Éviter de payer le loyer
+? Quels usages de l'IA sont appropriés pour une étude de marché ?
++ Préparer un questionnaire
++ Analyser des réponses anonymisées
++ Résumer un long rapport
+- Inventer la taille du marché
+? Combien de questions un bon questionnaire comporte-t-il au maximum, environ ?
++ Une dizaine
+- Cent
+- Cinquante
+- Une seule
+? À quoi sert un portrait de client ?
++ À guider l'offre, le prix et la communication
+- À remplacer l'étude de marché
+- À choisir le nom de l'entreprise
+- À rien
+? Quelles sont des sources publiques fiables ?
++ Les instituts nationaux de statistique
++ Les banques centrales
++ Les organisations internationales comme la Banque mondiale
+- Un message transféré anonymement sur WhatsApp
+? Deux sources donnent des chiffres différents. Que faire ?
++ Citer les deux et privilégier la plus récente et la plus officielle
+- Choisir le chiffre le plus impressionnant
+- Faire la moyenne sans rien dire
+- Inventer un troisième chiffre
+? Comment estimer la taille d'un marché quand aucune statistique n'existe ?
++ Par un raisonnement avec des hypothèses claires et sourcées
+- En demandant un chiffre à l'IA sans vérifier
+- En devinant
+- C'est impossible
+? Vrai ou faux : un projet sans aucun concurrent rassure les investisseurs.
+- Vrai
++ Faux
+? Quelle attitude est éthique pour analyser la concurrence ?
++ Observer les informations publiques comme le ferait un client
+- Se faire passer pour un employé pour obtenir des documents internes
+- Copier les visuels d'un concurrent
+- Publier de faux avis négatifs
+? Quels éléments une veille peut-elle surveiller ?
++ Les prix des fournisseurs
++ La réglementation
++ Les nouvelles offres des concurrents
+- L'horoscope
+? Qu'est-ce que le biais de confirmation ?
++ Ne retenir que les informations qui confirment ce que l'on souhaitait déjà
+- Confirmer un rendez-vous client
+- Vérifier ses sources
+- Un outil de veille
+? Où classer « concurrents peu présents en ligne » dans l'analyse ?
++ Opportunités
+- Forces
+- Faiblesses
+- Menaces

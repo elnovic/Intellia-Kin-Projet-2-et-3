@@ -1,0 +1,561 @@
+{
+ "slug": "du-concept-au-plan-d-affaires",
+ "format": "self_paced",
+ "objectives": [
+  "Formuler précisément le problème résolu et le client cible",
+  "Tester son idée avant d'investir",
+  "Construire un modèle d'affaires en une page",
+  "Calculer son budget de démarrage et son seuil de rentabilité",
+  "Rédiger un plan d'affaires adapté à son lecteur",
+  "Choisir un financement et planifier ses cent premiers jours"
+ ],
+ "skills": [
+  "Valider une idée d'entreprise",
+  "Construire un modèle et un plan d'affaires",
+  "Chiffrer un projet"
+ ],
+ "modules": [
+  {
+   "title": "De l'idée au modèle",
+   "lessons": [
+    {
+     "key": "probleme",
+     "title": "D'une idée à un problème",
+     "file": "01-d-une-idee-a-un-probleme.md",
+     "objective": "Partir du problème du client.",
+     "duration_minutes": 12,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Par quoi faut-il commencer un projet ?",
+       "options": [
+        {
+         "text": "Par le problème précis d'un client précis",
+         "correct": true
+        },
+        {
+         "text": "Par le développement d'une application",
+         "correct": false
+        },
+        {
+         "text": "Par l'achat du matériel",
+         "correct": false
+        },
+        {
+         "text": "Par le choix du logo",
+         "correct": false
+        }
+       ],
+       "explanation": "Beaucoup de projets échouent en résolvant un problème que personne n'a.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : « tout le monde » est un bon client cible.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Plus le client est précis, mieux c'est.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "tester",
+     "title": "Tester avant d'investir",
+     "file": "02-tester-avant-d-investir.md",
+     "objective": "Valider son idée auprès de vrais clients.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle question est la plus utile lors d'un entretien avec un client potentiel ?",
+       "options": [
+        {
+         "text": "« Racontez-moi la dernière fois que vous avez eu ce problème. »",
+         "correct": true
+        },
+        {
+         "text": "« Est-ce que vous achèteriez mon produit ? »",
+         "correct": false
+        },
+        {
+         "text": "« Mon idée est géniale, n'est-ce pas ? »",
+         "correct": false
+        },
+        {
+         "text": "« Combien gagnez-vous ? »",
+         "correct": false
+        }
+       ],
+       "explanation": "Les expériences réelles comptent plus que les intentions.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quel est le test le plus fiable d'une idée ?",
+       "options": [
+        {
+         "text": "Faire payer, même un petit montant",
+         "correct": true
+        },
+        {
+         "text": "Demander l'avis de sa famille",
+         "correct": false
+        },
+        {
+         "text": "Compter les « j'aime » sur une publication",
+         "correct": false
+        },
+        {
+         "text": "Demander à l'IA si l'idée est bonne",
+         "correct": false
+        }
+       ],
+       "explanation": "Un client qui paie prouve la valeur de l'offre.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "modele",
+     "title": "Le modèle d'affaires",
+     "file": "03-le-modele-d-affaires.md",
+     "objective": "Décrire comment le projet fonctionne et gagne de l'argent.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce que la proposition de valeur ?",
+       "options": [
+        {
+         "text": "La raison pour laquelle le client vous choisira, en une phrase",
+         "correct": true
+        },
+        {
+         "text": "Le prix de revient",
+         "correct": false
+        },
+        {
+         "text": "Le nom de l'entreprise",
+         "correct": false
+        },
+        {
+         "text": "Le montant du prêt",
+         "correct": false
+        }
+       ],
+       "explanation": "Plus rapide, moins cher, plus fiable, plus proche…",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Chiffrer, convaincre, lancer",
+   "lessons": [
+    {
+     "key": "chiffres",
+     "title": "Les chiffres du projet",
+     "file": "04-les-chiffres-du-projet.md",
+     "objective": "Calculer budget et seuil de rentabilité.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Coûts fixes 600 dollars par mois, marge de 2 dollars par vente. Quel est le seuil de rentabilité ?",
+       "options": [
+        {
+         "text": "300 ventes par mois",
+         "correct": true
+        },
+        {
+         "text": "1 200 ventes par mois",
+         "correct": false
+        },
+        {
+         "text": "60 ventes par mois",
+         "correct": false
+        },
+        {
+         "text": "2 ventes par mois",
+         "correct": false
+        }
+       ],
+       "explanation": "600 ÷ 2 = 300.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Lequel est un coût variable ?",
+       "options": [
+        {
+         "text": "Les matières premières",
+         "correct": true
+        },
+        {
+         "text": "Le loyer",
+         "correct": false
+        },
+        {
+         "text": "L'abonnement internet",
+         "correct": false
+        },
+        {
+         "text": "Le salaire fixe du gérant",
+         "correct": false
+        }
+       ],
+       "explanation": "Il augmente avec les ventes.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "plan",
+     "title": "Rédiger le plan d'affaires",
+     "file": "05-rediger-le-plan-d-affaires.md",
+     "objective": "Structurer et rédiger un plan convaincant.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle partie du plan d'affaires s'écrit en dernier ?",
+       "options": [
+        {
+         "text": "Le résumé",
+         "correct": true
+        },
+        {
+         "text": "Le marché",
+         "correct": false
+        },
+        {
+         "text": "L'offre",
+         "correct": false
+        },
+        {
+         "text": "Les risques",
+         "correct": false
+        }
+       ],
+       "explanation": "Rédigé en dernier, lu en premier.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "financer",
+     "title": "Financer et lancer",
+     "file": "06-financer-et-lancer.md",
+     "objective": "Choisir un financement et passer à l'action.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Une offre de financement demande de payer des frais à l'avance. Que penser ?",
+       "options": [
+        {
+         "text": "C'est un signal d'arnaque fréquent",
+         "correct": true
+        },
+        {
+         "text": "C'est normal et sans risque",
+         "correct": false
+        },
+        {
+         "text": "Il faut payer vite",
+         "correct": false
+        },
+        {
+         "text": "C'est obligatoire partout",
+         "correct": false
+        }
+       ],
+       "explanation": "Méfiance : vérifiez auprès d'organismes reconnus.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Du concept au plan d'affaires",
+ "summary": "Transformez une idée en projet solide : partir d'un vrai problème, tester avant d'investir, construire son modèle d'affaires, chiffrer son projet, rédiger un plan d'affaires et trouver un financement.",
+ "audience": "entrepreneur",
+ "parcours": "entrepreneuriat",
+ "level": "intermediaire",
+ "duration_minutes": 85,
+ "position": 11,
+ "prerequisites": "Le cours « Bien formuler ses demandes à l'IA » est conseillé.",
+ "description": "Beaucoup de projets échouent non pas faute de travail, mais parce qu'ils ont été lancés sans être testés, ou sans chiffres réalistes. Ce cours vous donne une méthode éprouvée pour passer de l'idée au projet.\n\nVous apprendrez à formuler le problème que vous résolvez, à tester votre idée auprès de vrais clients, à construire votre modèle d'affaires en une page, à calculer votre budget et votre seuil de rentabilité, à rédiger un plan d'affaires convaincant et à choisir le bon financement. L'IA vous accompagne à chaque étape, comme partenaire de réflexion et de rédaction.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Pourquoi le projet de Joël a-t-il échoué ?",
+    "options": [
+     {
+      "text": "Il a développé une solution sans vérifier le problème auprès des clients",
+      "correct": true
+     },
+     {
+      "text": "Son application était trop belle",
+      "correct": false
+     },
+     {
+      "text": "Il avait trop de clients",
+      "correct": false
+     },
+     {
+      "text": "Il manquait de logo",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle formulation de problème est la meilleure ?",
+    "options": [
+     {
+      "text": "« Les mamans qui travaillent n'ont pas le temps d'aller au marché tous les jours. »",
+      "correct": true
+     },
+     {
+      "text": "« Je veux créer une application. »",
+      "correct": false
+     },
+     {
+      "text": "« Tout le monde a besoin de mon produit. »",
+      "correct": false
+     },
+     {
+      "text": "« Mon produit est innovant. »",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi éviter de tester son idée seulement auprès de sa famille ?",
+    "options": [
+     {
+      "text": "Elle risque de dire oui par gentillesse",
+      "correct": true
+     },
+     {
+      "text": "Elle ne connaît rien",
+      "correct": false
+     },
+     {
+      "text": "C'est interdit",
+      "correct": false
+     },
+     {
+      "text": "Elle coûte cher",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles méthodes permettent de tester une idée à petit prix ?",
+    "options": [
+     {
+      "text": "La précommande",
+      "correct": true
+     },
+     {
+      "text": "Le produit minimum",
+      "correct": true
+     },
+     {
+      "text": "Le marché test",
+      "correct": true
+     },
+     {
+      "text": "La construction d'une usine",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quelles rubriques font partie du modèle d'affaires ?",
+    "options": [
+     {
+      "text": "Le client cible",
+      "correct": true
+     },
+     {
+      "text": "La proposition de valeur",
+      "correct": true
+     },
+     {
+      "text": "Les canaux",
+      "correct": true
+     },
+     {
+      "text": "Le signe astrologique du fondateur",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Vrai ou faux : le modèle d'affaires ne doit jamais changer.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Que doit inclure le budget de démarrage ?",
+    "options": [
+     {
+      "text": "Une réserve de trésorerie pour les premiers mois",
+      "correct": true
+     },
+     {
+      "text": "Uniquement le logo",
+      "correct": false
+     },
+     {
+      "text": "Rien, on paiera avec les ventes",
+      "correct": false
+     },
+     {
+      "text": "Les vacances du fondateur",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Lequel est un coût fixe ?",
+    "options": [
+     {
+      "text": "Le loyer",
+      "correct": true
+     },
+     {
+      "text": "Les emballages",
+      "correct": false
+     },
+     {
+      "text": "Les matières premières",
+      "correct": false
+     },
+     {
+      "text": "Les commissions sur ventes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi prévoir un scénario prudent ?",
+    "options": [
+     {
+      "text": "Parce que les partenaires sérieux le regardent en priorité",
+      "correct": true
+     },
+     {
+      "text": "Pour décourager les investisseurs",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas utile",
+      "correct": false
+     },
+     {
+      "text": "Pour payer moins d'impôts",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment éviter qu'une section rédigée par l'IA contienne des chiffres inventés ?",
+    "options": [
+     {
+      "text": "Fournir ses faits et lui demander de signaler les informations manquantes entre crochets",
+      "correct": true
+     },
+     {
+      "text": "Lui demander d'ajouter des statistiques impressionnantes",
+      "correct": false
+     },
+     {
+      "text": "Ne rien vérifier",
+      "correct": false
+     },
+     {
+      "text": "Copier le plan d'un concurrent",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que regarde surtout un banquier dans un plan d'affaires ?",
+    "options": [
+     {
+      "text": "La capacité à rembourser",
+      "correct": true
+     },
+     {
+      "text": "La couleur de la couverture",
+      "correct": false
+     },
+     {
+      "text": "Le nombre de pages",
+      "correct": false
+     },
+     {
+      "text": "Les loisirs du fondateur",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Avant d'emprunter, que faut-il vérifier ?",
+    "options": [
+     {
+      "text": "Le coût total et la capacité de remboursement dans le scénario prudent",
+      "correct": true
+     },
+     {
+      "text": "Uniquement le montant reçu",
+      "correct": false
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     },
+     {
+      "text": "Le nom du conseiller",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

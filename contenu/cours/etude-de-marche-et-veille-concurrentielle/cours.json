@@ -1,0 +1,561 @@
+{
+ "slug": "etude-de-marche-et-veille-concurrentielle",
+ "format": "self_paced",
+ "objectives": [
+  "Définir les questions d'une étude de marché",
+  "Connaître ses clients par l'observation, l'entretien et le questionnaire",
+  "Trouver et vérifier des chiffres fiables",
+  "Analyser la concurrence et trouver sa différence",
+  "Mettre en place une veille régulière",
+  "Transformer l'analyse en décisions"
+ ],
+ "skills": [
+  "Réaliser une étude de marché",
+  "Analyser la concurrence",
+  "Organiser une veille"
+ ],
+ "modules": [
+  {
+   "title": "Comprendre son marché",
+   "lessons": [
+    {
+     "key": "pourquoi",
+     "title": "Pourquoi étudier son marché",
+     "file": "01-pourquoi-etudier-son-marche.md",
+     "objective": "Comprendre l'intérêt et les limites de l'étude de marché.",
+     "duration_minutes": 12,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quelles sont les trois questions centrales d'une étude de marché ?",
+       "options": [
+        {
+         "text": "La demande",
+         "correct": true
+        },
+        {
+         "text": "L'offre",
+         "correct": true
+        },
+        {
+         "text": "L'environnement",
+         "correct": true
+        },
+        {
+         "text": "La décoration",
+         "correct": false
+        }
+       ],
+       "explanation": "Clients, concurrents, contexte.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Vrai ou faux : on peut se fier à l'IA pour connaître la taille exacte d'un marché local.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Ses chiffres peuvent être anciens, approximatifs ou inventés.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "clients",
+     "title": "Connaître ses clients",
+     "file": "02-connaitre-ses-clients.md",
+     "objective": "Observer, interroger et dresser des portraits de clients.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Laquelle de ces questions est orientée, donc à éviter ?",
+       "options": [
+        {
+         "text": "« Ne trouvez-vous pas que les prix actuels sont trop élevés ? »",
+         "correct": true
+        },
+        {
+         "text": "« Où achetez-vous habituellement vos pagnes ? »",
+         "correct": false
+        },
+        {
+         "text": "« Combien dépensez-vous par mois pour ce produit ? »",
+         "correct": false
+        },
+        {
+         "text": "« Comment avez-vous connu ce magasin ? »",
+         "correct": false
+        }
+       ],
+       "explanation": "Une question neutre ne suggère pas la réponse.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "sources",
+     "title": "Trouver des informations fiables",
+     "file": "03-trouver-des-informations-fiables.md",
+     "objective": "Chercher et vérifier des chiffres.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que noter pour chaque chiffre trouvé ?",
+       "options": [
+        {
+         "text": "La source et la date",
+         "correct": true
+        },
+        {
+         "text": "Uniquement le chiffre",
+         "correct": false
+        },
+        {
+         "text": "Le nom de l'IA utilisée",
+         "correct": false
+        },
+        {
+         "text": "Rien",
+         "correct": false
+        }
+       ],
+       "explanation": "Un chiffre ancien peut être loin de la réalité actuelle.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que faire quand l'IA cite une source pour un chiffre ?",
+       "options": [
+        {
+         "text": "Ouvrir la source et vérifier que le chiffre y figure",
+         "correct": true
+        },
+        {
+         "text": "Le recopier directement",
+         "correct": false
+        },
+        {
+         "text": "Le multiplier par deux",
+         "correct": false
+        },
+        {
+         "text": "L'ignorer",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA peut attribuer à une source un chiffre qu'elle ne contient pas.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Analyser et décider",
+   "lessons": [
+    {
+     "key": "concurrence",
+     "title": "Analyser la concurrence",
+     "file": "04-analyser-la-concurrence.md",
+     "objective": "Comparer les concurrents et trouver sa différence.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Une coiffeuse à domicile, pour un salon de beauté, est :",
+       "options": [
+        {
+         "text": "Un concurrent indirect",
+         "correct": true
+        },
+        {
+         "text": "Un fournisseur",
+         "correct": false
+        },
+        {
+         "text": "Un concurrent sans importance",
+         "correct": false
+        },
+        {
+         "text": "Un client",
+         "correct": false
+        }
+       ],
+       "explanation": "Elle répond au même besoin autrement.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que révèlent les reproches fréquents dans les avis sur vos concurrents ?",
+       "options": [
+        {
+         "text": "Des attentes non satisfaites, donc des opportunités",
+         "correct": true
+        },
+        {
+         "text": "Rien d'utile",
+         "correct": false
+        },
+        {
+         "text": "Qu'il faut copier les concurrents",
+         "correct": false
+        },
+        {
+         "text": "Que le marché n'existe pas",
+         "correct": false
+        }
+       ],
+       "explanation": "Faites mieux là où les autres déçoivent.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "veille",
+     "title": "Mettre en place une veille",
+     "file": "05-mettre-en-place-une-veille.md",
+     "objective": "Surveiller les évolutions de son marché.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle est la bonne organisation d'une veille ?",
+       "options": [
+        {
+         "text": "Peu de sources utiles, un moment fixe chaque semaine, un document unique",
+         "correct": true
+        },
+        {
+         "text": "Suivre toutes les sources possibles en permanence",
+         "correct": false
+        },
+        {
+         "text": "Ne rien noter",
+         "correct": false
+        },
+        {
+         "text": "Faire la veille une fois tous les cinq ans",
+         "correct": false
+        }
+       ],
+       "explanation": "Une veille désorganisée devient une perte de temps.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "decision",
+     "title": "De l'analyse à la décision",
+     "file": "06-de-l-analyse-a-la-decision.md",
+     "objective": "Transformer l'étude en actions.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Dans l'analyse forces, faiblesses, opportunités, menaces, où classer une hausse des prix des produits importés ?",
+       "options": [
+        {
+         "text": "Menaces",
+         "correct": true
+        },
+        {
+         "text": "Forces",
+         "correct": false
+        },
+        {
+         "text": "Faiblesses",
+         "correct": false
+        },
+        {
+         "text": "Opportunités",
+         "correct": false
+        }
+       ],
+       "explanation": "C'est un facteur externe négatif.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Étude de marché et veille concurrentielle",
+ "summary": "Connaissez vos clients et vos concurrents pour décider sur des faits : observer, interroger, trouver des chiffres fiables, analyser la concurrence, organiser une veille et transformer l'analyse en décisions.",
+ "audience": "entrepreneur",
+ "parcours": "entrepreneuriat",
+ "level": "intermediaire",
+ "duration_minutes": 80,
+ "position": 12,
+ "prerequisites": "Le cours « Du concept au plan d'affaires » est conseillé.",
+ "description": "Lancer ou développer une activité sans connaître son marché, c'est avancer les yeux fermés. Une bonne étude de marché ne demande pas forcément un gros budget, mais de la méthode.\n\nCe cours vous apprend à poser les bonnes questions, à connaître vos clients par l'observation, l'entretien et le questionnaire, à trouver des chiffres fiables, à analyser vos concurrents, à mettre en place une veille simple et à tirer des décisions de vos analyses. L'IA vous aide à préparer et analyser, tout en restant vigilant sur ses limites concernant les marchés locaux.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Qu'a permis l'étude de marché de Sandrine ?",
+    "options": [
+     {
+      "text": "Adapter son offre à la demande réelle avant d'ouvrir",
+      "correct": true
+     },
+     {
+      "text": "Augmenter ses prix",
+      "correct": false
+     },
+     {
+      "text": "Copier un concurrent",
+      "correct": false
+     },
+     {
+      "text": "Éviter de payer le loyer",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels usages de l'IA sont appropriés pour une étude de marché ?",
+    "options": [
+     {
+      "text": "Préparer un questionnaire",
+      "correct": true
+     },
+     {
+      "text": "Analyser des réponses anonymisées",
+      "correct": true
+     },
+     {
+      "text": "Résumer un long rapport",
+      "correct": true
+     },
+     {
+      "text": "Inventer la taille du marché",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Combien de questions un bon questionnaire comporte-t-il au maximum, environ ?",
+    "options": [
+     {
+      "text": "Une dizaine",
+      "correct": true
+     },
+     {
+      "text": "Cent",
+      "correct": false
+     },
+     {
+      "text": "Cinquante",
+      "correct": false
+     },
+     {
+      "text": "Une seule",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "À quoi sert un portrait de client ?",
+    "options": [
+     {
+      "text": "À guider l'offre, le prix et la communication",
+      "correct": true
+     },
+     {
+      "text": "À remplacer l'étude de marché",
+      "correct": false
+     },
+     {
+      "text": "À choisir le nom de l'entreprise",
+      "correct": false
+     },
+     {
+      "text": "À rien",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles sont des sources publiques fiables ?",
+    "options": [
+     {
+      "text": "Les instituts nationaux de statistique",
+      "correct": true
+     },
+     {
+      "text": "Les banques centrales",
+      "correct": true
+     },
+     {
+      "text": "Les organisations internationales comme la Banque mondiale",
+      "correct": true
+     },
+     {
+      "text": "Un message transféré anonymement sur WhatsApp",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Deux sources donnent des chiffres différents. Que faire ?",
+    "options": [
+     {
+      "text": "Citer les deux et privilégier la plus récente et la plus officielle",
+      "correct": true
+     },
+     {
+      "text": "Choisir le chiffre le plus impressionnant",
+      "correct": false
+     },
+     {
+      "text": "Faire la moyenne sans rien dire",
+      "correct": false
+     },
+     {
+      "text": "Inventer un troisième chiffre",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment estimer la taille d'un marché quand aucune statistique n'existe ?",
+    "options": [
+     {
+      "text": "Par un raisonnement avec des hypothèses claires et sourcées",
+      "correct": true
+     },
+     {
+      "text": "En demandant un chiffre à l'IA sans vérifier",
+      "correct": false
+     },
+     {
+      "text": "En devinant",
+      "correct": false
+     },
+     {
+      "text": "C'est impossible",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : un projet sans aucun concurrent rassure les investisseurs.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Quelle attitude est éthique pour analyser la concurrence ?",
+    "options": [
+     {
+      "text": "Observer les informations publiques comme le ferait un client",
+      "correct": true
+     },
+     {
+      "text": "Se faire passer pour un employé pour obtenir des documents internes",
+      "correct": false
+     },
+     {
+      "text": "Copier les visuels d'un concurrent",
+      "correct": false
+     },
+     {
+      "text": "Publier de faux avis négatifs",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels éléments une veille peut-elle surveiller ?",
+    "options": [
+     {
+      "text": "Les prix des fournisseurs",
+      "correct": true
+     },
+     {
+      "text": "La réglementation",
+      "correct": true
+     },
+     {
+      "text": "Les nouvelles offres des concurrents",
+      "correct": true
+     },
+     {
+      "text": "L'horoscope",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Qu'est-ce que le biais de confirmation ?",
+    "options": [
+     {
+      "text": "Ne retenir que les informations qui confirment ce que l'on souhaitait déjà",
+      "correct": true
+     },
+     {
+      "text": "Confirmer un rendez-vous client",
+      "correct": false
+     },
+     {
+      "text": "Vérifier ses sources",
+      "correct": false
+     },
+     {
+      "text": "Un outil de veille",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Où classer « concurrents peu présents en ligne » dans l'analyse ?",
+    "options": [
+     {
+      "text": "Opportunités",
+      "correct": true
+     },
+     {
+      "text": "Forces",
+      "correct": false
+     },
+     {
+      "text": "Faiblesses",
+      "correct": false
+     },
+     {
+      "text": "Menaces",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

@@ -1,0 +1,138 @@
+title: Du concept au plan d'affaires
+summary: Transformez une idée en projet solide : partir d'un vrai problème, tester avant d'investir, construire son modèle d'affaires, chiffrer son projet, rédiger un plan d'affaires et trouver un financement.
+audience: entrepreneur
+parcours: entrepreneuriat
+level: intermediaire
+duration: 85
+position: 11
+prerequisites: Le cours « Bien formuler ses demandes à l'IA » est conseillé.
+description: Beaucoup de projets échouent non pas faute de travail, mais parce qu'ils ont été lancés sans être testés, ou sans chiffres réalistes. Ce cours vous donne une méthode éprouvée pour passer de l'idée au projet.
+description: Vous apprendrez à formuler le problème que vous résolvez, à tester votre idée auprès de vrais clients, à construire votre modèle d'affaires en une page, à calculer votre budget et votre seuil de rentabilité, à rédiger un plan d'affaires convaincant et à choisir le bon financement. L'IA vous accompagne à chaque étape, comme partenaire de réflexion et de rédaction.
+objective: Formuler précisément le problème résolu et le client cible
+objective: Tester son idée avant d'investir
+objective: Construire un modèle d'affaires en une page
+objective: Calculer son budget de démarrage et son seuil de rentabilité
+objective: Rédiger un plan d'affaires adapté à son lecteur
+objective: Choisir un financement et planifier ses cent premiers jours
+skill: Valider une idée d'entreprise
+skill: Construire un modèle et un plan d'affaires
+skill: Chiffrer un projet
+module: De l'idée au modèle
+lesson: probleme | D'une idée à un problème | 01-d-une-idee-a-un-probleme.md | Partir du problème du client. | 12 | apercu
+? Par quoi faut-il commencer un projet ?
++ Par le problème précis d'un client précis
+- Par le développement d'une application
+- Par l'achat du matériel
+- Par le choix du logo
+> Beaucoup de projets échouent en résolvant un problème que personne n'a.
+? Vrai ou faux : « tout le monde » est un bon client cible.
+- Vrai
++ Faux
+> Plus le client est précis, mieux c'est.
+lesson: tester | Tester avant d'investir | 02-tester-avant-d-investir.md | Valider son idée auprès de vrais clients. | 14
+? Quelle question est la plus utile lors d'un entretien avec un client potentiel ?
++ « Racontez-moi la dernière fois que vous avez eu ce problème. »
+- « Est-ce que vous achèteriez mon produit ? »
+- « Mon idée est géniale, n'est-ce pas ? »
+- « Combien gagnez-vous ? »
+> Les expériences réelles comptent plus que les intentions.
+? Quel est le test le plus fiable d'une idée ?
++ Faire payer, même un petit montant
+- Demander l'avis de sa famille
+- Compter les « j'aime » sur une publication
+- Demander à l'IA si l'idée est bonne
+> Un client qui paie prouve la valeur de l'offre.
+lesson: modele | Le modèle d'affaires | 03-le-modele-d-affaires.md | Décrire comment le projet fonctionne et gagne de l'argent. | 14
+? Qu'est-ce que la proposition de valeur ?
++ La raison pour laquelle le client vous choisira, en une phrase
+- Le prix de revient
+- Le nom de l'entreprise
+- Le montant du prêt
+> Plus rapide, moins cher, plus fiable, plus proche…
+module: Chiffrer, convaincre, lancer
+lesson: chiffres | Les chiffres du projet | 04-les-chiffres-du-projet.md | Calculer budget et seuil de rentabilité. | 15
+? Coûts fixes 600 dollars par mois, marge de 2 dollars par vente. Quel est le seuil de rentabilité ?
++ 300 ventes par mois
+- 1 200 ventes par mois
+- 60 ventes par mois
+- 2 ventes par mois
+> 600 ÷ 2 = 300.
+? Lequel est un coût variable ?
++ Les matières premières
+- Le loyer
+- L'abonnement internet
+- Le salaire fixe du gérant
+> Il augmente avec les ventes.
+lesson: plan | Rédiger le plan d'affaires | 05-rediger-le-plan-d-affaires.md | Structurer et rédiger un plan convaincant. | 15
+? Quelle partie du plan d'affaires s'écrit en dernier ?
++ Le résumé
+- Le marché
+- L'offre
+- Les risques
+> Rédigé en dernier, lu en premier.
+lesson: financer | Financer et lancer | 06-financer-et-lancer.md | Choisir un financement et passer à l'action. | 15
+? Une offre de financement demande de payer des frais à l'avance. Que penser ?
++ C'est un signal d'arnaque fréquent
+- C'est normal et sans risque
+- Il faut payer vite
+- C'est obligatoire partout
+> Méfiance : vérifiez auprès d'organismes reconnus.
+exam:
+? Pourquoi le projet de Joël a-t-il échoué ?
++ Il a développé une solution sans vérifier le problème auprès des clients
+- Son application était trop belle
+- Il avait trop de clients
+- Il manquait de logo
+? Quelle formulation de problème est la meilleure ?
++ « Les mamans qui travaillent n'ont pas le temps d'aller au marché tous les jours. »
+- « Je veux créer une application. »
+- « Tout le monde a besoin de mon produit. »
+- « Mon produit est innovant. »
+? Pourquoi éviter de tester son idée seulement auprès de sa famille ?
++ Elle risque de dire oui par gentillesse
+- Elle ne connaît rien
+- C'est interdit
+- Elle coûte cher
+? Quelles méthodes permettent de tester une idée à petit prix ?
++ La précommande
++ Le produit minimum
++ Le marché test
+- La construction d'une usine
+? Quelles rubriques font partie du modèle d'affaires ?
++ Le client cible
++ La proposition de valeur
++ Les canaux
+- Le signe astrologique du fondateur
+? Vrai ou faux : le modèle d'affaires ne doit jamais changer.
+- Vrai
++ Faux
+? Que doit inclure le budget de démarrage ?
++ Une réserve de trésorerie pour les premiers mois
+- Uniquement le logo
+- Rien, on paiera avec les ventes
+- Les vacances du fondateur
+? Lequel est un coût fixe ?
++ Le loyer
+- Les emballages
+- Les matières premières
+- Les commissions sur ventes
+? Pourquoi prévoir un scénario prudent ?
++ Parce que les partenaires sérieux le regardent en priorité
+- Pour décourager les investisseurs
+- Ce n'est pas utile
+- Pour payer moins d'impôts
+? Comment éviter qu'une section rédigée par l'IA contienne des chiffres inventés ?
++ Fournir ses faits et lui demander de signaler les informations manquantes entre crochets
+- Lui demander d'ajouter des statistiques impressionnantes
+- Ne rien vérifier
+- Copier le plan d'un concurrent
+? Que regarde surtout un banquier dans un plan d'affaires ?
++ La capacité à rembourser
+- La couleur de la couverture
+- Le nombre de pages
+- Les loisirs du fondateur
+? Avant d'emprunter, que faut-il vérifier ?
++ Le coût total et la capacité de remboursement dans le scénario prudent
+- Uniquement le montant reçu
+- Rien
+- Le nom du conseiller
