@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="320" fill="#F8FAFC"/>
+<text x="30" y="45" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">Les cinq ingrédients d'une bonne demande</text>
+<rect x="30" y="75" width="176" height="200" rx="14" fill="#FFFFFF" stroke="#0A2540" stroke-width="2"/>
+<circle cx="60" cy="108" r="17" fill="#0A2540"/><text x="60" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">1</text>
+<text x="48" y="160" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0A2540">Rôle</text>
+<text x="48" y="195" font-size="14" font-style="italic" fill="#4A5568">Tu es comptable…</text>
+<rect x="222" y="75" width="176" height="200" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="252" cy="108" r="17" fill="#0066FF"/><text x="252" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">2</text>
+<text x="240" y="160" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0A2540">Contexte</text>
+<text x="240" y="195" font-size="14" font-style="italic" fill="#4A5568">pour une PME de 12</text>
+<text x="240" y="215" font-size="14" font-style="italic" fill="#4A5568">salariés…</text>
+<rect x="414" y="75" width="176" height="200" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="444" cy="108" r="17" fill="#0066FF"/><text x="444" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">3</text>
+<text x="432" y="160" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0A2540">Tâche</text>
+<text x="432" y="195" font-size="14" font-style="italic" fill="#4A5568">rédige un e-mail…</text>
+<rect x="606" y="75" width="176" height="200" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<circle cx="636" cy="108" r="17" fill="#00C9A7"/><text x="636" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">4</text>
+<text x="624" y="160" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0A2540">Format</text>
+<text x="624" y="195" font-size="14" font-style="italic" fill="#4A5568">en 5 lignes, avec</text>
+<text x="624" y="215" font-size="14" font-style="italic" fill="#4A5568">un objet…</text>
+<rect x="798" y="75" width="176" height="200" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<circle cx="828" cy="108" r="17" fill="#00C9A7"/><text x="828" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">5</text>
+<text x="816" y="160" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0A2540">Ton</text>
+<text x="816" y="195" font-size="14" font-style="italic" fill="#4A5568">poli mais ferme.</text>
+</svg>

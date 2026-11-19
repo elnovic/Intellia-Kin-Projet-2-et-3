@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="330" fill="#F8FAFC"/>
+<rect x="30" y="30" width="450" height="270" rx="14" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+<text x="55" y="75" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0A2540">Demande vague</text>
+<text x="55" y="120" font-size="16" fill="#1A202C">« Écris une publication</text>
+<text x="55" y="150" font-size="16" fill="#1A202C">pour ma boutique. »</text>
+<text x="55" y="180" font-size="16" fill="#1A202C"></text>
+<text x="55" y="210" font-size="16" fill="#4A5568">Résultat : banal, générique,</text>
+<text x="55" y="240" font-size="16" fill="#4A5568">inutilisable sans tout refaire.</text>
+<rect x="520" y="30" width="450" height="270" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<text x="545" y="75" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#0A2540">Demande précise</text>
+<text x="545" y="120" font-size="16" fill="#1A202C">« Tu es community manager.</text>
+<text x="545" y="150" font-size="16" fill="#1A202C">Écris 3 publications Facebook</text>
+<text x="545" y="180" font-size="16" fill="#1A202C">pour ma boutique de pagnes à</text>
+<text x="545" y="210" font-size="16" fill="#1A202C">Kinshasa : -20 % ce samedi.</text>
+<text x="545" y="240" font-size="16" fill="#1A202C">Ton joyeux, 60 mots, 3 hashtags. »</text>
+<path d="M487 165 h26 m-9 -8 l9 8 l-9 8" stroke="#0066FF" stroke-width="2.5" fill="none"/></svg>

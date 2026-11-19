@@ -1,0 +1,763 @@
+{
+ "slug": "bien-formuler-ses-demandes-a-l-ia",
+ "title": "Bien formuler ses demandes à l'IA",
+ "summary": "Apprenez à écrire des demandes claires et complètes pour obtenir, à chaque fois, des réponses vraiment utiles de ChatGPT, Gemini ou de tout autre assistant IA.",
+ "description": "La qualité d'une réponse d'IA dépend d'abord de la qualité de la demande. Deux personnes avec le même outil peuvent obtenir des résultats très différents : l'une un texte banal à réécrire, l'autre un document presque prêt.\n\nDans ce cours, vous apprendrez une méthode simple en cinq ingrédients, des techniques éprouvées (exemples, étapes, questions, variantes, critique) et la façon de constituer votre propre bibliothèque de demandes réutilisables.\n\nAucune compétence technique n'est requise : c'est un cours de communication, appliqué à l'IA.",
+ "audience": "tous",
+ "parcours": "tronc-commun",
+ "level": "debutant",
+ "format": "self_paced",
+ "duration_minutes": 75,
+ "position": 2,
+ "objectives": [
+  "Construire une demande complète avec cinq ingrédients",
+  "Utiliser des exemples pour imposer un style ou un format",
+  "Découper une tâche complexe en étapes",
+  "Améliorer une réponse par le dialogue",
+  "Obtenir des variantes et une critique franche",
+  "Constituer une bibliothèque de prompts réutilisables"
+ ],
+ "skills": [
+  "Rédiger des prompts efficaces",
+  "Améliorer une réponse d'IA par le dialogue",
+  "Créer des modèles de demandes réutilisables"
+ ],
+ "prerequisites": "Avoir suivi « Introduction à l'IA » est conseillé.",
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "modules": [
+  {
+   "title": "Pourquoi la formulation change tout",
+   "lessons": [
+    {
+     "key": "pourquoi",
+     "title": "Pourquoi la formulation change tout",
+     "file": "01-pourquoi-la-formulation-change-tout.md",
+     "objective": "Comprendre pourquoi une demande précise donne un bien meilleur résultat.",
+     "duration_minutes": 6,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Pourquoi une demande vague donne-t-elle un résultat banal ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "L'IA est paresseuse",
+         "correct": false
+        },
+        {
+         "text": "L'IA comble les informations manquantes avec ce qui est le plus probable, donc le plus général",
+         "correct": true
+        },
+        {
+         "text": "L'IA refuse les demandes courtes",
+         "correct": false
+        },
+        {
+         "text": "Les demandes courtes coûtent plus cher",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA ne connaît que ce que vous écrivez ; sans contexte, elle produit du générique."
+      },
+      {
+       "prompt": "Comment appelle-t-on la demande écrite adressée à une IA ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Un prompt",
+         "correct": true
+        },
+        {
+         "text": "Un script",
+         "correct": false
+        },
+        {
+         "text": "Un modèle",
+         "correct": false
+        },
+        {
+         "text": "Un algorithme",
+         "correct": false
+        }
+       ],
+       "explanation": "Le prompt est la consigne que vous donnez à l'IA."
+      }
+     ]
+    },
+    {
+     "key": "ingredients",
+     "title": "Les cinq ingrédients d'une bonne demande",
+     "file": "02-les-cinq-ingredients.md",
+     "objective": "Construire une demande avec rôle, contexte, tâche, format et ton.",
+     "duration_minutes": 8,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quels sont les cinq ingrédients d'une bonne demande ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Rôle, contexte, tâche, format, ton",
+         "correct": true
+        },
+        {
+         "text": "Titre, date, signature, objet, pièce jointe",
+         "correct": false
+        },
+        {
+         "text": "Question, réponse, source, lien, image",
+         "correct": false
+        },
+        {
+         "text": "Mot-clé, hashtag, émoji, lien, mention",
+         "correct": false
+        }
+       ],
+       "explanation": "Rôle, contexte, tâche, format et ton : la base de toute bonne demande."
+      },
+      {
+       "prompt": "Quel ingrédient est le plus souvent oublié, alors qu'il est le plus important ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Le ton",
+         "correct": false
+        },
+        {
+         "text": "Le contexte",
+         "correct": true
+        },
+        {
+         "text": "Le rôle",
+         "correct": false
+        },
+        {
+         "text": "La politesse",
+         "correct": false
+        }
+       ],
+       "explanation": "Le contexte donne à l'IA la situation réelle : qui, pour qui, quelles contraintes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Les techniques qui marchent",
+   "lessons": [
+    {
+     "key": "exemples",
+     "title": "Montrer des exemples",
+     "file": "03-montrer-des-exemples.md",
+     "objective": "Utiliser des exemples pour imposer un style ou un format.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Montrer deux ou trois exemples de son style est souvent plus efficace que de le décrire.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": true
+        },
+        {
+         "text": "Faux",
+         "correct": false
+        }
+       ],
+       "explanation": "Un exemple ne laisse aucune place à l'interprétation."
+      },
+      {
+       "prompt": "Que faut-il faire avant de donner de vrais messages clients en exemple ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Les traduire en anglais",
+         "correct": false
+        },
+        {
+         "text": "Retirer les informations personnelles",
+         "correct": true
+        },
+        {
+         "text": "Les raccourcir à une ligne",
+         "correct": false
+        },
+        {
+         "text": "Rien, c'est sans risque",
+         "correct": false
+        }
+       ],
+       "explanation": "Anonymisez toujours les exemples tirés de vrais échanges."
+      }
+     ]
+    },
+    {
+     "key": "etapes",
+     "title": "Avancer étape par étape",
+     "file": "04-etape-par-etape.md",
+     "objective": "Découper une tâche complexe et faire poser des questions à l'IA.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que faire face à une grosse tâche, comme un plan d'affaires complet ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Tout demander en une seule fois",
+         "correct": false
+        },
+        {
+         "text": "La découper en étapes et vérifier chacune",
+         "correct": true
+        },
+        {
+         "text": "Abandonner l'IA pour cette tâche",
+         "correct": false
+        },
+        {
+         "text": "Écrire la demande en majuscules",
+         "correct": false
+        }
+       ],
+       "explanation": "Découper permet de guider le raisonnement et de vérifier chaque étape."
+      },
+      {
+       "prompt": "Quand vous ne savez pas quelles informations donner, que pouvez-vous demander à l'IA ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "De deviner",
+         "correct": false
+        },
+        {
+         "text": "De vous poser les questions nécessaires, une par une",
+         "correct": true
+        },
+        {
+         "text": "D'inventer le contexte",
+         "correct": false
+        },
+        {
+         "text": "De chercher vos informations personnelles",
+         "correct": false
+        }
+       ],
+       "explanation": "Se faire interviewer par l'IA donne exactement le contexte qui manquait."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Dialoguer et améliorer",
+   "lessons": [
+    {
+     "key": "dialogue",
+     "title": "Dialoguer et améliorer",
+     "file": "05-dialoguer-et-ameliorer.md",
+     "objective": "Améliorer une réponse par des corrections courtes et précises.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "La première réponse de l'IA est trop longue. Quelle est la meilleure réaction ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Abandonner",
+         "correct": false
+        },
+        {
+         "text": "Écrire « Réduis de moitié, garde l'essentiel. »",
+         "correct": true
+        },
+        {
+         "text": "Copier quand même le texte",
+         "correct": false
+        },
+        {
+         "text": "Recommencer sur un autre outil",
+         "correct": false
+        }
+       ],
+       "explanation": "Une correction courte et précise suffit souvent."
+      },
+      {
+       "prompt": "Dans une même conversation, l'IA tient compte de ce qui a été dit plus haut.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": true
+        },
+        {
+         "text": "Faux",
+         "correct": false
+        }
+       ],
+       "explanation": "Vous pouvez donc faire référence aux versions précédentes."
+      }
+     ]
+    },
+    {
+     "key": "variantes",
+     "title": "Demander des variantes et une critique",
+     "file": "06-variantes-et-critique.md",
+     "objective": "Obtenir plusieurs options et un regard critique sur un travail.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi demander explicitement à l'IA d'être critique ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Parce qu'elle a tendance à être d'accord avec vous et à vous complimenter",
+         "correct": true
+        },
+        {
+         "text": "Parce qu'elle refuse sinon de répondre",
+         "correct": false
+        },
+        {
+         "text": "Pour économiser des données",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas utile",
+         "correct": false
+        }
+       ],
+       "explanation": "Par défaut, l'IA est complaisante ; une critique explicite est bien plus utile."
+      },
+      {
+       "prompt": "L'auto-vérification par l'IA remplace la vérification dans une source fiable.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Elle aide à repérer les points fragiles, mais ne remplace pas une source sûre."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Votre méthode au quotidien",
+   "lessons": [
+    {
+     "key": "bibliotheque",
+     "title": "Votre bibliothèque de prompts",
+     "file": "07-votre-bibliotheque-de-prompts.md",
+     "objective": "Créer des modèles de demandes réutilisables pour vos tâches fréquentes.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce qu'un modèle à trous ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Une demande où les éléments qui changent sont entre crochets",
+         "correct": true
+        },
+        {
+         "text": "Un prompt incomplet à éviter",
+         "correct": false
+        },
+        {
+         "text": "Un fichier corrompu",
+         "correct": false
+        },
+        {
+         "text": "Une demande sans format",
+         "correct": false
+        }
+       ],
+       "explanation": "Le modèle fixe ce qui ne change pas et laisse des crochets pour le reste."
+      }
+     ]
+    },
+    {
+     "key": "erreurs",
+     "title": "Les erreurs fréquentes",
+     "file": "08-les-erreurs-frequentes.md",
+     "objective": "Repérer et corriger les erreurs les plus courantes.",
+     "duration_minutes": 8,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Lesquelles de ces pratiques sont des erreurs fréquentes ?",
+       "kind": "multiple",
+       "options": [
+        {
+         "text": "Coller des données confidentielles",
+         "correct": true
+        },
+        {
+         "text": "Envoyer le résultat sans le relire",
+         "correct": true
+        },
+        {
+         "text": "Préciser le destinataire",
+         "correct": false
+        },
+        {
+         "text": "Abandonner après une seule réponse",
+         "correct": true
+        }
+       ],
+       "explanation": "Préciser le destinataire est au contraire une bonne pratique."
+      },
+      {
+       "prompt": "Ajouter une touche personnelle à un texte produit par l'IA le rend plus crédible.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": true
+        },
+        {
+         "text": "Faux",
+         "correct": false
+        }
+       ],
+       "explanation": "Un détail vécu ou une tournure à vous évite l'effet « texte trop parfait »."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Pourquoi deux personnes utilisant le même assistant IA peuvent-elles obtenir des résultats très différents ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Parce que l'IA favorise certains utilisateurs",
+      "correct": false
+     },
+     {
+      "text": "Parce que la qualité de la réponse dépend surtout de la précision de la demande",
+      "correct": true
+     },
+     {
+      "text": "Parce que l'une paie plus cher",
+      "correct": false
+     },
+     {
+      "text": "Par hasard uniquement",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Laquelle de ces demandes est la plus complète ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "« Fais une affiche. »",
+      "correct": false
+     },
+     {
+      "text": "« Affiche pour un concert. »",
+      "correct": false
+     },
+     {
+      "text": "« Tu es graphiste. Propose le texte d'une affiche pour un concert de rumba à Kinshasa le 12 mars, public 25-45 ans, ton festif, 3 lignes maximum. »",
+      "correct": true
+     },
+     {
+      "text": "« Aide-moi pour une affiche s'il te plaît. »",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Dans « Tu es recruteur expérimenté », de quel ingrédient s'agit-il ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Le format",
+      "correct": false
+     },
+     {
+      "text": "Le rôle",
+      "correct": true
+     },
+     {
+      "text": "Le ton",
+      "correct": false
+     },
+     {
+      "text": "La tâche",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Dans « en 5 points, avec un titre pour chacun », de quel ingrédient s'agit-il ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Le format",
+      "correct": true
+     },
+     {
+      "text": "Le contexte",
+      "correct": false
+     },
+     {
+      "text": "Le rôle",
+      "correct": false
+     },
+     {
+      "text": "Le ton",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Quel verbe donne la tâche la plus précise ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Parle-moi de mon rapport",
+      "correct": false
+     },
+     {
+      "text": "Aide-moi avec mon rapport",
+      "correct": false
+     },
+     {
+      "text": "Résume mon rapport en 5 points",
+      "correct": true
+     },
+     {
+      "text": "Regarde mon rapport",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Pour imposer son style, montrer des exemples est souvent plus efficace que de le décrire.",
+    "kind": "true_false",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Que faire avec les vrais messages de clients avant de les utiliser comme exemples ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Les anonymiser",
+      "correct": true
+     },
+     {
+      "text": "Les publier",
+      "correct": false
+     },
+     {
+      "text": "Les traduire",
+      "correct": false
+     },
+     {
+      "text": "Les allonger",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Quelle consigne améliore les réponses qui demandent un raisonnement ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "« Réponds vite. »",
+      "correct": false
+     },
+     {
+      "text": "« Explique ton raisonnement étape par étape avant de conclure. »",
+      "correct": true
+     },
+     {
+      "text": "« Ne réfléchis pas. »",
+      "correct": false
+     },
+     {
+      "text": "« Réponds en un mot. »",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Vous devez écrire un discours personnel et ne savez pas quoi préciser. Que faites-vous ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Je laisse l'IA inventer",
+      "correct": false
+     },
+     {
+      "text": "Je demande à l'IA de me poser les questions nécessaires, une par une",
+      "correct": true
+     },
+     {
+      "text": "Je renonce",
+      "correct": false
+     },
+     {
+      "text": "Je copie un discours trouvé en ligne",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Comment considérer la première réponse de l'IA ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Comme une version définitive",
+      "correct": false
+     },
+     {
+      "text": "Comme un brouillon à améliorer",
+      "correct": true
+     },
+     {
+      "text": "Comme une erreur",
+      "correct": false
+     },
+     {
+      "text": "Comme une source officielle",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Lesquelles de ces corrections sont précises et utiles ?",
+    "kind": "multiple",
+    "options": [
+     {
+      "text": "« Réduis de moitié, garde l'essentiel. »",
+      "correct": true
+     },
+     {
+      "text": "« Ce n'est pas bien. »",
+      "correct": false
+     },
+     {
+      "text": "« Réécris seulement le deuxième paragraphe, plus chaleureux. »",
+      "correct": true
+     },
+     {
+      "text": "« Adapte-le pour des étudiants de première année. »",
+      "correct": true
+     }
+    ]
+   },
+   {
+    "prompt": "Pourquoi demander plusieurs variantes plutôt qu'une seule réponse ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Pour pouvoir choisir, comparer et combiner",
+      "correct": true
+     },
+     {
+      "text": "Pour utiliser plus de données",
+      "correct": false
+     },
+     {
+      "text": "Parce que l'IA l'exige",
+      "correct": false
+     },
+     {
+      "text": "Pour éviter de relire",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Par défaut, l'IA a tendance à être trop complaisante avec votre travail.",
+    "kind": "true_false",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Qu'est-ce qu'une bibliothèque de prompts ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Une liste de sites internet",
+      "correct": false
+     },
+     {
+      "text": "Un ensemble de modèles de demandes réutilisables, avec des trous à compléter",
+      "correct": true
+     },
+     {
+      "text": "Un livre sur l'IA",
+      "correct": false
+     },
+     {
+      "text": "Un logiciel payant obligatoire",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Lesquelles de ces informations faut-il remplacer par des repères comme [Client A] avant de les donner à un assistant grand public ?",
+    "kind": "multiple",
+    "options": [
+     {
+      "text": "Le nom et le téléphone d'un client",
+      "correct": true
+     },
+     {
+      "text": "Le salaire d'un collègue",
+      "correct": true
+     },
+     {
+      "text": "Le sujet général de votre réunion",
+      "correct": false
+     },
+     {
+      "text": "Le numéro de compte bancaire d'un fournisseur",
+      "correct": true
+     }
+    ]
+   }
+  ]
+ }
+}

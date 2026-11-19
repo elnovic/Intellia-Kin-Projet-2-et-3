@@ -6,6 +6,8 @@ leçons en texte illustré (6 à 10 minutes), quiz de leçon, examen final
 
 Légende de l'état : ✅ rédigé · ⏳ à rédiger.
 
+Couverture d'un nouveau cours : `python tools/couverture.py <slug> "<surtitre>" "<ligne 1>" "<ligne 2>" "<sous-titre>"`.
+
 ## Tronc commun (tous publics)
 
 ### 1. Introduction à l'IA : comprendre l'IA sans jargon ✅
@@ -15,12 +17,12 @@ Légende de l'état : ✅ rédigé · ⏳ à rédiger.
 3. Forces et limites : ce que l'IA fait bien ; les limites et les pièges
 4. L'IA et vous : l'IA et le travail ; vos premiers pas
 
-### 2. Bien formuler ses demandes à l'IA ⏳
-`bien-formuler-ses-demandes-a-l-ia` · Débutant · 1 h 30
-1. Pourquoi la formulation change tout : anatomie d'une bonne demande (rôle, contexte, tâche, format, ton)
-2. Les techniques qui marchent : exemples à imiter ; étape par étape ; faire poser des questions à l'IA
-3. Dialoguer et améliorer : itérer ; demander des variantes ; critiquer la réponse
-4. Votre bibliothèque de prompts : modèles réutilisables par métier ; erreurs fréquentes
+### 2. Bien formuler ses demandes à l'IA ✅
+`bien-formuler-ses-demandes-a-l-ia` · Débutant · 1 h 15
+1. Pourquoi la formulation change tout : pourquoi la formulation change tout ; les cinq ingrédients
+2. Les techniques qui marchent : montrer des exemples ; avancer étape par étape
+3. Dialoguer et améliorer : dialoguer et améliorer ; variantes et critique
+4. Votre méthode au quotidien : votre bibliothèque de prompts ; les erreurs fréquentes
 
 ### 3. L'IA sur téléphone avec peu de data ⏳
 `l-ia-sur-telephone-avec-peu-de-data` · Débutant · 1 h

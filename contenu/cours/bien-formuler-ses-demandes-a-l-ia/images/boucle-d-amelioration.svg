@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="260" fill="#F8FAFC"/>
+<rect x="30" y="40" width="205" height="130" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<text x="50" y="90" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">1. Demander</text><text x="50" y="125" font-size="14" fill="#4A5568">avec les 5 ingrédients</text>
+<path d="M242 105 h26 m-9 -8 l9 8 l-9 8" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="275" y="40" width="205" height="130" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<text x="295" y="90" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">2. Lire</text><text x="295" y="125" font-size="14" fill="#4A5568">la réponse avec recul</text>
+<path d="M487 105 h26 m-9 -8 l9 8 l-9 8" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="520" y="40" width="205" height="130" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<text x="540" y="90" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">3. Corriger</text><text x="540" y="125" font-size="14" fill="#4A5568">« plus court », etc.</text>
+<path d="M732 105 h26 m-9 -8 l9 8 l-9 8" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="765" y="40" width="205" height="130" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<text x="785" y="90" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">4. Valider</text><text x="785" y="125" font-size="14" fill="#4A5568">vérifier, puis utiliser</text>
+<path d="M640 175 C 640 230, 370 230, 370 175" stroke="#0066FF" stroke-width="2" stroke-dasharray="6 5" fill="none"/><path d="M362 186 l8 -11 l8 11" stroke="#0066FF" stroke-width="2" fill="none"/>
+<text x="505" y="245" text-anchor="middle" font-size="14" fill="#4A5568">On recommence tant que le résultat ne convient pas</text></svg>
