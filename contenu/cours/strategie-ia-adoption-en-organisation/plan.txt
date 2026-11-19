@@ -1,0 +1,140 @@
+title: Stratégie IA et adoption en organisation
+summary: Passez des essais isolés à une transformation maîtrisée : diagnostiquer sa maturité, choisir les cas d'usage prioritaires, encadrer l'usage, former les équipes, mesurer les résultats et bâtir une feuille de route.
+audience: pme
+parcours: organisations
+level: avance
+duration: 90
+position: 20
+prerequisites: Le tronc commun est conseillé, ainsi que le cours « IA, confidentialité et éthique au travail ».
+description: Dans beaucoup d'organisations, l'IA s'installe sans plan : chacun son outil, aucune règle, aucune mesure. D'autres interdisent tout et se privent de gains importants. Entre les deux, il existe une voie : une stratégie simple et pragmatique.
+description: Ce cours s'adresse aux dirigeants, managers et responsables de PME, d'ONG et d'institutions. Il vous apprend à diagnostiquer la maturité de votre organisation, à choisir les cas d'usage qui créent le plus de valeur, à encadrer l'usage de l'IA, à former et accompagner les équipes, à mesurer les résultats et à construire une feuille de route sur douze à dix-huit mois.
+objective: Comprendre l'intérêt d'une stratégie IA
+objective: Diagnostiquer la maturité IA de son organisation
+objective: Prioriser les cas d'usage selon la valeur, la faisabilité et le risque
+objective: Mettre en place un cadre d'usage équilibré
+objective: Former et accompagner les équipes
+objective: Mesurer les résultats et bâtir une feuille de route
+skill: Élaborer une stratégie IA
+skill: Conduire le changement lié à l'IA
+skill: Piloter des projets IA dans une organisation
+module: Diagnostiquer et prioriser
+lesson: pourquoi | Pourquoi une stratégie | 01-pourquoi-une-strategie.md | Comprendre les risques de l'adoption désordonnée. | 14 | apercu
+? Quels sont les risques d'une adoption de l'IA sans stratégie ?
++ Des données sensibles envoyées dans des outils non maîtrisés
++ Des pratiques incohérentes
++ Aucune mesure des résultats
+- Une meilleure protection des données
+> Sans règles, chacun fait à sa manière.
+? Par quoi partir pour construire une stratégie IA ?
++ Les principaux défis de l'organisation
+- Le dernier outil à la mode
+- Le budget maximum disponible
+- Les choix des concurrents
+> L'IA au service des objectifs, pas l'inverse.
+lesson: diagnostic | Diagnostiquer sa maturité | 02-diagnostiquer-sa-maturite.md | Évaluer la situation de départ. | 15
+? Quelles dimensions évaluer dans le diagnostic ?
++ Les usages actuels
++ Les compétences
++ La culture
+- La couleur des bureaux
+> Usages, compétences, données et outils, cadre, culture.
+lesson: cas-usage | Choisir les cas d'usage | 03-choisir-les-cas-d-usage.md | Prioriser selon la valeur, la faisabilité et le risque. | 15
+? Quels cas d'usage lancer en premier ?
++ Ceux à forte valeur, faciles à mettre en œuvre et à faible risque
+- Les plus spectaculaires
+- Les plus risqués
+- Ceux qui concernent les données les plus sensibles
+> Des résultats rapides et visibles convainquent.
+? D'où viennent souvent les meilleures idées de cas d'usage ?
++ Du terrain, des équipes qui font le travail
+- Uniquement de la direction
+- Des publicités des fournisseurs
+- Du hasard
+> Les équipes connaissent les tâches qui leur font perdre du temps.
+module: Encadrer, accompagner, mesurer
+lesson: encadrer | Encadrer l'usage | 04-encadrer-l-usage.md | Mettre en place un cadre équilibré. | 15
+? Quels sont les quatre piliers du cadre d'usage ?
++ Outils autorisés, charte, rôles, gestion des risques
+- Interdiction, sanction, contrôle, surveillance
+- Publicité, ventes, prix, profits
+- Aucun cadre n'est nécessaire
+> Un cadre clair permet d'utiliser l'IA avec confiance.
+? Pourquoi un cadre trop strict pose-t-il problème ?
++ Il pousse aux usages cachés
+- Il protège trop bien les données
+- Il est trop court
+- Il ne pose aucun problème
+> Interdits clairs, liberté d'expérimenter sur le reste.
+lesson: accompagner | Former et accompagner | 05-former-et-accompagner.md | Accompagner les équipes dans la transformation. | 15
+? Quel est le premier facteur de réussite d'une stratégie IA ?
++ Les personnes, formées et accompagnées
+- Le prix des outils
+- Le nombre de logiciels
+- La vitesse d'internet uniquement
+> La technologie seule ne suffit pas.
+lesson: mesurer | Mesurer et faire grandir | 06-mesurer-et-faire-grandir.md | Mesurer les résultats et bâtir une feuille de route. | 16
+? Que faire d'un projet IA qui ne fonctionne pas ?
++ L'arrêter sans honte et en tirer les enseignements
+- Le cacher
+- Le généraliser à toute l'organisation
+- Augmenter son budget sans analyse
+> Abandonner un projet qui ne marche pas est une bonne décision.
+exam:
+? Quelle situation décrit une adoption sauvage de l'IA ?
++ Chaque service utilise ses propres outils sans règles ni mesure
+- Une charte claire et des outils choisis
+- Une formation de toutes les équipes
+- Des pilotes mesurés
+? Quelles questions une stratégie IA doit-elle trancher ?
++ Pourquoi et où utiliser l'IA
++ Comment l'encadrer
++ Comment mesurer les résultats
+- Quelle est la couleur du logo
+? Quel niveau de maturité correspond à « usages isolés et individuels, pas de règles » ?
++ Découverte
+- Intégration
+- Transformation
+- Structuration
+? Quels risques le diagnostic doit-il identifier ?
++ Les données sensibles traitées
++ Les activités où une erreur serait grave
++ La dépendance envers un seul fournisseur
+- Les préférences musicales des employés
+? Quels critères utiliser pour évaluer un cas d'usage ?
++ La valeur, la faisabilité et le risque
+- La popularité sur les réseaux sociaux
+- Le nombre de pages de documentation
+- L'avis d'un seul employé
+? Vrai ou faux : un assistant client spectaculaire qui donne de mauvaises réponses vaut mieux qu'un simple outil de rédaction utile.
+- Vrai
++ Faux
+? Quel rôle joue le sponsor à la direction ?
++ Il porte la démarche et arbitre
+- Il utilise seul tous les outils
+- Il interdit l'IA
+- Il n'a aucun rôle
+? Pour des usages impliquant des données internes, quels outils privilégier ?
++ Des offres professionnelles qui garantissent par contrat la protection des données
+- N'importe quel outil gratuit
+- Les outils les plus populaires sans vérification
+- Aucun outil, jamais
+? Comment répondre à l'inquiétude des équipes sur l'emploi ?
++ Expliquer clairement l'intention, l'évolution des métiers et l'accompagnement prévu
+- Ne rien dire
+- Promettre que rien ne changera jamais
+- Annoncer des suppressions sans explication
+? Quelle formation est la plus efficace ?
++ Des ateliers pratiques sur les vraies tâches des participants
+- Une conférence théorique unique
+- Un document de cent pages à lire seul
+- Aucune formation
+? Pourquoi mesurer la situation avant le lancement d'un cas d'usage ?
++ Pour pouvoir comparer et prouver les résultats
+- Pour retarder le projet
+- Ce n'est pas utile
+- Pour remplir un rapport
+? Quelle est la durée typique d'une feuille de route IA ?
++ Douze à dix-huit mois, révisée régulièrement
+- Une semaine
+- Vingt ans sans révision
+- Elle n'a pas de durée

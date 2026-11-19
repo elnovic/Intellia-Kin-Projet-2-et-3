@@ -1,0 +1,569 @@
+{
+ "slug": "strategie-ia-adoption-en-organisation",
+ "format": "self_paced",
+ "objectives": [
+  "Comprendre l'intérêt d'une stratégie IA",
+  "Diagnostiquer la maturité IA de son organisation",
+  "Prioriser les cas d'usage selon la valeur, la faisabilité et le risque",
+  "Mettre en place un cadre d'usage équilibré",
+  "Former et accompagner les équipes",
+  "Mesurer les résultats et bâtir une feuille de route"
+ ],
+ "skills": [
+  "Élaborer une stratégie IA",
+  "Conduire le changement lié à l'IA",
+  "Piloter des projets IA dans une organisation"
+ ],
+ "modules": [
+  {
+   "title": "Diagnostiquer et prioriser",
+   "lessons": [
+    {
+     "key": "pourquoi",
+     "title": "Pourquoi une stratégie",
+     "file": "01-pourquoi-une-strategie.md",
+     "objective": "Comprendre les risques de l'adoption désordonnée.",
+     "duration_minutes": 14,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quels sont les risques d'une adoption de l'IA sans stratégie ?",
+       "options": [
+        {
+         "text": "Des données sensibles envoyées dans des outils non maîtrisés",
+         "correct": true
+        },
+        {
+         "text": "Des pratiques incohérentes",
+         "correct": true
+        },
+        {
+         "text": "Aucune mesure des résultats",
+         "correct": true
+        },
+        {
+         "text": "Une meilleure protection des données",
+         "correct": false
+        }
+       ],
+       "explanation": "Sans règles, chacun fait à sa manière.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Par quoi partir pour construire une stratégie IA ?",
+       "options": [
+        {
+         "text": "Les principaux défis de l'organisation",
+         "correct": true
+        },
+        {
+         "text": "Le dernier outil à la mode",
+         "correct": false
+        },
+        {
+         "text": "Le budget maximum disponible",
+         "correct": false
+        },
+        {
+         "text": "Les choix des concurrents",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA au service des objectifs, pas l'inverse.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "diagnostic",
+     "title": "Diagnostiquer sa maturité",
+     "file": "02-diagnostiquer-sa-maturite.md",
+     "objective": "Évaluer la situation de départ.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelles dimensions évaluer dans le diagnostic ?",
+       "options": [
+        {
+         "text": "Les usages actuels",
+         "correct": true
+        },
+        {
+         "text": "Les compétences",
+         "correct": true
+        },
+        {
+         "text": "La culture",
+         "correct": true
+        },
+        {
+         "text": "La couleur des bureaux",
+         "correct": false
+        }
+       ],
+       "explanation": "Usages, compétences, données et outils, cadre, culture.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "cas-usage",
+     "title": "Choisir les cas d'usage",
+     "file": "03-choisir-les-cas-d-usage.md",
+     "objective": "Prioriser selon la valeur, la faisabilité et le risque.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quels cas d'usage lancer en premier ?",
+       "options": [
+        {
+         "text": "Ceux à forte valeur, faciles à mettre en œuvre et à faible risque",
+         "correct": true
+        },
+        {
+         "text": "Les plus spectaculaires",
+         "correct": false
+        },
+        {
+         "text": "Les plus risqués",
+         "correct": false
+        },
+        {
+         "text": "Ceux qui concernent les données les plus sensibles",
+         "correct": false
+        }
+       ],
+       "explanation": "Des résultats rapides et visibles convainquent.",
+       "kind": "single"
+      },
+      {
+       "prompt": "D'où viennent souvent les meilleures idées de cas d'usage ?",
+       "options": [
+        {
+         "text": "Du terrain, des équipes qui font le travail",
+         "correct": true
+        },
+        {
+         "text": "Uniquement de la direction",
+         "correct": false
+        },
+        {
+         "text": "Des publicités des fournisseurs",
+         "correct": false
+        },
+        {
+         "text": "Du hasard",
+         "correct": false
+        }
+       ],
+       "explanation": "Les équipes connaissent les tâches qui leur font perdre du temps.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Encadrer, accompagner, mesurer",
+   "lessons": [
+    {
+     "key": "encadrer",
+     "title": "Encadrer l'usage",
+     "file": "04-encadrer-l-usage.md",
+     "objective": "Mettre en place un cadre équilibré.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quels sont les quatre piliers du cadre d'usage ?",
+       "options": [
+        {
+         "text": "Outils autorisés, charte, rôles, gestion des risques",
+         "correct": true
+        },
+        {
+         "text": "Interdiction, sanction, contrôle, surveillance",
+         "correct": false
+        },
+        {
+         "text": "Publicité, ventes, prix, profits",
+         "correct": false
+        },
+        {
+         "text": "Aucun cadre n'est nécessaire",
+         "correct": false
+        }
+       ],
+       "explanation": "Un cadre clair permet d'utiliser l'IA avec confiance.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Pourquoi un cadre trop strict pose-t-il problème ?",
+       "options": [
+        {
+         "text": "Il pousse aux usages cachés",
+         "correct": true
+        },
+        {
+         "text": "Il protège trop bien les données",
+         "correct": false
+        },
+        {
+         "text": "Il est trop court",
+         "correct": false
+        },
+        {
+         "text": "Il ne pose aucun problème",
+         "correct": false
+        }
+       ],
+       "explanation": "Interdits clairs, liberté d'expérimenter sur le reste.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "accompagner",
+     "title": "Former et accompagner",
+     "file": "05-former-et-accompagner.md",
+     "objective": "Accompagner les équipes dans la transformation.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel est le premier facteur de réussite d'une stratégie IA ?",
+       "options": [
+        {
+         "text": "Les personnes, formées et accompagnées",
+         "correct": true
+        },
+        {
+         "text": "Le prix des outils",
+         "correct": false
+        },
+        {
+         "text": "Le nombre de logiciels",
+         "correct": false
+        },
+        {
+         "text": "La vitesse d'internet uniquement",
+         "correct": false
+        }
+       ],
+       "explanation": "La technologie seule ne suffit pas.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "mesurer",
+     "title": "Mesurer et faire grandir",
+     "file": "06-mesurer-et-faire-grandir.md",
+     "objective": "Mesurer les résultats et bâtir une feuille de route.",
+     "duration_minutes": 16,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Que faire d'un projet IA qui ne fonctionne pas ?",
+       "options": [
+        {
+         "text": "L'arrêter sans honte et en tirer les enseignements",
+         "correct": true
+        },
+        {
+         "text": "Le cacher",
+         "correct": false
+        },
+        {
+         "text": "Le généraliser à toute l'organisation",
+         "correct": false
+        },
+        {
+         "text": "Augmenter son budget sans analyse",
+         "correct": false
+        }
+       ],
+       "explanation": "Abandonner un projet qui ne marche pas est une bonne décision.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Stratégie IA et adoption en organisation",
+ "summary": "Passez des essais isolés à une transformation maîtrisée : diagnostiquer sa maturité, choisir les cas d'usage prioritaires, encadrer l'usage, former les équipes, mesurer les résultats et bâtir une feuille de route.",
+ "audience": "pme",
+ "parcours": "organisations",
+ "level": "avance",
+ "duration_minutes": 90,
+ "position": 20,
+ "prerequisites": "Le tronc commun est conseillé, ainsi que le cours « IA, confidentialité et éthique au travail ».",
+ "description": "Dans beaucoup d'organisations, l'IA s'installe sans plan : chacun son outil, aucune règle, aucune mesure. D'autres interdisent tout et se privent de gains importants. Entre les deux, il existe une voie : une stratégie simple et pragmatique.\n\nCe cours s'adresse aux dirigeants, managers et responsables de PME, d'ONG et d'institutions. Il vous apprend à diagnostiquer la maturité de votre organisation, à choisir les cas d'usage qui créent le plus de valeur, à encadrer l'usage de l'IA, à former et accompagner les équipes, à mesurer les résultats et à construire une feuille de route sur douze à dix-huit mois.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Quelle situation décrit une adoption sauvage de l'IA ?",
+    "options": [
+     {
+      "text": "Chaque service utilise ses propres outils sans règles ni mesure",
+      "correct": true
+     },
+     {
+      "text": "Une charte claire et des outils choisis",
+      "correct": false
+     },
+     {
+      "text": "Une formation de toutes les équipes",
+      "correct": false
+     },
+     {
+      "text": "Des pilotes mesurés",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles questions une stratégie IA doit-elle trancher ?",
+    "options": [
+     {
+      "text": "Pourquoi et où utiliser l'IA",
+      "correct": true
+     },
+     {
+      "text": "Comment l'encadrer",
+      "correct": true
+     },
+     {
+      "text": "Comment mesurer les résultats",
+      "correct": true
+     },
+     {
+      "text": "Quelle est la couleur du logo",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quel niveau de maturité correspond à « usages isolés et individuels, pas de règles » ?",
+    "options": [
+     {
+      "text": "Découverte",
+      "correct": true
+     },
+     {
+      "text": "Intégration",
+      "correct": false
+     },
+     {
+      "text": "Transformation",
+      "correct": false
+     },
+     {
+      "text": "Structuration",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels risques le diagnostic doit-il identifier ?",
+    "options": [
+     {
+      "text": "Les données sensibles traitées",
+      "correct": true
+     },
+     {
+      "text": "Les activités où une erreur serait grave",
+      "correct": true
+     },
+     {
+      "text": "La dépendance envers un seul fournisseur",
+      "correct": true
+     },
+     {
+      "text": "Les préférences musicales des employés",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quels critères utiliser pour évaluer un cas d'usage ?",
+    "options": [
+     {
+      "text": "La valeur, la faisabilité et le risque",
+      "correct": true
+     },
+     {
+      "text": "La popularité sur les réseaux sociaux",
+      "correct": false
+     },
+     {
+      "text": "Le nombre de pages de documentation",
+      "correct": false
+     },
+     {
+      "text": "L'avis d'un seul employé",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : un assistant client spectaculaire qui donne de mauvaises réponses vaut mieux qu'un simple outil de rédaction utile.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Quel rôle joue le sponsor à la direction ?",
+    "options": [
+     {
+      "text": "Il porte la démarche et arbitre",
+      "correct": true
+     },
+     {
+      "text": "Il utilise seul tous les outils",
+      "correct": false
+     },
+     {
+      "text": "Il interdit l'IA",
+      "correct": false
+     },
+     {
+      "text": "Il n'a aucun rôle",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pour des usages impliquant des données internes, quels outils privilégier ?",
+    "options": [
+     {
+      "text": "Des offres professionnelles qui garantissent par contrat la protection des données",
+      "correct": true
+     },
+     {
+      "text": "N'importe quel outil gratuit",
+      "correct": false
+     },
+     {
+      "text": "Les outils les plus populaires sans vérification",
+      "correct": false
+     },
+     {
+      "text": "Aucun outil, jamais",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment répondre à l'inquiétude des équipes sur l'emploi ?",
+    "options": [
+     {
+      "text": "Expliquer clairement l'intention, l'évolution des métiers et l'accompagnement prévu",
+      "correct": true
+     },
+     {
+      "text": "Ne rien dire",
+      "correct": false
+     },
+     {
+      "text": "Promettre que rien ne changera jamais",
+      "correct": false
+     },
+     {
+      "text": "Annoncer des suppressions sans explication",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle formation est la plus efficace ?",
+    "options": [
+     {
+      "text": "Des ateliers pratiques sur les vraies tâches des participants",
+      "correct": true
+     },
+     {
+      "text": "Une conférence théorique unique",
+      "correct": false
+     },
+     {
+      "text": "Un document de cent pages à lire seul",
+      "correct": false
+     },
+     {
+      "text": "Aucune formation",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi mesurer la situation avant le lancement d'un cas d'usage ?",
+    "options": [
+     {
+      "text": "Pour pouvoir comparer et prouver les résultats",
+      "correct": true
+     },
+     {
+      "text": "Pour retarder le projet",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas utile",
+      "correct": false
+     },
+     {
+      "text": "Pour remplir un rapport",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle est la durée typique d'une feuille de route IA ?",
+    "options": [
+     {
+      "text": "Douze à dix-huit mois, révisée régulièrement",
+      "correct": true
+     },
+     {
+      "text": "Une semaine",
+      "correct": false
+     },
+     {
+      "text": "Vingt ans sans révision",
+      "correct": false
+     },
+     {
+      "text": "Elle n'a pas de durée",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}
