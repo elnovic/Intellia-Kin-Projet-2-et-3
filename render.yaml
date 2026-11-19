@@ -1,0 +1,38 @@
+# Déploiement de l'API sur Render (offre gratuite).
+# Render lit ce fichier quand on crée un « Blueprint » à partir du dépôt.
+services:
+  - type: web
+    name: intellia-academie-api
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -e ./backend
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers
+    healthCheckPath: /health
+    buildFilter:
+      paths:
+        - backend/**
+        - contenu/**
+        - render.yaml
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: IK_ENVIRONMENT
+        value: production
+      - key: IK_SECRET_KEY
+        generateValue: true
+      - key: IK_CONTENT_DIR
+        value: ../contenu
+      - key: IK_CORS_ORIGINS
+        value: '["https://academie.intelliakin.com","https://intellia-academie.pages.dev"]'
+      - key: IK_BOOTSTRAP_ADMIN_NAME
+        value: Elnovic NTEDIKA
+      # Valeurs secrètes, saisies dans Render au moment de la création :
+      - key: IK_DATABASE_URL
+        sync: false
+      - key: IK_BOOTSTRAP_ADMIN_EMAIL
+        sync: false
+      - key: IK_BOOTSTRAP_ADMIN_PASSWORD
+        sync: false
+      - key: IK_GROQ_API_KEY
+        sync: false

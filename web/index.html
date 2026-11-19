@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Académie Intellia Kin</title>
+    <meta name="description" content="Cours gratuits sur l'intelligence artificielle, avec attestation de réussite, et outils IA gratuits pour les jeunes diplômés, les entrepreneurs et les organisations.">
+    <meta name="theme-color" content="#0a2540">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Académie Intellia Kin">
+    <meta property="og:title" content="Académie Intellia Kin : l'IA au service de votre performance">
+    <meta property="og:description" content="20 cours gratuits sur l'IA avec attestation de réussite, et des outils IA gratuits.">
+    <meta property="og:image" content="/assets/logo-slogan.png">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="/assets/tokens.css">
+    <link rel="stylesheet" href="/assets/app.css">
+    <script src="/config.js"></script>
+    <script type="module" src="/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#view">Aller au contenu</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand" aria-label="Académie Intellia Kin, accueil">
+          <img src="/assets/logo.png" alt="Intellia Kin" width="120" height="56">
+          <span class="brand-label">Académie</span>
+        </a>
+        <button class="menu-toggle" data-action="menu" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="/cours" data-nav>Cours</a>
+          <a href="/outils" data-nav>Outils</a>
+          <a href="/annonces" data-nav>Annonces et événements</a>
+          <span id="nav-account" class="nav-account"></span>
+        </nav>
+      </div>
+    </header>
+
+    <div id="wake-notice" class="wake-notice" role="status" hidden>
+      <span class="spinner" aria-hidden="true"></span>
+      Le serveur se réveille, cela peut prendre jusqu'à une minute. Merci de votre patience.
+    </div>
+
+    <main id="view" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <img src="/assets/logo.png" alt="Intellia Kin" width="110" height="52" class="footer-logo">
+          <p>L'intelligence artificielle au service de votre performance.</p>
+        </div>
+        <div>
+          <h2>L'Académie</h2>
+          <a href="/cours">Les 20 cours</a>
+          <a href="/outils">Les outils gratuits</a>
+          <a href="/annonces">Annonces et événements</a>
+        </div>
+        <div>
+          <h2>Le cabinet</h2>
+          <a href="https://intelliakin.com/formation.html" target="_blank" rel="noopener">Formation</a>
+          <a href="https://intelliakin.com/consulting.html" target="_blank" rel="noopener">Consulting</a>
+          <a href="https://intelliakin.com/realisation-projet.html" target="_blank" rel="noopener">Réalisation de projet</a>
+          <a href="https://intelliakin.com/contact.html" target="_blank" rel="noopener">Contact</a>
+        </div>
+      </div>
+      <p class="container footer-bottom">© <span id="year"></span> Intellia Kin. Tous droits réservés.</p>
+    </footer>
+
+    <div id="toasts" class="toasts" aria-live="polite"></div>
+  </body>
+</html>
