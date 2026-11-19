@@ -6,7 +6,7 @@ leçons en texte illustré (6 à 10 minutes), quiz de leçon, examen final
 
 Légende de l'état : ✅ rédigé · ⏳ à rédiger.
 
-État au 19 novembre 2026 : les 20 cours sont rédigés (130 leçons, 252 questions d'examen), en attente de relecture par Elnovic NTEDIKA sur la plateforme déployée.
+État au 19 novembre 2026 : les 20 cours sont rédigés (126 leçons, 246 questions d'examen), en attente de relecture par Elnovic NTEDIKA sur la plateforme déployée.
 
 Couverture d'un nouveau cours : `python tools/couverture.py <slug> "<surtitre>" "<ligne 1>" "<ligne 2>" "<sous-titre>"`.
 
