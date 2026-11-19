@@ -1,4 +1,4 @@
-// Les sept outils gratuits : quatre sans IA (sans compte), trois avec IA (compte requis).
+// Les dix outils gratuits : six avec IA, quatre sans IA. Un compte est requis pour tous.
 
 import { api, session } from "./api.js";
 import { renderMarkdown } from "./md.js";
@@ -8,6 +8,9 @@ export const TOOL_CARDS = [
   { slug: "cv-lettre", title: "CV et lettre de motivation", short: "Un CV et une lettre professionnels, adaptés au poste visé.", icon: "user", ai: true },
   { slug: "assistant-redaction", title: "Assistant de rédaction", short: "E-mails, courriers, offres et relances prêts à envoyer.", icon: "book", ai: true },
   { slug: "plan-affaires", title: "Plan d'affaires en une page", short: "Votre idée structurée, avec les cinq prochaines étapes.", icon: "spark", ai: true },
+  { slug: "generateur-publications", title: "Générateur de publications", short: "Des publications prêtes à poster sur vos réseaux sociaux.", icon: "share", ai: true },
+  { slug: "simulateur-entretien", title: "Simulateur d'entretien", short: "Les questions probables pour votre poste, et l'évaluation de vos réponses.", icon: "user", ai: true },
+  { slug: "coach-memoire", title: "Coach de mémoire", short: "Méthode et relecture de votre mémoire, sans rédiger à votre place.", icon: "book", ai: true },
   { slug: "calculateur-prix-marge", title: "Calculateur de prix et de marge", short: "Prix de vente, marge et seuil de rentabilité, en USD ou en CDF.", icon: "tool", ai: false },
   { slug: "tests-recrutement", title: "Tests de recrutement", short: "Entraînez-vous aux tests de logique, de français et d'Excel.", icon: "check", ai: false },
   { slug: "bibliotheque-prompts", title: "Bibliothèque de prompts", short: "Des demandes prêtes à copier, classées par métier.", icon: "book", ai: false },
@@ -18,6 +21,9 @@ const HANDLERS = {
   "cv-lettre": aiTool,
   "assistant-redaction": aiTool,
   "plan-affaires": aiTool,
+  "generateur-publications": aiTool,
+  "simulateur-entretien": aiTool,
+  "coach-memoire": aiTool,
   "calculateur-prix-marge": calculator,
   "tests-recrutement": recruitmentTests,
   "bibliotheque-prompts": promptLibrary,
@@ -28,16 +34,16 @@ export async function toolsPage(root) {
   setTitle("Outils gratuits", "Des outils gratuits, avec et sans IA, pour votre carrière, votre projet et votre organisation.");
   const card = (t) =>
     `<a class="tool-card" href="/outils/${t.slug}">${icon(t.icon)}<h3>${esc(t.title)}</h3><p>${esc(t.short)}</p>${
-      t.ai ? badge("IA · compte gratuit", "ai") : badge("Accès libre", "neutral")
+      t.ai ? badge("IA · 3 par jour", "ai") : badge("Sans limite", "neutral")
     }</a>`;
   root.innerHTML = `<section class="page"><div class="container">
     <header class="page-header">
       <h1>Outils gratuits</h1>
-      <p class="lead">Des outils simples et professionnels, conçus par Intellia Kin. Les outils sans IA sont en accès libre ; les outils avec IA demandent un compte gratuit, avec trois utilisations par jour.</p>
+      <p class="lead">Des outils simples et professionnels, conçus par Intellia Kin. Ils sont tous gratuits avec votre compte ; les outils avec IA s'utilisent trois fois par jour.</p>
     </header>
     <h2>Avec l'intelligence artificielle</h2>
     <div class="tool-grid">${TOOL_CARDS.filter((t) => t.ai).map(card).join("")}</div>
-    <h2>En accès libre</h2>
+    <h2>Sans intelligence artificielle</h2>
     <div class="tool-grid">${TOOL_CARDS.filter((t) => !t.ai).map(card).join("")}</div>
   </div></section>`;
 }
@@ -50,6 +56,15 @@ export async function toolPage(root, params, ctx) {
     return;
   }
   setTitle(tool.title, tool.short);
+  if (!session.token) {
+    root.innerHTML = `<section class="page"><div class="container narrow">
+      <p class="eyebrow"><a href="/outils">Outils</a></p><h1>${esc(tool.title)}</h1><p class="lead">${esc(tool.short)}</p>
+      <div class="notice notice-info"><p>Tous nos outils sont gratuits. Pour y accéder, créez votre compte avec votre adresse e-mail : cela prend moins d'une minute.</p>
+      <a class="ik-bouton" href="/inscription?suite=${encodeURIComponent(location.pathname)}">Créer un compte gratuit</a>
+      <a class="ik-bouton ik-bouton-secondaire" href="/connexion?suite=${encodeURIComponent(location.pathname)}">Se connecter</a></div>
+    </div></section>`;
+    return;
+  }
   root.innerHTML = `<section class="page"><div class="container narrow">
     <p class="eyebrow"><a href="/outils">Outils</a></p>
     <h1>${esc(tool.title)}</h1>
@@ -79,9 +94,47 @@ const ENUM_LABELS = {
   courte: "Courte",
   moyenne: "Moyenne",
   detaillee: "Détaillée",
+  facebook: "Facebook",
+  instagram: "Instagram",
+  linkedin: "LinkedIn",
+  whatsapp: "WhatsApp (statut ou groupe)",
+  tiktok: "TikTok",
+  vendre: "Vendre un produit ou un service",
+  informer: "Informer",
+  evenement: "Annoncer un événement",
+  recruter: "Recruter",
+  fideliser: "Remercier, fidéliser",
+  professionnel: "Professionnel",
+  dynamique: "Dynamique",
+  inspirant: "Inspirant",
+  1: "1 publication",
+  3: "3 versions",
+  5: "5 versions",
+  stage: "Stage",
+  premier_emploi: "Premier emploi",
+  confirme: "Profil confirmé",
+  choisir_sujet: "Choisir mon sujet",
+  problematique: "Formuler ma problématique",
+  plan: "Construire mon plan",
+  methodologie: "Choisir ma méthodologie",
+  relecture: "Faire relire un passage",
+  licence: "Licence",
+  master: "Master",
+  doctorat: "Doctorat",
 };
 
-const FIELD_LABELS = { document: "Que voulez-vous obtenir ?", type_document: "Type de document", ton: "Ton", longueur: "Longueur" };
+const FIELD_LABELS = {
+  document: "Que voulez-vous obtenir ?",
+  type_document: "Type de document",
+  ton: "Ton",
+  longueur: "Longueur",
+  reseau: "Réseau social",
+  objectif: "Objectif",
+  nombre: "Nombre de versions",
+  experience: "Votre niveau d'expérience",
+  etape: "Où en êtes-vous ?",
+  niveau: "Niveau d'études",
+};
 
 function fieldHtml(name, spec, required) {
   const label = esc(FIELD_LABELS[name] || spec.title || name);
@@ -100,12 +153,6 @@ function fieldHtml(name, spec, required) {
 }
 
 async function aiTool(box, tool, { navigate }) {
-  if (!session.token) {
-    box.innerHTML = `<div class="notice notice-info"><p>Cet outil utilise l'intelligence artificielle. Il est gratuit, avec un compte, à raison de trois utilisations par jour.</p>
-      <a class="ik-bouton" href="/inscription?suite=${encodeURIComponent(location.pathname)}">Créer un compte gratuit</a>
-      <a class="ik-bouton ik-bouton-secondaire" href="/connexion?suite=${encodeURIComponent(location.pathname)}">Se connecter</a></div>`;
-    return;
-  }
   const [tools, quota] = await Promise.all([api("/tools", { auth: false }), api("/tools/quota")]);
   const spec = tools.find((t) => t.slug === tool.slug);
   const schema = spec.fields;

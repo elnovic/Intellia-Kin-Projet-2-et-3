@@ -40,7 +40,7 @@ def test_import_is_idempotent_and_keeps_progress(client, session_factory, conten
     assert detail["cover_image"] == "/media/cours/cours-test/images/couverture.svg"
     lessons = detail["modules"][0]["lessons"]
     assert [l["title"] for l in lessons] == ["Leçon 1", "Leçon 2"]
-    preview = client.get(f"/courses/cours-test/lessons/{lessons[0]['id']}").json()
+    preview = client.get(f"/courses/cours-test/lessons/{lessons[0]['id']}", headers=learner_headers).json()
     assert [b["type"] for b in preview["blocks"]] == ["text", "callout", "callout", "quiz"]
 
     client.post("/courses/cours-test/enroll", headers=learner_headers)
@@ -78,3 +78,20 @@ def test_images_are_served_safely(client, content, monkeypatch):
     assert client.get("/media/cours/cours-test/images/..%2Fcours.json").status_code == 404
     assert course_image(content, "cours-test", "cours.json") is None
     assert course_image(content, "../x", "a.svg") is None
+
+
+def test_repository_courses_are_read_only_in_the_console(client, session_factory, content, admin_headers):
+    with session_factory() as db:
+        import_courses(db, content)
+    course = next(c for c in client.get("/admin/courses", headers=admin_headers).json() if c["slug"] == "cours-test")
+    full = client.get(f"/admin/courses/{course['id']}", headers=admin_headers).json()
+    lesson = full["modules"][0]["lessons"][0]
+    block = lesson["blocks"][0]
+    refused = [
+        client.patch(f"/admin/courses/{course['id']}", json={"title": "Autre titre"}, headers=admin_headers),
+        client.post(f"/admin/courses/{course['id']}/modules", json={"title": "M"}, headers=admin_headers),
+        client.patch(f"/admin/lessons/{lesson['id']}", json={"title": "L"}, headers=admin_headers),
+        client.put(f"/admin/blocks/{block['id']}", json={"data": {"markdown": "x"}}, headers=admin_headers),
+        client.delete(f"/admin/courses/{course['id']}", headers=admin_headers),
+    ]
+    assert [r.status_code for r in refused] == [409] * 5

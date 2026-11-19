@@ -2,6 +2,7 @@
 
 import { api, ApiError, mediaUrl, session } from "./api.js";
 import { renderMarkdown } from "./md.js";
+import { qrSvg } from "./qrcode.js";
 import {
   LABELS,
   PARCOURS_ORDER,
@@ -109,10 +110,10 @@ export async function coursePage(root, { slug }, { navigate }) {
   let cta;
   if (!session.user) {
     cta = `<a class="ik-bouton" href="/inscription?suite=${encodeURIComponent(`/cours/${slug}`)}">Créer un compte gratuit pour commencer</a>
-      ${firstPreview ? `<a class="ik-bouton ik-bouton-secondaire" href="/cours/${slug}/lecon/${firstPreview.id}">Lire la leçon d'aperçu</a>` : ""}
       <p class="small">Déjà inscrit ? <a href="/connexion?suite=${encodeURIComponent(`/cours/${slug}`)}">Connectez-vous</a>.</p>`;
   } else if (!progress) {
-    cta = '<button class="ik-bouton" data-enroll>S\'inscrire gratuitement</button>';
+    cta = `<button class="ik-bouton" data-enroll>S'inscrire gratuitement</button>
+      ${firstPreview ? `<a class="ik-bouton ik-bouton-secondaire" href="/cours/${slug}/lecon/${firstPreview.id}">Lire la leçon d'aperçu</a>` : ""}`;
   } else {
     cta = `<div class="progress-box">
         <div class="progress-bar" role="progressbar" aria-valuenow="${progress.percent}" aria-valuemin="0" aria-valuemax="100"><span style="width:${progress.percent}%"></span></div>
@@ -151,9 +152,9 @@ export async function coursePage(root, { slug }, { navigate }) {
                 <h3><span class="module-number">Module ${mi + 1}</span> ${esc(m.title)}</h3>
                 <ol>${m.lessons
                   .map((l) => {
-                    const open = l.is_preview || progress || session.isAdmin;
+                    const open = (l.is_preview && session.user) || progress || session.isAdmin;
                     const state = done.has(l.id) ? `<span class="done">${icon("check")}<span class="sr-only">Terminée</span></span>` : open ? "" : icon("lock");
-                    const label = `<span>${esc(l.title)}</span><span class="meta">${l.is_preview && !progress ? "Aperçu · " : ""}${l.duration_minutes} min</span>`;
+                    const label = `<span>${esc(l.title)}</span><span class="meta">${l.is_preview && session.user && !progress ? "Aperçu · " : ""}${l.duration_minutes} min</span>`;
                     return `<li>${open ? `<a href="/cours/${slug}/lecon/${l.id}">${label}</a>` : `<span class="locked">${label}</span>`}${state}</li>`;
                   })
                   .join("")}</ol>
@@ -304,6 +305,11 @@ function bindQuizzes(root, slug, lessonId) {
 // --- Lecteur de leçon -------------------------------------------------------
 
 export async function lessonPage(root, { slug, lessonId }, { navigate }) {
+  if (!session.token) {
+    toast("Connectez-vous ou créez un compte gratuit pour lire les leçons.", "info");
+    navigate(`/connexion?suite=${encodeURIComponent(location.pathname)}`, { replace: true });
+    return;
+  }
   root.innerHTML = `<section class="page"><div class="container">${loading()}</div></section>`;
   let course, lesson, progress;
   try {
@@ -500,7 +506,6 @@ export async function certificatePage(root, { number }) {
     certUrl: url,
     certId: c.number,
   })}`;
-  const qr = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=0&color=0a2540&data=${encodeURIComponent(url)}`;
   const mine = session.user && session.user.full_name;
 
   root.innerHTML = `<section class="page certificate-page">
@@ -527,7 +532,7 @@ export async function certificatePage(root, { number }) {
             ${c.skills.length ? `<div class="cert-skills"><p>Compétences acquises</p><ul>${c.skills.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>` : ""}
             <footer class="cert-footer">
               <div class="cert-date"><p class="label">Délivrée le</p><p>${formatDate(c.issued_at)}</p><p class="label">N° ${esc(c.number)}</p></div>
-              <div class="cert-qr"><img src="${qr}" alt="QR code de vérification" width="88" height="88"><p class="label">Vérifier l'attestation</p></div>
+              <div class="cert-qr">${qrSvg(url, { size: 92 })}<p class="label">Vérifier l'attestation</p></div>
               <div class="cert-signature"><p class="signature-name">${esc(c.signatory_name)}</p><p class="label">${esc(c.signatory_title)}</p></div>
             </footer>
           </div>

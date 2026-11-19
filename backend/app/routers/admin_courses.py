@@ -17,13 +17,13 @@ from ..schemas import (
     BlockIn,
     BlockOut,
     BlockUpdate,
-    CertificateFix,
     CourseCreate,
     CourseFull,
     CourseSummary,
     CourseUpdate,
     ExamIn,
     LessonCreate,
+    LessonAdminOut,
     LessonFull,
     LessonUpdate,
     ModuleCreate,
@@ -68,6 +68,24 @@ def _get(db: Session, model: type, item_id: uuid.UUID, label: str) -> Any:
     item = db.get(model, item_id)
     if item is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, f"{label} introuvable.")
+    return item
+
+
+def _editable(db: Session, model: type, item_id: uuid.UUID, label: str) -> Any:
+    """Objet modifiable : les cours rédigés dans le dépôt ne se modifient pas en ligne."""
+    item = _get(db, model, item_id, label)
+    course = item
+    if isinstance(item, Module):
+        course = item.course
+    elif isinstance(item, Lesson):
+        course = item.module.course
+    elif isinstance(item, Block):
+        course = item.lesson.module.course
+    if course.source == "depot":
+        raise HTTPException(
+            status.HTTP_409_CONFLICT,
+            "Ce cours est rédigé dans le dépôt GitHub (dossier contenu/cours) : modifiez-le là-bas.",
+        )
     return item
 
 
@@ -138,7 +156,7 @@ def get_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Course:
 def update_course(
     course_id: uuid.UUID, payload: CourseUpdate, db: Session = Depends(get_db)
 ) -> Course:
-    course = _get(db, Course, course_id, "Cours")
+    course = _editable(db, Course, course_id, "Cours")
     changes = payload.model_dump(exclude_unset=True)
     new_slug = changes.get("slug")
     if new_slug is not None and _slug_taken(db, new_slug, except_id=course.id):
@@ -155,7 +173,7 @@ def update_course(
 
 @router.post("/courses/{course_id}/publish", response_model=CourseFull)
 def publish_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Course:
-    course = _get(db, Course, course_id, "Cours")
+    course = _editable(db, Course, course_id, "Cours")
     if course.is_template:
         raise HTTPException(
             status.HTTP_409_CONFLICT, "Un gabarit ne se publie pas. Créez un cours à partir de lui."
@@ -179,7 +197,7 @@ def publish_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Cours
 @router.post("/courses/{course_id}/unpublish", response_model=CourseFull)
 def unpublish_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Course:
     """Repasse le cours en brouillon. Les inscriptions existantes sont conservées."""
-    course = _get(db, Course, course_id, "Cours")
+    course = _editable(db, Course, course_id, "Cours")
     course.status = "draft"
     db.commit()
     return course
@@ -187,16 +205,29 @@ def unpublish_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Cou
 
 @router.post("/courses/{course_id}/archive", response_model=CourseFull)
 def archive_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Course:
-    course = _get(db, Course, course_id, "Cours")
+    course = _editable(db, Course, course_id, "Cours")
     course.status = "archived"
     db.commit()
     return course
 
 
+@router.delete("/courses/{course_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Response:
+    """Supprime un cours sans inscrit. Un cours suivi s'archive plutôt."""
+    course = _editable(db, Course, course_id, "Cours")
+    if db.scalar(select(func.count(Enrollment.id)).where(Enrollment.course_id == course.id)):
+        raise HTTPException(
+            status.HTTP_409_CONFLICT, "Des apprenants suivent ce cours : archivez-le plutôt."
+        )
+    db.delete(course)
+    db.commit()
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
 @router.put("/courses/{course_id}/exam", response_model=CourseFull)
 def set_exam(course_id: uuid.UUID, payload: ExamIn, db: Session = Depends(get_db)) -> Course:
     """Remplace les questions de l'examen final."""
-    course = _get(db, Course, course_id, "Cours")
+    course = _editable(db, Course, course_id, "Cours")
     try:
         course.exam = {"questions": validate_questions(payload.questions)}
     except BlockError as exc:
@@ -211,7 +242,7 @@ def set_exam(course_id: uuid.UUID, payload: ExamIn, db: Session = Depends(get_db
 def reorder_modules(
     course_id: uuid.UUID, payload: ReorderIn, db: Session = Depends(get_db)
 ) -> Course:
-    course = _get(db, Course, course_id, "Cours")
+    course = _editable(db, Course, course_id, "Cours")
     _reorder(course.modules, payload.ids)
     db.commit()
     return course
@@ -228,7 +259,7 @@ def reorder_modules(
 def create_module(
     course_id: uuid.UUID, payload: ModuleCreate, db: Session = Depends(get_db)
 ) -> Module:
-    course = _get(db, Course, course_id, "Cours")
+    course = _editable(db, Course, course_id, "Cours")
     module = Module(
         course_id=course.id,
         title=payload.title,
@@ -243,7 +274,7 @@ def create_module(
 def update_module(
     module_id: uuid.UUID, payload: ModuleUpdate, db: Session = Depends(get_db)
 ) -> Module:
-    module = _get(db, Module, module_id, "Module")
+    module = _editable(db, Module, module_id, "Module")
     module.title = payload.title
     db.commit()
     return module
@@ -251,7 +282,7 @@ def update_module(
 
 @router.delete("/modules/{module_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_module(module_id: uuid.UUID, db: Session = Depends(get_db)) -> Response:
-    db.delete(_get(db, Module, module_id, "Module"))
+    db.delete(_editable(db, Module, module_id, "Module"))
     db.commit()
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
@@ -260,7 +291,7 @@ def delete_module(module_id: uuid.UUID, db: Session = Depends(get_db)) -> Respon
 def reorder_lessons(
     module_id: uuid.UUID, payload: ReorderIn, db: Session = Depends(get_db)
 ) -> Module:
-    module = _get(db, Module, module_id, "Module")
+    module = _editable(db, Module, module_id, "Module")
     _reorder(module.lessons, payload.ids)
     db.commit()
     return module
@@ -277,7 +308,7 @@ def reorder_lessons(
 def create_lesson(
     module_id: uuid.UUID, payload: LessonCreate, db: Session = Depends(get_db)
 ) -> Lesson:
-    module = _get(db, Module, module_id, "Module")
+    module = _editable(db, Module, module_id, "Module")
     lesson = Lesson(
         module_id=module.id,
         title=payload.title,
@@ -291,16 +322,20 @@ def create_lesson(
     return lesson
 
 
-@router.get("/lessons/{lesson_id}", response_model=LessonFull)
-def get_lesson(lesson_id: uuid.UUID, db: Session = Depends(get_db)) -> Lesson:
-    return _get(db, Lesson, lesson_id, "Leçon")
+@router.get("/lessons/{lesson_id}", response_model=LessonAdminOut)
+def get_lesson(lesson_id: uuid.UUID, db: Session = Depends(get_db)) -> LessonAdminOut:
+    lesson = _get(db, Lesson, lesson_id, "Leçon")
+    out = LessonAdminOut.model_validate(lesson)
+    course = lesson.module.course
+    out.course_id, out.course_title, out.course_source = course.id, course.title, course.source
+    return out
 
 
 @router.patch("/lessons/{lesson_id}", response_model=LessonFull)
 def update_lesson(
     lesson_id: uuid.UUID, payload: LessonUpdate, db: Session = Depends(get_db)
 ) -> Lesson:
-    lesson = _get(db, Lesson, lesson_id, "Leçon")
+    lesson = _editable(db, Lesson, lesson_id, "Leçon")
     for field, value in payload.model_dump(exclude_unset=True).items():
         if value is not None:
             setattr(lesson, field, value)
@@ -310,7 +345,7 @@ def update_lesson(
 
 @router.delete("/lessons/{lesson_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_lesson(lesson_id: uuid.UUID, db: Session = Depends(get_db)) -> Response:
-    db.delete(_get(db, Lesson, lesson_id, "Leçon"))
+    db.delete(_editable(db, Lesson, lesson_id, "Leçon"))
     db.commit()
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
@@ -319,7 +354,7 @@ def delete_lesson(lesson_id: uuid.UUID, db: Session = Depends(get_db)) -> Respon
 def reorder_blocks(
     lesson_id: uuid.UUID, payload: ReorderIn, db: Session = Depends(get_db)
 ) -> Lesson:
-    lesson = _get(db, Lesson, lesson_id, "Leçon")
+    lesson = _editable(db, Lesson, lesson_id, "Leçon")
     _reorder(lesson.blocks, payload.ids)
     db.commit()
     return lesson
@@ -336,7 +371,7 @@ def reorder_blocks(
 def create_block(
     lesson_id: uuid.UUID, payload: BlockIn, db: Session = Depends(get_db)
 ) -> Block:
-    lesson = _get(db, Lesson, lesson_id, "Leçon")
+    lesson = _editable(db, Lesson, lesson_id, "Leçon")
     block = Block(
         lesson_id=lesson.id,
         type=payload.type,
@@ -353,7 +388,7 @@ def update_block(
     block_id: uuid.UUID, payload: BlockUpdate, db: Session = Depends(get_db)
 ) -> Block:
     """Remplace le contenu d'un bloc. Son type ne change pas."""
-    block = _get(db, Block, block_id, "Bloc")
+    block = _editable(db, Block, block_id, "Bloc")
     block.data = _validated(block.type, payload.data)
     db.commit()
     return block
@@ -361,25 +396,12 @@ def update_block(
 
 @router.delete("/blocks/{block_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_block(block_id: uuid.UUID, db: Session = Depends(get_db)) -> Response:
-    db.delete(_get(db, Block, block_id, "Bloc"))
+    db.delete(_editable(db, Block, block_id, "Bloc"))
     db.commit()
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
 
-# --- Attestations et statistiques -----------------------------------------
-
-
-@router.patch("/certificates/{number}")
-def fix_certificate_name(
-    number: str, payload: CertificateFix, db: Session = Depends(get_db)
-) -> dict[str, str]:
-    """Corrige le nom porté sur une attestation (seule modification possible)."""
-    certificate = db.scalar(select(Certificate).where(Certificate.number == number.upper()))
-    if certificate is None:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "Attestation introuvable.")
-    certificate.full_name = " ".join(payload.full_name.split())
-    db.commit()
-    return {"number": certificate.number, "full_name": certificate.full_name}
+# --- Statistiques ----------------------------------------------------------
 
 
 @router.get("/stats")

@@ -49,7 +49,7 @@ export async function home(root) {
         <div>
           <p class="eyebrow light">Académie Intellia Kin · 100 % gratuit</p>
           <h1>Maîtrisez l'intelligence artificielle, à votre rythme.</h1>
-          <p class="lead">20 cours concrets, une attestation de réussite pour chaque cours, et des outils IA gratuits pour votre carrière, votre projet ou votre organisation.</p>
+          <p class="lead">20 cours concrets, une attestation de réussite pour chaque cours, et dix outils gratuits pour votre carrière, votre projet ou votre organisation.</p>
           <div class="cta">
             <a class="ik-bouton" href="/cours">Découvrir les cours</a>
             <a class="ik-bouton ik-bouton-clair" href="/outils">Essayer les outils</a>
@@ -57,7 +57,7 @@ export async function home(root) {
         </div>
         <ul class="hero-stats">
           <li><span class="ik-chiffre">20</span> cours gratuits</li>
-          <li><span class="ik-chiffre">7</span> outils</li>
+          <li><span class="ik-chiffre">10</span> outils gratuits</li>
           <li><span class="ik-chiffre">1</span> attestation vérifiable par cours</li>
         </ul>
       </div>
@@ -116,7 +116,7 @@ export async function home(root) {
 }
 
 function toolMini(tool) {
-  return `<a class="tool-card" href="/outils/${tool.slug}">${icon(tool.icon)}<h3>${esc(tool.title)}</h3><p>${esc(tool.short)}</p>${tool.ai ? badge("IA", "ai") : badge("Sans compte", "neutral")}</a>`;
+  return `<a class="tool-card" href="/outils/${tool.slug}">${icon(tool.icon)}<h3>${esc(tool.title)}</h3><p>${esc(tool.short)}</p>${tool.ai ? badge("IA", "ai") : badge("Gratuit", "neutral")}</a>`;
 }
 
 // --- Annonces ---------------------------------------------------------------

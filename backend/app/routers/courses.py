@@ -85,15 +85,14 @@ def _required_enrollment(db: Session, user: User, course: Course) -> Enrollment:
 
 
 def _check_lesson_access(db: Session, course: Course, lesson: Lesson, user: User | None) -> None:
-    if lesson.is_preview:
-        return
+    """Un compte est toujours requis. Une leçon d'aperçu se lit sans inscription au cours."""
     if user is None:
         raise HTTPException(
             status.HTTP_401_UNAUTHORIZED,
             "Connectez-vous pour lire cette leçon.",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    if user.role != "admin":
+    if user.role != "admin" and not lesson.is_preview:
         _required_enrollment(db, user, course)
 
 

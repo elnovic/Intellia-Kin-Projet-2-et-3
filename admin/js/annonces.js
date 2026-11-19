@@ -1,7 +1,8 @@
-// Administration : tableau de bord, annonces, cours, attestations.
+// Annonces, formations et événements : création, publication, inscrits.
 
 import { api, API_BASE, session } from "./api.js";
 import { LABELS, badge, esc, formData, formatDate, loading, setTitle, toast, withBusy } from "./ui.js";
+import { PUBLIC_SITE, shell } from "./layout.js";
 
 const TIMEZONES = [
   ["Africa/Kinshasa", "Kinshasa (UTC+1)"],
@@ -12,100 +13,18 @@ const TIMEZONES = [
   ["Europe/Paris", "Paris, Bruxelles"],
 ];
 
-function guard(root) {
-  if (session.isAdmin) return true;
-  root.innerHTML = `<section class="page"><div class="container narrow"><h1>Accès réservé</h1>
-    <p>Cette partie est réservée à l'équipe Intellia Kin.</p>${session.user ? "" : '<a class="ik-bouton" href="/connexion?suite=/admin">Se connecter</a>'}</div></section>`;
-  return false;
-}
-
-function adminNav(active) {
-  const links = [["/admin", "Tableau de bord"], ["/admin/annonces", "Annonces"], ["/admin/cours", "Cours"], ["/admin/attestations", "Attestations"]];
-  return `<nav class="admin-nav" aria-label="Administration">${links
-    .map(([href, label]) => `<a href="${href}" class="${href === active ? "active" : ""}">${label}</a>`)
-    .join("")}</nav>`;
-}
-
-function shell(root, active, title, content) {
-  root.innerHTML = `<section class="page admin"><div class="container">
-    <p class="eyebrow">Administration</p><h1>${esc(title)}</h1>${adminNav(active)}<div data-admin>${content}</div>
-  </div></section>`;
-  return root.querySelector("[data-admin]");
-}
-
-// --- Tableau de bord ---------------------------------------------------------
-
-export async function dashboard(root) {
-  if (!guard(root)) return;
-  setTitle("Administration");
-  const box = shell(root, "/admin", "Tableau de bord", loading());
-  const stats = await api("/admin/stats");
-  box.innerHTML = `<div class="kpi-grid">
-      <div class="ik-chiffre-cle"><p class="label">Comptes créés</p><p class="kpi">${stats.users}</p></div>
-      <div class="ik-chiffre-cle"><p class="label">Inscriptions aux cours</p><p class="kpi">${stats.enrollments}</p></div>
-      <div class="ik-chiffre-cle"><p class="label">Attestations délivrées</p><p class="kpi">${stats.certificates}</p></div>
-    </div>
-    <h2>Par cours</h2>
-    <div class="md-table"><table><thead><tr><th>Cours</th><th>Inscrits</th><th>Attestations</th></tr></thead><tbody>${stats.courses
-      .map((c) => `<tr><td><a href="/cours/${esc(c.slug)}">${esc(c.title)}</a></td><td>${c.enrollments}</td><td>${c.certificates}</td></tr>`)
-      .join("")}</tbody></table></div>`;
-}
-
-// --- Cours ------------------------------------------------------------------
-
-export async function coursesList(root) {
-  if (!guard(root)) return;
-  setTitle("Cours · Administration");
-  const box = shell(root, "/admin/cours", "Cours", loading());
-  const courses = await api("/admin/courses");
-  box.innerHTML = `<p class="notice notice-info small">Les cours marqués « dépôt » sont rédigés dans le dépôt GitHub (dossier <code>contenu/cours</code>) et rechargés à chaque déploiement : modifiez-les là-bas.</p>
-    <div class="md-table"><table><thead><tr><th>#</th><th>Cours</th><th>Parcours</th><th>Niveau</th><th>Statut</th><th>Source</th></tr></thead><tbody>${courses
-      .sort((a, b) => a.position - b.position)
-      .map(
-        (c) => `<tr><td>${c.position}</td><td><a href="/cours/${esc(c.slug)}">${esc(c.title)}</a></td><td>${esc(LABELS.parcours[c.parcours] || c.parcours)}</td><td>${esc(LABELS.level[c.level] || c.level)}</td><td>${badge(c.status === "published" ? "Publié" : c.status === "draft" ? "Brouillon" : "Archivé", c.status === "published" ? "success" : "neutral")}</td><td>${c.source === "depot" ? "dépôt" : "console"}</td></tr>`
-      )
-      .join("")}</tbody></table></div>`;
-}
-
-// --- Attestations -------------------------------------------------------------
-
-export async function certificatesTool(root) {
-  if (!guard(root)) return;
-  setTitle("Attestations · Administration");
-  const box = shell(
-    root,
-    "/admin/attestations",
-    "Attestations",
-    `<p>Corrigez le nom porté sur une attestation, par exemple après une faute de frappe signalée par l'apprenant.</p>
-    <form data-fix class="form-grid">
-      <label class="field"><span>Numéro de l'attestation</span><input name="number" required placeholder="IK-2026-000001" pattern="IK-\\d{4}-\\d{6}"></label>
-      <label class="field"><span>Nom corrigé</span><input name="full_name" required minlength="3" maxlength="120"></label>
-      <button class="ik-bouton" type="submit">Corriger</button>
-    </form>`
-  );
-  box.querySelector("[data-fix]").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const { number, full_name } = formData(event.currentTarget);
-    withBusy(event.currentTarget.querySelector("button"), async () => {
-      await api(`/admin/certificates/${encodeURIComponent(number.toUpperCase())}`, { method: "PATCH", body: { full_name } });
-      toast("Nom corrigé.", "success");
-    }).catch((error) => toast(error.message, "error"));
-  });
-}
-
 // --- Annonces ---------------------------------------------------------------
 
 export async function announcementsList(root) {
-  if (!guard(root)) return;
-  setTitle("Annonces · Administration");
-  const box = shell(root, "/admin/annonces", "Annonces", loading());
+  setTitle("Annonces");
+  const box = shell(root, "annonces", "Annonces", loading());
   const items = await api("/admin/announcements");
-  box.innerHTML = `<p><a class="ik-bouton" href="/admin/annonces/nouvelle">Nouvelle annonce</a></p>
+  box.innerHTML = `<p><a class="ik-bouton" href="#/annonces/nouvelle">Nouvelle annonce</a></p>
     ${
       items.length
         ? `<div class="md-table"><table><thead><tr><th>Titre</th><th>Type</th><th>Date</th><th>Statut</th><th>Inscrits</th></tr></thead><tbody>${items
             .map(
-              (a) => `<tr><td><a href="/admin/annonces/${a.id}">${esc(a.title)}</a>${a.pinned ? " " + badge("À la une", "pinned") : ""}</td><td>${esc(LABELS.kind[a.kind])}</td><td>${esc(formatDate(a.starts_at || a.published_at || "", Boolean(a.starts_at), a.timezone))}</td><td>${badge(a.status === "published" ? "Publiée" : "Brouillon", a.status === "published" ? "success" : "neutral")}</td><td>${a.registration_mode === "internal" ? a.registered_count + (a.capacity ? ` / ${a.capacity}` : "") : "—"}</td></tr>`
+              (a) => `<tr><td><a href="#/annonces/${a.id}">${esc(a.title)}</a>${a.pinned ? " " + badge("À la une", "pinned") : ""}</td><td>${esc(LABELS.kind[a.kind])}</td><td>${esc(formatDate(a.starts_at || a.published_at || "", Boolean(a.starts_at), a.timezone))}</td><td>${badge(a.status === "published" ? "Publiée" : "Brouillon", a.status === "published" ? "success" : "neutral")}</td><td>${a.registration_mode === "internal" ? a.registered_count + (a.capacity ? ` / ${a.capacity}` : "") : "—"}</td></tr>`
             )
             .join("")}</tbody></table></div>`
         : '<p class="empty">Aucune annonce. Créez la première !</p>'
@@ -134,10 +53,9 @@ function utcToZoned(iso, timeZone) {
 const DATE_FIELDS = ["starts_at", "ends_at", "registration_deadline", "expires_at"];
 
 export async function announcementForm(root, { id }, { navigate }) {
-  if (!guard(root)) return;
   const editing = Boolean(id);
   setTitle(editing ? "Modifier l'annonce" : "Nouvelle annonce");
-  const box = shell(root, "/admin/annonces", editing ? "Modifier l'annonce" : "Nouvelle annonce", loading());
+  const box = shell(root, "annonces", editing ? "Modifier l'annonce" : "Nouvelle annonce", loading());
   const [all, courses] = await Promise.all([editing ? api("/admin/announcements") : [], api("/admin/courses")]);
   const a = editing ? all.find((x) => x.id === id) : null;
   if (editing && !a) {
@@ -187,7 +105,7 @@ export async function announcementForm(root, { id }, { navigate }) {
       <button class="ik-bouton ik-bouton-secondaire" type="submit" value="draft">Enregistrer${editing && v.status === "published" ? "" : " le brouillon"}</button>
       <button class="ik-bouton" type="submit" value="publish">${editing && v.status === "published" ? "Enregistrer (déjà publiée)" : "Enregistrer et publier"}</button>
       ${editing && v.status === "published" ? '<button class="ik-bouton ik-bouton-secondaire" type="button" data-unpublish>Dépublier</button>' : ""}
-      ${editing ? `<a class="ik-bouton ik-bouton-secondaire" href="/annonces/${val("slug")}" target="_blank">Voir la page</a>` : ""}
+      ${editing ? `<a class="ik-bouton ik-bouton-secondaire" href="${PUBLIC_SITE}/annonces/${val("slug")}" target="_blank" rel="noopener">Voir la page</a>` : ""}
       ${editing ? '<button class="ik-bouton ik-bouton-danger" type="button" data-delete>Supprimer</button>' : ""}
     </div>
   </form>
@@ -214,7 +132,7 @@ export async function announcementForm(root, { id }, { navigate }) {
         : await api("/admin/announcements", { method: "POST", body });
       if (publish && saved.status !== "published") await api(`/admin/announcements/${saved.id}/publish`, { method: "POST" });
       toast(publish ? "Annonce publiée." : "Annonce enregistrée.", "success");
-      navigate(`/admin/annonces/${saved.id}`, { replace: !editing });
+      navigate(`/annonces/${saved.id}`, { force: true });
     }).catch((error) => toast(error.message, "error"));
   });
 
@@ -222,7 +140,7 @@ export async function announcementForm(root, { id }, { navigate }) {
     withBusy(event.currentTarget, async () => {
       await api(`/admin/announcements/${id}/unpublish`, { method: "POST" });
       toast("Annonce retirée du site.", "success");
-      navigate(`/admin/annonces/${id}`, { replace: true });
+      navigate(`/annonces/${id}`, { force: true });
     }).catch((error) => toast(error.message, "error"))
   );
   box.querySelector("[data-delete]")?.addEventListener("click", (event) => {
@@ -230,7 +148,7 @@ export async function announcementForm(root, { id }, { navigate }) {
     withBusy(event.currentTarget, async () => {
       await api(`/admin/announcements/${id}`, { method: "DELETE" });
       toast("Annonce supprimée.", "success");
-      navigate("/admin/annonces", { replace: true });
+      navigate("/annonces");
     }).catch((error) => toast(error.message, "error"));
   });
 

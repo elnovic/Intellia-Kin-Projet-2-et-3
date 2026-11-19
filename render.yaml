@@ -24,7 +24,7 @@ services:
       - key: IK_CONTENT_DIR
         value: ../contenu
       - key: IK_CORS_ORIGINS
-        value: '["https://academie.intelliakin.com","https://intellia-academie.pages.dev"]'
+        value: '["https://academie.intelliakin.com","https://intellia-academie.pages.dev","https://intellia-controle.pages.dev"]'
       - key: IK_BOOTSTRAP_ADMIN_NAME
         value: Elnovic NTEDIKA
       # Valeurs secrètes, saisies dans Render au moment de la création :

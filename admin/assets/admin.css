@@ -1,0 +1,44 @@
+/* Centre de contrôle : mise en page propre à l'administration. */
+
+.control { display: grid; grid-template-columns: 250px minmax(0, 1fr); min-height: 100vh; }
+.control-nav { background: var(--ik-bleu-nuit); color: #c9d6e8; padding: var(--ik-espace-6); display: flex; flex-direction: column; gap: var(--ik-espace-6); position: sticky; top: 0; height: 100vh; }
+.control-brand { display: grid; gap: 0.4rem; text-decoration: none; }
+.control-brand img { background: #fff; border-radius: 8px; padding: 6px 10px; }
+.control-brand span { color: var(--ik-cyan-tech); font-family: var(--ik-police-titres); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.control-nav nav { display: grid; gap: 0.2rem; }
+.control-nav nav a { color: #c9d6e8; text-decoration: none; padding: 0.6rem 0.8rem; border-radius: 8px; font-weight: 500; }
+.control-nav nav a:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+.control-nav nav a.active { background: var(--ik-action); color: #fff; }
+.control-foot { margin-top: auto; display: grid; gap: 0.6rem; font-size: var(--ik-taille-petit); }
+.control-foot a, .control-foot .link-button { color: #c9d6e8; text-align: left; }
+.control-main { padding: var(--ik-espace-8) var(--ik-espace-8) var(--ik-espace-12); max-width: 1100px; }
+.login { min-height: 100vh; display: grid; place-items: center; background: linear-gradient(135deg, #0a2540, #0d3466); }
+.login .auth-box { text-align: center; }
+.login .form-stack { text-align: left; }
+.quick-actions { display: flex; gap: var(--ik-espace-3); flex-wrap: wrap; margin-bottom: var(--ik-espace-6); }
+.editor-bar { display: flex; flex-wrap: wrap; gap: var(--ik-espace-3); align-items: center; margin-bottom: var(--ik-espace-6); }
+.editor-modules, .editor-lessons, .blocks { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--ik-espace-3); }
+.editor-module { border: 1px solid var(--ik-bordure); border-radius: var(--ik-rayon); padding: var(--ik-espace-4); background: var(--ik-fond); }
+.editor-lessons { margin: var(--ik-espace-3) 0; }
+.editor-lessons li { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; background: #fff; border: 1px solid var(--ik-bordure); border-radius: var(--ik-rayon-petit); padding: 0.5rem 0.8rem; }
+.editor-lessons li a { font-weight: 500; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.row-actions { display: inline-flex; gap: 0.3rem; margin-left: auto; }
+.icon-button { width: 32px; height: 32px; border: 1px solid var(--ik-bordure); border-radius: 6px; background: #fff; cursor: pointer; font-size: 0.95rem; color: var(--ik-bleu-nuit); }
+.icon-button:hover:not(:disabled) { border-color: var(--ik-action); color: var(--ik-action); }
+.icon-button:disabled { opacity: 0.35; cursor: default; }
+.icon-button.danger:hover { border-color: var(--ik-erreur); color: var(--ik-erreur); }
+.inline-form { display: flex; gap: var(--ik-espace-3); margin-top: var(--ik-espace-3); }
+.inline-form input { flex: 1; font: inherit; padding: 0.5rem 0.8rem; border: 1px solid #cbd5e1; border-radius: var(--ik-rayon-petit); }
+.block-card { background: #fff; border: 1px solid var(--ik-bordure); border-radius: var(--ik-rayon); padding: var(--ik-espace-4); }
+.block-preview { margin-top: var(--ik-espace-2); color: var(--ik-texte-discret); }
+.small-prose { font-size: 0.92rem; max-height: 220px; overflow: hidden; }
+.thumb { max-height: 120px; border-radius: 6px; }
+.mono, textarea.mono { font-family: var(--ik-police-donnees); font-size: 0.88rem; }
+details.panel summary { cursor: pointer; }
+h2.inline { display: inline; }
+@media (max-width: 860px) {
+  .control { grid-template-columns: 1fr; }
+  .control-nav { position: static; height: auto; }
+  .control-main { padding: var(--ik-espace-6) var(--ik-espace-4); }
+}

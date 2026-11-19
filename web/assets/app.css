@@ -1,6 +1,7 @@
 /* Académie Intellia Kin — styles de l'interface. Couleurs et polices : tokens.css. */
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { min-height: 100vh; display: flex; flex-direction: column; }
 main { flex: 1; outline: none; }
@@ -358,7 +359,7 @@ fieldset legend { font-family: var(--ik-police-titres); font-weight: 600; color:
 .cert-footer p { margin: 0; }
 .cert-footer .label { font-size: 0.72rem; margin: 2px 0 0; }
 .cert-date { text-align: left; font-size: 0.9rem; }
-.cert-qr img { display: block; margin: 0 auto; }
+.cert-qr svg, .cert-qr img { display: block; margin: 0 auto; }
 .cert-signature { text-align: right; }
 .signature-name { font-family: "Brush Script MT", "Segoe Script", cursive; font-size: 1.7rem; color: var(--ik-bleu-nuit); border-bottom: 1px solid var(--ik-bleu-nuit); display: inline-block; padding: 0 6px; line-height: 1.2; }
 

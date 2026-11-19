@@ -90,15 +90,13 @@ def test_full_path_to_certificate(client, admin_headers, learner_headers):
     again = client.post(f"/courses/{slug}/certificate", json={"full_name": "Autre Nom"}, headers=learner_headers)
     assert again.json()["full_name"] == "Grâce Mbuyi"
 
-    # Vérification publique, puis correction par un administrateur.
+    # Vérification publique.
     public = client.get(f"/certificates/{body['number'].lower()}")
     assert public.status_code == 200
     assert public.json()["course_title"] == "Cours avec examen"
-    fixed = client.patch(
-        f"/admin/certificates/{body['number']}", json={"full_name": "Grâce Mbuyi Kalala"}, headers=admin_headers
-    )
-    assert fixed.status_code == 200
-    assert client.get(f"/certificates/{body['number']}").json()["full_name"] == "Grâce Mbuyi Kalala"
+    assert client.patch(
+        f"/admin/certificates/{body['number']}", json={"full_name": "X"}, headers=admin_headers
+    ).status_code in (404, 405)
 
     mine = client.get("/me/certificates", headers=learner_headers).json()
     assert [c["number"] for c in mine] == [body["number"]]

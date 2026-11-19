@@ -7,7 +7,8 @@ chaque envoi sur la branche `main` met la plateforme à jour automatiquement.
 |---|---|---|
 | Base de données | Supabase | (privée) |
 | API | Render | `https://intellia-academie-api.onrender.com` |
-| Interface | Cloudflare Pages | `https://academie.intelliakin.com` |
+| Académie (public) | Cloudflare Pages | `https://academie.intelliakin.com` |
+| Centre de contrôle (équipe) | Cloudflare Pages, sans domaine | `https://intellia-controle.pages.dev` |
 
 Le site `intelliakin.com` n'est pas modifié.
 
@@ -67,20 +68,33 @@ environ une minute à se réveiller. L'interface affiche alors un message d'atte
 5. Onglet **Custom domains**, **Set up a custom domain** : `academie.intelliakin.com`.
    Le domaine étant déjà chez Cloudflare, l'enregistrement DNS est créé automatiquement.
 
-## Étape 5 — Premiers pas
+## Étape 5 — Cloudflare Pages (centre de contrôle, sans domaine)
 
-1. Ouvrir `https://academie.intelliakin.com/connexion` et se connecter avec le
-   compte administrateur de l'étape 3.
-2. Le lien **Administration** apparaît dans le menu : tableau de bord, annonces,
-   cours, attestations.
-3. Créer une première annonce de test, la publier, puis la supprimer.
+1. **Workers & Pages**, **Create**, **Pages**, **Connect to Git**, même dépôt.
+2. Nom du projet : `intellia-controle`.
+3. Réglages de build :
+   - Framework preset : **None**
+   - Build command : `bash admin/build.sh`
+   - Build output directory : `admin/dist`
+4. **Save and Deploy**. Ne pas ajouter de domaine personnalisé : l'adresse
+   `https://intellia-controle.pages.dev` reste connue de l'équipe seulement.
+   Les pages portent la consigne « noindex » pour ne pas apparaître dans les moteurs de recherche.
+5. Si Cloudflare attribue un autre nom (par exemple `intellia-controle-xyz.pages.dev`),
+   l'ajouter à `IK_CORS_ORIGINS` dans Render.
+
+## Étape 6 — Premiers pas
+
+1. Ouvrir le centre de contrôle et se connecter avec le compte administrateur de l'étape 3.
+2. Créer une annonce de test, la publier, vérifier qu'elle apparaît sur l'Académie, puis la supprimer.
+3. Créer un cours de test, ajouter un module, une leçon et quelques blocs, le publier,
+   le vérifier sur l'Académie, puis le supprimer.
 
 ## Mettre à jour la plateforme
 
 - **Cours** : modifier les fichiers de `contenu/cours/`, envoyer sur `main`.
   Render recharge les cours modifiés au redémarrage.
-- **Interface** : modifier `web/`, envoyer sur `main`. Cloudflare redéploie seul.
-- **Annonces et événements** : directement depuis l'administration, sans toucher au code.
+- **Interface** : modifier `web/` ou `admin/`, envoyer sur `main`. Cloudflare redéploie seul.
+- **Nouveaux cours, annonces et événements** : directement depuis le centre de contrôle, sans toucher au code.
 
 ## Sauvegardes
 

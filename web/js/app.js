@@ -1,7 +1,6 @@
 // Routeur et mise en page de l'Académie Intellia Kin.
 
 import { refreshUser, session } from "./api.js";
-import * as admin from "./pages-admin.js";
 import * as community from "./pages-community.js";
 import * as courses from "./pages-courses.js";
 import * as tools from "./pages-tools.js";
@@ -21,12 +20,6 @@ const routes = [
   ["/connexion", community.loginPage],
   ["/inscription", community.registerPage],
   ["/mon-espace", community.mySpace],
-  ["/admin", admin.dashboard],
-  ["/admin/annonces", admin.announcementsList],
-  ["/admin/annonces/nouvelle", admin.announcementForm],
-  ["/admin/annonces/:id", admin.announcementForm],
-  ["/admin/cours", admin.coursesList],
-  ["/admin/attestations", admin.certificatesTool],
 ];
 
 function match(path) {
@@ -65,8 +58,7 @@ function updateNav() {
   const account = document.getElementById("nav-account");
   if (account) {
     account.innerHTML = session.user
-      ? `${session.isAdmin ? '<a href="/admin" data-nav>Administration</a>' : ""}
-         <a href="/mon-espace" data-nav class="nav-user">${esc(session.user.full_name.split(" ")[0])}</a>
+      ? `<a href="/mon-espace" data-nav class="nav-user">${esc(session.user.full_name.split(" ")[0])}</a>
          <button class="link-button" data-action="logout">Déconnexion</button>`
       : `<a href="/connexion" data-nav>Connexion</a>
          <a href="/inscription" class="ik-bouton ik-bouton-petit">Créer un compte</a>`;

@@ -25,7 +25,10 @@ def fake_ai(monkeypatch):
 
 def test_tools_are_listed_with_their_form(client):
     tools = {t["slug"]: t for t in client.get("/tools").json()}
-    assert set(tools) == {"cv-lettre", "assistant-redaction", "plan-affaires"}
+    assert set(tools) == {
+        "cv-lettre", "assistant-redaction", "plan-affaires",
+        "generateur-publications", "simulateur-entretien", "coach-memoire",
+    }
     assert "poste_vise" in tools["cv-lettre"]["fields"]["properties"]
 
 

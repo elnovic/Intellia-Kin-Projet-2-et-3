@@ -1,12 +1,14 @@
 # Académie Intellia Kin
 
 Plateforme gratuite du cabinet Intellia Kin : 20 cours sur l'IA avec attestation
-de réussite, outils gratuits, annonces et événements, et administration.
+de réussite, 10 outils gratuits, annonces et événements. L'équipe la pilote depuis
+un centre de contrôle séparé.
 Elle est distincte du site vitrine `intelliakin.com`, qui n'est pas modifié.
 
 | Partie | Dossier | Hébergement |
 |---|---|---|
-| Interface (`academie.intelliakin.com`) | `web/` | Cloudflare Pages |
+| Académie publique (`academie.intelliakin.com`) | `web/` | Cloudflare Pages |
+| Centre de contrôle de l'équipe (sans domaine) | `admin/` | Cloudflare Pages |
 | API | `backend/` | Render |
 | Base de données | — | Supabase |
 | Cours rédigés | `contenu/cours/` | chargés par l'API au démarrage |
@@ -18,7 +20,7 @@ Elle est distincte du site vitrine `intelliakin.com`, qui n'est pas modifié.
 docker compose up --build
 ```
 
-Interface : http://localhost:8080 · API : http://localhost:8000/docs
+Académie : http://localhost:8080 · Contrôle : http://localhost:8081 · API : http://localhost:8000/docs
 Compte administrateur local : `admin@intelliakin.com` / `admin-local-123`.
 
 ## Documents

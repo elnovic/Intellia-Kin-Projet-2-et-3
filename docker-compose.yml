@@ -1,6 +1,6 @@
 # Environnement de développement : base PostgreSQL et API.
 #   docker compose up --build
-# Interface : http://localhost:8080 · API : http://localhost:8000 (documentation sur /docs)
+# Académie : http://localhost:8080 · Contrôle : http://localhost:8081 · API : http://localhost:8000 (documentation sur /docs)
 # Compte administrateur local : admin@intelliakin.com / admin-local-123
 services:
   db:
@@ -26,7 +26,7 @@ services:
       IK_CONTENT_DIR: /srv/contenu
       IK_BOOTSTRAP_ADMIN_EMAIL: admin@intelliakin.com
       IK_BOOTSTRAP_ADMIN_PASSWORD: admin-local-123
-      IK_CORS_ORIGINS: '["http://localhost:8080"]'
+      IK_CORS_ORIGINS: '["http://localhost:8080","http://localhost:8081"]'
     volumes:
       - ./contenu:/srv/contenu:ro
     ports:
@@ -44,6 +44,17 @@ services:
       - ./web:/web:ro
     ports:
       - "8080:8080"
+
+  controle:
+    # Plateforme de contrôle : http://localhost:8081
+    image: python:3.12-slim
+    working_dir: /repo
+    command: sh -c "bash admin/build.sh && python -m http.server 8081 -d admin/dist"
+    volumes:
+      - ./admin:/repo/admin
+      - ./web:/repo/web:ro
+    ports:
+      - "8081:8081"
 
 volumes:
   db-data:

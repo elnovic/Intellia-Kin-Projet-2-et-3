@@ -159,6 +159,117 @@ def plan_prompt(form: PlanForm) -> str:
     return f"Rédige le plan d'affaires.\n<donnees>\n{form.model_dump_json(indent=1)}\n</donnees>"
 
 
+# --- Générateur de publications ---------------------------------------------
+
+
+class PublicationForm(_Form):
+    reseau: Literal["facebook", "instagram", "linkedin", "whatsapp", "tiktok"] = "facebook"
+    objectif: Literal["vendre", "informer", "evenement", "recruter", "fideliser"] = "vendre"
+    activite: str = _f(200, 2, title="Votre activité ou organisation")
+    sujet: str = _f(1500, 5, title="De quoi parle la publication ? (produit, offre, message)")
+    public: str = _f(300, title="À qui s'adresse-t-elle ?", default="")
+    infos_pratiques: str = _f(500, title="Infos pratiques (prix, date, lieu, contact)", default="")
+    ton: Literal["professionnel", "chaleureux", "dynamique", "inspirant"] = "chaleureux"
+    nombre: Literal["1", "3", "5"] = "3"
+
+
+PUBLICATION_SYSTEM = (
+    """Tu es responsable de la communication digitale d'une petite entreprise ou d'une organisation.
+Tu rédiges des publications prêtes à être postées.
+
+- Adapte la longueur et le style au réseau : LinkedIn plus posé et professionnel ; Instagram
+  et TikTok plus courts et visuels ; WhatsApp direct et personnel ; Facebook entre les deux.
+- Chaque publication : une accroche forte, le message, un appel à l'action clair.
+- Utilise les infos pratiques fournies, sans en inventer (pas de prix ni de date imaginaires).
+- Numérote les versions (## Version 1, ## Version 2…) et propose 3 à 6 hashtags pertinents
+  pour chacune, sauf pour WhatsApp.
+- Termine par « ## Idée de visuel » : une description courte de l'image ou de la vidéo à associer.
+"""
+    + COMMON_RULES
+)
+
+
+def publication_prompt(form: PublicationForm) -> str:
+    return f"Rédige {form.nombre} publication(s).\n<donnees>\n{form.model_dump_json(indent=1)}\n</donnees>"
+
+
+# --- Simulateur d'entretien (écrit) ------------------------------------------
+
+
+class EntretienForm(_Form):
+    poste: str = _f(150, 2, title="Poste visé")
+    secteur: str = _f(150, title="Entreprise ou secteur", default="")
+    experience: Literal["stage", "premier_emploi", "confirme"] = "premier_emploi"
+    question: str = _f(500, title="Question d'entretien à laquelle vous voulez répondre (facultatif)", default="")
+    reponse: str = _f(3000, title="Votre réponse, pour la faire évaluer (facultatif)", default="")
+
+
+ENTRETIEN_SYSTEM = (
+    """Tu es un recruteur bienveillant mais exigeant, qui prépare des candidats aux entretiens.
+
+Si le candidat n'a pas fourni de réponse :
+- Propose 10 questions probables pour ce poste : 3 sur le parcours et la motivation,
+  4 sur les compétences, 3 comportementales (méthode STAR).
+- Pour chaque question : ce que le recruteur cherche à savoir, et un conseil pour bien répondre.
+
+Si le candidat a fourni une réponse :
+- Donne une note sur 10, avec ## Ce qui fonctionne, ## Ce qui manque, puis
+  ## Une meilleure réponse : une version améliorée qui reste fidèle à son parcours,
+  sans inventer d'expérience.
+- Termine par ## Questions de relance : 3 questions que le recruteur pourrait poser ensuite.
+"""
+    + COMMON_RULES
+)
+
+
+def entretien_prompt(form: EntretienForm) -> str:
+    task = "Évalue ma réponse." if form.reponse else "Prépare-moi à cet entretien."
+    return f"{task}\n<donnees>\n{form.model_dump_json(indent=1)}\n</donnees>"
+
+
+# --- Coach de mémoire ---------------------------------------------------------
+
+
+class MemoireForm(_Form):
+    etape: Literal["choisir_sujet", "problematique", "plan", "methodologie", "relecture"] = "problematique"
+    discipline: str = _f(150, 2, title="Discipline (gestion, droit, informatique…)")
+    niveau: Literal["licence", "master", "doctorat"] = "licence"
+    sujet: str = _f(500, title="Votre sujet ou vos pistes de sujet", default="")
+    texte: str = _f(6000, title="Votre texte à relire (pour l'étape relecture)", default="")
+    question: str = _f(800, title="Votre question précise (facultatif)", default="")
+
+
+MEMOIRE_SYSTEM = (
+    """Tu es un directeur de mémoire expérimenté. Ton rôle est d'aider l'étudiant à progresser
+par lui-même, dans le respect de l'intégrité académique.
+
+Règle absolue : tu ne rédiges jamais le mémoire, ni aucune partie de celui-ci, à la place de
+l'étudiant. Tu ne produis pas de paragraphes prêts à copier. Tu expliques, tu questionnes,
+tu proposes des pistes, des structures et des corrections ponctuelles.
+
+Selon l'étape :
+- choisir_sujet : 5 pistes de sujets précis et faisables, avec pour chacune l'intérêt, le
+  terrain possible et la difficulté.
+- problematique : aide à formuler une problématique claire ; propose 3 formulations
+  possibles à partir du sujet, et 3 hypothèses à vérifier.
+- plan : propose une structure (parties et sous-parties sous forme de titres seulement),
+  avec l'objectif de chaque partie.
+- methodologie : méthodes de collecte adaptées (enquête, entretiens, documents, données),
+  échantillon, outils, limites.
+- relecture : commente le texte fourni : structure, clarté, argumentation, citations et
+  références, fautes de langue. Cite au maximum de courts extraits pour signaler un problème
+  et explique comment le corriger, sans réécrire le passage.
+
+Rappelle en une phrase, à la fin, que toute source utilisée doit être citée et vérifiée.
+"""
+    + COMMON_RULES
+)
+
+
+def memoire_prompt(form: MemoireForm) -> str:
+    return f"Accompagne-moi pour l'étape « {form.etape} ».\n<donnees>\n{form.model_dump_json(indent=1)}\n</donnees>"
+
+
 # --- Catalogue --------------------------------------------------------------
 
 
@@ -205,6 +316,36 @@ TOOLS: dict[str, Tool] = {
             system=PLAN_SYSTEM,
             build=plan_prompt,
             course_slug="du-concept-au-plan-d-affaires",
+            max_tokens=3000,
+        ),
+        Tool(
+            slug="generateur-publications",
+            title="Générateur de publications",
+            description="Des publications prêtes à poster pour Facebook, Instagram, LinkedIn, WhatsApp ou TikTok.",
+            form=PublicationForm,
+            system=PUBLICATION_SYSTEM,
+            build=publication_prompt,
+            course_slug="marketing-digital-et-creation-de-contenu",
+            max_tokens=2500,
+        ),
+        Tool(
+            slug="simulateur-entretien",
+            title="Simulateur d'entretien",
+            description="Les questions probables pour votre poste, et une évaluation de vos réponses.",
+            form=EntretienForm,
+            system=ENTRETIEN_SYSTEM,
+            build=entretien_prompt,
+            course_slug="reussir-entretiens-et-tests-de-recrutement",
+            max_tokens=3000,
+        ),
+        Tool(
+            slug="coach-memoire",
+            title="Coach de mémoire",
+            description="Méthode et relecture pour votre mémoire, sans jamais rédiger à votre place.",
+            form=MemoireForm,
+            system=MEMOIRE_SYSTEM,
+            build=memoire_prompt,
+            course_slug="bien-formuler-ses-demandes-a-l-ia",
             max_tokens=3000,
         ),
     )

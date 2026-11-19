@@ -200,6 +200,12 @@ class LessonFull(LessonOutline):
     blocks: list[BlockOut]
 
 
+class LessonAdminOut(LessonFull):
+    course_id: uuid.UUID | None = None
+    course_title: str = ""
+    course_source: str = "console"
+
+
 class ModuleFull(_Out):
     id: uuid.UUID
     title: str

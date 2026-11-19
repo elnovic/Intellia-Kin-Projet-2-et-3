@@ -197,8 +197,9 @@ def test_lesson_access_enrollment_and_progress(client, admin_headers, learner_he
     client.post(f"/admin/courses/{course['id']}/publish", headers=admin_headers)
     slug = course["slug"]
 
-    # La leçon en aperçu est ouverte à tous ; l'autre demande une inscription.
-    assert client.get(f"/courses/{slug}/lessons/{first['id']}").status_code == 200
+    # Un compte est toujours requis ; l'aperçu se lit sans inscription au cours.
+    assert client.get(f"/courses/{slug}/lessons/{first['id']}").status_code == 401
+    assert client.get(f"/courses/{slug}/lessons/{first['id']}", headers=learner_headers).status_code == 200
     assert client.get(f"/courses/{slug}/lessons/{second['id']}").status_code == 401
     not_enrolled = client.get(
         f"/courses/{slug}/lessons/{second['id']}", headers=learner_headers
@@ -262,3 +263,12 @@ def test_modules_and_lessons_can_be_reordered_and_deleted(client, admin_headers)
     assert client.delete(f"/admin/modules/{first['id']}", headers=admin_headers).status_code == 204
     tree = client.get(f"/admin/courses/{course['id']}", headers=admin_headers).json()
     assert [module["title"] for module in tree["modules"]] == ["Module 2"]
+
+
+def test_console_course_can_be_deleted_until_someone_enrolls(client, admin_headers, learner_headers):
+    course, _ = _published_course(client, admin_headers, title="Cours éphémère")
+    other, _ = _published_course(client, admin_headers, title="Cours suivi")
+    client.post(f"/courses/{other['slug']}/enroll", headers=learner_headers)
+    assert client.delete(f"/admin/courses/{other['id']}", headers=admin_headers).status_code == 409
+    assert client.delete(f"/admin/courses/{course['id']}", headers=admin_headers).status_code == 204
+    assert client.get(f"/admin/courses/{course['id']}", headers=admin_headers).status_code == 404
