@@ -9,18 +9,20 @@ from fastapi import APIRouter, Depends, HTTPException, Response, status
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from ..blocks import BlockError, block_types_catalog, validate_block
+from ..blocks import BlockError, block_types_catalog, validate_block, validate_questions
 from ..db import get_db
 from ..deps import require_admin
-from ..models import Block, Course, Lesson, Module, utcnow
+from ..models import Block, Certificate, Course, Enrollment, Lesson, Module, User, utcnow
 from ..schemas import (
     BlockIn,
     BlockOut,
     BlockUpdate,
+    CertificateFix,
     CourseCreate,
     CourseFull,
     CourseSummary,
     CourseUpdate,
+    ExamIn,
     LessonCreate,
     LessonFull,
     LessonUpdate,
@@ -95,16 +97,6 @@ def _validated(block_type: str, data: dict[str, Any]) -> dict[str, Any]:
         ) from exc
 
 
-def _check_pricing(course: Course) -> None:
-    if course.is_free:
-        course.price_usd = None
-    elif course.price_usd is None or course.price_usd <= 0:
-        raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
-            "Un cours payant doit avoir un prix supérieur à zéro.",
-        )
-
-
 # --- Types de blocs --------------------------------------------------------
 
 
@@ -152,12 +144,11 @@ def update_course(
     if new_slug is not None and _slug_taken(db, new_slug, except_id=course.id):
         raise HTTPException(status.HTTP_409_CONFLICT, "Cette adresse de cours est déjà prise.")
     # Ces champs ne peuvent pas être vidés.
-    required = {"title", "slug", "summary", "description", "audience", "format", "is_free", "is_template"}
+    required = set(CourseUpdate.model_fields) - {"cover_image"}
     for field, value in changes.items():
         if value is None and field in required:
             continue
         setattr(course, field, value)
-    _check_pricing(course)
     db.commit()
     return course
 
@@ -178,7 +169,6 @@ def publish_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Cours
         raise HTTPException(
             status.HTTP_409_CONFLICT, "Ajoutez au moins une leçon avant de publier ce cours."
         )
-    _check_pricing(course)
     course.status = "published"
     if course.published_at is None:
         course.published_at = utcnow()
@@ -199,6 +189,20 @@ def unpublish_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Cou
 def archive_course(course_id: uuid.UUID, db: Session = Depends(get_db)) -> Course:
     course = _get(db, Course, course_id, "Cours")
     course.status = "archived"
+    db.commit()
+    return course
+
+
+@router.put("/courses/{course_id}/exam", response_model=CourseFull)
+def set_exam(course_id: uuid.UUID, payload: ExamIn, db: Session = Depends(get_db)) -> Course:
+    """Remplace les questions de l'examen final."""
+    course = _get(db, Course, course_id, "Cours")
+    try:
+        course.exam = {"questions": validate_questions(payload.questions)}
+    except BlockError as exc:
+        raise HTTPException(
+            status.HTTP_422_UNPROCESSABLE_ENTITY, {"message": str(exc), "erreurs": exc.errors}
+        ) from exc
     db.commit()
     return course
 
@@ -277,6 +281,8 @@ def create_lesson(
     lesson = Lesson(
         module_id=module.id,
         title=payload.title,
+        objective=payload.objective,
+        duration_minutes=payload.duration_minutes,
         is_preview=payload.is_preview,
         position=_next_position(db, Lesson, Lesson.module_id, module.id),
     )
@@ -295,10 +301,9 @@ def update_lesson(
     lesson_id: uuid.UUID, payload: LessonUpdate, db: Session = Depends(get_db)
 ) -> Lesson:
     lesson = _get(db, Lesson, lesson_id, "Leçon")
-    if payload.title is not None:
-        lesson.title = payload.title
-    if payload.is_preview is not None:
-        lesson.is_preview = payload.is_preview
+    for field, value in payload.model_dump(exclude_unset=True).items():
+        if value is not None:
+            setattr(lesson, field, value)
     db.commit()
     return lesson
 
@@ -359,3 +364,50 @@ def delete_block(block_id: uuid.UUID, db: Session = Depends(get_db)) -> Response
     db.delete(_get(db, Block, block_id, "Bloc"))
     db.commit()
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+# --- Attestations et statistiques -----------------------------------------
+
+
+@router.patch("/certificates/{number}")
+def fix_certificate_name(
+    number: str, payload: CertificateFix, db: Session = Depends(get_db)
+) -> dict[str, str]:
+    """Corrige le nom porté sur une attestation (seule modification possible)."""
+    certificate = db.scalar(select(Certificate).where(Certificate.number == number.upper()))
+    if certificate is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Attestation introuvable.")
+    certificate.full_name = " ".join(payload.full_name.split())
+    db.commit()
+    return {"number": certificate.number, "full_name": certificate.full_name}
+
+
+@router.get("/stats")
+def stats(db: Session = Depends(get_db)) -> dict[str, Any]:
+    """Chiffres clés pour le tableau de bord de l'administration."""
+    per_course = db.execute(
+        select(Course.slug, Course.title, func.count(Enrollment.id))
+        .outerjoin(Enrollment, Enrollment.course_id == Course.id)
+        .group_by(Course.id)
+        .order_by(Course.position)
+    ).all()
+    certificates = dict(
+        db.execute(
+            select(Certificate.course_id, func.count(Certificate.id)).group_by(Certificate.course_id)
+        ).all()
+    )
+    course_ids = dict(db.execute(select(Course.slug, Course.id)).all())
+    return {
+        "users": db.scalar(select(func.count(User.id))),
+        "enrollments": db.scalar(select(func.count(Enrollment.id))),
+        "certificates": db.scalar(select(func.count(Certificate.id))),
+        "courses": [
+            {
+                "slug": slug,
+                "title": title,
+                "enrollments": count,
+                "certificates": certificates.get(course_ids.get(slug), 0),
+            }
+            for slug, title, count in per_course
+        ],
+    }

@@ -89,24 +89,6 @@ def test_slug_is_generated_and_kept_unique(client, admin_headers):
     assert taken.status_code == 409
 
 
-def test_paid_course_needs_a_price(client, admin_headers):
-    no_price = client.post(
-        "/admin/courses",
-        json={"title": "Cours payant", "is_free": False},
-        headers=admin_headers,
-    )
-    assert no_price.status_code == 422
-    paid = _create_course(client, admin_headers, is_free=False, price_usd="25.00")
-    assert paid["is_free"] is False
-    assert float(paid["price_usd"]) == 25.0
-    # Rendre le cours gratuit efface son prix.
-    freed = client.patch(
-        f"/admin/courses/{paid['id']}", json={"is_free": True}, headers=admin_headers
-    )
-    assert freed.status_code == 200, freed.text
-    assert freed.json()["price_usd"] is None
-
-
 def test_course_needs_a_lesson_to_be_published(client, admin_headers):
     course = _create_course(client, admin_headers)
     empty = client.post(f"/admin/courses/{course['id']}/publish", headers=admin_headers)
@@ -135,21 +117,16 @@ def test_drafts_are_hidden_from_the_catalogue(client, admin_headers):
 
 
 def test_catalogue_filters(client, admin_headers):
-    _published_course(client, admin_headers, title="Pour les jeunes", audience="jeune_diplome")
-    _published_course(client, admin_headers, title="Pour les PME", audience="pme")
+    _published_course(client, admin_headers, title="Pour les jeunes", audience="jeune_diplome", parcours="carriere")
+    _published_course(client, admin_headers, title="Pour les PME", audience="pme", parcours="organisations")
     _published_course(client, admin_headers, title="Pour tous", audience="tous")
-    _published_course(
-        client, admin_headers, title="PME payant", audience="pme",
-        is_free=False, price_usd="40.00",
-    )
 
     def titles(query):
         return {course["title"] for course in client.get(f"/courses{query}").json()}
 
-    assert titles("?audience=pme") == {"Pour les PME", "Pour tous", "PME payant"}
+    assert titles("?audience=pme") == {"Pour les PME", "Pour tous"}
     assert titles("?audience=jeune_diplome") == {"Pour les jeunes", "Pour tous"}
-    assert titles("?is_free=false") == {"PME payant"}
-    assert titles("?audience=pme&is_free=true") == {"Pour les PME", "Pour tous"}
+    assert titles("?parcours=carriere") == {"Pour les jeunes"}
 
 
 def test_invalid_block_is_refused_with_details(client, admin_headers):
@@ -248,7 +225,8 @@ def test_lesson_access_enrollment_and_progress(client, admin_headers, learner_he
     half = client.post(
         f"/courses/{slug}/lessons/{first['id']}/complete", headers=learner_headers
     )
-    assert half.json() == {"completed_lessons": 1, "total_lessons": 2, "percent": 50}
+    assert (half.json()["completed_lessons"], half.json()["total_lessons"], half.json()["percent"]) == (1, 2, 50)
+    assert half.json()["completed_lesson_ids"] == [first["id"]]
     repeated = client.post(
         f"/courses/{slug}/lessons/{first['id']}/complete", headers=learner_headers
     )
@@ -259,18 +237,6 @@ def test_lesson_access_enrollment_and_progress(client, admin_headers, learner_he
     assert done.json()["percent"] == 100
     progress = client.get(f"/courses/{slug}/progress", headers=learner_headers)
     assert progress.json()["percent"] == 100
-
-
-def test_paid_course_cannot_be_joined_without_payment(client, admin_headers, learner_headers):
-    course, lesson = _published_course(
-        client, admin_headers, title="Cours payant", is_free=False, price_usd="30.00"
-    )
-    refused = client.post(f"/courses/{course['slug']}/enroll", headers=learner_headers)
-    assert refused.status_code == 402
-    locked = client.get(
-        f"/courses/{course['slug']}/lessons/{lesson['id']}", headers=learner_headers
-    )
-    assert locked.status_code == 403
 
 
 def test_modules_and_lessons_can_be_reordered_and_deleted(client, admin_headers):

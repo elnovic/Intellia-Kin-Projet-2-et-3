@@ -94,7 +94,9 @@ class CalloutBlock(_Block):
     label = "Encadré"
     family = "Lecture"
     type: Literal["callout"]
-    variant: Literal["info", "tip", "warning"] = "info"
+    # info : à savoir ; tip : à retenir ; warning : attention ; exercise : à vous de jouer
+    variant: Literal["info", "tip", "warning", "exercise"] = "info"
+    title: str | None = Field(default=None, max_length=120)
     markdown: Text
 
 
@@ -381,3 +383,54 @@ def block_types_catalog() -> list[dict[str, Any]]:
         }
         for block_type, cls in BLOCK_CLASSES.items()
     ]
+
+
+# --- Correction des questions ----------------------------------------------
+
+
+def validate_questions(questions: Any) -> list[dict[str, Any]]:
+    """Valide une liste de questions (examen final) et renvoie sa forme normalisée."""
+    if not isinstance(questions, list) or not questions:
+        raise BlockError("L'examen doit contenir au moins une question.")
+    normalized = []
+    for index, raw in enumerate(questions, start=1):
+        try:
+            normalized.append(Question.model_validate(raw).model_dump(mode="json"))
+        except ValidationError as exc:
+            errors = [
+                {"champ": f"question {index}." + ".".join(str(p) for p in e["loc"]), "message": e["msg"]}
+                for e in exc.errors()
+            ]
+            raise BlockError(f"Question {index} invalide.", errors) from exc
+    return normalized
+
+
+def public_questions(questions: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Questions sans les bonnes réponses ni les explications."""
+    return public_view("quiz", {"questions": questions})["questions"]
+
+
+def grade(questions: list[dict[str, Any]], answers: list[list[int]]) -> list[dict[str, Any]]:
+    """Corrige des réponses.
+
+    `answers[i]` contient les indices des options cochées pour la question i.
+    Une question est juste si l'ensemble coché est exactement l'ensemble correct.
+    """
+    results = []
+    for index, question in enumerate(questions):
+        expected = {i for i, option in enumerate(question["options"]) if option.get("correct")}
+        given = set(answers[index]) if index < len(answers) else set()
+        results.append(
+            {
+                "correct": given == expected,
+                "points": question.get("points", 1) if given == expected else 0,
+                "max_points": question.get("points", 1),
+            }
+        )
+    return results
+
+
+def score_percent(results: list[dict[str, Any]]) -> int:
+    total = sum(r["max_points"] for r in results)
+    earned = sum(r["points"] for r in results)
+    return round(100 * earned / total) if total else 0

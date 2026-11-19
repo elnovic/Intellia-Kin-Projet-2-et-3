@@ -1,0 +1,27 @@
+{
+  "slug": "cours-test",
+  "title": "Cours de test",
+  "summary": "Un cours pour vérifier l'import.",
+  "description": "Description.",
+  "audience": "tous",
+  "parcours": "tronc-commun",
+  "level": "debutant",
+  "duration_minutes": 30,
+  "objectives": ["Comprendre l'import"],
+  "skills": ["Importer un cours"],
+  "position": 1,
+  "cover_image": "images/couverture.svg",
+  "modules": [
+    {
+      "title": "Module 1",
+      "lessons": [
+        {"key": "l1", "title": "Leçon 1", "file": "01.md", "objective": "Lire", "duration_minutes": 5, "is_preview": true,
+         "quiz": [{"prompt": "Vrai ?", "kind": "true_false", "options": [{"text": "Vrai", "correct": true}, {"text": "Faux"}]}]},
+        {"key": "l2", "title": "Leçon 2", "file": "02.md"}
+      ]
+    }
+  ],
+  "exam": {"pass_score": 70, "questions": [
+    {"prompt": "Q1", "options": [{"text": "A", "correct": true}, {"text": "B"}]}
+  ]}
+}
