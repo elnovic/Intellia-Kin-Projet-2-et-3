@@ -1,0 +1,569 @@
+{
+ "slug": "productivite-professionnelle-office-et-ia",
+ "format": "self_paced",
+ "objectives": [
+  "Distinguer l'urgent et l'important et planifier sa semaine",
+  "Rédiger plus vite avec les modèles et l'IA",
+  "Utiliser les fonctions Excel essentielles et les tableaux croisés",
+  "Trier et rédiger ses e-mails efficacement",
+  "Préparer des réunions et des présentations claires",
+  "Construire son système personnel de productivité"
+ ],
+ "skills": [
+  "Utiliser Word et Excel efficacement",
+  "Rédiger et organiser avec l'IA",
+  "Organiser son travail et ses priorités"
+ ],
+ "modules": [
+  {
+   "title": "S'organiser et rédiger",
+   "lessons": [
+    {
+     "key": "organiser",
+     "title": "Organiser sa journée",
+     "file": "01-organiser-sa-journee.md",
+     "objective": "Distinguer l'urgent et l'important.",
+     "duration_minutes": 12,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quelles tâches risquent d'être négligées quand on court après l'urgence ?",
+       "options": [
+        {
+         "text": "Les tâches importantes mais pas urgentes",
+         "correct": true
+        },
+        {
+         "text": "Les tâches urgentes et importantes",
+         "correct": false
+        },
+        {
+         "text": "Les tâches inutiles",
+         "correct": false
+        },
+        {
+         "text": "Aucune",
+         "correct": false
+        }
+       ],
+       "explanation": "C'est là que se joue la qualité du travail.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "word",
+     "title": "Rédiger plus vite avec Word",
+     "file": "02-rediger-plus-vite-avec-word.md",
+     "objective": "Utiliser modèles, styles et IA pour rédiger.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "À quoi servent les styles dans Word ?",
+       "options": [
+        {
+         "text": "À donner une mise en forme cohérente et générer une table des matières automatique",
+         "correct": true
+        },
+        {
+         "text": "À changer la langue du document",
+         "correct": false
+        },
+        {
+         "text": "À envoyer le document par e-mail",
+         "correct": false
+        },
+        {
+         "text": "À protéger le document par mot de passe",
+         "correct": false
+        }
+       ],
+       "explanation": "Titre 1, Titre 2, Normal : un clic suffit.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelle est la dernière étape de la rédaction avec l'IA ?",
+       "options": [
+        {
+         "text": "Relire, corriger et personnaliser",
+         "correct": true
+        },
+        {
+         "text": "Envoyer sans relire",
+         "correct": false
+        },
+        {
+         "text": "Imprimer",
+         "correct": false
+        },
+        {
+         "text": "Demander une autre version jusqu'à la perfection",
+         "correct": false
+        }
+       ],
+       "explanation": "Vérifiez dates, noms et chiffres.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "excel",
+     "title": "Excel sans peur",
+     "file": "03-excel-sans-peur.md",
+     "objective": "Utiliser les fonctions essentielles d'Excel.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle fonction additionne selon une condition ?",
+       "options": [
+        {
+         "text": "SOMME.SI",
+         "correct": true
+        },
+        {
+         "text": "MOYENNE",
+         "correct": false
+        },
+        {
+         "text": "RECHERCHEX",
+         "correct": false
+        },
+        {
+         "text": "MAJUSCULE",
+         "correct": false
+        }
+       ],
+       "explanation": "Exemple : le total des ventes d'un produit.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que faire d'une formule proposée par l'IA ?",
+       "options": [
+        {
+         "text": "La tester sur quelques lignes dont on connaît le résultat",
+         "correct": true
+        },
+        {
+         "text": "L'utiliser directement sur tout le fichier sans vérifier",
+         "correct": false
+        },
+        {
+         "text": "La recopier à la main dans un cahier",
+         "correct": false
+        },
+        {
+         "text": "La refuser systématiquement",
+         "correct": false
+        }
+       ],
+       "explanation": "Une formule peut sembler juste et donner un résultat faux.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Communiquer et durer",
+   "lessons": [
+    {
+     "key": "e-mails",
+     "title": "Maîtriser ses e-mails",
+     "file": "04-maitriser-ses-e-mails.md",
+     "objective": "Trier et rédiger ses e-mails efficacement.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel objet d'e-mail est le plus efficace ?",
+       "options": [
+        {
+         "text": "« Devis à valider avant vendredi — Projet Lumière »",
+         "correct": true
+        },
+        {
+         "text": "« Question »",
+         "correct": false
+        },
+        {
+         "text": "« Urgent !!! »",
+         "correct": false
+        },
+        {
+         "text": "Aucun objet",
+         "correct": false
+        }
+       ],
+       "explanation": "Un objet clair dit de quoi il s'agit et ce qui est attendu.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "reunions",
+     "title": "Présentations et réunions",
+     "file": "05-presentations-et-reunions.md",
+     "objective": "Rendre réunions et présentations efficaces.",
+     "duration_minutes": 13,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel titre de diapositive est le meilleur ?",
+       "options": [
+        {
+         "text": "« Les ventes ont progressé de 15 % au deuxième trimestre »",
+         "correct": true
+        },
+        {
+         "text": "« Ventes T2 »",
+         "correct": false
+        },
+        {
+         "text": "« Diapositive 4 »",
+         "correct": false
+        },
+        {
+         "text": "« Chiffres »",
+         "correct": false
+        }
+       ],
+       "explanation": "Le titre exprime l'idée principale.",
+       "kind": "single"
+      },
+      {
+       "prompt": "D'où doivent venir les chiffres d'une présentation ?",
+       "options": [
+        {
+         "text": "De vos sources vérifiées",
+         "correct": true
+        },
+        {
+         "text": "De l'IA, sans vérification",
+         "correct": false
+        },
+        {
+         "text": "De votre mémoire",
+         "correct": false
+        },
+        {
+         "text": "D'un concurrent",
+         "correct": false
+        }
+       ],
+       "explanation": "Une statistique inventée ruine la crédibilité.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "systeme",
+     "title": "Votre système personnel",
+     "file": "06-votre-systeme-personnel.md",
+     "objective": "Construire un système de productivité durable.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quels sont les piliers d'un système personnel de productivité ?",
+       "options": [
+        {
+         "text": "Un endroit unique pour ses tâches",
+         "correct": true
+        },
+        {
+         "text": "Un agenda à jour",
+         "correct": true
+        },
+        {
+         "text": "Une revue hebdomadaire",
+         "correct": true
+        },
+        {
+         "text": "Dix applications différentes",
+         "correct": false
+        }
+       ],
+       "explanation": "Simplicité et régularité font la différence.",
+       "kind": "multiple"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Productivité professionnelle : bureautique et IA",
+ "summary": "Gagnez des heures chaque semaine : organiser sa journée, rédiger plus vite, maîtriser Excel, dompter ses e-mails, préparer réunions et présentations avec l'aide de l'IA.",
+ "audience": "jeune_diplome",
+ "parcours": "carriere",
+ "level": "debutant",
+ "duration_minutes": 80,
+ "position": 10,
+ "prerequisites": "Savoir utiliser un ordinateur. Le cours « Bien formuler ses demandes à l'IA » est conseillé.",
+ "description": "Dans la plupart des emplois de bureau, une grande partie du temps part dans des tâches répétitives : courriers, tableaux, e-mails, réunions. Bien maîtrisées, la bureautique et l'IA libèrent ce temps pour le travail qui compte.\n\nCe cours vous donne des méthodes concrètes pour organiser vos priorités, rédiger plus vite avec Word et l'IA, utiliser Excel sans peur, reprendre le contrôle de vos e-mails, rendre vos réunions et présentations plus efficaces, et construire un système personnel durable.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Une tâche importante mais pas urgente doit être :",
+    "options": [
+     {
+      "text": "Planifiée",
+      "correct": true
+     },
+     {
+      "text": "Éliminée",
+      "correct": false
+     },
+     {
+      "text": "Déléguée systématiquement",
+      "correct": false
+     },
+     {
+      "text": "Ignorée",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Qu'est-ce qu'un bloc de concentration ?",
+    "options": [
+     {
+      "text": "Une plage sans e-mails ni messages pour le travail de réflexion",
+      "correct": true
+     },
+     {
+      "text": "Une réunion d'équipe",
+      "correct": false
+     },
+     {
+      "text": "Une pause déjeuner",
+      "correct": false
+     },
+     {
+      "text": "Un logiciel",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle information donner à l'IA pour rédiger un courrier ?",
+    "options": [
+     {
+      "text": "Les points clés, le destinataire, l'objectif, le ton et la longueur",
+      "correct": true
+     },
+     {
+      "text": "Uniquement « écris un courrier »",
+      "correct": false
+     },
+     {
+      "text": "Votre mot de passe",
+      "correct": false
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faut-il faire avant de coller un document confidentiel dans un assistant IA grand public ?",
+    "options": [
+     {
+      "text": "Ne pas le faire, ou l'anonymiser",
+      "correct": true
+     },
+     {
+      "text": "Rien, c'est sans risque",
+      "correct": false
+     },
+     {
+      "text": "Le traduire",
+      "correct": false
+     },
+     {
+      "text": "Le mettre en gras",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment organiser des données dans Excel ?",
+    "options": [
+     {
+      "text": "Une ligne par élément, une colonne par information, sans cellules fusionnées",
+      "correct": true
+     },
+     {
+      "text": "Des cellules fusionnées partout",
+      "correct": false
+     },
+     {
+      "text": "Toutes les informations dans une seule cellule",
+      "correct": false
+     },
+     {
+      "text": "Des lignes vides entre chaque donnée",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelle fonction affiche « À commander » si le stock est inférieur à 10 ?",
+    "options": [
+     {
+      "text": "SI",
+      "correct": true
+     },
+     {
+      "text": "SOMME",
+      "correct": false
+     },
+     {
+      "text": "MOYENNE",
+      "correct": false
+     },
+     {
+      "text": "NB",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "À quoi sert un tableau croisé dynamique ?",
+    "options": [
+     {
+      "text": "À synthétiser rapidement un grand tableau de données",
+      "correct": true
+     },
+     {
+      "text": "À dessiner un logo",
+      "correct": false
+     },
+     {
+      "text": "À envoyer des e-mails",
+      "correct": false
+     },
+     {
+      "text": "À corriger l'orthographe",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Qu'est-ce que la règle des deux minutes ?",
+    "options": [
+     {
+      "text": "Traiter immédiatement un e-mail qui demande moins de deux minutes",
+      "correct": true
+     },
+     {
+      "text": "Lire chaque e-mail pendant deux minutes",
+      "correct": false
+     },
+     {
+      "text": "Répondre toutes les deux minutes",
+      "correct": false
+     },
+     {
+      "text": "Ne garder les e-mails que deux minutes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : il faut relire un e-mail rédigé avec l'IA avant de l'envoyer.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Que doit contenir un compte rendu de réunion utile ?",
+    "options": [
+     {
+      "text": "Les décisions prises et les actions avec responsable et date",
+      "correct": true
+     },
+     {
+      "text": "La transcription mot pour mot de tout ce qui a été dit",
+      "correct": false
+     },
+     {
+      "text": "Uniquement la liste des participants",
+      "correct": false
+     },
+     {
+      "text": "Rien, on s'en souviendra",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faire avant d'utiliser la transcription automatique d'une réunion ?",
+    "options": [
+     {
+      "text": "Prévenir les participants, obtenir leur accord et vérifier la politique de l'organisation",
+      "correct": true
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     },
+     {
+      "text": "L'activer en secret",
+      "correct": false
+     },
+     {
+      "text": "L'envoyer à tout le monde sans relire",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "À quoi sert une revue hebdomadaire ?",
+    "options": [
+     {
+      "text": "Faire le point sur ce qui est fait, ce qui reste et les priorités",
+      "correct": true
+     },
+     {
+      "text": "Lire les journaux de la semaine",
+      "correct": false
+     },
+     {
+      "text": "Envoyer un rapport à tous ses contacts",
+      "correct": false
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

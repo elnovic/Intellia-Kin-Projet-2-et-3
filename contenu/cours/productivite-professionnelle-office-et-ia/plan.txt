@@ -1,0 +1,140 @@
+title: Productivité professionnelle : bureautique et IA
+summary: Gagnez des heures chaque semaine : organiser sa journée, rédiger plus vite, maîtriser Excel, dompter ses e-mails, préparer réunions et présentations avec l'aide de l'IA.
+audience: jeune_diplome
+parcours: carriere
+level: debutant
+duration: 80
+position: 10
+prerequisites: Savoir utiliser un ordinateur. Le cours « Bien formuler ses demandes à l'IA » est conseillé.
+description: Dans la plupart des emplois de bureau, une grande partie du temps part dans des tâches répétitives : courriers, tableaux, e-mails, réunions. Bien maîtrisées, la bureautique et l'IA libèrent ce temps pour le travail qui compte.
+description: Ce cours vous donne des méthodes concrètes pour organiser vos priorités, rédiger plus vite avec Word et l'IA, utiliser Excel sans peur, reprendre le contrôle de vos e-mails, rendre vos réunions et présentations plus efficaces, et construire un système personnel durable.
+objective: Distinguer l'urgent et l'important et planifier sa semaine
+objective: Rédiger plus vite avec les modèles et l'IA
+objective: Utiliser les fonctions Excel essentielles et les tableaux croisés
+objective: Trier et rédiger ses e-mails efficacement
+objective: Préparer des réunions et des présentations claires
+objective: Construire son système personnel de productivité
+skill: Utiliser Word et Excel efficacement
+skill: Rédiger et organiser avec l'IA
+skill: Organiser son travail et ses priorités
+module: S'organiser et rédiger
+lesson: organiser | Organiser sa journée | 01-organiser-sa-journee.md | Distinguer l'urgent et l'important. | 12 | apercu
+? Quelles tâches risquent d'être négligées quand on court après l'urgence ?
++ Les tâches importantes mais pas urgentes
+- Les tâches urgentes et importantes
+- Les tâches inutiles
+- Aucune
+> C'est là que se joue la qualité du travail.
+lesson: word | Rédiger plus vite avec Word | 02-rediger-plus-vite-avec-word.md | Utiliser modèles, styles et IA pour rédiger. | 13
+? À quoi servent les styles dans Word ?
++ À donner une mise en forme cohérente et générer une table des matières automatique
+- À changer la langue du document
+- À envoyer le document par e-mail
+- À protéger le document par mot de passe
+> Titre 1, Titre 2, Normal : un clic suffit.
+? Quelle est la dernière étape de la rédaction avec l'IA ?
++ Relire, corriger et personnaliser
+- Envoyer sans relire
+- Imprimer
+- Demander une autre version jusqu'à la perfection
+> Vérifiez dates, noms et chiffres.
+lesson: excel | Excel sans peur | 03-excel-sans-peur.md | Utiliser les fonctions essentielles d'Excel. | 15
+? Quelle fonction additionne selon une condition ?
++ SOMME.SI
+- MOYENNE
+- RECHERCHEX
+- MAJUSCULE
+> Exemple : le total des ventes d'un produit.
+? Que faire d'une formule proposée par l'IA ?
++ La tester sur quelques lignes dont on connaît le résultat
+- L'utiliser directement sur tout le fichier sans vérifier
+- La recopier à la main dans un cahier
+- La refuser systématiquement
+> Une formule peut sembler juste et donner un résultat faux.
+module: Communiquer et durer
+lesson: e-mails | Maîtriser ses e-mails | 04-maitriser-ses-e-mails.md | Trier et rédiger ses e-mails efficacement. | 13
+? Quel objet d'e-mail est le plus efficace ?
++ « Devis à valider avant vendredi — Projet Lumière »
+- « Question »
+- « Urgent !!! »
+- Aucun objet
+> Un objet clair dit de quoi il s'agit et ce qui est attendu.
+lesson: reunions | Présentations et réunions | 05-presentations-et-reunions.md | Rendre réunions et présentations efficaces. | 13
+? Quel titre de diapositive est le meilleur ?
++ « Les ventes ont progressé de 15 % au deuxième trimestre »
+- « Ventes T2 »
+- « Diapositive 4 »
+- « Chiffres »
+> Le titre exprime l'idée principale.
+? D'où doivent venir les chiffres d'une présentation ?
++ De vos sources vérifiées
+- De l'IA, sans vérification
+- De votre mémoire
+- D'un concurrent
+> Une statistique inventée ruine la crédibilité.
+lesson: systeme | Votre système personnel | 06-votre-systeme-personnel.md | Construire un système de productivité durable. | 14
+? Quels sont les piliers d'un système personnel de productivité ?
++ Un endroit unique pour ses tâches
++ Un agenda à jour
++ Une revue hebdomadaire
+- Dix applications différentes
+> Simplicité et régularité font la différence.
+exam:
+? Une tâche importante mais pas urgente doit être :
++ Planifiée
+- Éliminée
+- Déléguée systématiquement
+- Ignorée
+? Qu'est-ce qu'un bloc de concentration ?
++ Une plage sans e-mails ni messages pour le travail de réflexion
+- Une réunion d'équipe
+- Une pause déjeuner
+- Un logiciel
+? Quelle information donner à l'IA pour rédiger un courrier ?
++ Les points clés, le destinataire, l'objectif, le ton et la longueur
+- Uniquement « écris un courrier »
+- Votre mot de passe
+- Rien
+? Que faut-il faire avant de coller un document confidentiel dans un assistant IA grand public ?
++ Ne pas le faire, ou l'anonymiser
+- Rien, c'est sans risque
+- Le traduire
+- Le mettre en gras
+? Comment organiser des données dans Excel ?
++ Une ligne par élément, une colonne par information, sans cellules fusionnées
+- Des cellules fusionnées partout
+- Toutes les informations dans une seule cellule
+- Des lignes vides entre chaque donnée
+? Quelle fonction affiche « À commander » si le stock est inférieur à 10 ?
++ SI
+- SOMME
+- MOYENNE
+- NB
+? À quoi sert un tableau croisé dynamique ?
++ À synthétiser rapidement un grand tableau de données
+- À dessiner un logo
+- À envoyer des e-mails
+- À corriger l'orthographe
+? Qu'est-ce que la règle des deux minutes ?
++ Traiter immédiatement un e-mail qui demande moins de deux minutes
+- Lire chaque e-mail pendant deux minutes
+- Répondre toutes les deux minutes
+- Ne garder les e-mails que deux minutes
+? Vrai ou faux : il faut relire un e-mail rédigé avec l'IA avant de l'envoyer.
++ Vrai
+- Faux
+? Que doit contenir un compte rendu de réunion utile ?
++ Les décisions prises et les actions avec responsable et date
+- La transcription mot pour mot de tout ce qui a été dit
+- Uniquement la liste des participants
+- Rien, on s'en souviendra
+? Que faire avant d'utiliser la transcription automatique d'une réunion ?
++ Prévenir les participants, obtenir leur accord et vérifier la politique de l'organisation
+- Rien
+- L'activer en secret
+- L'envoyer à tout le monde sans relire
+? À quoi sert une revue hebdomadaire ?
++ Faire le point sur ce qui est fait, ce qui reste et les priorités
+- Lire les journaux de la semaine
+- Envoyer un rapport à tous ses contacts
+- Rien
