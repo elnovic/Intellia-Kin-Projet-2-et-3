@@ -1,70 +1,81 @@
 # Déploiement pas à pas
 
-Trois services gratuits, reliés au dépôt GitHub. Après la mise en place,
-chaque envoi sur la branche `main` met la plateforme à jour automatiquement.
+Tout est hébergé gratuitement chez Cloudflare, sans carte bancaire, et relié au
+dépôt GitHub : après la mise en place, chaque envoi sur la branche `main` met la
+plateforme à jour automatiquement. Seuls les outils IA utilisent un service
+extérieur gratuit, Groq.
 
 | Élément | Service | Adresse |
 |---|---|---|
-| Base de données | Supabase | (privée) |
-| API | Render | `https://intellia-academie-api.onrender.com` |
+| Base de données | Cloudflare D1 | (privée) |
+| API | Cloudflare Workers | `https://intellia-academie-api.<compte>.workers.dev` |
 | Académie (public) | Cloudflare Pages | `https://academie.intelliakin.com` |
 | Centre de contrôle (équipe) | Cloudflare Pages, sans domaine | `https://intellia-controle.pages.dev` |
+| Modèle d'IA des outils | Groq, offre gratuite | — |
 
 Le site `intelliakin.com` n'est pas modifié.
 
-## Étape 1 — Supabase (base de données)
+Règle de sécurité : la clé Groq, la clé secrète et le mot de passe administrateur
+se saisissent **uniquement** dans le tableau de bord Cloudflare, jamais dans un
+message ni dans le dépôt.
 
-1. Sur supabase.com, se connecter avec GitHub, puis **New project**.
-2. Nom : `intellia-academie`. Région : **Central EU (Frankfurt)**.
-3. **Generate a password**, puis l'enregistrer dans un gestionnaire de mots de passe.
-4. Une fois le projet prêt : bouton **Connect** en haut de la page,
-   onglet **Connection string**, méthode **Session pooler**.
-5. Copier la chaîne `postgresql://postgres.xxxx:[YOUR-PASSWORD]@aws-…pooler.supabase.com:5432/postgres`
-   et remplacer `[YOUR-PASSWORD]` par le mot de passe.
-   Si le mot de passe contient des caractères spéciaux (`@ # / ?`), les encoder
-   (par exemple `@` devient `%40`).
-
-Ne jamais transmettre cette chaîne par message : elle se colle uniquement dans Render.
-
-## Étape 2 — Groq (modèle d'IA des outils)
+## Étape 1 — Groq (modèle d'IA des outils)
 
 1. Sur console.groq.com, créer un compte gratuit.
 2. **API Keys**, puis **Create API Key**, nom : `intellia-academie`.
-3. Copier la clé (elle commence par `gsk_`). Elle ne s'affiche qu'une fois.
+3. Copier la clé (elle commence par `gsk_`) dans une note privée. Elle ne s'affiche qu'une fois.
 
-## Étape 3 — Render (API)
+## Étape 2 — Base de données D1
 
-1. Sur render.com, se connecter avec GitHub et autoriser l'accès au dépôt
-   `Intellia-Kin-Projet-2-et-3`.
-2. **New**, puis **Blueprint**, choisir le dépôt. Render lit `render.yaml`.
-3. Renseigner les valeurs demandées :
+1. Tableau de bord Cloudflare, menu **Storage & databases**, puis **D1 SQL database**.
+2. **Create database**. Nom : `intellia-academie`. Emplacement : laisser le choix
+   automatique, ou choisir l'Europe de l'Ouest.
+3. Sur la page de la base, copier le **Database ID** (une suite de lettres et de
+   chiffres séparés par des tirets). Cet identifiant n'est pas secret.
+4. Le reporter dans `api/wrangler.toml`, ligne `database_id`, puis envoyer sur `main`.
 
-| Variable | Valeur |
+Les tables sont créées automatiquement par l'API à son premier démarrage, et les
+20 cours du dossier `contenu/cours` y sont chargés.
+
+## Étape 3 — API (Cloudflare Workers)
+
+1. **Workers & Pages**, **Create application**, puis **Import a repository**
+   (ou **Connect to Git**). Autoriser Cloudflare à lire le dépôt
+   `Intellia-Kin-Projet-2-et-3` si c'est demandé.
+2. Nom du projet : `intellia-academie-api`.
+3. Réglages :
+   - Root directory (dossier racine) : `api`
+   - Build command : *(laisser vide)*
+   - Deploy command : `npx wrangler deploy`
+4. **Deploy**. La construction prend une à deux minutes : elle prépare les cours
+   et publie le Worker.
+5. Ouvrir le Worker, onglet **Settings**, section **Variables and Secrets**, puis
+   **Add** pour chacune des quatre valeurs, en choisissant le type **Secret** :
+
+| Nom | Valeur |
 |---|---|
-| `IK_DATABASE_URL` | la chaîne Supabase de l'étape 1 |
-| `IK_BOOTSTRAP_ADMIN_EMAIL` | l'e-mail du compte administrateur |
-| `IK_BOOTSTRAP_ADMIN_PASSWORD` | un mot de passe solide (12 caractères ou plus) |
-| `IK_GROQ_API_KEY` | la clé Groq de l'étape 2 |
+| `SECRET_KEY` | une longue suite aléatoire de 48 caractères ou plus (générateur de mots de passe) |
+| `ADMIN_EMAIL` | l'e-mail du compte administrateur |
+| `ADMIN_PASSWORD` | un mot de passe solide, 12 caractères ou plus |
+| `GROQ_API_KEY` | la clé Groq de l'étape 1 |
 
-4. **Apply**. Le premier déploiement prend quelques minutes.
-5. Vérifier : `https://<adresse-render>/health` doit afficher `{"status":"ok"}`
-   et `https://<adresse-render>/courses` la liste des cours.
-6. Si l'adresse donnée par Render n'est pas `intellia-academie-api.onrender.com`,
-   la reporter dans `web/config.js`.
+6. **Deploy** pour enregistrer. Tant que `SECRET_KEY` n'est pas défini, l'API répond
+   par une erreur : c'est voulu.
+7. Vérifier, avec l'adresse affichée par Cloudflare (onglet **Settings**, **Domains & Routes**) :
+   `https://<adresse>/health` doit afficher `{"status":"ok"}` et
+   `https://<adresse>/courses` la liste des 20 cours.
+8. Reporter cette adresse dans `web/config.js` et `admin/config.js` (`apiBase`),
+   puis envoyer sur `main`.
 
-Sur l'offre gratuite, l'API s'endort après 15 minutes sans visite et met
-environ une minute à se réveiller. L'interface affiche alors un message d'attente.
+## Étape 4 — Cloudflare Pages (Académie)
 
-## Étape 4 — Cloudflare Pages (interface)
-
-1. Tableau de bord Cloudflare, **Workers & Pages**, **Create**, onglet **Pages**,
-   **Connect to Git**, choisir le dépôt.
+1. **Workers & Pages**, **Create**, onglet **Pages**, **Connect to Git**, choisir le dépôt.
 2. Nom du projet : `intellia-academie`.
 3. Réglages de build :
    - Framework preset : **None**
    - Build command : *(laisser vide)*
    - Build output directory : `web`
-4. **Save and Deploy**. L'interface est en ligne sur `https://intellia-academie.pages.dev`.
+4. **Save and Deploy**. L'Académie est en ligne sur `https://intellia-academie.pages.dev`.
 5. Onglet **Custom domains**, **Set up a custom domain** : `academie.intelliakin.com`.
    Le domaine étant déjà chez Cloudflare, l'enregistrement DNS est créé automatiquement.
 
@@ -80,7 +91,7 @@ environ une minute à se réveiller. L'interface affiche alors un message d'atte
    `https://intellia-controle.pages.dev` reste connue de l'équipe seulement.
    Les pages portent la consigne « noindex » pour ne pas apparaître dans les moteurs de recherche.
 5. Si Cloudflare attribue un autre nom (par exemple `intellia-controle-xyz.pages.dev`),
-   l'ajouter à `IK_CORS_ORIGINS` dans Render.
+   l'ajouter à `CORS_ORIGINS` dans `api/wrangler.toml`.
 
 ## Étape 6 — Premiers pas
 
@@ -88,23 +99,54 @@ environ une minute à se réveiller. L'interface affiche alors un message d'atte
 2. Créer une annonce de test, la publier, vérifier qu'elle apparaît sur l'Académie, puis la supprimer.
 3. Créer un cours de test, ajouter un module, une leçon et quelques blocs, le publier,
    le vérifier sur l'Académie, puis le supprimer.
+4. Créer un compte apprenant, suivre une leçon, essayer un outil IA.
 
 ## Mettre à jour la plateforme
 
-- **Cours** : modifier les fichiers de `contenu/cours/`, envoyer sur `main`.
-  Render recharge les cours modifiés au redémarrage.
-- **Interface** : modifier `web/` ou `admin/`, envoyer sur `main`. Cloudflare redéploie seul.
+- **Cours du dépôt** : modifier les fichiers de `contenu/cours/`, envoyer sur `main`.
+  Le Worker est reconstruit et recharge seulement les cours modifiés ; la
+  progression des apprenants est conservée.
+- **Interfaces** : modifier `web/` ou `admin/`, envoyer sur `main`. Cloudflare redéploie seul.
 - **Nouveaux cours, annonces et événements** : directement depuis le centre de contrôle, sans toucher au code.
+- **Changer le mot de passe administrateur** : modifier le secret `ADMIN_PASSWORD`
+  dans le tableau de bord ; il est appliqué au prochain démarrage de l'API.
+
+## Limites de l'offre gratuite
+
+| Ressource | Limite quotidienne ou par requête |
+|---|---|
+| Requêtes vers l'API | 100 000 par jour |
+| Lectures dans la base | 5 millions de lignes par jour |
+| Écritures dans la base | 100 000 lignes par jour |
+| Taille de la base | 500 Mo |
+| Temps de calcul | 10 ms par requête (le code est écrit pour rester en dessous) |
+
+Ces limites suffisent largement pour le lancement. Les compteurs sont visibles dans
+le tableau de bord (**Workers & Pages** et **D1**).
 
 ## Sauvegardes
 
-L'offre gratuite de Supabase ne fait pas de sauvegarde automatique.
-Une fois par semaine, depuis un ordinateur
-avec PostgreSQL installé :
+D1 garde un historique de 7 jours sur l'offre gratuite (« Time Travel ») : la
+base peut être restaurée à un instant précis depuis le tableau de bord.
+En complément, une fois par semaine, depuis un ordinateur avec Node.js :
 
 ```bash
-pg_dump "<chaîne Supabase>" > sauvegarde-$(date +%F).sql
+cd api
+npx wrangler d1 export intellia-academie --remote --output=sauvegarde-$(date +%F).sql
 ```
 
-Un projet Supabase gratuit sans activité pendant 7 jours est mis en pause :
-il suffit de le relancer depuis le tableau de bord.
+Conserver ces fichiers hors du dépôt, en lieu sûr : ils contiennent les données des apprenants.
+
+## Travailler en local
+
+```bash
+cd api
+cp .dev.vars.example .dev.vars
+npm install
+npx wrangler dev          # API sur http://localhost:8787, base D1 locale
+npm test                  # tests de l'API et vérification des cours
+```
+
+Servir ensuite `web/` sur le port 8080 et `admin/dist` (après `bash admin/build.sh`)
+sur le port 8081 avec n'importe quel serveur de fichiers statiques.
+Compte administrateur local : celui de `.dev.vars`.

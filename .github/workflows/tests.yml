@@ -5,28 +5,24 @@ on:
     branches: [main]
   pull_request:
 
-# Les cours (dossier contenu) sont vérifiés à chaque envoi.
+# L'API et les cours (dossier contenu) sont vérifiés à chaque envoi.
 
 permissions:
   contents: read
 
 jobs:
-  backend:
-    name: Backend
+  api:
+    name: API et cours
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: backend
+        working-directory: api
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: backend/pyproject.toml
-      - name: Installer les dépendances
-        run: pip install -e ".[dev]"
-      - name: Lancer les tests
-        run: pytest -q
+          node-version: "22"
       - name: Vérifier les cours du dépôt
-        run: python -m app.cli check-courses
+        run: node scripts/build-content.mjs --check
+      - name: Lancer les tests
+        run: node scripts/build-content.mjs && node --test --no-warnings test/*.test.mjs

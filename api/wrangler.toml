@@ -1,0 +1,34 @@
+# Worker Cloudflare de l'Académie Intellia Kin (offre gratuite).
+# Déploiement automatique depuis GitHub (Workers Builds), dossier racine : api
+# Guide pas à pas : docs/05-deploiement.md
+
+name = "intellia-academie-api"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# Prépare les cours du dossier contenu/ avant chaque déploiement.
+[build]
+command = "node scripts/build-content.mjs"
+
+# Base de données D1. L'identifiant est donné par Cloudflare à la création de la base.
+[[d1_databases]]
+binding = "DB"
+database_name = "intellia-academie"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+[vars]
+ENVIRONMENT = "production"
+CORS_ORIGINS = '["https://academie.intelliakin.com","https://intellia-academie.pages.dev","https://intellia-controle.pages.dev"]'
+ADMIN_NAME = "Elnovic NTEDIKA"
+AI_DAILY_LIMIT = "3"
+
+# Valeurs secrètes, saisies dans le tableau de bord Cloudflare
+# (Worker > Settings > Variables and Secrets), jamais dans ce fichier :
+#   SECRET_KEY       longue suite aléatoire (signature des sessions et protection des mots de passe)
+#   ADMIN_EMAIL      e-mail du compte administrateur
+#   ADMIN_PASSWORD   mot de passe administrateur (12 caractères ou plus)
+#   GROQ_API_KEY     clé Groq des outils IA (commence par gsk_)
+
+[observability]
+enabled = true

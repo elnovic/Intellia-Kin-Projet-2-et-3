@@ -65,7 +65,7 @@ Variantes : `a-retenir` (cyan), `a-savoir` (bleu), `attention` (orange), `a-vous
 ## Vérifier avant d'envoyer
 
 ```bash
-cd backend && python -m app.cli check-courses
+cd api && node scripts/build-content.mjs --check
 ```
 
 ## Les types de blocs (cours saisis dans l'administration)

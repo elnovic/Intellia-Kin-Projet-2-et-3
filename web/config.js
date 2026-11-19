@@ -1,8 +1,8 @@
-// Adresse de l'API. Remplacez-la par l'adresse donnée par Render
-// (par exemple https://intellia-academie-api.onrender.com), sans barre finale.
+// Adresse de l'API (Worker Cloudflare), sans barre finale.
+// En local : « npx wrangler dev » dans le dossier api écoute sur le port 8787.
 window.IK_CONFIG = {
   apiBase:
     location.hostname === "localhost" || location.hostname === "127.0.0.1"
-      ? "http://localhost:8000"
-      : "https://intellia-academie-api.onrender.com",
+      ? "http://localhost:8787"
+      : "https://intellia-academie-api.workers.dev",
 };

@@ -38,7 +38,8 @@ Le site vitrine `intelliakin.com` reste tel quel. Ses intitulés font foi :
   pawaPay (second devis), CinetPay (repli).
 
 ### Technique
-- Backend Python (FastAPI), base PostgreSQL, monolithe modulaire.
+- API unique sur Cloudflare Workers avec une base Cloudflare D1 (décision du 19 novembre 2026 :
+  Render exigeait une carte bancaire ; la première version était en Python avec PostgreSQL).
 - Les outils chiffrés (paie, échéances, marges) calculent en code ; l'IA ne calcule jamais.
 - Tous les appels aux modèles d'IA passent par une passerelle unique
   (choix du modèle, crédits, plafond de dépense, journaux).

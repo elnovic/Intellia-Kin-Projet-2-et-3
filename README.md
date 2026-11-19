@@ -9,19 +9,24 @@ Elle est distincte du site vitrine `intelliakin.com`, qui n'est pas modifié.
 |---|---|---|
 | Académie publique (`academie.intelliakin.com`) | `web/` | Cloudflare Pages |
 | Centre de contrôle de l'équipe (sans domaine) | `admin/` | Cloudflare Pages |
-| API | `backend/` | Render |
-| Base de données | — | Supabase |
-| Cours rédigés | `contenu/cours/` | chargés par l'API au démarrage |
+| API | `api/` | Cloudflare Workers |
+| Base de données | — | Cloudflare D1 |
+| Cours rédigés | `contenu/cours/` | préparés à chaque déploiement, chargés par l'API |
 | Charte graphique en code | `design/` | — |
+
+Tout fonctionne sur les offres gratuites, sans carte bancaire.
 
 ## Démarrer en local
 
 ```bash
-docker compose up --build
+cd api
+cp .dev.vars.example .dev.vars
+npm install
+npx wrangler dev     # API sur http://localhost:8787
+npm test             # tests et vérification des cours
 ```
 
-Académie : http://localhost:8080 · Contrôle : http://localhost:8081 · API : http://localhost:8000/docs
-Compte administrateur local : `admin@intelliakin.com` / `admin-local-123`.
+Servir `web/` sur le port 8080 et `admin/dist` (après `bash admin/build.sh`) sur le port 8081.
 
 ## Documents
 
@@ -34,5 +39,5 @@ Compte administrateur local : `admin@intelliakin.com` / `admin-local-123`.
 
 ## Méthode de travail
 
-- `main` est la version en ligne : chaque envoi met à jour Render et Cloudflare.
+- `main` est la version en ligne : chaque envoi met à jour Cloudflare.
 - Les tests et la vérification des cours s'exécutent à chaque envoi (`.github/workflows/tests.yml`).

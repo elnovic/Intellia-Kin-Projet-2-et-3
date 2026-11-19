@@ -1,0 +1,6 @@
+# Copier ce fichier en .dev.vars pour lancer l'API en local (npx wrangler dev).
+ENVIRONMENT=development
+SECRET_KEY=cle-locale-de-developpement
+ADMIN_EMAIL=admin@intelliakin.com
+ADMIN_PASSWORD=admin-local-123
+GROQ_API_KEY=

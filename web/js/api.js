@@ -1,7 +1,7 @@
 // Appels à l'API, session et réveil du serveur.
 
 const CONFIG = window.IK_CONFIG || {};
-export const API_BASE = (CONFIG.apiBase || "http://localhost:8000").replace(/\/$/, "");
+export const API_BASE = (CONFIG.apiBase || "http://localhost:8787").replace(/\/$/, "");
 const TOKEN_KEY = "ik_token";
 const USER_KEY = "ik_user";
 
@@ -77,7 +77,7 @@ function translate(msg = "") {
     .replace("String should match pattern", "format invalide");
 }
 
-// Le serveur gratuit s'endort après 15 minutes : on prévient si la réponse tarde.
+// On affiche un message si la réponse tarde (connexion lente).
 let pending = 0;
 function wakeNotice(show) {
   const el = document.getElementById("wake-notice");
