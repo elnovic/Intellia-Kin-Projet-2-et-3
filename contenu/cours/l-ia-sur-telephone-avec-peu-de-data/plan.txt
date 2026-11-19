@@ -1,0 +1,148 @@
+title: L'IA sur téléphone avec peu de data
+summary: Utilisez les assistants IA sur un simple téléphone, même avec un petit forfait et une connexion instable : outils, réglages, dictée, photos et bonnes habitudes.
+audience: tous
+parcours: tronc-commun
+level: debutant
+duration: 60
+position: 3
+prerequisites: Avoir un smartphone. Le cours « Introduction à l'IA » est conseillé.
+description: Pour des millions de personnes, le téléphone est le seul outil numérique. Bonne nouvelle : il suffit pour profiter de l'intelligence artificielle.
+description: Ce cours vous montre comment choisir vos outils, économiser votre data, dicter vos demandes, faire lire un document photographié, et continuer à travailler quand la connexion est capricieuse. Le tout avec des exemples concrets tirés du quotidien.
+objective: Choisir et installer un assistant IA fiable sur son téléphone
+objective: Réduire la consommation de data liée à l'IA
+objective: Utiliser la dictée vocale pour gagner du temps
+objective: Faire lire et traduire un document photographié
+objective: S'organiser quand la connexion est instable
+skill: Utiliser un assistant IA sur téléphone de façon économe
+skill: Dicter, photographier et traduire avec l'IA
+skill: Travailler avec une connexion limitée
+module: Bien démarrer sur téléphone
+lesson: outils | Choisir ses outils | 01-choisir-ses-outils.md | Choisir un assistant fiable et y accéder en un geste. | 8 | apercu
+? Pourquoi un téléphone d'entrée de gamme suffit-il pour utiliser un assistant IA ?
+- Parce que l'IA est installée entièrement dans le téléphone
++ Parce que les calculs se font sur des serveurs distants
+- Parce que l'IA fonctionne sans connexion
+- Ce n'est pas possible
+> Votre téléphone envoie la question et affiche la réponse ; le gros du travail se fait sur des serveurs.
+? Comment éviter les fausses applications d'IA ?
++ Vérifier que l'éditeur est officiel avant d'installer
+- Installer celle qui a le plus beau logo
+- Payer pour débloquer le service
+- Télécharger un fichier envoyé par un inconnu
+> Vérifiez toujours l'éditeur (OpenAI, Google, Anthropic, Microsoft) dans le magasin officiel.
+lesson: data | Économiser sa data | 02-economiser-sa-data.md | Savoir ce qui consomme et appliquer les bons réflexes. | 10
+? Lequel de ces usages consomme le moins de data ?
++ Une conversation écrite
+- La génération d'images
+- Une conversation vocale en continu
+- L'envoi d'une vidéo
+> Le texte est très léger ; images, vidéos et voix pèsent beaucoup plus.
+? Vrai ou faux : écrire une demande complète du premier coup permet aussi d'économiser de la data.
++ Vrai
+- Faux
+> Moins d'allers-retours, c'est moins de données échangées.
+module: Parler, photographier, traduire
+lesson: voix | Parler à l'IA | 03-parler-a-l-ia.md | Dicter ses demandes et écouter les réponses. | 10
+? Quel est le principal avantage de la dictée avec le micro du clavier ?
++ Elle est rapide et consomme peu de data, car seul le texte est envoyé
+- Elle n'a jamais besoin d'être relue
+- Elle fonctionne sans aucune connexion avec l'assistant
+- Elle remplace la vérification des chiffres
+> Le texte dicté part vers l'assistant ; relisez toujours avant d'envoyer.
+? Vrai ou faux : les conversations vocales en continu consomment beaucoup plus de data que l'écrit.
++ Vrai
+- Faux
+> Réservez-les au Wi-Fi.
+lesson: photos | Photographier et traduire | 04-photographier-et-traduire.md | Faire lire un document photographié et traduire un message. | 10
+? Pour qu'une IA lise bien une facture photographiée, que faut-il faire ?
++ Photographier à plat, sans reflet, et cadrer la zone utile
+- Prendre la photo de loin
+- Envoyer plusieurs photos floues
+- Utiliser le flash systématiquement
+> Une photo nette et bien cadrée limite les erreurs de lecture.
+? Quels documents ne faut-il pas photographier pour une IA grand public ?
++ Une pièce d'identité
++ Un relevé bancaire
+- Un ticket de caisse anodin
++ Un dossier médical
+> Les documents sensibles restent hors des assistants grand public.
+module: Une méthode pour tous les jours
+lesson: hors-ligne | Travailler avec une connexion instable | 05-travailler-avec-une-connexion-instable.md | S'organiser pour utiliser l'IA malgré les coupures. | 10
+? Quelle est la meilleure stratégie quand la connexion est rare ?
++ Préparer ses demandes hors connexion et les envoyer en une fois
+- Attendre d'avoir une connexion parfaite
+- Écrire ses demandes au dernier moment
+- Poser dix petites questions séparées
+> Préparer et regrouper ses demandes réduit le temps de connexion.
+? Sur un Wi-Fi public, que faut-il éviter ?
++ Se connecter à son compte bancaire
+- Lire un article
+- Envoyer une question générale à un assistant
+- Consulter la météo
+> Les réseaux publics ne sont pas sûrs pour les comptes sensibles.
+lesson: usages | Cinq usages du quotidien | 06-cinq-usages-du-quotidien.md | Adopter une routine IA simple et utile sur téléphone. | 10
+? Après qu'une IA a calculé un prix de vente, que faites-vous ?
++ Je refais le calcul final avec ma calculatrice
+- Je l'utilise directement
+- Je demande à un ami de deviner
+- Je change de téléphone
+> L'IA peut se tromper sur les chiffres : vérifiez toujours.
+exam:
+? Où se font principalement les calculs d'un assistant IA comme ChatGPT ou Gemini ?
+- Dans la batterie du téléphone
++ Sur des serveurs distants
+- Dans la carte SIM
+- Dans l'appareil photo
+? Si votre téléphone manque de mémoire, comment accéder à un assistant IA ?
++ Par le navigateur, sur le site officiel de l'assistant
+- Ce n'est pas possible
+- En installant une application inconnue plus légère
+- Par SMS uniquement
+? Quels usages consomment beaucoup de data ?
++ La génération d'images
++ L'envoi de vidéos
+- Une question écrite courte
++ Une conversation vocale en continu
+? Quelle demande économise le plus de data ?
+- Dix questions courtes envoyées une par une
++ Une demande complète et précise, avec un format court
+- Une demande vague suivie de nombreuses corrections
+- Une demande accompagnée de plusieurs photos inutiles
+? Vrai ou faux : il est conseillé de désactiver la mise à jour automatique des applications en données mobiles.
++ Vrai
+- Faux
+? Que faut-il faire après une dictée vocale, avant d'envoyer ?
++ Relire, surtout les noms et les chiffres
+- Rien, la dictée est toujours parfaite
+- La traduire en anglais
+- L'envoyer deux fois
+? Pour faire lire une facture par l'IA, quelle photo est la meilleure ?
+- Une photo prise de loin avec des reflets
++ Une photo à plat, nette, cadrée sur la facture
+- Une photo de nuit sans lumière
+- Une vidéo de la facture
+? Une traduction automatique d'un message important en lingala doit être :
++ Relue par une personne qui parle la langue
+- Envoyée sans relecture
+- Traduite une seconde fois en anglais
+- Supprimée
+? Lesquels de ces documents ne doivent pas être envoyés à une IA grand public ?
++ Une pièce d'identité
++ Un relevé bancaire
++ Un contrat confidentiel
+- La photo d'une affiche publique
+? Comment travailler efficacement avec une connexion instable ?
++ Préparer ses demandes dans ses notes et les envoyer en une fois
+- N'utiliser l'IA que la nuit
+- Toujours utiliser la conversation vocale
+- Recommencer chaque question plusieurs fois
+? Pourquoi sauvegarder les bonnes réponses dans ses notes ?
++ Pour les relire hors connexion et éviter de reposer la même question
+- Parce que l'IA les efface immédiatement
+- Pour les vendre
+- Ce n'est pas utile
+? Après qu'une IA a calculé une marge, que faut-il faire ?
++ Vérifier le calcul avec une calculatrice
+- Le croire, une machine ne se trompe pas
+- Demander un autre calcul au hasard
+- L'arrondir au millier près

@@ -1,0 +1,611 @@
+{
+ "slug": "verifier-ce-que-dit-l-ia",
+ "format": "self_paced",
+ "objectives": [
+  "Comprendre pourquoi et quand l'IA se trompe",
+  "Appliquer la méthode de vérification en quatre questions",
+  "Contrôler chiffres, citations et références juridiques",
+  "Repérer les images, voix et vidéos truquées",
+  "Adopter les bons réflexes face aux fausses informations"
+ ],
+ "skills": [
+  "Vérifier une information produite par l'IA",
+  "Repérer les contenus truqués et les fausses informations",
+  "Utiliser des sources fiables"
+ ],
+ "modules": [
+  {
+   "title": "Pourquoi vérifier",
+   "lessons": [
+    {
+     "key": "erreurs",
+     "title": "Pourquoi l'IA se trompe",
+     "file": "01-pourquoi-l-ia-se-trompe.md",
+     "objective": "Connaître les quatre sources d'erreur de l'IA.",
+     "duration_minutes": 10,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce qu'une hallucination d'IA ?",
+       "options": [
+        {
+         "text": "Une information inventée mais présentée de façon crédible",
+         "correct": true
+        },
+        {
+         "text": "Une panne de l'application",
+         "correct": false
+        },
+        {
+         "text": "Une image floue",
+         "correct": false
+        },
+        {
+         "text": "Un virus",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA complète avec ce qui est plausible, même quand c'est faux.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelles informations faut-il toujours vérifier ?",
+       "options": [
+        {
+         "text": "Les chiffres et les statistiques",
+         "correct": true
+        },
+        {
+         "text": "Les références à des lois",
+         "correct": true
+        },
+        {
+         "text": "Une liste d'idées de slogans",
+         "correct": false
+        },
+        {
+         "text": "Les citations entre guillemets",
+         "correct": true
+        }
+       ],
+       "explanation": "Les idées se choisissent ; les faits se vérifient.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "methode",
+     "title": "La méthode en quatre questions",
+     "file": "02-la-methode-en-quatre-questions.md",
+     "objective": "Vérifier une information avec quatre questions simples.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelles sont les quatre questions de la méthode ?",
+       "options": [
+        {
+         "text": "Qui le dit ? Quand ? Qui d'autre ? Est-ce cohérent ?",
+         "correct": true
+        },
+        {
+         "text": "Qui ? Quoi ? Où ? Combien ?",
+         "correct": false
+        },
+        {
+         "text": "Est-ce long ? Est-ce beau ? Est-ce court ? Est-ce drôle ?",
+         "correct": false
+        },
+        {
+         "text": "Quel outil ? Quel prix ? Quel pays ? Quelle langue ?",
+         "correct": false
+        }
+       ],
+       "explanation": "Source, date, recoupement, cohérence.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : une réponse d'IA est une source fiable en elle-même.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "C'est un résumé sans garantie ; il faut remonter à une source fiable.",
+       "kind": "true_false"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Les pièges à connaître",
+   "lessons": [
+    {
+     "key": "chiffres",
+     "title": "Chiffres, citations et références",
+     "file": "03-chiffres-citations-et-references.md",
+     "objective": "Contrôler les informations les plus sensibles.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Une IA vous donne une statistique sans source. Que faites-vous ?",
+       "options": [
+        {
+         "text": "Je cherche la source ; si je ne la trouve pas, je ne l'utilise pas",
+         "correct": true
+        },
+        {
+         "text": "Je l'utilise, elle a l'air sérieuse",
+         "correct": false
+        },
+        {
+         "text": "Je l'arrondis",
+         "correct": false
+        },
+        {
+         "text": "Je la mets entre parenthèses",
+         "correct": false
+        }
+       ],
+       "explanation": "Pas de source fiable, pas de statistique.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Pour une question de droit dans votre pays, qui a le dernier mot ?",
+       "options": [
+        {
+         "text": "Le texte officiel ou un professionnel du droit",
+         "correct": true
+        },
+        {
+         "text": "La réponse de l'IA",
+         "correct": false
+        },
+        {
+         "text": "Un message WhatsApp",
+         "correct": false
+        },
+        {
+         "text": "Le premier site trouvé",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA aide à comprendre ; le texte officiel fait foi.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "truquages",
+     "title": "Images, voix et vidéos truquées",
+     "file": "04-images-voix-et-videos-truquees.md",
+     "objective": "Repérer les contenus fabriqués par l'IA.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Un proche vous envoie un vocal pour demander de l'argent en urgence. Que faites-vous ?",
+       "options": [
+        {
+         "text": "Je le rappelle moi-même sur son numéro habituel avant toute action",
+         "correct": true
+        },
+        {
+         "text": "J'envoie l'argent tout de suite",
+         "correct": false
+        },
+        {
+         "text": "Je transfère le vocal à mes contacts",
+         "correct": false
+        },
+        {
+         "text": "Je réponds par un autre vocal",
+         "correct": false
+        }
+       ],
+       "explanation": "Les voix peuvent être clonées : vérifiez par un autre canal.",
+       "kind": "single"
+      },
+      {
+       "prompt": "À quoi sert une recherche d'image inversée ?",
+       "options": [
+        {
+         "text": "À retrouver où et quand une image a été publiée la première fois",
+         "correct": true
+        },
+        {
+         "text": "À rendre une image plus nette",
+         "correct": false
+        },
+        {
+         "text": "À traduire le texte d'une image",
+         "correct": false
+        },
+        {
+         "text": "À supprimer une image d'internet",
+         "correct": false
+        }
+       ],
+       "explanation": "Elle révèle souvent l'origine réelle d'une photo.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Les bons réflexes",
+   "lessons": [
+    {
+     "key": "whatsapp",
+     "title": "Fausses informations sur WhatsApp",
+     "file": "05-fausses-informations-sur-whatsapp.md",
+     "objective": "Appliquer cinq réflexes avant de partager un message.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Lesquels sont des signaux d'alerte d'une fausse information ?",
+       "options": [
+        {
+         "text": "« Partagez vite avant suppression »",
+         "correct": true
+        },
+        {
+         "text": "Aucune source précise",
+         "correct": true
+        },
+        {
+         "text": "Une promesse de gain facile",
+         "correct": true
+        },
+        {
+         "text": "Un lien vers le site officiel d'un ministère",
+         "correct": false
+        }
+       ],
+       "explanation": "Urgence, absence de source et promesse trop belle sont des signaux classiques.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Dans le doute sur un message, que faire ?",
+       "options": [
+        {
+         "text": "Ne pas le partager",
+         "correct": true
+        },
+        {
+         "text": "Le partager avec un avertissement",
+         "correct": false
+        },
+        {
+         "text": "Le partager seulement à la famille",
+         "correct": false
+        },
+        {
+         "text": "Le recopier en changeant quelques mots",
+         "correct": false
+        }
+       ],
+       "explanation": "Dans le doute, on s'abstient.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "fiabilite",
+     "title": "Devenir un utilisateur fiable",
+     "file": "06-devenir-un-utilisateur-fiable.md",
+     "objective": "Construire ses sources et adapter son niveau de vérification.",
+     "duration_minutes": 10,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pour un document officiel ou un rapport, quel niveau de vérification appliquer ?",
+       "options": [
+        {
+         "text": "La méthode des quatre questions sur chaque fait",
+         "correct": true
+        },
+        {
+         "text": "Aucune vérification",
+         "correct": false
+        },
+        {
+         "text": "Une simple relecture de l'orthographe",
+         "correct": false
+        },
+        {
+         "text": "Demander à l'IA si elle est sûre",
+         "correct": false
+        }
+       ],
+       "explanation": "Plus l'enjeu est grand, plus la vérification est poussée.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Vérifier ce que dit l'IA",
+ "summary": "Apprenez à repérer les erreurs de l'IA, à vérifier chiffres, citations et références, et à démasquer les images, voix et messages truqués avant de les partager.",
+ "audience": "tous",
+ "parcours": "tronc-commun",
+ "level": "debutant",
+ "duration_minutes": 70,
+ "position": 4,
+ "prerequisites": "Le cours « Introduction à l'IA » est conseillé.",
+ "description": "L'IA écrit avec assurance, même quand elle se trompe. Et elle permet désormais de fabriquer des images, des voix et des vidéos très réalistes. Savoir vérifier est devenu une compétence essentielle, au travail comme dans la vie quotidienne.\n\nCe cours vous donne une méthode simple en quatre questions, des réflexes précis pour les chiffres, les citations et les références, et les bons gestes face aux contenus truqués et aux fausses informations qui circulent sur WhatsApp et les réseaux sociaux.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Pourquoi un assistant IA peut-il donner une information fausse avec assurance ?",
+    "options": [
+     {
+      "text": "Parce qu'il produit le texte le plus plausible, pas forcément le plus vrai",
+      "correct": true
+     },
+     {
+      "text": "Parce qu'il veut tromper l'utilisateur",
+      "correct": false
+     },
+     {
+      "text": "Parce qu'il est en panne",
+      "correct": false
+     },
+     {
+      "text": "Parce que l'utilisateur a mal écrit",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Lesquelles sont des sources d'erreur de l'IA ?",
+    "options": [
+     {
+      "text": "Les hallucinations",
+      "correct": true
+     },
+     {
+      "text": "Les connaissances datées",
+      "correct": true
+     },
+     {
+      "text": "Les biais des données",
+      "correct": true
+     },
+     {
+      "text": "Une connexion lente",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Dans la méthode en quatre questions, que vérifie la question « Quand ? »",
+    "options": [
+     {
+      "text": "Que l'information est à jour",
+      "correct": true
+     },
+     {
+      "text": "L'heure de la réponse",
+      "correct": false
+     },
+     {
+      "text": "La date de votre anniversaire",
+      "correct": false
+     },
+     {
+      "text": "La vitesse de l'IA",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Combien de sources fiables et indépendantes faut-il idéalement pour confirmer une information importante ?",
+    "options": [
+     {
+      "text": "Aucune",
+      "correct": false
+     },
+     {
+      "text": "Une seule",
+      "correct": false
+     },
+     {
+      "text": "Au moins deux",
+      "correct": true
+     },
+     {
+      "text": "Dix",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : l'IA peut inventer des sources, avec des titres et des liens qui n'existent pas.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Une IA calcule le total d'une facture. Que faites-vous ?",
+    "options": [
+     {
+      "text": "Je refais le calcul avec une calculatrice ou un tableur",
+      "correct": true
+     },
+     {
+      "text": "Je l'accepte, les machines ne se trompent pas en calcul",
+      "correct": false
+     },
+     {
+      "text": "Je demande le même calcul à un ami par WhatsApp",
+      "correct": false
+     },
+     {
+      "text": "Je l'arrondis",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faire avant d'utiliser une citation célèbre proposée par l'IA ?",
+    "options": [
+     {
+      "text": "Retrouver une source sérieuse qui l'attribue à son auteur",
+      "correct": true
+     },
+     {
+      "text": "La mettre entre guillemets, cela suffit",
+      "correct": false
+     },
+     {
+      "text": "Changer le nom de l'auteur",
+      "correct": false
+     },
+     {
+      "text": "La traduire",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels indices peuvent signaler une image générée par IA ?",
+    "options": [
+     {
+      "text": "Des mains ou des doigts déformés",
+      "correct": true
+     },
+     {
+      "text": "Un texte illisible dans l'image",
+      "correct": true
+     },
+     {
+      "text": "Des ombres incohérentes",
+      "correct": true
+     },
+     {
+      "text": "Une photo prise de jour",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quel est le meilleur réflexe face à un vocal d'un proche qui réclame de l'argent en urgence ?",
+    "options": [
+     {
+      "text": "Le rappeler soi-même sur son numéro habituel",
+      "correct": true
+     },
+     {
+      "text": "Envoyer l'argent rapidement",
+      "correct": false
+     },
+     {
+      "text": "Demander à l'IA de confirmer la voix",
+      "correct": false
+     },
+     {
+      "text": "Partager le vocal dans le groupe familial",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Lesquels de ces réflexes faut-il appliquer avant de partager un message alarmant ?",
+    "options": [
+     {
+      "text": "Faire une pause",
+      "correct": true
+     },
+     {
+      "text": "Chercher la source",
+      "correct": true
+     },
+     {
+      "text": "Faire une recherche sur une phrase clé",
+      "correct": true
+     },
+     {
+      "text": "Le transférer à tous ses contacts pour avoir leur avis",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Pour une démarche administrative ou fiscale, quel rôle donner à l'IA ?",
+    "options": [
+     {
+      "text": "M'aider à comprendre et à préparer mes questions, la réponse venant du texte officiel ou d'un professionnel",
+      "correct": true
+     },
+     {
+      "text": "Donner la réponse définitive",
+      "correct": false
+     },
+     {
+      "text": "Remplir et signer le formulaire à ma place",
+      "correct": false
+     },
+     {
+      "text": "Aucun rôle, c'est interdit",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Qui est responsable d'un rapport préparé avec l'aide de l'IA ?",
+    "options": [
+     {
+      "text": "La personne qui le publie ou le signe",
+      "correct": true
+     },
+     {
+      "text": "L'entreprise qui a créé l'IA",
+      "correct": false
+     },
+     {
+      "text": "Personne",
+      "correct": false
+     },
+     {
+      "text": "Le fournisseur internet",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

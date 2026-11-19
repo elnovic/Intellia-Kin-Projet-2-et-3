@@ -1,0 +1,150 @@
+title: Vérifier ce que dit l'IA
+summary: Apprenez à repérer les erreurs de l'IA, à vérifier chiffres, citations et références, et à démasquer les images, voix et messages truqués avant de les partager.
+audience: tous
+parcours: tronc-commun
+level: debutant
+duration: 70
+position: 4
+prerequisites: Le cours « Introduction à l'IA » est conseillé.
+description: L'IA écrit avec assurance, même quand elle se trompe. Et elle permet désormais de fabriquer des images, des voix et des vidéos très réalistes. Savoir vérifier est devenu une compétence essentielle, au travail comme dans la vie quotidienne.
+description: Ce cours vous donne une méthode simple en quatre questions, des réflexes précis pour les chiffres, les citations et les références, et les bons gestes face aux contenus truqués et aux fausses informations qui circulent sur WhatsApp et les réseaux sociaux.
+objective: Comprendre pourquoi et quand l'IA se trompe
+objective: Appliquer la méthode de vérification en quatre questions
+objective: Contrôler chiffres, citations et références juridiques
+objective: Repérer les images, voix et vidéos truquées
+objective: Adopter les bons réflexes face aux fausses informations
+skill: Vérifier une information produite par l'IA
+skill: Repérer les contenus truqués et les fausses informations
+skill: Utiliser des sources fiables
+module: Pourquoi vérifier
+lesson: erreurs | Pourquoi l'IA se trompe | 01-pourquoi-l-ia-se-trompe.md | Connaître les quatre sources d'erreur de l'IA. | 10 | apercu
+? Qu'est-ce qu'une hallucination d'IA ?
++ Une information inventée mais présentée de façon crédible
+- Une panne de l'application
+- Une image floue
+- Un virus
+> L'IA complète avec ce qui est plausible, même quand c'est faux.
+? Quelles informations faut-il toujours vérifier ?
++ Les chiffres et les statistiques
++ Les références à des lois
+- Une liste d'idées de slogans
++ Les citations entre guillemets
+> Les idées se choisissent ; les faits se vérifient.
+lesson: methode | La méthode en quatre questions | 02-la-methode-en-quatre-questions.md | Vérifier une information avec quatre questions simples. | 12
+? Quelles sont les quatre questions de la méthode ?
++ Qui le dit ? Quand ? Qui d'autre ? Est-ce cohérent ?
+- Qui ? Quoi ? Où ? Combien ?
+- Est-ce long ? Est-ce beau ? Est-ce court ? Est-ce drôle ?
+- Quel outil ? Quel prix ? Quel pays ? Quelle langue ?
+> Source, date, recoupement, cohérence.
+? Vrai ou faux : une réponse d'IA est une source fiable en elle-même.
+- Vrai
++ Faux
+> C'est un résumé sans garantie ; il faut remonter à une source fiable.
+module: Les pièges à connaître
+lesson: chiffres | Chiffres, citations et références | 03-chiffres-citations-et-references.md | Contrôler les informations les plus sensibles. | 12
+? Une IA vous donne une statistique sans source. Que faites-vous ?
++ Je cherche la source ; si je ne la trouve pas, je ne l'utilise pas
+- Je l'utilise, elle a l'air sérieuse
+- Je l'arrondis
+- Je la mets entre parenthèses
+> Pas de source fiable, pas de statistique.
+? Pour une question de droit dans votre pays, qui a le dernier mot ?
++ Le texte officiel ou un professionnel du droit
+- La réponse de l'IA
+- Un message WhatsApp
+- Le premier site trouvé
+> L'IA aide à comprendre ; le texte officiel fait foi.
+lesson: truquages | Images, voix et vidéos truquées | 04-images-voix-et-videos-truquees.md | Repérer les contenus fabriqués par l'IA. | 12
+? Un proche vous envoie un vocal pour demander de l'argent en urgence. Que faites-vous ?
++ Je le rappelle moi-même sur son numéro habituel avant toute action
+- J'envoie l'argent tout de suite
+- Je transfère le vocal à mes contacts
+- Je réponds par un autre vocal
+> Les voix peuvent être clonées : vérifiez par un autre canal.
+? À quoi sert une recherche d'image inversée ?
++ À retrouver où et quand une image a été publiée la première fois
+- À rendre une image plus nette
+- À traduire le texte d'une image
+- À supprimer une image d'internet
+> Elle révèle souvent l'origine réelle d'une photo.
+module: Les bons réflexes
+lesson: whatsapp | Fausses informations sur WhatsApp | 05-fausses-informations-sur-whatsapp.md | Appliquer cinq réflexes avant de partager un message. | 12
+? Lesquels sont des signaux d'alerte d'une fausse information ?
++ « Partagez vite avant suppression »
++ Aucune source précise
++ Une promesse de gain facile
+- Un lien vers le site officiel d'un ministère
+> Urgence, absence de source et promesse trop belle sont des signaux classiques.
+? Dans le doute sur un message, que faire ?
++ Ne pas le partager
+- Le partager avec un avertissement
+- Le partager seulement à la famille
+- Le recopier en changeant quelques mots
+> Dans le doute, on s'abstient.
+lesson: fiabilite | Devenir un utilisateur fiable | 06-devenir-un-utilisateur-fiable.md | Construire ses sources et adapter son niveau de vérification. | 10
+? Pour un document officiel ou un rapport, quel niveau de vérification appliquer ?
++ La méthode des quatre questions sur chaque fait
+- Aucune vérification
+- Une simple relecture de l'orthographe
+- Demander à l'IA si elle est sûre
+> Plus l'enjeu est grand, plus la vérification est poussée.
+exam:
+? Pourquoi un assistant IA peut-il donner une information fausse avec assurance ?
++ Parce qu'il produit le texte le plus plausible, pas forcément le plus vrai
+- Parce qu'il veut tromper l'utilisateur
+- Parce qu'il est en panne
+- Parce que l'utilisateur a mal écrit
+? Lesquelles sont des sources d'erreur de l'IA ?
++ Les hallucinations
++ Les connaissances datées
++ Les biais des données
+- Une connexion lente
+? Dans la méthode en quatre questions, que vérifie la question « Quand ? »
++ Que l'information est à jour
+- L'heure de la réponse
+- La date de votre anniversaire
+- La vitesse de l'IA
+? Combien de sources fiables et indépendantes faut-il idéalement pour confirmer une information importante ?
+- Aucune
+- Une seule
++ Au moins deux
+- Dix
+? Vrai ou faux : l'IA peut inventer des sources, avec des titres et des liens qui n'existent pas.
++ Vrai
+- Faux
+? Une IA calcule le total d'une facture. Que faites-vous ?
++ Je refais le calcul avec une calculatrice ou un tableur
+- Je l'accepte, les machines ne se trompent pas en calcul
+- Je demande le même calcul à un ami par WhatsApp
+- Je l'arrondis
+? Que faire avant d'utiliser une citation célèbre proposée par l'IA ?
++ Retrouver une source sérieuse qui l'attribue à son auteur
+- La mettre entre guillemets, cela suffit
+- Changer le nom de l'auteur
+- La traduire
+? Quels indices peuvent signaler une image générée par IA ?
++ Des mains ou des doigts déformés
++ Un texte illisible dans l'image
++ Des ombres incohérentes
+- Une photo prise de jour
+? Quel est le meilleur réflexe face à un vocal d'un proche qui réclame de l'argent en urgence ?
++ Le rappeler soi-même sur son numéro habituel
+- Envoyer l'argent rapidement
+- Demander à l'IA de confirmer la voix
+- Partager le vocal dans le groupe familial
+? Lesquels de ces réflexes faut-il appliquer avant de partager un message alarmant ?
++ Faire une pause
++ Chercher la source
++ Faire une recherche sur une phrase clé
+- Le transférer à tous ses contacts pour avoir leur avis
+? Pour une démarche administrative ou fiscale, quel rôle donner à l'IA ?
++ M'aider à comprendre et à préparer mes questions, la réponse venant du texte officiel ou d'un professionnel
+- Donner la réponse définitive
+- Remplir et signer le formulaire à ma place
+- Aucun rôle, c'est interdit
+? Qui est responsable d'un rapport préparé avec l'aide de l'IA ?
++ La personne qui le publie ou le signe
+- L'entreprise qui a créé l'IA
+- Personne
+- Le fournisseur internet
