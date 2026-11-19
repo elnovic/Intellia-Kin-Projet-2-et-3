@@ -1,43 +1,36 @@
-# Intellia Kin — Plateforme (projets 2 et 3)
+# Académie Intellia Kin
 
-Plateforme en ligne du cabinet Intellia Kin : cours gratuits et payants avec
-attestation, annonces de formations, événements, outils IA par abonnement, et la
-console d'administration qui pilote l'ensemble.
+Plateforme gratuite du cabinet Intellia Kin : 20 cours sur l'IA avec attestation
+de réussite, outils gratuits, annonces et événements, et administration.
+Elle est distincte du site vitrine `intelliakin.com`, qui n'est pas modifié.
 
-| Adresse | Rôle | Dossier |
+| Partie | Dossier | Hébergement |
 |---|---|---|
-| `intelliakin.com` | Site vitrine existant (hors de ce dépôt) | — |
-| `app.intelliakin.com` | Plateforme : cours, outils IA, annonces, événements, compte | `web/` (à venir) |
-| `admin.intelliakin.com` | Console d'administration | `admin/` (à venir) |
-| API | Logique métier commune aux deux interfaces | `backend/` |
+| Interface (`academie.intelliakin.com`) | `web/` | Cloudflare Pages |
+| API | `backend/` | Render |
+| Base de données | — | Supabase |
+| Cours rédigés | `contenu/cours/` | chargés par l'API au démarrage |
+| Charte graphique en code | `design/` | — |
 
-## Organisation du dépôt
-
-```
-backend/    API Python (FastAPI), modèles de données, tests
-design/     Charte graphique en code : couleurs, polices, logo
-docs/       Cadrage, architecture, modèle des cours, feuille de route
-```
-
-## Démarrer
+## Démarrer en local
 
 ```bash
 docker compose up --build
 ```
 
-L'API répond sur http://localhost:8000 et sa documentation sur
-http://localhost:8000/docs. Voir [`backend/README.md`](backend/README.md) pour
-créer le premier administrateur, lancer sans Docker et exécuter les tests.
+Interface : http://localhost:8080 · API : http://localhost:8000/docs
+Compte administrateur local : `admin@intelliakin.com` / `admin-local-123`.
 
 ## Documents
 
 1. [Cadrage et décisions](docs/01-cadrage.md)
 2. [Architecture technique](docs/02-architecture.md)
-3. [Cours et blocs de contenu](docs/03-cours-et-blocs.md)
+3. [Rédiger un cours](docs/03-cours-et-blocs.md)
 4. [Feuille de route](docs/04-feuille-de-route.md)
+5. [Déploiement pas à pas](docs/05-deploiement.md)
+6. [Programme des 20 cours](docs/06-programme-des-cours.md)
 
 ## Méthode de travail
 
-- `main` contient ce qui a été relu et validé.
-- Chaque évolution arrive sur une branche, avec une demande de fusion.
-- Les tests s'exécutent automatiquement à chaque envoi (`.github/workflows/tests.yml`).
+- `main` est la version en ligne : chaque envoi met à jour Render et Cloudflare.
+- Les tests et la vérification des cours s'exécutent à chaque envoi (`.github/workflows/tests.yml`).
