@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="Inter, Arial, sans-serif">
+<rect width="900" height="360" fill="#F8FAFC"/>
+<text x="40" y="60" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#0A2540">« Aujourd'hui, le ciel est … »</text>
+<text x="40" y="92" font-size="15" fill="#4A5568">Le modèle calcule la probabilité de chaque mot possible, puis en choisit un.</text>
+<text x="40" y="150" font-size="17" fill="#1A202C">bleu</text>
+<rect x="150" y="134" width="600" height="22" rx="6" fill="#E2E8F0"/>
+<rect x="150" y="134" width="372" height="22" rx="6" fill="#00C9A7"/>
+<text x="534" y="151" font-family="JetBrains Mono, monospace" font-size="15" fill="#0A2540">62 %</text>
+<text x="40" y="192" font-size="17" fill="#1A202C">nuageux</text>
+<rect x="150" y="176" width="600" height="22" rx="6" fill="#E2E8F0"/>
+<rect x="150" y="176" width="126" height="22" rx="6" fill="#0066FF"/>
+<text x="288" y="193" font-family="JetBrains Mono, monospace" font-size="15" fill="#0A2540">21 %</text>
+<text x="40" y="234" font-size="17" fill="#1A202C">gris</text>
+<rect x="150" y="218" width="600" height="22" rx="6" fill="#E2E8F0"/>
+<rect x="150" y="218" width="54" height="22" rx="6" fill="#0066FF"/>
+<text x="216" y="235" font-family="JetBrains Mono, monospace" font-size="15" fill="#0A2540">9 %</text>
+<text x="40" y="276" font-size="17" fill="#1A202C">dégagé</text>
+<rect x="150" y="260" width="600" height="22" rx="6" fill="#E2E8F0"/>
+<rect x="150" y="260" width="30" height="22" rx="6" fill="#0066FF"/>
+<text x="192" y="277" font-family="JetBrains Mono, monospace" font-size="15" fill="#0A2540">5 %</text>
+<text x="40" y="318" font-size="17" fill="#1A202C">vert</text>
+<rect x="150" y="302" width="600" height="22" rx="6" fill="#E2E8F0"/>
+<rect x="150" y="302" width="6" height="22" rx="6" fill="#0066FF"/>
+<text x="168" y="319" font-family="JetBrains Mono, monospace" font-size="15" fill="#0A2540">1 %</text>
+<text x="40" y="345" font-size="13" fill="#5B6B82">Chiffres illustratifs. Le modèle répète cette opération pour chaque mot de sa réponse.</text></svg>

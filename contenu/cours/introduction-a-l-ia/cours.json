@@ -1,0 +1,882 @@
+{
+ "slug": "introduction-a-l-ia",
+ "title": "Introduction à l'IA : comprendre l'IA sans jargon",
+ "summary": "Comprenez enfin ce qu'est l'intelligence artificielle, comment elle apprend, ce qu'elle sait faire et ce qu'elle ne sait pas faire, avec des mots simples.",
+ "description": "L'intelligence artificielle est partout : dans votre téléphone, dans vos applications, et désormais dans les assistants comme ChatGPT ou Gemini. Pourtant, peu de personnes savent vraiment ce qu'elle est.\n\nCe cours vous donne les bases indispensables, sans formule mathématique ni jargon technique. À travers des exemples tirés du quotidien, vous découvrirez comment une machine apprend, pourquoi un assistant IA peut se tromper avec assurance, et comment en tirer parti dans votre vie professionnelle.\n\nC'est le point de départ idéal avant tous les autres cours de l'Académie.",
+ "audience": "tous",
+ "parcours": "tronc-commun",
+ "level": "debutant",
+ "format": "self_paced",
+ "duration_minutes": 75,
+ "position": 1,
+ "objectives": [
+  "Expliquer simplement ce qu'est l'intelligence artificielle",
+  "Comprendre comment une machine apprend à partir d'exemples",
+  "Distinguer les trois grandes familles d'IA",
+  "Comprendre le fonctionnement d'un assistant comme ChatGPT",
+  "Identifier les forces et les limites de l'IA",
+  "Utiliser un assistant IA pour une première tâche réelle"
+ ],
+ "skills": [
+  "Comprendre le fonctionnement de l'IA",
+  "Identifier les usages et les limites de l'IA",
+  "Utiliser un assistant IA de façon responsable"
+ ],
+ "prerequisites": "Aucun. Savoir utiliser un téléphone suffit.",
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "modules": [
+  {
+   "title": "Ce qu'est vraiment l'intelligence artificielle",
+   "lessons": [
+    {
+     "key": "ia-quotidien",
+     "title": "L'IA est déjà dans votre poche",
+     "file": "01-l-ia-est-deja-dans-votre-poche.md",
+     "objective": "Reconnaître les usages de l'IA dans votre vie de tous les jours.",
+     "duration_minutes": 6,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Lequel de ces services utilise très probablement l'IA ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Une calculatrice qui additionne deux nombres",
+         "correct": false
+        },
+        {
+         "text": "Un clavier de téléphone qui devine le mot suivant",
+         "correct": true
+        },
+        {
+         "text": "Une lampe torche",
+         "correct": false
+        },
+        {
+         "text": "Un réveil réglé à 6 h",
+         "correct": false
+        }
+       ],
+       "explanation": "Le clavier prédictif a appris, sur des millions de phrases, quels mots ont des chances de suivre ceux que vous tapez."
+      },
+      {
+       "prompt": "L'IA est réservée aux robots et aux laboratoires de recherche.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "L'IA est déjà dans de nombreuses applications ordinaires : cartes, traduction, réseaux sociaux, filtres anti-arnaque…"
+      }
+     ]
+    },
+    {
+     "key": "definition",
+     "title": "Une définition simple",
+     "file": "02-une-definition-simple.md",
+     "objective": "Définir l'IA avec vos propres mots et la distinguer de la programmation classique.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce qui distingue la plupart des IA actuelles des programmes classiques ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Elles sont plus chères",
+         "correct": false
+        },
+        {
+         "text": "Elles apprennent à partir d'exemples au lieu de suivre des règles écrites à la main",
+         "correct": true
+        },
+        {
+         "text": "Elles fonctionnent sans électricité",
+         "correct": false
+        },
+        {
+         "text": "Elles sont conscientes",
+         "correct": false
+        }
+       ],
+       "explanation": "C'est l'apprentissage automatique : la machine découvre elle-même les règles à partir de nombreux exemples."
+      },
+      {
+       "prompt": "Une IA ressent des émotions et comprend le monde comme un humain.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "L'IA calcule ; elle n'a ni conscience ni émotions."
+      }
+     ]
+    },
+    {
+     "key": "histoire",
+     "title": "Une brève histoire de l'IA",
+     "file": "03-une-breve-histoire.md",
+     "objective": "Situer les grandes étapes de l'IA et comprendre pourquoi elle progresse si vite aujourd'hui.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "En quelle décennie l'expression « intelligence artificielle » s'est-elle imposée ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Les années 1950",
+         "correct": true
+        },
+        {
+         "text": "Les années 1990",
+         "correct": false
+        },
+        {
+         "text": "Les années 2010",
+         "correct": false
+        },
+        {
+         "text": "Les années 2020",
+         "correct": false
+        }
+       ],
+       "explanation": "L'expression s'impose lors d'une rencontre de chercheurs à l'université de Dartmouth, en 1956."
+      },
+      {
+       "prompt": "Quels ingrédients expliquent l'accélération de l'IA depuis les années 2010 ?",
+       "kind": "multiple",
+       "options": [
+        {
+         "text": "Beaucoup de données",
+         "correct": true
+        },
+        {
+         "text": "Beaucoup de puissance de calcul",
+         "correct": true
+        },
+        {
+         "text": "L'apprentissage profond",
+         "correct": true
+        },
+        {
+         "text": "Des robots humanoïdes",
+         "correct": false
+        }
+       ],
+       "explanation": "Données, puissance de calcul et apprentissage profond : ce trio a rendu possibles les progrès récents."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Comment une machine apprend",
+   "lessons": [
+    {
+     "key": "apprentissage",
+     "title": "Apprendre à partir d'exemples",
+     "file": "04-apprendre-a-partir-d-exemples.md",
+     "objective": "Comprendre les quatre étapes de l'apprentissage automatique.",
+     "duration_minutes": 8,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Dans quel ordre se déroule l'apprentissage automatique ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Prédiction, modèle, données, entraînement",
+         "correct": false
+        },
+        {
+         "text": "Données, entraînement, modèle, prédiction",
+         "correct": true
+        },
+        {
+         "text": "Modèle, données, prédiction, entraînement",
+         "correct": false
+        },
+        {
+         "text": "Entraînement, prédiction, données, modèle",
+         "correct": false
+        }
+       ],
+       "explanation": "On rassemble des données, on entraîne, on obtient un modèle, puis on l'utilise pour prédire."
+      },
+      {
+       "prompt": "Un modèle qui annonce « arnaque à 97 % » ne peut pas se tromper.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Une prédiction est une probabilité : à 97 %, le modèle se trompe encore environ 3 fois sur 100."
+      }
+     ]
+    },
+    {
+     "key": "familles",
+     "title": "Les trois grandes familles d'IA",
+     "file": "05-les-trois-grandes-familles.md",
+     "objective": "Distinguer l'IA qui prédit, l'IA qui recommande et l'IA qui génère.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Un outil qui rédige la description d'un produit appartient à quelle famille ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "L'IA qui prédit",
+         "correct": false
+        },
+        {
+         "text": "L'IA qui recommande",
+         "correct": false
+        },
+        {
+         "text": "L'IA générative",
+         "correct": true
+        },
+        {
+         "text": "Aucune",
+         "correct": false
+        }
+       ],
+       "explanation": "Il crée un contenu nouveau à partir d'une demande : c'est de l'IA générative."
+      },
+      {
+       "prompt": "Comment appelle-t-on la demande écrite que l'on adresse à une IA générative ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Un prompt",
+         "correct": true
+        },
+        {
+         "text": "Un algorithme",
+         "correct": false
+        },
+        {
+         "text": "Un modèle",
+         "correct": false
+        },
+        {
+         "text": "Un serveur",
+         "correct": false
+        }
+       ],
+       "explanation": "Le prompt est l'instruction que vous donnez à l'IA."
+      }
+     ]
+    },
+    {
+     "key": "assistant",
+     "title": "Comment fonctionne un assistant comme ChatGPT",
+     "file": "06-comment-fonctionne-un-assistant-ia.md",
+     "objective": "Comprendre pourquoi un assistant IA écrit si bien et pourquoi il peut se tromper.",
+     "duration_minutes": 9,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quel est le talent principal d'un grand modèle de langage ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Chercher dans une base de données de vérités",
+         "correct": false
+        },
+        {
+         "text": "Prédire le mot suivant le plus probable",
+         "correct": true
+        },
+        {
+         "text": "Comprendre le monde par l'expérience",
+         "correct": false
+        },
+        {
+         "text": "Copier des textes existants mot pour mot",
+         "correct": false
+        }
+       ],
+       "explanation": "Il génère sa réponse mot après mot, en choisissant à chaque fois parmi les mots les plus probables."
+      },
+      {
+       "prompt": "Qu'appelle-t-on une « hallucination » ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Une panne du serveur",
+         "correct": false
+        },
+        {
+         "text": "Une réponse fausse mais présentée comme crédible",
+         "correct": true
+        },
+        {
+         "text": "Une image générée par l'IA",
+         "correct": false
+        },
+        {
+         "text": "Un virus informatique",
+         "correct": false
+        }
+       ],
+       "explanation": "Le modèle produit un texte vraisemblable, même quand l'information est inventée."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Ce que l'IA sait faire, et ce qu'elle ne sait pas faire",
+   "lessons": [
+    {
+     "key": "forces",
+     "title": "Ce que l'IA fait bien",
+     "file": "07-ce-que-l-ia-fait-bien.md",
+     "objective": "Repérer les tâches pour lesquelles l'IA vous fait gagner du temps.",
+     "duration_minutes": 7,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Parmi ces tâches, lesquelles sont des points forts de l'IA ?",
+       "kind": "multiple",
+       "options": [
+        {
+         "text": "Rédiger un premier jet",
+         "correct": true
+        },
+        {
+         "text": "Résumer un long document",
+         "correct": true
+        },
+        {
+         "text": "Décider à votre place d'un recrutement",
+         "correct": false
+        },
+        {
+         "text": "Trouver des idées",
+         "correct": true
+        }
+       ],
+       "explanation": "L'IA rédige, résume et propose des idées ; la décision, elle, reste la vôtre."
+      },
+      {
+       "prompt": "Plus votre demande est précise, meilleur est le résultat.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": true
+        },
+        {
+         "text": "Faux",
+         "correct": false
+        }
+       ],
+       "explanation": "Rôle, contexte, objectif et format : ces précisions changent tout."
+      }
+     ]
+    },
+    {
+     "key": "limites",
+     "title": "Les limites et les pièges",
+     "file": "08-les-limites-et-les-pieges.md",
+     "objective": "Connaître les limites de l'IA pour éviter les erreurs coûteuses.",
+     "duration_minutes": 9,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi une IA peut-elle moins bien maîtriser le lingala ou le wolof que l'anglais ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Parce que ces langues sont trop difficiles",
+         "correct": false
+        },
+        {
+         "text": "Parce qu'elles sont beaucoup moins présentes dans ses données d'entraînement",
+         "correct": true
+        },
+        {
+         "text": "Parce que l'IA refuse ces langues",
+         "correct": false
+        },
+        {
+         "text": "Parce qu'il faut une connexion plus rapide",
+         "correct": false
+        }
+       ],
+       "explanation": "Une IA reproduit les déséquilibres de ses données : moins de textes, moins de maîtrise."
+      },
+      {
+       "prompt": "Que ne faut-il jamais confier à un assistant IA grand public ?",
+       "kind": "multiple",
+       "options": [
+        {
+         "text": "Votre code secret de mobile money",
+         "correct": true
+        },
+        {
+         "text": "Les salaires de vos collègues",
+         "correct": true
+        },
+        {
+         "text": "Une question sur l'histoire de l'IA",
+         "correct": false
+        },
+        {
+         "text": "Le numéro de carte bancaire d'un client",
+         "correct": true
+        }
+       ],
+       "explanation": "Codes, données personnelles et informations bancaires ne doivent jamais être saisis dans un assistant grand public."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "L'IA et vous",
+   "lessons": [
+    {
+     "key": "travail",
+     "title": "L'IA et le travail : remplacer ou augmenter ?",
+     "file": "09-l-ia-et-le-travail.md",
+     "objective": "Analyser l'effet de l'IA sur un métier, tâche par tâche.",
+     "duration_minutes": 8,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle affirmation décrit le mieux l'effet de l'IA sur la plupart des métiers ?",
+       "kind": "single",
+       "options": [
+        {
+         "text": "Ils vont tous disparaître",
+         "correct": false
+        },
+        {
+         "text": "Rien ne va changer",
+         "correct": false
+        },
+        {
+         "text": "Ils vont se transformer : certaines tâches seront automatisées, d'autres accélérées",
+         "correct": true
+        },
+        {
+         "text": "Seuls les ingénieurs seront concernés",
+         "correct": false
+        }
+       ],
+       "explanation": "Un métier est un ensemble de tâches : l'IA en automatise certaines, en accélère d'autres, et laisse les plus humaines à l'humain."
+      },
+      {
+       "prompt": "Négocier, rassurer et assumer une décision restent des tâches profondément humaines.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": true
+        },
+        {
+         "text": "Faux",
+         "correct": false
+        }
+       ],
+       "explanation": "Ces tâches demandent du jugement, de l'empathie et de la responsabilité."
+      }
+     ]
+    },
+    {
+     "key": "premiers-pas",
+     "title": "Vos premiers pas avec un assistant IA",
+     "file": "10-vos-premiers-pas.md",
+     "objective": "Mener vos trois premières conversations utiles avec un assistant IA.",
+     "duration_minutes": 9,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quels éléments rendent une demande à l'IA plus efficace ?",
+       "kind": "multiple",
+       "options": [
+        {
+         "text": "Votre rôle",
+         "correct": true
+        },
+        {
+         "text": "Le contexte",
+         "correct": true
+        },
+        {
+         "text": "L'objectif et le format attendu",
+         "correct": true
+        },
+        {
+         "text": "Écrire uniquement en majuscules",
+         "correct": false
+        }
+       ],
+       "explanation": "Rôle, contexte, objectif et format : la base d'une bonne demande."
+      },
+      {
+       "prompt": "Il vaut mieux se contenter de la première réponse de l'IA, sans la retoucher.",
+       "kind": "true_false",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Les utilisateurs efficaces dialoguent : ils demandent des corrections et des variantes."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Quelle est la meilleure définition de l'intelligence artificielle ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Des robots qui ressemblent à des humains",
+      "correct": false
+     },
+     {
+      "text": "Des programmes capables de tâches qui demandent habituellement de l'intelligence humaine",
+      "correct": true
+     },
+     {
+      "text": "Des ordinateurs très rapides",
+      "correct": false
+     },
+     {
+      "text": "Internet",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Comment la plupart des IA actuelles apprennent-elles ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "En suivant uniquement des règles écrites à la main",
+      "correct": false
+     },
+     {
+      "text": "À partir de nombreux exemples",
+      "correct": true
+     },
+     {
+      "text": "En lisant votre esprit",
+      "correct": false
+     },
+     {
+      "text": "Elles n'apprennent pas",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "L'intelligence artificielle est une invention des années 2020.",
+    "kind": "true_false",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ]
+   },
+   {
+    "prompt": "Dans l'apprentissage automatique, comment appelle-t-on le résultat de l'entraînement, prêt à être utilisé ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Le prompt",
+      "correct": false
+     },
+     {
+      "text": "Le modèle",
+      "correct": true
+     },
+     {
+      "text": "La donnée",
+      "correct": false
+     },
+     {
+      "text": "Le serveur",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Un modèle annonce qu'un message est une arnaque « à 95 % ». Que faut-il en conclure ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Le message est forcément une arnaque",
+      "correct": false
+     },
+     {
+      "text": "C'est une forte probabilité, pas une certitude",
+      "correct": true
+     },
+     {
+      "text": "Le modèle est en panne",
+      "correct": false
+     },
+     {
+      "text": "Le message est forcément normal",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Pourquoi la qualité des données est-elle si importante ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Parce qu'une IA ne peut pas être meilleure que les exemples qui l'ont formée",
+      "correct": true
+     },
+     {
+      "text": "Parce que les données coûtent cher",
+      "correct": false
+     },
+     {
+      "text": "Parce que les données remplacent le modèle",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est pas important",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Une application qui vous suggère des vidéos fait partie de quelle famille d'IA ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Générer",
+      "correct": false
+     },
+     {
+      "text": "Recommander",
+      "correct": true
+     },
+     {
+      "text": "Reconnaître et prédire",
+      "correct": false
+     },
+     {
+      "text": "Aucune",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Lesquels de ces outils sont des assistants d'IA générative ?",
+    "kind": "multiple",
+    "options": [
+     {
+      "text": "ChatGPT",
+      "correct": true
+     },
+     {
+      "text": "Gemini",
+      "correct": true
+     },
+     {
+      "text": "Meta AI",
+      "correct": true
+     },
+     {
+      "text": "Une calculatrice",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Comment un grand modèle de langage construit-il sa réponse ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Il recopie une page internet",
+      "correct": false
+     },
+     {
+      "text": "Il prédit, mot après mot, la suite la plus probable",
+      "correct": true
+     },
+     {
+      "text": "Il consulte un expert humain à chaque question",
+      "correct": false
+     },
+     {
+      "text": "Il tire les mots au hasard",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Un assistant IA vous donne un article de loi précis. Que faites-vous avant de l'utiliser ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Je l'utilise directement, l'IA ne se trompe pas",
+      "correct": false
+     },
+     {
+      "text": "Je vérifie dans une source officielle",
+      "correct": true
+     },
+     {
+      "text": "Je demande à l'IA si elle est sûre et je la crois",
+      "correct": false
+     },
+     {
+      "text": "Je l'ignore toujours",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Pourquoi un assistant IA peut-il ignorer une loi votée récemment ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Parce que ses connaissances s'arrêtent à la date de son entraînement",
+      "correct": true
+     },
+     {
+      "text": "Parce qu'il refuse de parler de droit",
+      "correct": false
+     },
+     {
+      "text": "Parce que les lois sont secrètes",
+      "correct": false
+     },
+     {
+      "text": "Parce qu'il est en panne",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Lesquelles de ces informations ne doivent jamais être saisies dans un assistant IA grand public ?",
+    "kind": "multiple",
+    "options": [
+     {
+      "text": "Un mot de passe",
+      "correct": true
+     },
+     {
+      "text": "Le numéro de compte bancaire d'un client",
+      "correct": true
+     },
+     {
+      "text": "Une demande d'idées de noms pour une boutique",
+      "correct": false
+     },
+     {
+      "text": "Les données de santé d'un collègue",
+      "correct": true
+     }
+    ]
+   },
+   {
+    "prompt": "Une IA peut reproduire des biais présents dans ses données, par exemple au détriment de certaines langues.",
+    "kind": "true_false",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Quelle est la meilleure façon de décrire l'effet de l'IA sur la plupart des métiers ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "Une disparition totale",
+      "correct": false
+     },
+     {
+      "text": "Une transformation : des tâches automatisées, d'autres accélérées, d'autres qui restent humaines",
+      "correct": true
+     },
+     {
+      "text": "Aucun effet",
+      "correct": false
+     },
+     {
+      "text": "Un effet limité aux métiers techniques",
+      "correct": false
+     }
+    ]
+   },
+   {
+    "prompt": "Laquelle de ces demandes donnera probablement le meilleur résultat ?",
+    "kind": "single",
+    "options": [
+     {
+      "text": "« Écris un e-mail. »",
+      "correct": false
+     },
+     {
+      "text": "« E-mail client. »",
+      "correct": false
+     },
+     {
+      "text": "« Tu es assistante de direction. Écris un e-mail court et poli pour rappeler à un client sa facture impayée de 350 dollars. »",
+      "correct": true
+     },
+     {
+      "text": "« Aide-moi. »",
+      "correct": false
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="300" fill="#F8FAFC"/>
+<rect x="30" y="50" width="205" height="180" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="66" cy="88" r="20" fill="#0066FF"/><text x="66" y="95" text-anchor="middle" fill="#fff" font-weight="700" font-size="18">1</text>
+<text x="50" y="145" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#0A2540">Des exemples</text>
+<text x="50" y="175" font-size="14" fill="#4A5568">20 000 SMS déjà</text><text x="50" y="195" font-size="14" fill="#4A5568">classés par des humains</text>
+<path d="M242 140 h26 m-9 -8 l9 8 l-9 8" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="275" y="50" width="205" height="180" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="311" cy="88" r="20" fill="#0066FF"/><text x="311" y="95" text-anchor="middle" fill="#fff" font-weight="700" font-size="18">2</text>
+<text x="295" y="145" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#0A2540">L'entraînement</text>
+<text x="295" y="175" font-size="14" fill="#4A5568">elle cherche ce qui</text><text x="295" y="195" font-size="14" fill="#4A5568">distingue les deux types</text>
+<path d="M487 140 h26 m-9 -8 l9 8 l-9 8" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="520" y="50" width="205" height="180" rx="14" fill="#FFFFFF" stroke="#0A2540" stroke-width="2"/>
+<circle cx="556" cy="88" r="20" fill="#0A2540"/><text x="556" y="95" text-anchor="middle" fill="#fff" font-weight="700" font-size="18">3</text>
+<text x="540" y="145" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#0A2540">Le modèle</text>
+<text x="540" y="175" font-size="14" fill="#4A5568">un ensemble de réglages</text><text x="540" y="195" font-size="14" fill="#4A5568">appris, prêt à servir</text>
+<path d="M732 140 h26 m-9 -8 l9 8 l-9 8" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="765" y="50" width="205" height="180" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<circle cx="801" cy="88" r="20" fill="#00C9A7"/><text x="801" y="95" text-anchor="middle" fill="#fff" font-weight="700" font-size="18">4</text>
+<text x="785" y="145" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#0A2540">La prédiction</text>
+<text x="785" y="175" font-size="14" fill="#4A5568">nouveau SMS :</text><text x="785" y="195" font-size="14" fill="#4A5568">« arnaque à 97 % »</text>
+<text x="30" y="275" font-size="14" fill="#4A5568">Plus les exemples sont nombreux, variés et justes, plus les prédictions sont fiables.</text></svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" font-family="Inter, Arial, sans-serif">
+<rect width="1100" height="360" fill="#F8FAFC"/>
+<line x1="40" y1="180" x2="1060" y2="180" stroke="#0A2540" stroke-width="3"/>
+<line x1="125" y1="180" x2="125" y2="212" stroke="#0066FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="125" cy="180" r="9" fill="#0066FF"/>
+<text x="125" y="238" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" font-weight="600" fill="#0A2540">1950</text>
+<text x="125" y="260" text-anchor="middle" font-size="13" fill="#1A202C">Turing pose la question :</text>
+<text x="125" y="277" text-anchor="middle" font-size="13" fill="#1A202C">une machine peut-elle penser ?</text>
+<line x1="267" y1="180" x2="267" y2="135" stroke="#0066FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="267" cy="180" r="9" fill="#0066FF"/>
+<text x="267" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" font-weight="600" fill="#0A2540">1956</text>
+<text x="267" y="80" text-anchor="middle" font-size="13" fill="#1A202C">Naissance du terme</text>
+<text x="267" y="97" text-anchor="middle" font-size="13" fill="#1A202C">« intelligence artificielle »</text>
+<line x1="408" y1="180" x2="408" y2="212" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="408" cy="180" r="9" fill="#94A3B8"/>
+<text x="408" y="238" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" font-weight="600" fill="#0A2540">1970-1980</text>
+<text x="408" y="260" text-anchor="middle" font-size="13" fill="#1A202C">Les « hivers de l'IA » :</text>
+<text x="408" y="277" text-anchor="middle" font-size="13" fill="#1A202C">déceptions, budgets coupés</text>
+<line x1="550" y1="180" x2="550" y2="135" stroke="#0066FF" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="550" cy="180" r="9" fill="#0066FF"/>
+<text x="550" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" font-weight="600" fill="#0A2540">1997</text>
+<text x="550" y="80" text-anchor="middle" font-size="13" fill="#1A202C">Deep Blue bat le champion</text>
+<text x="550" y="97" text-anchor="middle" font-size="13" fill="#1A202C">du monde d'échecs</text>
+<line x1="692" y1="180" x2="692" y2="212" stroke="#00C9A7" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="692" cy="180" r="9" fill="#00C9A7"/>
+<text x="692" y="238" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" font-weight="600" fill="#0A2540">2012</text>
+<text x="692" y="260" text-anchor="middle" font-size="13" fill="#1A202C">L'apprentissage profond</text>
+<text x="692" y="277" text-anchor="middle" font-size="13" fill="#1A202C">reconnaît les images</text>
+<line x1="833" y1="180" x2="833" y2="135" stroke="#00C9A7" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="833" cy="180" r="9" fill="#00C9A7"/>
+<text x="833" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" font-weight="600" fill="#0A2540">2016</text>
+<text x="833" y="80" text-anchor="middle" font-size="13" fill="#1A202C">AlphaGo bat l'un des</text>
+<text x="833" y="97" text-anchor="middle" font-size="13" fill="#1A202C">meilleurs joueurs de go</text>
+<line x1="975" y1="180" x2="975" y2="212" stroke="#00C9A7" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="975" cy="180" r="12" fill="#00C9A7"/>
+<text x="975" y="238" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" font-weight="600" fill="#0A2540">2022</text>
+<text x="975" y="260" text-anchor="middle" font-size="13" fill="#1A202C">ChatGPT : l'IA entre</text>
+<text x="975" y="277" text-anchor="middle" font-size="13" fill="#1A202C">dans le grand public</text>
+<text x="40" y="340" font-size="14" fill="#4A5568">Soixante-dix ans d'histoire : des espoirs, des déceptions et des percées soudaines.</text>
+</svg>

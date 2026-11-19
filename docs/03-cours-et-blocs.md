@@ -1,92 +1,76 @@
-# Cours et blocs de contenu
+# Rédiger un cours
 
-## Structure
+Les 20 cours de l'Académie sont rédigés dans le dépôt, dans `contenu/cours/`.
+Chaque envoi sur `main` les vérifie (tests GitHub) puis les recharge sur la plateforme.
+
+## Un dossier par cours
 
 ```
-Cours
- └─ Modules           (chapitres, ordonnés)
-     └─ Leçons        (ordonnées ; une leçon peut être en aperçu libre)
-         └─ Blocs     (contenu, ordonnés, de types variés)
+contenu/cours/<slug>/
+    cours.json      fiche, programme, quiz des leçons, examen final
+    lecons/*.md     une leçon par fichier (Markdown)
+    images/*        illustrations (SVG, PNG, JPG, WebP)
 ```
 
-Une leçon est une pile de blocs. L'équipe compose chaque leçon depuis la
-console en ajoutant, déplaçant et modifiant des blocs.
+Le nom du dossier est l'adresse du cours : `academie.intelliakin.com/cours/<slug>`.
 
-Chaque bloc est stocké avec un **type** et un **contenu** (`data`, en JSON).
-Ajouter un type de bloc ne modifie ni la base de données ni les cours existants :
-on ajoute une classe dans `backend/app/blocks.py`.
+## La fiche `cours.json`
 
-## Types de blocs
+| Champ | Rôle |
+|---|---|
+| `title`, `summary`, `description` | Titre, résumé (carte du catalogue), présentation longue (Markdown) |
+| `audience` | `tous`, `jeune_diplome`, `entrepreneur`, `pme` |
+| `parcours` | `tronc-commun`, `carriere`, `entrepreneuriat`, `organisations` |
+| `level` | `debutant`, `intermediaire`, `avance` |
+| `duration_minutes`, `position` | Durée affichée, ordre dans le catalogue |
+| `objectives` | « Ce que vous allez apprendre » |
+| `skills` | Compétences imprimées sur l'attestation (3 ou 4) |
+| `prerequisites`, `trainer`, `cover_image` | Prérequis, formateur, image de couverture |
+| `modules[].lessons[]` | `key` (identifiant stable, ne jamais le changer), `title`, `file`, `objective`, `duration_minutes`, `is_preview`, `quiz` |
+| `exam` | `pass_score` (70), `distinction_score` (90), `questions` |
 
-| Famille | Type | Contenu |
-|---|---|---|
-| Lecture | `text` | Texte mis en forme (Markdown) |
-| Lecture | `image` | Image, texte alternatif, légende |
-| Lecture | `gallery` | Plusieurs images |
-| Lecture | `callout` | Encadré : information, astuce, attention |
-| Lecture | `table` | Tableau, avec en-têtes |
-| Lecture | `code` | Extrait de code ou de prompt |
-| Média | `video` | Vidéo téléversée ou lien externe |
-| Média | `audio` | Fichier audio |
-| Média | `pdf` | Document PDF affiché dans la page |
-| Média | `slides` | Diaporama |
-| Média | `file` | Fichier à télécharger |
-| Média | `embed` | Contenu intégré d'un autre site |
-| Évaluation | `quiz` | Questions à choix unique, multiple, vrai ou faux |
-| Évaluation | `open_question` | Réponse libre |
-| Évaluation | `assignment` | Devoir à rendre |
-| Évaluation | `exam` | Examen final chronométré, avec note de réussite |
-| Pratique | `tool_exercise` | Exercice relié à un outil IA de la plateforme |
-| Pratique | `case_study` | Étude de cas avec questions |
-| En direct | `live_session` | Séance datée, en visioconférence ou en présentiel |
+Une question : `{"prompt": "...", "kind": "single" | "multiple" | "true_false",
+"options": [{"text": "...", "correct": true}], "explanation": "..."}`.
 
-La console récupère cette liste, avec le schéma de chaque type, par
-`GET /admin/block-types`. Elle peut ainsi construire ses formulaires de saisie
-sans les coder en dur.
+## Écrire une leçon
 
-## Règles de validation
+Markdown simple : `##` pour les sections, `**gras**`, listes `-` et `1.`,
+tableaux, citations `>`, blocs de code entre trois accents graves.
 
-- Les adresses de fichiers commencent par `https://` (lien externe) ou par
-  `/media/` (fichier téléversé sur la plateforme).
-- Question à choix unique : exactement une bonne réponse.
-- Question à choix multiple : au moins une bonne réponse.
-- Vrai ou faux : deux options, une seule correcte.
-- Tableau : chaque ligne a autant de cellules que d'en-têtes.
-- Un apprenant ne reçoit jamais les bonnes réponses ni les explications d'un
-  quiz ou d'un examen : l'API les retire avant d'envoyer la leçon.
+Images : `![Description de l'image](images/nom-du-fichier.svg)`.
 
-## Formats de cours
+Encadrés :
 
-| Format | Code | Usage |
-|---|---|---|
-| À son rythme | `self_paced` | Accès libre, sans date |
-| Session datée | `cohort` | Un groupe, un calendrier, des séances en direct |
-| Hybride | `hybrid` | Contenu en ligne et séances en présentiel |
+```
+::: a-retenir
+- Point clé 1
+- Point clé 2
+:::
 
-Chaque format peut être gratuit ou payant. Un cours peut être marqué comme
-**gabarit** (`is_template`) pour servir de point de départ à d'autres cours.
-Les **parcours** (plusieurs cours enchaînés, pour les formations longues)
-arrivent dans une prochaine étape.
+::: a-vous Titre de l'exercice
+Consigne de l'exercice.
+:::
+```
 
-## Publics
+Variantes : `a-retenir` (cyan), `a-savoir` (bleu), `attention` (orange), `a-vous` (exercice).
 
-`jeune_diplome`, `entrepreneur`, `pme`, `tous`.
+## Ton et style
 
-## Cycle de vie d'un cours
+- Une histoire ou une situation concrète pour ouvrir la leçon.
+- Des personnages récurrents, d'Afrique francophone et d'ailleurs.
+- Phrases courtes, « vous », aucun jargon non expliqué.
+- Chaque leçon finit par un exercice « À vous de jouer » et un encadré « À retenir ».
+- Aucun chiffre ni fait vérifiable sans source sûre.
 
-`draft` (brouillon) → `published` (publié) → `archived` (archivé).
-Un cours ne peut être publié que s'il contient au moins une leçon.
+## Vérifier avant d'envoyer
 
-## Inscription et progression
+```bash
+cd backend && python -m app.cli check-courses
+```
 
-- Cours gratuit : inscription immédiate.
-- Cours payant : l'inscription passera par le module de paiement (à venir).
-  En attendant, l'API répond que le paiement est requis.
-- L'apprenant marque chaque leçon comme terminée ; la progression est le
-  pourcentage de leçons terminées.
+## Les types de blocs (cours saisis dans l'administration)
 
-## Attestation (à venir)
-
-Conditions fixées par cours : toutes les leçons terminées et, si le cours a un
-examen, note minimale atteinte (`certificate_min_score`). L'attestation est un
-PDF aux couleurs de la charte, avec un numéro unique et un QR code de vérification.
+Les cours créés en ligne utilisent les mêmes blocs : texte, image, galerie, encadré,
+tableau, code, vidéo, audio, PDF, diaporama, fichier, contenu intégré, quiz,
+réponse libre, devoir, examen, exercice avec un outil IA, étude de cas, séance en direct.
+Leur schéma est fourni par `GET /admin/block-types`.
