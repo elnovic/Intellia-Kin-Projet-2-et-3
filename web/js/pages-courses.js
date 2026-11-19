@@ -332,6 +332,7 @@ export async function lessonPage(root, { slug, lessonId }, { navigate }) {
     <aside class="lesson-nav" aria-label="Programme du cours">
       <a class="back" href="/cours/${slug}">← ${esc(course.title)}</a>
       ${progress ? `<div class="progress-bar small-bar"><span style="width:${progress.percent}%"></span></div><p class="small">${progress.percent} % terminé</p>` : ""}
+      <details class="lesson-outline" ${window.innerWidth > 900 ? "open" : ""}><summary>Programme du cours</summary>
       <ol>${course.modules
         .map(
           (m) => `<li><p class="nav-module">${esc(m.title)}</p><ol>${m.lessons
@@ -340,7 +341,7 @@ export async function lessonPage(root, { slug, lessonId }, { navigate }) {
         )
         .join("")}
         ${course.exam_question_count ? `<li><p class="nav-module">Fin de cours</p><ol><li><a href="/cours/${slug}/examen">${icon("award")} Examen final</a></li></ol></li>` : ""}
-      </ol>
+      </ol></details>
     </aside>
     <article class="lesson">
       <p class="eyebrow">Leçon ${index + 1} sur ${lessons.length} · ${esc(lessons[index]?.module || "")}</p>

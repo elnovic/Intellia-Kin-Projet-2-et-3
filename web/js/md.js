@@ -27,7 +27,7 @@ function inline(text) {
   out = out
     .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_, alt, src) => {
       const url = mediaUrl(safeUrl(src.replace(/&amp;/g, "&")));
-      return `<figure class="md-figure"><img src="${escapeHtml(url)}" alt="${alt}" loading="lazy">${
+      return `<figure class="md-figure"><a href="${escapeHtml(url)}" target="_blank" rel="noopener" title="Agrandir l'image"><img src="${escapeHtml(url)}" alt="${alt}" loading="lazy"></a>${
         alt ? `<figcaption>${alt}</figcaption>` : ""
       }</figure>`;
     })

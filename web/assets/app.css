@@ -205,6 +205,8 @@ code { font-family: var(--ik-police-donnees); font-size: 0.9em; background: #eef
 .lesson-nav li.done > a { color: var(--ik-texte-discret); }
 .lesson-nav li.done .icon { color: var(--ik-cyan-tech); }
 .small-bar { height: 6px; margin-bottom: 0.3rem; }
+.lesson-outline summary { cursor: pointer; font-family: var(--ik-police-titres); font-weight: 600; color: var(--ik-bleu-nuit); padding: 0.4rem 0; list-style-position: inside; }
+@media (min-width: 901px) { .lesson-outline summary { display: none; } }
 .lesson { width: min(760px, 100% - 2rem); margin: 0 auto; padding: var(--ik-espace-8) 0 var(--ik-espace-12); }
 .lesson h1 { font-size: clamp(1.7rem, 1.4rem + 1.2vw, 2.3rem); }
 .lesson-meta { color: var(--ik-texte-discret); font-size: var(--ik-taille-petit); display: flex; gap: 0.4rem; align-items: center; }
@@ -212,7 +214,7 @@ code { font-family: var(--ik-police-donnees); font-size: 0.9em; background: #eef
 .lesson-footer { display: flex; justify-content: space-between; gap: var(--ik-espace-4); flex-wrap: wrap; border-top: 1px solid var(--ik-bordure); margin-top: var(--ik-espace-12); padding-top: var(--ik-espace-6); }
 @media (max-width: 900px) {
   .lesson-layout { grid-template-columns: 1fr; }
-  .lesson-nav { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--ik-bordure); max-height: 45vh; }
+  .lesson-nav { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--ik-bordure); padding: var(--ik-espace-4); }
 }
 
 /* Texte riche */
