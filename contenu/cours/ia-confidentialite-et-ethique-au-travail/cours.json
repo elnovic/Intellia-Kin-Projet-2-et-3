@@ -1,0 +1,604 @@
+{
+ "slug": "ia-confidentialite-et-ethique-au-travail",
+ "format": "self_paced",
+ "objectives": [
+  "Comprendre ce que deviennent les données confiées à une IA",
+  "Classer les usages en vert, orange et rouge",
+  "Anonymiser un document avant de l'utiliser avec l'IA",
+  "Respecter droits d'auteur, règles académiques et transparence",
+  "Éviter les biais dans les décisions qui touchent des personnes",
+  "Rédiger une charte d'usage de l'IA pour une équipe"
+ ],
+ "skills": [
+  "Protéger les données personnelles et confidentielles",
+  "Utiliser l'IA de façon éthique et transparente",
+  "Rédiger une charte d'usage de l'IA"
+ ],
+ "modules": [
+  {
+   "title": "Vos données",
+   "lessons": [
+    {
+     "key": "donnees",
+     "title": "Ce que deviennent vos données",
+     "file": "01-ce-que-deviennent-vos-donnees.md",
+     "objective": "Savoir ce qui arrive à ce que vous écrivez à une IA.",
+     "duration_minutes": 10,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Que peut devenir un message envoyé à un assistant IA gratuit, selon le service et vos réglages ?",
+       "options": [
+        {
+         "text": "Il peut être conservé",
+         "correct": true
+        },
+        {
+         "text": "Il peut servir à améliorer les modèles",
+         "correct": true
+        },
+        {
+         "text": "Il est toujours effacé immédiatement",
+         "correct": false
+        },
+        {
+         "text": "Il peut être relu pour contrôler les abus",
+         "correct": true
+        }
+       ],
+       "explanation": "Les conditions varient : lisez la page de confidentialité de l'outil.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Vrai ou faux : au travail, les données de vos clients et collègues vous appartiennent.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Elles ne vous appartiennent pas : vous en êtes responsable.",
+       "kind": "true_false"
+      }
+     ]
+    },
+    {
+     "key": "regles",
+     "title": "Les règles d'or au travail",
+     "file": "02-les-regles-d-or-au-travail.md",
+     "objective": "Classer ses usages en vert, orange et rouge.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Laquelle de ces informations est « rouge » ?",
+       "options": [
+        {
+         "text": "Le code secret de mobile money",
+         "correct": true
+        },
+        {
+         "text": "Une liste d'idées de slogans",
+         "correct": false
+        },
+        {
+         "text": "Une question générale sur la structure d'un rapport",
+         "correct": false
+        },
+        {
+         "text": "Un article déjà publié",
+         "correct": false
+        }
+       ],
+       "explanation": "Codes et mots de passe ne se confient jamais à une IA.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelle question se poser avant d'envoyer un document à une IA ?",
+       "options": [
+        {
+         "text": "Y a-t-il des informations sur des personnes identifiables ?",
+         "correct": true
+        },
+        {
+         "text": "Le document est-il assez long ?",
+         "correct": false
+        },
+        {
+         "text": "L'IA va-t-elle aimer le document ?",
+         "correct": false
+        },
+        {
+         "text": "Faut-il l'envoyer en PDF ?",
+         "correct": false
+        }
+       ],
+       "explanation": "Personnes identifiables, secrets, règles internes : les trois questions clés.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Bonnes pratiques",
+   "lessons": [
+    {
+     "key": "anonymiser",
+     "title": "Anonymiser ses données",
+     "file": "03-anonymiser-ses-donnees.md",
+     "objective": "Remplacer les informations identifiantes avant d'utiliser l'IA.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce qu'anonymiser un document ?",
+       "options": [
+        {
+         "text": "Remplacer tout ce qui permet d'identifier une personne ou une entreprise par des repères neutres",
+         "correct": true
+        },
+        {
+         "text": "Supprimer le document",
+         "correct": false
+        },
+        {
+         "text": "Le traduire dans une autre langue",
+         "correct": false
+        },
+        {
+         "text": "Le transformer en PDF",
+         "correct": false
+        }
+       ],
+       "explanation": "Exemple : remplacer un nom par [Client A].",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quand faut-il anonymiser ?",
+       "options": [
+        {
+         "text": "Avant d'envoyer le texte à l'IA",
+         "correct": true
+        },
+        {
+         "text": "Après avoir reçu la réponse",
+         "correct": false
+        },
+        {
+         "text": "Jamais",
+         "correct": false
+        },
+        {
+         "text": "Seulement le vendredi",
+         "correct": false
+        }
+       ],
+       "explanation": "Un texte envoyé ne se rattrape pas.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "auteur",
+     "title": "Droits d'auteur, plagiat et transparence",
+     "file": "04-droits-d-auteur-plagiat-et-transparence.md",
+     "objective": "Respecter les règles et rester transparent.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce qui pose problème sur le plan éthique ?",
+       "options": [
+        {
+         "text": "Faire passer pour sien un travail rédigé par l'IA, là où c'est interdit",
+         "correct": true
+        },
+        {
+         "text": "Utiliser l'IA pour comprendre une notion",
+         "correct": false
+        },
+        {
+         "text": "Demander des idées à l'IA",
+         "correct": false
+        },
+        {
+         "text": "Faire corriger ses fautes d'orthographe, si c'est autorisé",
+         "correct": false
+        }
+       ],
+       "explanation": "Utiliser l'IA n'est pas tricher ; tromper sur l'auteur du travail, si.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : dire que l'on a utilisé l'IA renforce souvent la confiance.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": true
+        },
+        {
+         "text": "Faux",
+         "correct": false
+        }
+       ],
+       "explanation": "La transparence montre que vous maîtrisez l'outil et assumez le résultat.",
+       "kind": "true_false"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Décider et s'organiser",
+   "lessons": [
+    {
+     "key": "biais",
+     "title": "Biais et équité",
+     "file": "05-biais-et-equite.md",
+     "objective": "Éviter les injustices quand l'IA touche des personnes.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qui doit prendre la décision finale de recruter un candidat ?",
+       "options": [
+        {
+         "text": "Un humain, avec des critères clairs et explicables",
+         "correct": true
+        },
+        {
+         "text": "L'IA, elle est plus objective",
+         "correct": false
+        },
+        {
+         "text": "Le candidat lui-même",
+         "correct": false
+        },
+        {
+         "text": "Personne",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA peut aider à trier, mais la décision et son explication restent humaines.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quelles informations retirer pour un premier tri de CV ?",
+       "options": [
+        {
+         "text": "La photo",
+         "correct": true
+        },
+        {
+         "text": "L'âge",
+         "correct": true
+        },
+        {
+         "text": "Les compétences liées au poste",
+         "correct": false
+        },
+        {
+         "text": "La situation familiale",
+         "correct": true
+        }
+       ],
+       "explanation": "Retirez ce qui n'a rien à voir avec le poste et pourrait biaiser.",
+       "kind": "multiple"
+      }
+     ]
+    },
+    {
+     "key": "charte",
+     "title": "Écrire une charte d'usage",
+     "file": "06-ecrire-une-charte-d-usage.md",
+     "objective": "Rédiger une charte d'usage de l'IA pour son équipe.",
+     "duration_minutes": 12,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelles rubriques une charte d'usage de l'IA doit-elle contenir ?",
+       "options": [
+        {
+         "text": "Les données interdites",
+         "correct": true
+        },
+        {
+         "text": "La vérification des contenus",
+         "correct": true
+        },
+        {
+         "text": "Le référent en cas de doute",
+         "correct": true
+        },
+        {
+         "text": "La couleur préférée de chaque salarié",
+         "correct": false
+        }
+       ],
+       "explanation": "Objectif, outils, données interdites, vérification, transparence, décisions, référent.",
+       "kind": "multiple"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "IA, confidentialité et éthique au travail",
+ "summary": "Utilisez l'IA au travail sans mettre en danger vos données, celles de vos clients ni votre réputation : règles d'or, anonymisation, droits d'auteur, biais et charte d'usage.",
+ "audience": "tous",
+ "parcours": "tronc-commun",
+ "level": "debutant",
+ "duration_minutes": 70,
+ "position": 5,
+ "prerequisites": "Le cours « Introduction à l'IA » est conseillé.",
+ "description": "L'IA fait gagner un temps précieux, mais une seule erreur peut coûter cher : un fichier client envoyé dans un assistant grand public, un mémoire rédigé par une machine, un recrutement injuste.\n\nCe cours vous donne des règles simples et concrètes pour utiliser l'IA de façon responsable : savoir ce que deviennent vos données, ce que l'on peut confier ou non à une IA, comment anonymiser, comment respecter les droits d'auteur et éviter les biais, et comment écrire une charte d'usage pour votre équipe.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Que peut-il arriver à une conversation avec un assistant IA gratuit ?",
+    "options": [
+     {
+      "text": "Elle peut être conservée et, selon les réglages, servir à améliorer les modèles",
+      "correct": true
+     },
+     {
+      "text": "Elle est toujours supprimée dès la réponse",
+      "correct": false
+     },
+     {
+      "text": "Elle est publiée sur internet",
+      "correct": false
+     },
+     {
+      "text": "Elle est envoyée à votre employeur",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Où trouver les options pour limiter l'utilisation de vos conversations ?",
+    "options": [
+     {
+      "text": "Dans les paramètres de confidentialité ou de données de l'assistant",
+      "correct": true
+     },
+     {
+      "text": "Dans le Play Store",
+      "correct": false
+     },
+     {
+      "text": "Dans les réglages du Wi-Fi",
+      "correct": false
+     },
+     {
+      "text": "Nulle part, c'est impossible",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Lesquelles de ces informations sont « rouges » ?",
+    "options": [
+     {
+      "text": "Les salaires nominatifs des collègues",
+      "correct": true
+     },
+     {
+      "text": "Le numéro de compte bancaire d'un client",
+      "correct": true
+     },
+     {
+      "text": "La stratégie confidentielle de l'entreprise",
+      "correct": true
+     },
+     {
+      "text": "Une question générale sur la rédaction d'un rapport",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quelle tâche est « verte » ?",
+    "options": [
+     {
+      "text": "Chercher des idées de titres pour une publication",
+      "correct": true
+     },
+     {
+      "text": "Analyser un fichier de clients avec noms et téléphones",
+      "correct": false
+     },
+     {
+      "text": "Corriger un contrat confidentiel avec les vrais montants",
+      "correct": false
+     },
+     {
+      "text": "Saisir son mot de passe pour qu'il soit retenu",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment anonymiser « M. Albert Mukendi nous doit 12 450 dollars » ?",
+    "options": [
+     {
+      "text": "« [Nom du client] nous doit [montant] »",
+      "correct": true
+     },
+     {
+      "text": "« M. A. Mukendi nous doit 12 450 dollars »",
+      "correct": false
+     },
+     {
+      "text": "« Albert nous doit environ 12 000 dollars »",
+      "correct": false
+     },
+     {
+      "text": "Il est impossible de l'anonymiser",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : un détail très spécifique peut permettre de deviner une identité, même sans nom.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": true
+     },
+     {
+      "text": "Faux",
+      "correct": false
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Quelle utilisation de l'IA pour un mémoire est généralement acceptable, si le règlement l'autorise ?",
+    "options": [
+     {
+      "text": "Se faire expliquer une notion difficile",
+      "correct": true
+     },
+     {
+      "text": "Faire rédiger un chapitre et le présenter comme le sien",
+      "correct": false
+     },
+     {
+      "text": "Inventer des références",
+      "correct": false
+     },
+     {
+      "text": "Copier un texte généré sans le relire",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que faire avant d'utiliser une image générée dans une campagne commerciale ?",
+    "options": [
+     {
+      "text": "Vérifier qu'elle n'imite ni une marque, ni un artiste, ni une œuvre protégée",
+      "correct": true
+     },
+     {
+      "text": "Rien, tout ce que l'IA génère est libre de droits",
+      "correct": false
+     },
+     {
+      "text": "Ajouter le logo d'une marque connue",
+      "correct": false
+     },
+     {
+      "text": "La signer de son nom",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi une IA peut-elle être injuste dans un tri de candidatures ?",
+    "options": [
+     {
+      "text": "Parce qu'elle reproduit les biais de ses données",
+      "correct": true
+     },
+     {
+      "text": "Parce qu'elle connaît personnellement les candidats",
+      "correct": false
+     },
+     {
+      "text": "Parce qu'elle est volontairement méchante",
+      "correct": false
+     },
+     {
+      "text": "Ce n'est jamais le cas",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un candidat refusé demande pourquoi. Quelle réponse est acceptable ?",
+    "options": [
+     {
+      "text": "Une explication fondée sur des critères clairs, assumée par un humain",
+      "correct": true
+     },
+     {
+      "text": "« C'est l'IA qui a décidé. »",
+      "correct": false
+     },
+     {
+      "text": "Aucune réponse",
+      "correct": false
+     },
+     {
+      "text": "« Le hasard. »",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "À quoi sert une charte d'usage de l'IA ?",
+    "options": [
+     {
+      "text": "À rassurer, protéger les données et harmoniser les pratiques",
+      "correct": true
+     },
+     {
+      "text": "À interdire toute utilisation de l'IA",
+      "correct": false
+     },
+     {
+      "text": "À remplacer la loi",
+      "correct": false
+     },
+     {
+      "text": "À choisir le meilleur téléphone",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Qui est responsable d'un document envoyé à un client après avoir été produit avec l'IA ?",
+    "options": [
+     {
+      "text": "La personne qui l'envoie",
+      "correct": true
+     },
+     {
+      "text": "L'éditeur de l'IA",
+      "correct": false
+     },
+     {
+      "text": "Le client",
+      "correct": false
+     },
+     {
+      "text": "Personne",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

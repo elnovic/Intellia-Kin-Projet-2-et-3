@@ -1,0 +1,149 @@
+title: IA, confidentialité et éthique au travail
+summary: Utilisez l'IA au travail sans mettre en danger vos données, celles de vos clients ni votre réputation : règles d'or, anonymisation, droits d'auteur, biais et charte d'usage.
+audience: tous
+parcours: tronc-commun
+level: debutant
+duration: 70
+position: 5
+prerequisites: Le cours « Introduction à l'IA » est conseillé.
+description: L'IA fait gagner un temps précieux, mais une seule erreur peut coûter cher : un fichier client envoyé dans un assistant grand public, un mémoire rédigé par une machine, un recrutement injuste.
+description: Ce cours vous donne des règles simples et concrètes pour utiliser l'IA de façon responsable : savoir ce que deviennent vos données, ce que l'on peut confier ou non à une IA, comment anonymiser, comment respecter les droits d'auteur et éviter les biais, et comment écrire une charte d'usage pour votre équipe.
+objective: Comprendre ce que deviennent les données confiées à une IA
+objective: Classer les usages en vert, orange et rouge
+objective: Anonymiser un document avant de l'utiliser avec l'IA
+objective: Respecter droits d'auteur, règles académiques et transparence
+objective: Éviter les biais dans les décisions qui touchent des personnes
+objective: Rédiger une charte d'usage de l'IA pour une équipe
+skill: Protéger les données personnelles et confidentielles
+skill: Utiliser l'IA de façon éthique et transparente
+skill: Rédiger une charte d'usage de l'IA
+module: Vos données
+lesson: donnees | Ce que deviennent vos données | 01-ce-que-deviennent-vos-donnees.md | Savoir ce qui arrive à ce que vous écrivez à une IA. | 10 | apercu
+? Que peut devenir un message envoyé à un assistant IA gratuit, selon le service et vos réglages ?
++ Il peut être conservé
++ Il peut servir à améliorer les modèles
+- Il est toujours effacé immédiatement
++ Il peut être relu pour contrôler les abus
+> Les conditions varient : lisez la page de confidentialité de l'outil.
+? Vrai ou faux : au travail, les données de vos clients et collègues vous appartiennent.
+- Vrai
++ Faux
+> Elles ne vous appartiennent pas : vous en êtes responsable.
+lesson: regles | Les règles d'or au travail | 02-les-regles-d-or-au-travail.md | Classer ses usages en vert, orange et rouge. | 12
+? Laquelle de ces informations est « rouge » ?
++ Le code secret de mobile money
+- Une liste d'idées de slogans
+- Une question générale sur la structure d'un rapport
+- Un article déjà publié
+> Codes et mots de passe ne se confient jamais à une IA.
+? Quelle question se poser avant d'envoyer un document à une IA ?
++ Y a-t-il des informations sur des personnes identifiables ?
+- Le document est-il assez long ?
+- L'IA va-t-elle aimer le document ?
+- Faut-il l'envoyer en PDF ?
+> Personnes identifiables, secrets, règles internes : les trois questions clés.
+module: Bonnes pratiques
+lesson: anonymiser | Anonymiser ses données | 03-anonymiser-ses-donnees.md | Remplacer les informations identifiantes avant d'utiliser l'IA. | 12
+? Qu'est-ce qu'anonymiser un document ?
++ Remplacer tout ce qui permet d'identifier une personne ou une entreprise par des repères neutres
+- Supprimer le document
+- Le traduire dans une autre langue
+- Le transformer en PDF
+> Exemple : remplacer un nom par [Client A].
+? Quand faut-il anonymiser ?
++ Avant d'envoyer le texte à l'IA
+- Après avoir reçu la réponse
+- Jamais
+- Seulement le vendredi
+> Un texte envoyé ne se rattrape pas.
+lesson: auteur | Droits d'auteur, plagiat et transparence | 04-droits-d-auteur-plagiat-et-transparence.md | Respecter les règles et rester transparent. | 12
+? Qu'est-ce qui pose problème sur le plan éthique ?
++ Faire passer pour sien un travail rédigé par l'IA, là où c'est interdit
+- Utiliser l'IA pour comprendre une notion
+- Demander des idées à l'IA
+- Faire corriger ses fautes d'orthographe, si c'est autorisé
+> Utiliser l'IA n'est pas tricher ; tromper sur l'auteur du travail, si.
+? Vrai ou faux : dire que l'on a utilisé l'IA renforce souvent la confiance.
++ Vrai
+- Faux
+> La transparence montre que vous maîtrisez l'outil et assumez le résultat.
+module: Décider et s'organiser
+lesson: biais | Biais et équité | 05-biais-et-equite.md | Éviter les injustices quand l'IA touche des personnes. | 12
+? Qui doit prendre la décision finale de recruter un candidat ?
++ Un humain, avec des critères clairs et explicables
+- L'IA, elle est plus objective
+- Le candidat lui-même
+- Personne
+> L'IA peut aider à trier, mais la décision et son explication restent humaines.
+? Quelles informations retirer pour un premier tri de CV ?
++ La photo
++ L'âge
+- Les compétences liées au poste
++ La situation familiale
+> Retirez ce qui n'a rien à voir avec le poste et pourrait biaiser.
+lesson: charte | Écrire une charte d'usage | 06-ecrire-une-charte-d-usage.md | Rédiger une charte d'usage de l'IA pour son équipe. | 12
+? Quelles rubriques une charte d'usage de l'IA doit-elle contenir ?
++ Les données interdites
++ La vérification des contenus
++ Le référent en cas de doute
+- La couleur préférée de chaque salarié
+> Objectif, outils, données interdites, vérification, transparence, décisions, référent.
+exam:
+? Que peut-il arriver à une conversation avec un assistant IA gratuit ?
++ Elle peut être conservée et, selon les réglages, servir à améliorer les modèles
+- Elle est toujours supprimée dès la réponse
+- Elle est publiée sur internet
+- Elle est envoyée à votre employeur
+? Où trouver les options pour limiter l'utilisation de vos conversations ?
++ Dans les paramètres de confidentialité ou de données de l'assistant
+- Dans le Play Store
+- Dans les réglages du Wi-Fi
+- Nulle part, c'est impossible
+? Lesquelles de ces informations sont « rouges » ?
++ Les salaires nominatifs des collègues
++ Le numéro de compte bancaire d'un client
++ La stratégie confidentielle de l'entreprise
+- Une question générale sur la rédaction d'un rapport
+? Quelle tâche est « verte » ?
++ Chercher des idées de titres pour une publication
+- Analyser un fichier de clients avec noms et téléphones
+- Corriger un contrat confidentiel avec les vrais montants
+- Saisir son mot de passe pour qu'il soit retenu
+? Comment anonymiser « M. Albert Mukendi nous doit 12 450 dollars » ?
++ « [Nom du client] nous doit [montant] »
+- « M. A. Mukendi nous doit 12 450 dollars »
+- « Albert nous doit environ 12 000 dollars »
+- Il est impossible de l'anonymiser
+? Vrai ou faux : un détail très spécifique peut permettre de deviner une identité, même sans nom.
++ Vrai
+- Faux
+? Quelle utilisation de l'IA pour un mémoire est généralement acceptable, si le règlement l'autorise ?
++ Se faire expliquer une notion difficile
+- Faire rédiger un chapitre et le présenter comme le sien
+- Inventer des références
+- Copier un texte généré sans le relire
+? Que faire avant d'utiliser une image générée dans une campagne commerciale ?
++ Vérifier qu'elle n'imite ni une marque, ni un artiste, ni une œuvre protégée
+- Rien, tout ce que l'IA génère est libre de droits
+- Ajouter le logo d'une marque connue
+- La signer de son nom
+? Pourquoi une IA peut-elle être injuste dans un tri de candidatures ?
++ Parce qu'elle reproduit les biais de ses données
+- Parce qu'elle connaît personnellement les candidats
+- Parce qu'elle est volontairement méchante
+- Ce n'est jamais le cas
+? Un candidat refusé demande pourquoi. Quelle réponse est acceptable ?
++ Une explication fondée sur des critères clairs, assumée par un humain
+- « C'est l'IA qui a décidé. »
+- Aucune réponse
+- « Le hasard. »
+? À quoi sert une charte d'usage de l'IA ?
++ À rassurer, protéger les données et harmoniser les pratiques
+- À interdire toute utilisation de l'IA
+- À remplacer la loi
+- À choisir le meilleur téléphone
+? Qui est responsable d'un document envoyé à un client après avoir été produit avec l'IA ?
++ La personne qui l'envoie
+- L'éditeur de l'IA
+- Le client
+- Personne
