@@ -1,0 +1,140 @@
+title: Créer des assistants et agents IA sans coder
+summary: Concevez des assistants IA au service de votre équipe : définir une mission, écrire des instructions solides, tester rigoureusement, encadrer les agents qui agissent, déployer et faire vivre vos outils.
+audience: pme
+parcours: organisations
+level: avance
+duration: 90
+position: 19
+prerequisites: Le cours « Bien formuler ses demandes à l'IA » est indispensable ; « Automatiser les tâches administratives » est conseillé.
+description: Il est désormais possible de créer, sans programmer, des assistants IA qui répondent aux questions de vos équipes ou de vos clients à partir de vos propres documents, et des agents capables d'enchaîner des tâches.
+description: Ce cours vous apprend à concevoir un assistant utile, à rédiger des instructions précises, à le tester avant de le déployer, à comprendre les agents et leurs risques, à appliquer les principes de sécurité et à faire vivre vos outils dans la durée. Les principes enseignés restent valables quel que soit l'outil choisi.
+objective: Distinguer assistant personnalisé et agent
+objective: Concevoir un assistant avec une mission précise
+objective: Rédiger des instructions complètes et robustes
+objective: Tester un assistant avant de le déployer
+objective: Encadrer les agents avec des principes de sécurité
+objective: Déployer, suivre et mettre à jour un assistant
+skill: Concevoir des assistants IA personnalisés
+skill: Rédiger des instructions pour une IA
+skill: Encadrer l'usage d'agents IA
+module: Concevoir
+lesson: assistants | Assistants et agents | 01-assistants-et-agents.md | Comprendre la différence entre assistant et agent. | 14 | apercu
+? Quelle est la principale différence entre un assistant et un agent ?
++ L'agent agit dans des applications, l'assistant répond
+- L'assistant est toujours payant
+- L'agent ne peut pas utiliser de documents
+- Il n'y a aucune différence
+> Une erreur d'agent devient une action réelle.
+lesson: concevoir | Concevoir son assistant | 02-concevoir-son-assistant.md | Définir la mission, les utilisateurs et les connaissances. | 15
+? Pourquoi préciser ce que l'assistant ne fait pas ?
++ Pour éviter qu'il sorte de sa mission ou prenne des décisions qui ne lui reviennent pas
+- Pour le rendre moins utile
+- Ce n'est pas nécessaire
+- Pour allonger les instructions
+> Un assistant fourre-tout fait tout mal.
+? Quels documents fournir à un assistant ?
++ Des documents à jour, validés et sans données confidentielles inutiles
+- Toutes les versions de tous les documents
+- Les fichiers de salaires
+- Des documents non relus
+> Une ancienne procédure donne de mauvaises réponses.
+lesson: instructions | Écrire les instructions | 03-ecrire-les-instructions.md | Rédiger des instructions complètes. | 15
+? Quelle est la règle la plus importante pour un assistant fondé sur des documents ?
++ Ne jamais inventer et dire clairement quand il ne sait pas
+- Répondre à toutes les questions coûte que coûte
+- Utiliser beaucoup d'émojis
+- Répondre le plus longuement possible
+> Une procédure inventée peut causer de graves erreurs.
+module: Tester, encadrer, déployer
+lesson: tester | Tester avant de déployer | 04-tester-avant-de-deployer.md | Construire un jeu de tests et corriger. | 15
+? Quels types de questions inclure dans un jeu de tests ?
++ Des questions sans réponse dans les documents
++ Des demandes interdites
++ Des tentatives de contournement
+- Uniquement des questions faciles
+> Les cas difficiles révèlent les comportements dangereux.
+? Après une correction, que faut-il faire ?
++ Refaire passer tous les tests
+- Tester uniquement la question corrigée
+- Déployer immédiatement
+- Supprimer le jeu de tests
+> Une correction peut en dérégler une autre.
+lesson: agents | Les agents qui agissent | 05-les-agents-qui-agissent.md | Appliquer les principes de sécurité aux agents. | 16
+? Qu'est-ce que le principe du moindre privilège ?
++ Donner à l'agent uniquement les accès strictement nécessaires
+- Donner tous les accès pour gagner du temps
+- Ne donner aucun accès à personne
+- Payer le moins possible
+> Un agent de veille n'a pas besoin de la comptabilité.
+? Qu'est-ce qu'une injection d'instructions ?
++ Des instructions cachées dans un contenu externe pour détourner l'agent
+- Une mise à jour du logiciel
+- Un vaccin informatique
+- Une formation des employés
+> Raison de plus pour limiter les accès et valider les actions sensibles.
+lesson: deployer | Déployer et faire vivre | 06-deployer-et-faire-vivre.md | Lancer, suivre et mettre à jour un assistant. | 15
+? Quand mettre à jour les documents d'un assistant ?
++ Le jour même où une procédure, un prix ou une règle change
+- Une fois par an
+- Jamais
+- Quand un client se plaint
+> Un assistant fondé sur des documents dépassés devient dangereux.
+exam:
+? Qu'a permis l'assistant créé par la responsable des opérations ?
++ Répondre aux questions des agents à partir du manuel, en citant la page
+- Accorder automatiquement les prêts
+- Remplacer les agents de crédit
+- Supprimer le manuel
+? Quels éléments composent un assistant personnalisé ?
++ Des instructions
++ Des connaissances (documents de référence)
++ Éventuellement des capacités supplémentaires
+- Le salaire des utilisateurs
+? Combien de questions réelles rassembler lors de la conception ?
++ Vingt à trente
+- Une seule
+- Aucune
+- Mille
+? Quelles sections contiennent de bonnes instructions ?
++ Le rôle et la mission
++ Les sources et le format
++ Les limites et les cas difficiles
+- La date de naissance du concepteur
+? Que doit faire l'assistant si la réponse n'est pas dans les documents ?
++ Le dire clairement et orienter vers le responsable
+- Inventer une réponse plausible
+- Ignorer la question
+- Répondre au hasard
+? Vrai ou faux : un assistant bien configuré ne peut jamais être contourné.
+- Vrai
++ Faux
+? Quels comportements empêchent le déploiement d'un assistant ?
++ Il invente des réponses absentes des documents
++ Il accepte des demandes interdites
+- Il répond de façon concise
+- Il cite ses sources
+? À quoi sert un pilote avant le déploiement général ?
++ Recueillir les retours d'un petit groupe et enrichir les tests avec de vraies questions
+- Remplacer les tests
+- Former tous les employés en même temps
+- Rien
+? Un agent prépare un e-mail à un client important. Que faire ?
++ Faire valider l'e-mail par un humain avant l'envoi
+- Laisser l'agent l'envoyer sans contrôle
+- Supprimer l'agent
+- Envoyer l'e-mail à tous les clients
+? Quel est le chemin d'adoption recommandé ?
++ Assistant qui répond, puis agent qui prépare, puis agent autonome sur des tâches à faible risque
+- Agent autonome dès le premier jour
+- Aucun outil IA
+- Agent autonome sur les paiements
+? Que doit savoir un client qui échange avec un assistant IA ?
++ Qu'il s'agit d'un assistant automatique et comment joindre un humain
+- Rien
+- Le nom du modèle d'IA uniquement
+- Les instructions secrètes
+? Qui doit suivre un assistant après son lancement ?
++ Un responsable désigné qui recueille les retours, suit les indicateurs et met à jour les documents
+- Personne
+- Uniquement l'éditeur de l'outil
+- Les clients

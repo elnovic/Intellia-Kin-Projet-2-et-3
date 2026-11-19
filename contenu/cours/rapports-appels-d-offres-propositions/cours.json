@@ -1,0 +1,561 @@
+{
+ "slug": "rapports-appels-d-offres-propositions",
+ "format": "self_paced",
+ "objectives": [
+  "Écrire des documents clairs pour un lecteur pressé",
+  "Rédiger un rapport d'activité orienté résultats",
+  "Analyser un dossier d'appel d'offres et décider d'y répondre",
+  "Construire une offre technique et financière conforme",
+  "Rédiger une proposition commerciale personnalisée",
+  "Relire efficacement et constituer une bibliothèque de contenus"
+ ],
+ "skills": [
+  "Rédiger des documents professionnels",
+  "Répondre à des appels d'offres",
+  "Rédiger des propositions commerciales"
+ ],
+ "modules": [
+  {
+   "title": "Rapports et écriture professionnelle",
+   "lessons": [
+    {
+     "key": "ecrire",
+     "title": "Écrire pour être lu",
+     "file": "01-ecrire-pour-etre-lu.md",
+     "objective": "Écrire pour un lecteur pressé.",
+     "duration_minutes": 13,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Où placer l'essentiel dans un document professionnel ?",
+       "options": [
+        {
+         "text": "Au début, dans un résumé",
+         "correct": true
+        },
+        {
+         "text": "À la fin, comme une surprise",
+         "correct": false
+        },
+        {
+         "text": "Dans les annexes",
+         "correct": false
+        },
+        {
+         "text": "Nulle part",
+         "correct": false
+        }
+       ],
+       "explanation": "Le lecteur pressé lit d'abord la première page.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que vérifier après une réécriture par l'IA ?",
+       "options": [
+        {
+         "text": "Que les faits, les chiffres et les nuances n'ont pas changé",
+         "correct": true
+        },
+        {
+         "text": "Que le texte est plus long",
+         "correct": false
+        },
+        {
+         "text": "Que le texte contient plus d'adjectifs",
+         "correct": false
+        },
+        {
+         "text": "Rien",
+         "correct": false
+        }
+       ],
+       "explanation": "Comparez toujours avec l'original.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "rapport",
+     "title": "Le rapport d'activité",
+     "file": "02-le-rapport-d-activite.md",
+     "objective": "Rédiger un rapport orienté résultats.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Lequel est un résultat, et non une simple activité ?",
+       "options": [
+        {
+         "text": "180 agricultrices appliquent les nouvelles techniques",
+         "correct": true
+        },
+        {
+         "text": "12 sessions de formation organisées",
+         "correct": false
+        },
+        {
+         "text": "3 000 affiches distribuées",
+         "correct": false
+        },
+        {
+         "text": "Un logiciel installé",
+         "correct": false
+        }
+       ],
+       "explanation": "Le résultat dit ce qui a changé.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Vrai ou faux : il vaut mieux cacher les difficultés dans un rapport.",
+       "options": [
+        {
+         "text": "Vrai",
+         "correct": false
+        },
+        {
+         "text": "Faux",
+         "correct": true
+        }
+       ],
+       "explanation": "Elles finissent toujours par être découvertes ; présentez-les avec les solutions.",
+       "kind": "true_false"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Appels d'offres et propositions",
+   "lessons": [
+    {
+     "key": "appel-offres",
+     "title": "Comprendre un appel d'offres",
+     "file": "03-comprendre-un-appel-d-offres.md",
+     "objective": "Analyser un dossier et décider d'y répondre.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi l'offre de la PME informatique a-t-elle été rejetée ?",
+       "options": [
+        {
+         "text": "Il manquait une pièce administrative obligatoire",
+         "correct": true
+        },
+        {
+         "text": "Son offre technique était mauvaise",
+         "correct": false
+        },
+        {
+         "text": "Son prix était trop bas",
+         "correct": false
+        },
+        {
+         "text": "Elle était trop en avance",
+         "correct": false
+        }
+       ],
+       "explanation": "La conformité compte autant que la qualité.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Que faire de la liste des pièces obligatoires extraite par l'IA ?",
+       "options": [
+        {
+         "text": "La vérifier ligne par ligne dans le dossier original",
+         "correct": true
+        },
+        {
+         "text": "La considérer comme complète",
+         "correct": false
+        },
+        {
+         "text": "L'ignorer",
+         "correct": false
+        },
+        {
+         "text": "L'envoyer à l'acheteur",
+         "correct": false
+        }
+       ],
+       "explanation": "L'IA peut oublier une exigence enfouie dans une annexe.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "offre",
+     "title": "Construire une offre gagnante",
+     "file": "04-construire-une-offre-gagnante.md",
+     "objective": "Rédiger une offre conforme et convaincante.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Dans quel ordre présenter l'offre technique ?",
+       "options": [
+        {
+         "text": "Dans l'ordre et avec les intitulés des critères d'évaluation",
+         "correct": true
+        },
+        {
+         "text": "Dans l'ordre alphabétique",
+         "correct": false
+        },
+        {
+         "text": "Au hasard",
+         "correct": false
+        },
+        {
+         "text": "En commençant par le prix",
+         "correct": false
+        }
+       ],
+       "explanation": "L'évaluateur suit une grille.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "proposition",
+     "title": "La proposition commerciale",
+     "file": "05-la-proposition-commerciale.md",
+     "objective": "Rédiger une proposition personnalisée.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Par quoi commencer une proposition commerciale ?",
+       "options": [
+        {
+         "text": "La situation et les enjeux du client",
+         "correct": true
+        },
+        {
+         "text": "La liste de tous vos services",
+         "correct": false
+        },
+        {
+         "text": "L'historique de votre entreprise",
+         "correct": false
+        },
+        {
+         "text": "Le prix",
+         "correct": false
+        }
+       ],
+       "explanation": "Montrez d'abord que vous avez compris.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "relire",
+     "title": "Relire et se constituer une bibliothèque",
+     "file": "06-relire-et-se-constituer-une-bibliotheque.md",
+     "objective": "Relire efficacement et réutiliser ses contenus.",
+     "duration_minutes": 14,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle est la source d'erreurs la plus fréquente dans les offres ?",
+       "options": [
+        {
+         "text": "Le copier-coller d'un ancien document",
+         "correct": true
+        },
+        {
+         "text": "L'usage d'un correcteur orthographique",
+         "correct": false
+        },
+        {
+         "text": "La relecture par un collègue",
+         "correct": false
+        },
+        {
+         "text": "Les titres informatifs",
+         "correct": false
+        }
+       ],
+       "explanation": "Un nom d'ancien client peut subsister.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Rapports, appels d'offres et propositions",
+ "summary": "Rédigez des documents professionnels qui informent et convainquent : écrire pour un lecteur pressé, produire des rapports orientés résultats, analyser un appel d'offres, construire une offre conforme et une proposition commerciale.",
+ "audience": "pme",
+ "parcours": "organisations",
+ "level": "intermediaire",
+ "duration_minutes": 85,
+ "position": 18,
+ "prerequisites": "Le cours « Bien formuler ses demandes à l'IA » est conseillé.",
+ "description": "Rapports aux bailleurs, réponses aux appels d'offres, propositions commerciales : ces documents décident souvent d'un financement ou d'un contrat. Leur qualité et leur conformité sont essentielles.\n\nCe cours vous apprend à écrire pour être lu, à rédiger des rapports qui mettent en avant les résultats, à analyser un dossier d'appel d'offres, à construire une offre technique et financière conforme et convaincante, à rédiger une proposition commerciale personnalisée et à organiser une bibliothèque de contenus réutilisables. L'IA vous aide à analyser, rédiger et relire, avec des vérifications rigoureuses.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Quelles questions se poser avant d'écrire un document professionnel ?",
+    "options": [
+     {
+      "text": "Qui va lire ?",
+      "correct": true
+     },
+     {
+      "text": "Que doit-il retenir ?",
+      "correct": true
+     },
+     {
+      "text": "Que doit-il faire après ?",
+      "correct": true
+     },
+     {
+      "text": "Combien de pages puis-je écrire ?",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Quelle phrase est la plus claire ?",
+    "options": [
+     {
+      "text": "« L'équipe a formé 200 agents. »",
+      "correct": true
+     },
+     {
+      "text": "« Il a été procédé à la formation d'un nombre important d'agents par l'équipe. »",
+      "correct": false
+     },
+     {
+      "text": "« De nombreux agents ont été formés. »",
+      "correct": false
+     },
+     {
+      "text": "« Une formation a eu lieu. »",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que doit contenir le résumé d'un rapport d'activité ?",
+    "options": [
+     {
+      "text": "Les principaux résultats, les difficultés majeures et les décisions attendues",
+      "correct": true
+     },
+     {
+      "text": "La liste de toutes les activités",
+      "correct": false
+     },
+     {
+      "text": "Les CV de l'équipe",
+      "correct": false
+     },
+     {
+      "text": "Les annexes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un bailleur impose un modèle de rapport. Que faire ?",
+    "options": [
+     {
+      "text": "Le respecter à la lettre",
+      "correct": true
+     },
+     {
+      "text": "Utiliser son propre modèle",
+      "correct": false
+     },
+     {
+      "text": "Ignorer les indicateurs demandés",
+      "correct": false
+     },
+     {
+      "text": "Envoyer un rapport plus court",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles sont les trois listes à établir en analysant un appel d'offres ?",
+    "options": [
+     {
+      "text": "Les exigences éliminatoires",
+      "correct": true
+     },
+     {
+      "text": "Les critères d'évaluation",
+      "correct": true
+     },
+     {
+      "text": "Les questions à poser",
+      "correct": true
+     },
+     {
+      "text": "Les vacances de l'équipe",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Vous ne remplissez pas seul les conditions d'expérience d'un appel d'offres. Quelle solution peut exister ?",
+    "options": [
+     {
+      "text": "Former un groupement avec un partenaire",
+      "correct": true
+     },
+     {
+      "text": "Inventer des références",
+      "correct": false
+     },
+     {
+      "text": "Répondre quand même sans rien dire",
+      "correct": false
+     },
+     {
+      "text": "Modifier le dossier d'appel d'offres",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Par quoi commencer la préparation d'une offre ?",
+    "options": [
+     {
+      "text": "Les documents administratifs, qui demandent parfois des démarches longues",
+      "correct": true
+     },
+     {
+      "text": "La mise en page",
+      "correct": false
+     },
+     {
+      "text": "Le choix de la police",
+      "correct": false
+     },
+     {
+      "text": "La lettre de remerciement",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : on peut ajouter une référence fictive pour renforcer une offre.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Quand déposer une offre ?",
+    "options": [
+     {
+      "text": "En avance, après une vérification complète",
+      "correct": true
+     },
+     {
+      "text": "À la dernière minute",
+      "correct": false
+     },
+     {
+      "text": "Quelques heures après la date limite",
+      "correct": false
+     },
+     {
+      "text": "Sans vérification pour gagner du temps",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Pourquoi proposer trois options dans une proposition commerciale ?",
+    "options": [
+     {
+      "text": "Pour aider le client à décider et adapter l'offre au budget sans baisser ses prix",
+      "correct": true
+     },
+     {
+      "text": "Pour embrouiller le client",
+      "correct": false
+     },
+     {
+      "text": "Pour allonger le document",
+      "correct": false
+     },
+     {
+      "text": "C'est obligatoire",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Comment utiliser l'IA pour relire un document ?",
+    "options": [
+     {
+      "text": "Lui demander de lister les problèmes, puis vérifier chacun soi-même",
+      "correct": true
+     },
+     {
+      "text": "Accepter toutes ses modifications sans les lire",
+      "correct": false
+     },
+     {
+      "text": "Lui demander de réécrire tout le document sans vérifier",
+      "correct": false
+     },
+     {
+      "text": "Ne jamais l'utiliser",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que contient une bibliothèque de contenus réutilisables ?",
+    "options": [
+     {
+      "text": "La présentation de l'organisation, les CV, les références et les documents administratifs à jour",
+      "correct": true
+     },
+     {
+      "text": "Les mots de passe de l'équipe",
+      "correct": false
+     },
+     {
+      "text": "Les offres des concurrents",
+      "correct": false
+     },
+     {
+      "text": "Rien d'utile",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

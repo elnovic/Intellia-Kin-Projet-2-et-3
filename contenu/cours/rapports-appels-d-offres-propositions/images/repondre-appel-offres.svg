@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="300" fill="#F8FAFC"/>
+<text x="30" y="45" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">Répondre à un appel d'offres</text>
+<rect x="30" y="75" width="132" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="62" cy="108" r="17" fill="#0066FF"/><text x="62" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">1</text>
+<text x="48" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Analyser</text>
+<text x="48" y="208" font-size="13.5" fill="#4A5568">exigences et</text>
+<text x="48" y="227" font-size="13.5" fill="#4A5568">critères</text>
+<path d="M166 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="192" y="75" width="132" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="224" cy="108" r="17" fill="#0066FF"/><text x="224" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">2</text>
+<text x="210" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Décider</text>
+<text x="210" y="208" font-size="13.5" fill="#4A5568">y aller ou non</text>
+<path d="M327 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="353" y="75" width="132" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="385" cy="108" r="17" fill="#0066FF"/><text x="385" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">3</text>
+<text x="371" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Planifier</text>
+<text x="371" y="208" font-size="13.5" fill="#4A5568">tâches et</text>
+<text x="371" y="227" font-size="13.5" fill="#4A5568">échéances</text>
+<path d="M489 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="515" y="75" width="132" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="547" cy="108" r="17" fill="#0066FF"/><text x="547" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">4</text>
+<text x="533" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Rédiger</text>
+<text x="533" y="208" font-size="13.5" fill="#4A5568">offre</text>
+<text x="533" y="227" font-size="13.5" fill="#4A5568">technique et</text>
+<text x="533" y="246" font-size="13.5" fill="#4A5568">financière</text>
+<path d="M651 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="677" y="75" width="132" height="190" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<circle cx="709" cy="108" r="17" fill="#0066FF"/><text x="709" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">5</text>
+<text x="695" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Vérifier</text>
+<text x="695" y="208" font-size="13.5" fill="#4A5568">conformité et</text>
+<text x="695" y="227" font-size="13.5" fill="#4A5568">relecture</text>
+<path d="M812 170 h20 m-7 -6 l7 6 l-7 6" stroke="#0066FF" stroke-width="2.5" fill="none"/>
+<rect x="838" y="75" width="132" height="190" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<circle cx="870" cy="108" r="17" fill="#00C9A7"/><text x="870" y="114" text-anchor="middle" fill="#fff" font-weight="700" font-size="16">6</text>
+<text x="856" y="155" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Déposer</text>
+<text x="856" y="208" font-size="13.5" fill="#4A5568">avant la date</text>
+<text x="856" y="227" font-size="13.5" fill="#4A5568">limite</text>
+</svg>

@@ -1,0 +1,569 @@
+{
+ "slug": "creer-des-assistants-et-agents-ia-sans-coder",
+ "format": "self_paced",
+ "objectives": [
+  "Distinguer assistant personnalisé et agent",
+  "Concevoir un assistant avec une mission précise",
+  "Rédiger des instructions complètes et robustes",
+  "Tester un assistant avant de le déployer",
+  "Encadrer les agents avec des principes de sécurité",
+  "Déployer, suivre et mettre à jour un assistant"
+ ],
+ "skills": [
+  "Concevoir des assistants IA personnalisés",
+  "Rédiger des instructions pour une IA",
+  "Encadrer l'usage d'agents IA"
+ ],
+ "modules": [
+  {
+   "title": "Concevoir",
+   "lessons": [
+    {
+     "key": "assistants",
+     "title": "Assistants et agents",
+     "file": "01-assistants-et-agents.md",
+     "objective": "Comprendre la différence entre assistant et agent.",
+     "duration_minutes": 14,
+     "is_preview": true,
+     "quiz": [
+      {
+       "prompt": "Quelle est la principale différence entre un assistant et un agent ?",
+       "options": [
+        {
+         "text": "L'agent agit dans des applications, l'assistant répond",
+         "correct": true
+        },
+        {
+         "text": "L'assistant est toujours payant",
+         "correct": false
+        },
+        {
+         "text": "L'agent ne peut pas utiliser de documents",
+         "correct": false
+        },
+        {
+         "text": "Il n'y a aucune différence",
+         "correct": false
+        }
+       ],
+       "explanation": "Une erreur d'agent devient une action réelle.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "concevoir",
+     "title": "Concevoir son assistant",
+     "file": "02-concevoir-son-assistant.md",
+     "objective": "Définir la mission, les utilisateurs et les connaissances.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Pourquoi préciser ce que l'assistant ne fait pas ?",
+       "options": [
+        {
+         "text": "Pour éviter qu'il sorte de sa mission ou prenne des décisions qui ne lui reviennent pas",
+         "correct": true
+        },
+        {
+         "text": "Pour le rendre moins utile",
+         "correct": false
+        },
+        {
+         "text": "Ce n'est pas nécessaire",
+         "correct": false
+        },
+        {
+         "text": "Pour allonger les instructions",
+         "correct": false
+        }
+       ],
+       "explanation": "Un assistant fourre-tout fait tout mal.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Quels documents fournir à un assistant ?",
+       "options": [
+        {
+         "text": "Des documents à jour, validés et sans données confidentielles inutiles",
+         "correct": true
+        },
+        {
+         "text": "Toutes les versions de tous les documents",
+         "correct": false
+        },
+        {
+         "text": "Les fichiers de salaires",
+         "correct": false
+        },
+        {
+         "text": "Des documents non relus",
+         "correct": false
+        }
+       ],
+       "explanation": "Une ancienne procédure donne de mauvaises réponses.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "instructions",
+     "title": "Écrire les instructions",
+     "file": "03-ecrire-les-instructions.md",
+     "objective": "Rédiger des instructions complètes.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quelle est la règle la plus importante pour un assistant fondé sur des documents ?",
+       "options": [
+        {
+         "text": "Ne jamais inventer et dire clairement quand il ne sait pas",
+         "correct": true
+        },
+        {
+         "text": "Répondre à toutes les questions coûte que coûte",
+         "correct": false
+        },
+        {
+         "text": "Utiliser beaucoup d'émojis",
+         "correct": false
+        },
+        {
+         "text": "Répondre le plus longuement possible",
+         "correct": false
+        }
+       ],
+       "explanation": "Une procédure inventée peut causer de graves erreurs.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Tester, encadrer, déployer",
+   "lessons": [
+    {
+     "key": "tester",
+     "title": "Tester avant de déployer",
+     "file": "04-tester-avant-de-deployer.md",
+     "objective": "Construire un jeu de tests et corriger.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quels types de questions inclure dans un jeu de tests ?",
+       "options": [
+        {
+         "text": "Des questions sans réponse dans les documents",
+         "correct": true
+        },
+        {
+         "text": "Des demandes interdites",
+         "correct": true
+        },
+        {
+         "text": "Des tentatives de contournement",
+         "correct": true
+        },
+        {
+         "text": "Uniquement des questions faciles",
+         "correct": false
+        }
+       ],
+       "explanation": "Les cas difficiles révèlent les comportements dangereux.",
+       "kind": "multiple"
+      },
+      {
+       "prompt": "Après une correction, que faut-il faire ?",
+       "options": [
+        {
+         "text": "Refaire passer tous les tests",
+         "correct": true
+        },
+        {
+         "text": "Tester uniquement la question corrigée",
+         "correct": false
+        },
+        {
+         "text": "Déployer immédiatement",
+         "correct": false
+        },
+        {
+         "text": "Supprimer le jeu de tests",
+         "correct": false
+        }
+       ],
+       "explanation": "Une correction peut en dérégler une autre.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "agents",
+     "title": "Les agents qui agissent",
+     "file": "05-les-agents-qui-agissent.md",
+     "objective": "Appliquer les principes de sécurité aux agents.",
+     "duration_minutes": 16,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Qu'est-ce que le principe du moindre privilège ?",
+       "options": [
+        {
+         "text": "Donner à l'agent uniquement les accès strictement nécessaires",
+         "correct": true
+        },
+        {
+         "text": "Donner tous les accès pour gagner du temps",
+         "correct": false
+        },
+        {
+         "text": "Ne donner aucun accès à personne",
+         "correct": false
+        },
+        {
+         "text": "Payer le moins possible",
+         "correct": false
+        }
+       ],
+       "explanation": "Un agent de veille n'a pas besoin de la comptabilité.",
+       "kind": "single"
+      },
+      {
+       "prompt": "Qu'est-ce qu'une injection d'instructions ?",
+       "options": [
+        {
+         "text": "Des instructions cachées dans un contenu externe pour détourner l'agent",
+         "correct": true
+        },
+        {
+         "text": "Une mise à jour du logiciel",
+         "correct": false
+        },
+        {
+         "text": "Un vaccin informatique",
+         "correct": false
+        },
+        {
+         "text": "Une formation des employés",
+         "correct": false
+        }
+       ],
+       "explanation": "Raison de plus pour limiter les accès et valider les actions sensibles.",
+       "kind": "single"
+      }
+     ]
+    },
+    {
+     "key": "deployer",
+     "title": "Déployer et faire vivre",
+     "file": "06-deployer-et-faire-vivre.md",
+     "objective": "Lancer, suivre et mettre à jour un assistant.",
+     "duration_minutes": 15,
+     "is_preview": false,
+     "quiz": [
+      {
+       "prompt": "Quand mettre à jour les documents d'un assistant ?",
+       "options": [
+        {
+         "text": "Le jour même où une procédure, un prix ou une règle change",
+         "correct": true
+        },
+        {
+         "text": "Une fois par an",
+         "correct": false
+        },
+        {
+         "text": "Jamais",
+         "correct": false
+        },
+        {
+         "text": "Quand un client se plaint",
+         "correct": false
+        }
+       ],
+       "explanation": "Un assistant fondé sur des documents dépassés devient dangereux.",
+       "kind": "single"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "trainer": "Équipe pédagogique Intellia Kin",
+ "cover_image": "images/couverture.svg",
+ "title": "Créer des assistants et agents IA sans coder",
+ "summary": "Concevez des assistants IA au service de votre équipe : définir une mission, écrire des instructions solides, tester rigoureusement, encadrer les agents qui agissent, déployer et faire vivre vos outils.",
+ "audience": "pme",
+ "parcours": "organisations",
+ "level": "avance",
+ "duration_minutes": 90,
+ "position": 19,
+ "prerequisites": "Le cours « Bien formuler ses demandes à l'IA » est indispensable ; « Automatiser les tâches administratives » est conseillé.",
+ "description": "Il est désormais possible de créer, sans programmer, des assistants IA qui répondent aux questions de vos équipes ou de vos clients à partir de vos propres documents, et des agents capables d'enchaîner des tâches.\n\nCe cours vous apprend à concevoir un assistant utile, à rédiger des instructions précises, à le tester avant de le déployer, à comprendre les agents et leurs risques, à appliquer les principes de sécurité et à faire vivre vos outils dans la durée. Les principes enseignés restent valables quel que soit l'outil choisi.",
+ "exam": {
+  "pass_score": 70,
+  "distinction_score": 90,
+  "questions": [
+   {
+    "prompt": "Qu'a permis l'assistant créé par la responsable des opérations ?",
+    "options": [
+     {
+      "text": "Répondre aux questions des agents à partir du manuel, en citant la page",
+      "correct": true
+     },
+     {
+      "text": "Accorder automatiquement les prêts",
+      "correct": false
+     },
+     {
+      "text": "Remplacer les agents de crédit",
+      "correct": false
+     },
+     {
+      "text": "Supprimer le manuel",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quels éléments composent un assistant personnalisé ?",
+    "options": [
+     {
+      "text": "Des instructions",
+      "correct": true
+     },
+     {
+      "text": "Des connaissances (documents de référence)",
+      "correct": true
+     },
+     {
+      "text": "Éventuellement des capacités supplémentaires",
+      "correct": true
+     },
+     {
+      "text": "Le salaire des utilisateurs",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Combien de questions réelles rassembler lors de la conception ?",
+    "options": [
+     {
+      "text": "Vingt à trente",
+      "correct": true
+     },
+     {
+      "text": "Une seule",
+      "correct": false
+     },
+     {
+      "text": "Aucune",
+      "correct": false
+     },
+     {
+      "text": "Mille",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quelles sections contiennent de bonnes instructions ?",
+    "options": [
+     {
+      "text": "Le rôle et la mission",
+      "correct": true
+     },
+     {
+      "text": "Les sources et le format",
+      "correct": true
+     },
+     {
+      "text": "Les limites et les cas difficiles",
+      "correct": true
+     },
+     {
+      "text": "La date de naissance du concepteur",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "Que doit faire l'assistant si la réponse n'est pas dans les documents ?",
+    "options": [
+     {
+      "text": "Le dire clairement et orienter vers le responsable",
+      "correct": true
+     },
+     {
+      "text": "Inventer une réponse plausible",
+      "correct": false
+     },
+     {
+      "text": "Ignorer la question",
+      "correct": false
+     },
+     {
+      "text": "Répondre au hasard",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Vrai ou faux : un assistant bien configuré ne peut jamais être contourné.",
+    "options": [
+     {
+      "text": "Vrai",
+      "correct": false
+     },
+     {
+      "text": "Faux",
+      "correct": true
+     }
+    ],
+    "kind": "true_false"
+   },
+   {
+    "prompt": "Quels comportements empêchent le déploiement d'un assistant ?",
+    "options": [
+     {
+      "text": "Il invente des réponses absentes des documents",
+      "correct": true
+     },
+     {
+      "text": "Il accepte des demandes interdites",
+      "correct": true
+     },
+     {
+      "text": "Il répond de façon concise",
+      "correct": false
+     },
+     {
+      "text": "Il cite ses sources",
+      "correct": false
+     }
+    ],
+    "kind": "multiple"
+   },
+   {
+    "prompt": "À quoi sert un pilote avant le déploiement général ?",
+    "options": [
+     {
+      "text": "Recueillir les retours d'un petit groupe et enrichir les tests avec de vraies questions",
+      "correct": true
+     },
+     {
+      "text": "Remplacer les tests",
+      "correct": false
+     },
+     {
+      "text": "Former tous les employés en même temps",
+      "correct": false
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Un agent prépare un e-mail à un client important. Que faire ?",
+    "options": [
+     {
+      "text": "Faire valider l'e-mail par un humain avant l'envoi",
+      "correct": true
+     },
+     {
+      "text": "Laisser l'agent l'envoyer sans contrôle",
+      "correct": false
+     },
+     {
+      "text": "Supprimer l'agent",
+      "correct": false
+     },
+     {
+      "text": "Envoyer l'e-mail à tous les clients",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Quel est le chemin d'adoption recommandé ?",
+    "options": [
+     {
+      "text": "Assistant qui répond, puis agent qui prépare, puis agent autonome sur des tâches à faible risque",
+      "correct": true
+     },
+     {
+      "text": "Agent autonome dès le premier jour",
+      "correct": false
+     },
+     {
+      "text": "Aucun outil IA",
+      "correct": false
+     },
+     {
+      "text": "Agent autonome sur les paiements",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Que doit savoir un client qui échange avec un assistant IA ?",
+    "options": [
+     {
+      "text": "Qu'il s'agit d'un assistant automatique et comment joindre un humain",
+      "correct": true
+     },
+     {
+      "text": "Rien",
+      "correct": false
+     },
+     {
+      "text": "Le nom du modèle d'IA uniquement",
+      "correct": false
+     },
+     {
+      "text": "Les instructions secrètes",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   },
+   {
+    "prompt": "Qui doit suivre un assistant après son lancement ?",
+    "options": [
+     {
+      "text": "Un responsable désigné qui recueille les retours, suit les indicateurs et met à jour les documents",
+      "correct": true
+     },
+     {
+      "text": "Personne",
+      "correct": false
+     },
+     {
+      "text": "Uniquement l'éditeur de l'outil",
+      "correct": false
+     },
+     {
+      "text": "Les clients",
+      "correct": false
+     }
+    ],
+    "kind": "single"
+   }
+  ]
+ }
+}

@@ -1,0 +1,138 @@
+title: Rapports, appels d'offres et propositions
+summary: Rédigez des documents professionnels qui informent et convainquent : écrire pour un lecteur pressé, produire des rapports orientés résultats, analyser un appel d'offres, construire une offre conforme et une proposition commerciale.
+audience: pme
+parcours: organisations
+level: intermediaire
+duration: 85
+position: 18
+prerequisites: Le cours « Bien formuler ses demandes à l'IA » est conseillé.
+description: Rapports aux bailleurs, réponses aux appels d'offres, propositions commerciales : ces documents décident souvent d'un financement ou d'un contrat. Leur qualité et leur conformité sont essentielles.
+description: Ce cours vous apprend à écrire pour être lu, à rédiger des rapports qui mettent en avant les résultats, à analyser un dossier d'appel d'offres, à construire une offre technique et financière conforme et convaincante, à rédiger une proposition commerciale personnalisée et à organiser une bibliothèque de contenus réutilisables. L'IA vous aide à analyser, rédiger et relire, avec des vérifications rigoureuses.
+objective: Écrire des documents clairs pour un lecteur pressé
+objective: Rédiger un rapport d'activité orienté résultats
+objective: Analyser un dossier d'appel d'offres et décider d'y répondre
+objective: Construire une offre technique et financière conforme
+objective: Rédiger une proposition commerciale personnalisée
+objective: Relire efficacement et constituer une bibliothèque de contenus
+skill: Rédiger des documents professionnels
+skill: Répondre à des appels d'offres
+skill: Rédiger des propositions commerciales
+module: Rapports et écriture professionnelle
+lesson: ecrire | Écrire pour être lu | 01-ecrire-pour-etre-lu.md | Écrire pour un lecteur pressé. | 13 | apercu
+? Où placer l'essentiel dans un document professionnel ?
++ Au début, dans un résumé
+- À la fin, comme une surprise
+- Dans les annexes
+- Nulle part
+> Le lecteur pressé lit d'abord la première page.
+? Que vérifier après une réécriture par l'IA ?
++ Que les faits, les chiffres et les nuances n'ont pas changé
+- Que le texte est plus long
+- Que le texte contient plus d'adjectifs
+- Rien
+> Comparez toujours avec l'original.
+lesson: rapport | Le rapport d'activité | 02-le-rapport-d-activite.md | Rédiger un rapport orienté résultats. | 14
+? Lequel est un résultat, et non une simple activité ?
++ 180 agricultrices appliquent les nouvelles techniques
+- 12 sessions de formation organisées
+- 3 000 affiches distribuées
+- Un logiciel installé
+> Le résultat dit ce qui a changé.
+? Vrai ou faux : il vaut mieux cacher les difficultés dans un rapport.
+- Vrai
++ Faux
+> Elles finissent toujours par être découvertes ; présentez-les avec les solutions.
+module: Appels d'offres et propositions
+lesson: appel-offres | Comprendre un appel d'offres | 03-comprendre-un-appel-d-offres.md | Analyser un dossier et décider d'y répondre. | 15
+? Pourquoi l'offre de la PME informatique a-t-elle été rejetée ?
++ Il manquait une pièce administrative obligatoire
+- Son offre technique était mauvaise
+- Son prix était trop bas
+- Elle était trop en avance
+> La conformité compte autant que la qualité.
+? Que faire de la liste des pièces obligatoires extraite par l'IA ?
++ La vérifier ligne par ligne dans le dossier original
+- La considérer comme complète
+- L'ignorer
+- L'envoyer à l'acheteur
+> L'IA peut oublier une exigence enfouie dans une annexe.
+lesson: offre | Construire une offre gagnante | 04-construire-une-offre-gagnante.md | Rédiger une offre conforme et convaincante. | 15
+? Dans quel ordre présenter l'offre technique ?
++ Dans l'ordre et avec les intitulés des critères d'évaluation
+- Dans l'ordre alphabétique
+- Au hasard
+- En commençant par le prix
+> L'évaluateur suit une grille.
+lesson: proposition | La proposition commerciale | 05-la-proposition-commerciale.md | Rédiger une proposition personnalisée. | 14
+? Par quoi commencer une proposition commerciale ?
++ La situation et les enjeux du client
+- La liste de tous vos services
+- L'historique de votre entreprise
+- Le prix
+> Montrez d'abord que vous avez compris.
+lesson: relire | Relire et se constituer une bibliothèque | 06-relire-et-se-constituer-une-bibliotheque.md | Relire efficacement et réutiliser ses contenus. | 14
+? Quelle est la source d'erreurs la plus fréquente dans les offres ?
++ Le copier-coller d'un ancien document
+- L'usage d'un correcteur orthographique
+- La relecture par un collègue
+- Les titres informatifs
+> Un nom d'ancien client peut subsister.
+exam:
+? Quelles questions se poser avant d'écrire un document professionnel ?
++ Qui va lire ?
++ Que doit-il retenir ?
++ Que doit-il faire après ?
+- Combien de pages puis-je écrire ?
+? Quelle phrase est la plus claire ?
++ « L'équipe a formé 200 agents. »
+- « Il a été procédé à la formation d'un nombre important d'agents par l'équipe. »
+- « De nombreux agents ont été formés. »
+- « Une formation a eu lieu. »
+? Que doit contenir le résumé d'un rapport d'activité ?
++ Les principaux résultats, les difficultés majeures et les décisions attendues
+- La liste de toutes les activités
+- Les CV de l'équipe
+- Les annexes
+? Un bailleur impose un modèle de rapport. Que faire ?
++ Le respecter à la lettre
+- Utiliser son propre modèle
+- Ignorer les indicateurs demandés
+- Envoyer un rapport plus court
+? Quelles sont les trois listes à établir en analysant un appel d'offres ?
++ Les exigences éliminatoires
++ Les critères d'évaluation
++ Les questions à poser
+- Les vacances de l'équipe
+? Vous ne remplissez pas seul les conditions d'expérience d'un appel d'offres. Quelle solution peut exister ?
++ Former un groupement avec un partenaire
+- Inventer des références
+- Répondre quand même sans rien dire
+- Modifier le dossier d'appel d'offres
+? Par quoi commencer la préparation d'une offre ?
++ Les documents administratifs, qui demandent parfois des démarches longues
+- La mise en page
+- Le choix de la police
+- La lettre de remerciement
+? Vrai ou faux : on peut ajouter une référence fictive pour renforcer une offre.
+- Vrai
++ Faux
+? Quand déposer une offre ?
++ En avance, après une vérification complète
+- À la dernière minute
+- Quelques heures après la date limite
+- Sans vérification pour gagner du temps
+? Pourquoi proposer trois options dans une proposition commerciale ?
++ Pour aider le client à décider et adapter l'offre au budget sans baisser ses prix
+- Pour embrouiller le client
+- Pour allonger le document
+- C'est obligatoire
+? Comment utiliser l'IA pour relire un document ?
++ Lui demander de lister les problèmes, puis vérifier chacun soi-même
+- Accepter toutes ses modifications sans les lire
+- Lui demander de réécrire tout le document sans vérifier
+- Ne jamais l'utiliser
+? Que contient une bibliothèque de contenus réutilisables ?
++ La présentation de l'organisation, les CV, les références et les documents administratifs à jour
+- Les mots de passe de l'équipe
+- Les offres des concurrents
+- Rien d'utile
