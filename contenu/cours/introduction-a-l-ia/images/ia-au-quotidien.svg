@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Inter, Arial, sans-serif">
+  <rect width="900" height="420" fill="#F8FAFC"/>
+  <rect x="360" y="30" width="180" height="360" rx="26" fill="#0A2540"/>
+  <rect x="374" y="62" width="152" height="296" rx="8" fill="#FFFFFF"/>
+  <circle cx="450" cy="46" r="4" fill="#5B6B82"/>
+  <g font-size="13" fill="#1A202C">
+    <rect x="388" y="80" width="124" height="44" rx="8" fill="#EEF4FF"/><text x="398" y="107">Clavier prédictif</text>
+    <rect x="388" y="134" width="124" height="44" rx="8" fill="#E6FAF6"/><text x="398" y="161">Traduction</text>
+    <rect x="388" y="188" width="124" height="44" rx="8" fill="#EEF4FF"/><text x="398" y="215">Itinéraire</text>
+    <rect x="388" y="242" width="124" height="44" rx="8" fill="#E6FAF6"/><text x="398" y="269">Anti-arnaque</text>
+    <rect x="388" y="296" width="124" height="44" rx="8" fill="#EEF4FF"/><text x="398" y="323">Recommandations</text>
+  </g>
+  <g font-size="15" fill="#1A202C">
+    <g stroke="#0066FF" stroke-width="2" fill="none"><path d="M360 102 H250"/><path d="M360 210 H250"/><path d="M360 318 H250"/><path d="M540 156 H650"/><path d="M540 264 H650"/></g>
+    <g fill="#0066FF"><circle cx="250" cy="102" r="5"/><circle cx="250" cy="210" r="5"/><circle cx="250" cy="318" r="5"/></g>
+    <g fill="#00C9A7"><circle cx="650" cy="156" r="5"/><circle cx="650" cy="264" r="5"/></g>
+    <text x="30" y="98" font-weight="600">Il devine le mot suivant</text><text x="30" y="118" fill="#4A5568" font-size="13">appris sur des millions de phrases</text>
+    <text x="30" y="206" font-weight="600">Il prévoit les embouteillages</text><text x="30" y="226" fill="#4A5568" font-size="13">à partir des trajets d'autres usagers</text>
+    <text x="30" y="314" font-weight="600">Il vous propose des vidéos</text><text x="30" y="334" fill="#4A5568" font-size="13">selon ce que vous avez regardé</text>
+    <text x="665" y="152" font-weight="600">Il traduit un message</text><text x="665" y="172" fill="#4A5568" font-size="13">en quelques secondes</text>
+    <text x="665" y="260" font-weight="600">Il bloque un SMS suspect</text><text x="665" y="280" fill="#4A5568" font-size="13">ou une transaction anormale</text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+# Environnement de développement : base PostgreSQL et API.
+#   docker compose up --build
+# Interface : http://localhost:8080 · API : http://localhost:8000 (documentation sur /docs)
+# Compte administrateur local : admin@intelliakin.com / admin-local-123
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: intellia
+      POSTGRES_PASSWORD: intellia
+      POSTGRES_DB: intellia
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U intellia -d intellia"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ./backend
+    environment:
+      IK_ENVIRONMENT: development
+      IK_DATABASE_URL: postgresql+psycopg://intellia:intellia@db:5432/intellia
+      IK_SECRET_KEY: cle-de-developpement-a-remplacer-avant-la-production
+      IK_CONTENT_DIR: /srv/contenu
+      IK_BOOTSTRAP_ADMIN_EMAIL: admin@intelliakin.com
+      IK_BOOTSTRAP_ADMIN_PASSWORD: admin-local-123
+      IK_CORS_ORIGINS: '["http://localhost:8080"]'
+    volumes:
+      - ./contenu:/srv/contenu:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    # Interface servie telle quelle : http://localhost:8080
+    image: python:3.12-slim
+    working_dir: /web
+    command: python -m http.server 8080
+    volumes:
+      - ./web:/web:ro
+    ports:
+      - "8080:8080"
+
+volumes:
+  db-data:

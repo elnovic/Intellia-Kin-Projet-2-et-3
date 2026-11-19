@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="340" fill="#F8FAFC"/>
+<rect x="30" y="30" width="290" height="280" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="30" y="30" width="290" height="8" rx="4" fill="#0066FF"/>
+<text x="54" y="85" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0A2540">Reconnaître et prédire</text>
+<text x="54" y="115" font-size="15" fill="#4A5568">Elle classe ou estime.</text>
+<circle cx="62" cy="160" r="5" fill="#0066FF"/><text x="78" y="165" font-size="16" fill="#1A202C">Repérer une fraude</text>
+<circle cx="62" cy="205" r="5" fill="#0066FF"/><text x="78" y="210" font-size="16" fill="#1A202C">Lire un document scanné</text>
+<circle cx="62" cy="250" r="5" fill="#0066FF"/><text x="78" y="255" font-size="16" fill="#1A202C">Prévoir des ventes</text>
+<rect x="355" y="30" width="290" height="280" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="355" y="30" width="290" height="8" rx="4" fill="#0A2540"/>
+<text x="379" y="85" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0A2540">Recommander</text>
+<text x="379" y="115" font-size="15" fill="#4A5568">Elle choisit pour vous.</text>
+<circle cx="387" cy="160" r="5" fill="#0A2540"/><text x="403" y="165" font-size="16" fill="#1A202C">Vidéos et musiques</text>
+<circle cx="387" cy="205" r="5" fill="#0A2540"/><text x="403" y="210" font-size="16" fill="#1A202C">Produits en ligne</text>
+<circle cx="387" cy="250" r="5" fill="#0A2540"/><text x="403" y="255" font-size="16" fill="#1A202C">Contacts suggérés</text>
+<rect x="680" y="30" width="290" height="280" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="680" y="30" width="290" height="8" rx="4" fill="#00C9A7"/>
+<text x="704" y="85" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0A2540">Générer</text>
+<text x="704" y="115" font-size="15" fill="#4A5568">Elle crée du contenu nouveau.</text>
+<circle cx="712" cy="160" r="5" fill="#00C9A7"/><text x="728" y="165" font-size="16" fill="#1A202C">Textes et e-mails</text>
+<circle cx="712" cy="205" r="5" fill="#00C9A7"/><text x="728" y="210" font-size="16" fill="#1A202C">Images et voix</text>
+<circle cx="712" cy="250" r="5" fill="#00C9A7"/><text x="728" y="255" font-size="16" fill="#1A202C">Résumés et traductions</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 330" font-family="Inter, Arial, sans-serif">
+<rect width="1000" height="330" fill="#F8FAFC"/>
+<text x="30" y="45" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0A2540">Un métier = des dizaines de tâches</text>
+<rect x="30" y="70" width="290" height="230" rx="14" fill="#FFFFFF" stroke="#00C9A7" stroke-width="2"/>
+<text x="52" y="110" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#00806B">Ce que l'IA fait déjà bien</text>
+<rect x="52" y="136" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="66" y="158" font-size="15" fill="#1A202C">Rédiger un premier jet</text>
+<rect x="52" y="181" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="66" y="203" font-size="15" fill="#1A202C">Résumer un long document</text>
+<rect x="52" y="226" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="66" y="248" font-size="15" fill="#1A202C">Trier des demandes</text>
+<rect x="355" y="70" width="290" height="230" rx="14" fill="#FFFFFF" stroke="#0066FF" stroke-width="2"/>
+<text x="377" y="110" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0066FF">Ce que l'IA accélère</text>
+<rect x="377" y="136" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="391" y="158" font-size="15" fill="#1A202C">Préparer une analyse</text>
+<rect x="377" y="181" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="391" y="203" font-size="15" fill="#1A202C">Créer une présentation</text>
+<rect x="377" y="226" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="391" y="248" font-size="15" fill="#1A202C">Répondre aux clients</text>
+<rect x="680" y="70" width="290" height="230" rx="14" fill="#FFFFFF" stroke="#0A2540" stroke-width="2"/>
+<text x="702" y="110" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0A2540">Ce qui reste humain</text>
+<rect x="702" y="136" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="716" y="158" font-size="15" fill="#1A202C">Décider et assumer</text>
+<rect x="702" y="181" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="716" y="203" font-size="15" fill="#1A202C">Négocier, rassurer</text>
+<rect x="702" y="226" width="246" height="34" rx="8" fill="#F1F5F9"/><text x="716" y="248" font-size="15" fill="#1A202C">Connaître le terrain</text>
+</svg>

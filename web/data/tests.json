@@ -1,0 +1,422 @@
+[
+ {
+  "slug": "logique",
+  "title": "Raisonnement logique",
+  "description": "Suites, déductions et calculs rapides, comme dans les tests d'entrée des grandes entreprises.",
+  "duration_minutes": 15,
+  "questions": [
+   {
+    "prompt": "Complétez la suite : 2, 6, 12, 20, 30, …",
+    "options": [
+     "40",
+     "42",
+     "44",
+     "36"
+    ],
+    "answer": 1,
+    "explanation": "Les écarts augmentent de 2 à chaque fois : +4, +6, +8, +10, puis +12. 30 + 12 = 42."
+   },
+   {
+    "prompt": "Complétez la suite : 3, 9, 27, 81, …",
+    "options": [
+     "162",
+     "243",
+     "324",
+     "108"
+    ],
+    "answer": 1,
+    "explanation": "Chaque nombre est multiplié par 3 : 81 × 3 = 243."
+   },
+   {
+    "prompt": "Tous les comptables sont rigoureux. Paul est comptable. Que peut-on conclure ?",
+    "options": [
+     "Paul est rigoureux",
+     "Paul n'est pas rigoureux",
+     "Toutes les personnes rigoureuses sont comptables",
+     "On ne peut rien conclure"
+    ],
+    "answer": 0,
+    "explanation": "Si la règle s'applique à tous les comptables, elle s'applique à Paul. L'inverse (tous les rigoureux sont comptables) n'est pas démontré."
+   },
+   {
+    "prompt": "Un article coûte 80 USD. Il est soldé à −25 %. Quel est son nouveau prix ?",
+    "options": [
+     "55 USD",
+     "60 USD",
+     "65 USD",
+     "70 USD"
+    ],
+    "answer": 1,
+    "explanation": "25 % de 80 = 20. 80 − 20 = 60 USD."
+   },
+   {
+    "prompt": "Complétez la suite de lettres : A, C, F, J, O, …",
+    "options": [
+     "T",
+     "U",
+     "V",
+     "S"
+    ],
+    "answer": 1,
+    "explanation": "On avance de 2, puis 3, 4, 5 lettres… puis 6 : O (15e lettre) + 6 = U (21e lettre)."
+   },
+   {
+    "prompt": "5 machines fabriquent 5 pièces en 5 minutes. Combien de minutes faut-il à 100 machines pour fabriquer 100 pièces ?",
+    "options": [
+     "1",
+     "5",
+     "20",
+     "100"
+    ],
+    "answer": 1,
+    "explanation": "Chaque machine fabrique une pièce en 5 minutes. 100 machines font donc 100 pièces en 5 minutes."
+   },
+   {
+    "prompt": "Un bus part à 14 h 45 et arrive à 18 h 10. Combien de temps dure le trajet ?",
+    "options": [
+     "3 h 25",
+     "3 h 35",
+     "4 h 25",
+     "3 h 15"
+    ],
+    "answer": 0,
+    "explanation": "De 14 h 45 à 17 h 45 : 3 h. De 17 h 45 à 18 h 10 : 25 min. Total : 3 h 25."
+   },
+   {
+    "prompt": "Quel est l'intrus ?",
+    "options": [
+     "Carré",
+     "Triangle",
+     "Cercle",
+     "Cube"
+    ],
+    "answer": 3,
+    "explanation": "Le cube est une forme en trois dimensions ; les autres sont des figures planes."
+   },
+   {
+    "prompt": "3 stylos coûtent 1 500 CDF. Combien coûtent 7 stylos ?",
+    "options": [
+     "3 000 CDF",
+     "3 500 CDF",
+     "4 500 CDF",
+     "4 000 CDF"
+    ],
+    "answer": 1,
+    "explanation": "Un stylo coûte 1 500 ÷ 3 = 500 CDF. 7 × 500 = 3 500 CDF."
+   },
+   {
+    "prompt": "Aminata est plus âgée que Joseph. Joseph est plus âgé que Kevin. Qui est le plus jeune ?",
+    "options": [
+     "Aminata",
+     "Joseph",
+     "Kevin",
+     "On ne peut pas savoir"
+    ],
+    "answer": 2,
+    "explanation": "Aminata > Joseph > Kevin : Kevin est le plus jeune."
+   },
+   {
+    "prompt": "Complétez la suite : 1, 1, 2, 3, 5, 8, …",
+    "options": [
+     "11",
+     "12",
+     "13",
+     "15"
+    ],
+    "answer": 2,
+    "explanation": "Chaque nombre est la somme des deux précédents : 5 + 8 = 13."
+   },
+   {
+    "prompt": "4 personnes terminent un travail en 6 jours. Combien de jours faut-il à 8 personnes travaillant au même rythme ?",
+    "options": [
+     "2",
+     "3",
+     "4",
+     "12"
+    ],
+    "answer": 1,
+    "explanation": "Deux fois plus de personnes : deux fois moins de temps, soit 3 jours."
+   }
+  ]
+ },
+ {
+  "slug": "francais",
+  "title": "Français professionnel",
+  "description": "Orthographe, grammaire et usages de la correspondance professionnelle.",
+  "duration_minutes": 12,
+  "questions": [
+   {
+    "prompt": "Quelle formule de politesse est correctement écrite ?",
+    "options": [
+     "Veuillez agréer, Madame, l'expression de mes salutations distinguées.",
+     "Veuillez agréez, Madame, l'expression de mes salutations distinguées.",
+     "Veuillez agréé, Madame, l'expression de mes salutations distinguées.",
+     "Veuillez agréer, Madame, l'expressions de mes salutations distinguées."
+    ],
+    "answer": 0,
+    "explanation": "Après « veuillez », le verbe reste à l'infinitif : « agréer »."
+   },
+   {
+    "prompt": "« Les documents que j'ai … hier sont sur votre bureau. »",
+    "options": [
+     "reçu",
+     "reçus",
+     "reçues",
+     "reçut"
+    ],
+    "answer": 1,
+    "explanation": "Avec l'auxiliaire avoir, le participe s'accorde avec le complément placé avant : « que » reprend « les documents » (masculin pluriel)."
+   },
+   {
+    "prompt": "Quelle phrase est correcte ?",
+    "options": [
+     "Quelque soit la décision, nous l'appliquerons.",
+     "Quelle que soit la décision, nous l'appliquerons.",
+     "Quelles que soit la décision, nous l'appliquerons.",
+     "Quel que soit la décision, nous l'appliquerons."
+    ],
+    "answer": 1,
+    "explanation": "Devant le verbe être, on écrit « quel que » en deux mots, accordé avec le sujet : « la décision » est féminin singulier."
+   },
+   {
+    "prompt": "Que signifie « pallier un manque » ?",
+    "options": [
+     "Y remédier, au moins en partie",
+     "L'aggraver",
+     "L'éviter de justesse",
+     "L'annoncer officiellement"
+    ],
+    "answer": 0,
+    "explanation": "Pallier, c'est atténuer ou compenser un problème. On écrit « pallier un manque », sans « à »."
+   },
+   {
+    "prompt": "« Nous … la réunion si le directeur était absent. »",
+    "options": [
+     "reporterons",
+     "reporterions",
+     "reportions",
+     "reporterez"
+    ],
+    "answer": 1,
+    "explanation": "Avec « si » suivi de l'imparfait, le verbe principal se met au conditionnel présent."
+   },
+   {
+    "prompt": "« Elles se sont … de la réussite du projet. »",
+    "options": [
+     "réjoui",
+     "réjouis",
+     "réjouies",
+     "réjouie"
+    ],
+    "answer": 2,
+    "explanation": "« Se réjouir » est toujours pronominal : le participe s'accorde avec le sujet « elles »."
+   },
+   {
+    "prompt": "Quelle formule convient pour commencer un e-mail formel à une personne que vous ne connaissez pas ?",
+    "options": [
+     "Salut,",
+     "Madame, Monsieur,",
+     "Coucou,",
+     "Cher ami,"
+    ],
+    "answer": 1,
+    "explanation": "« Madame, Monsieur, » est la formule neutre et respectueuse quand on ne connaît pas le destinataire."
+   },
+   {
+    "prompt": "Quel est le pluriel de « un compte rendu » ?",
+    "options": [
+     "des compte rendus",
+     "des comptes rendu",
+     "des comptes rendus",
+     "des comptes-rendu"
+    ],
+    "answer": 2,
+    "explanation": "Les deux mots s'accordent : des comptes rendus."
+   },
+   {
+    "prompt": "« Il faut que vous … ce rapport avant vendredi. »",
+    "options": [
+     "finissez",
+     "finissiez",
+     "finirez",
+     "finiriez"
+    ],
+    "answer": 1,
+    "explanation": "« Il faut que » est suivi du subjonctif : que vous finissiez."
+   },
+   {
+    "prompt": "Complétez : « Il … envoyé le rapport … la direction. »",
+    "options": [
+     "à … a",
+     "a … à",
+     "a … a",
+     "à … à"
+    ],
+    "answer": 1,
+    "explanation": "« a » est le verbe avoir (on peut dire « avait ») ; « à » est la préposition."
+   },
+   {
+    "prompt": "Quelle est l'abréviation française de « Monsieur » ?",
+    "options": [
+     "Mr",
+     "M.",
+     "Mr.",
+     "Mons."
+    ],
+    "answer": 1,
+    "explanation": "En français, on écrit « M. ». « Mr » est l'abréviation anglaise."
+   },
+   {
+    "prompt": "Quel mot est correctement orthographié ?",
+    "options": [
+     "développement",
+     "dévelopement",
+     "développment",
+     "dévellopement"
+    ],
+    "answer": 0,
+    "explanation": "Développement : deux « p », un seul « l »."
+   }
+  ]
+ },
+ {
+  "slug": "bureautique",
+  "title": "Excel et bureautique",
+  "description": "Les questions de base posées aux assistants, comptables et chargés de projet.",
+  "duration_minutes": 12,
+  "questions": [
+   {
+    "prompt": "Quelle formule calcule la somme des cellules A1 à A10 ?",
+    "options": [
+     "=SOMME(A1:A10)",
+     "=SOMME(A1;A10)",
+     "=ADD(A1:A10)",
+     "=TOTAL(A1-A10)"
+    ],
+    "answer": 0,
+    "explanation": "Les deux-points désignent une plage. « A1;A10 » n'additionnerait que les deux cellules A1 et A10."
+   },
+   {
+    "prompt": "Comment figer une référence de cellule pour qu'elle ne change pas quand on recopie la formule ?",
+    "options": [
+     "A1",
+     "$A$1",
+     "#A#1",
+     "&A&1"
+    ],
+    "answer": 1,
+    "explanation": "Le signe $ bloque la colonne et la ligne. La touche F4 l'ajoute automatiquement."
+   },
+   {
+    "prompt": "Quelle fonction calcule la moyenne dans Excel en français ?",
+    "options": [
+     "=MOY()",
+     "=MOYENNE()",
+     "=MEDIANE()",
+     "=AVG()"
+    ],
+    "answer": 1,
+    "explanation": "MOYENNE. MEDIANE renvoie la valeur du milieu, ce n'est pas la même chose."
+   },
+   {
+    "prompt": "La cellule B2 contient 48. Que renvoie =SI(B2>=50;\"Admis\";\"Ajourné\") ?",
+    "options": [
+     "Admis",
+     "Ajourné",
+     "48",
+     "Une erreur"
+    ],
+    "answer": 1,
+    "explanation": "48 est inférieur à 50 : la condition est fausse, Excel renvoie la seconde valeur."
+   },
+   {
+    "prompt": "Quel raccourci annule la dernière action ?",
+    "options": [
+     "Ctrl + Y",
+     "Ctrl + Z",
+     "Ctrl + X",
+     "Ctrl + A"
+    ],
+    "answer": 1,
+    "explanation": "Ctrl + Z annule. Ctrl + Y rétablit ce qui a été annulé."
+   },
+   {
+    "prompt": "Quelle fonction compte les cellules non vides d'une plage, qu'elles contiennent du texte ou des nombres ?",
+    "options": [
+     "NB",
+     "NBVAL",
+     "SOMME",
+     "NB.VIDE"
+    ],
+    "answer": 1,
+    "explanation": "NBVAL compte toutes les cellules non vides. NB ne compte que les nombres."
+   },
+   {
+    "prompt": "Quel outil résume un grand tableau par catégorie (par exemple les ventes par mois et par produit) ?",
+    "options": [
+     "Le tableau croisé dynamique",
+     "La mise en forme conditionnelle",
+     "Le correcteur orthographique",
+     "Le zoom"
+    ],
+    "answer": 0,
+    "explanation": "Le tableau croisé dynamique regroupe et totalise les données en quelques clics."
+   },
+   {
+    "prompt": "Que renvoie =ARRONDI(12,456;1) ?",
+    "options": [
+     "12",
+     "12,4",
+     "12,5",
+     "12,46"
+    ],
+    "answer": 2,
+    "explanation": "On arrondit à une décimale : 12,456 devient 12,5."
+   },
+   {
+    "prompt": "Une cellule affiche ######. Que se passe-t-il le plus souvent ?",
+    "options": [
+     "La colonne est trop étroite pour afficher la valeur",
+     "La formule contient une erreur de syntaxe",
+     "Le fichier est protégé",
+     "La cellule est vide"
+    ],
+    "answer": 0,
+    "explanation": "Élargissez la colonne : la valeur s'affichera."
+   },
+   {
+    "prompt": "À quoi sert RECHERCHEV ?",
+    "options": [
+     "Chercher une valeur dans la première colonne d'un tableau et renvoyer une valeur de la même ligne",
+     "Vérifier l'orthographe",
+     "Trier un tableau",
+     "Rechercher un fichier sur l'ordinateur"
+    ],
+    "answer": 0,
+    "explanation": "Exemple : retrouver le prix d'un produit à partir de son code."
+   },
+   {
+    "prompt": "Dans Word, que faut-il faire avant d'insérer une table des matières automatique ?",
+    "options": [
+     "Appliquer des styles de titre aux titres",
+     "Mettre les titres en gras",
+     "Numéroter les pages",
+     "Insérer des sauts de page"
+    ],
+    "answer": 0,
+    "explanation": "La table des matières se construit à partir des styles « Titre 1 », « Titre 2 », etc."
+   },
+   {
+    "prompt": "Dans PowerPoint, quel mode sert à projeter la présentation devant un public ?",
+    "options": [
+     "Le mode Diaporama",
+     "Le mode Plan",
+     "La trieuse de diapositives",
+     "Le mode Masque"
+    ],
+    "answer": 0,
+    "explanation": "Le mode Diaporama affiche les diapositives en plein écran (touche F5)."
+   }
+  ]
+ }
+]

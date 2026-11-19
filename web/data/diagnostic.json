@@ -1,0 +1,407 @@
+{
+ "questions": [
+  {
+   "prompt": "À quelle fréquence utilisez-vous un assistant IA (ChatGPT, Gemini, Copilot, Meta AI…) ?",
+   "options": [
+    {
+     "text": "Jamais",
+     "scores": {
+      "niveau": 0
+     }
+    },
+    {
+     "text": "J'ai essayé une ou deux fois",
+     "scores": {
+      "niveau": 1
+     }
+    },
+    {
+     "text": "Quelques fois par mois",
+     "scores": {
+      "niveau": 2
+     }
+    },
+    {
+     "text": "Plusieurs fois par semaine",
+     "scores": {
+      "niveau": 3
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Comment décririez-vous vos demandes à l'IA ?",
+   "options": [
+    {
+     "text": "Je ne sais pas trop quoi lui demander",
+     "scores": {
+      "niveau": 0
+     }
+    },
+    {
+     "text": "Des questions courtes, comme sur un moteur de recherche",
+     "scores": {
+      "niveau": 1
+     }
+    },
+    {
+     "text": "Je donne un peu de contexte",
+     "scores": {
+      "niveau": 2
+     }
+    },
+    {
+     "text": "Je précise le rôle, le contexte, le format et je corrige le tir",
+     "scores": {
+      "niveau": 3
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Quand l'IA vous donne une information, que faites-vous ?",
+   "options": [
+    {
+     "text": "Je la crois, c'est une machine",
+     "scores": {
+      "niveau": 0
+     }
+    },
+    {
+     "text": "Je la crois la plupart du temps",
+     "scores": {
+      "niveau": 1
+     }
+    },
+    {
+     "text": "Je vérifie quand c'est important",
+     "scores": {
+      "niveau": 2
+     }
+    },
+    {
+     "text": "Je vérifie les chiffres, les noms et les sources",
+     "scores": {
+      "niveau": 3
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Avez-vous déjà utilisé l'IA pour un vrai travail (rapport, CV, publication, analyse) ?",
+   "options": [
+    {
+     "text": "Non",
+     "scores": {
+      "niveau": 0
+     }
+    },
+    {
+     "text": "Une fois",
+     "scores": {
+      "niveau": 1
+     }
+    },
+    {
+     "text": "Plusieurs fois",
+     "scores": {
+      "niveau": 2
+     }
+    },
+    {
+     "text": "C'est devenu une habitude",
+     "scores": {
+      "niveau": 3
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Que savez-vous des informations à ne pas confier à une IA ?",
+   "options": [
+    {
+     "text": "Je n'y ai jamais pensé",
+     "scores": {
+      "niveau": 0
+     }
+    },
+    {
+     "text": "J'en ai entendu parler",
+     "scores": {
+      "niveau": 1
+     }
+    },
+    {
+     "text": "J'évite les données personnelles",
+     "scores": {
+      "niveau": 2
+     }
+    },
+    {
+     "text": "J'ai des règles claires, pour moi et mon équipe",
+     "scores": {
+      "niveau": 3
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Avez-vous déjà automatisé une tâche (formulaire, réponse automatique, tableau qui se remplit seul) ?",
+   "options": [
+    {
+     "text": "Non",
+     "scores": {
+      "niveau": 0
+     }
+    },
+    {
+     "text": "J'aimerais savoir le faire",
+     "scores": {
+      "niveau": 1,
+      "organisations": 1
+     }
+    },
+    {
+     "text": "Oui, une fois",
+     "scores": {
+      "niveau": 2,
+      "organisations": 1
+     }
+    },
+    {
+     "text": "Oui, régulièrement",
+     "scores": {
+      "niveau": 3,
+      "organisations": 2
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Quelle est votre situation actuelle ?",
+   "options": [
+    {
+     "text": "Étudiant ou jeune diplômé",
+     "scores": {
+      "carriere": 3
+     }
+    },
+    {
+     "text": "Salarié ou fonctionnaire",
+     "scores": {
+      "carriere": 1,
+      "organisations": 2
+     }
+    },
+    {
+     "text": "Entrepreneur ou porteur de projet",
+     "scores": {
+      "entrepreneuriat": 3
+     }
+    },
+    {
+     "text": "Dirigeant ou responsable d'équipe",
+     "scores": {
+      "organisations": 3
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Quel est votre objectif principal pour les six prochains mois ?",
+   "options": [
+    {
+     "text": "Trouver un emploi ou un stage",
+     "scores": {
+      "carriere": 3
+     }
+    },
+    {
+     "text": "Lancer ou développer mon activité",
+     "scores": {
+      "entrepreneuriat": 3
+     }
+    },
+    {
+     "text": "Gagner du temps dans mon travail",
+     "scores": {
+      "organisations": 2,
+      "carriere": 1
+     }
+    },
+    {
+     "text": "Faire adopter l'IA dans mon organisation",
+     "scores": {
+      "organisations": 3
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Quelle tâche aimeriez-vous le plus confier à l'IA ?",
+   "options": [
+    {
+     "text": "Mes candidatures et la préparation d'entretiens",
+     "scores": {
+      "carriere": 2
+     }
+    },
+    {
+     "text": "Mes publications et mes messages aux clients",
+     "scores": {
+      "entrepreneuriat": 2
+     }
+    },
+    {
+     "text": "Mes rapports, comptes rendus et courriers",
+     "scores": {
+      "organisations": 2,
+      "carriere": 1
+     }
+    },
+    {
+     "text": "L'analyse de mes chiffres",
+     "scores": {
+      "entrepreneuriat": 1,
+      "organisations": 2
+     }
+    }
+   ]
+  },
+  {
+   "prompt": "Combien de temps pouvez-vous consacrer à vous former chaque semaine ?",
+   "options": [
+    {
+     "text": "Moins de 30 minutes",
+     "scores": {}
+    },
+    {
+     "text": "30 minutes à 1 heure",
+     "scores": {}
+    },
+    {
+     "text": "1 à 3 heures",
+     "scores": {}
+    },
+    {
+     "text": "Plus de 3 heures",
+     "scores": {}
+    }
+   ]
+  }
+ ],
+ "levels": [
+  {
+   "max": 5,
+   "title": "Découverte",
+   "text": "Vous débutez avec l'IA : c'est le meilleur moment pour prendre de bonnes habitudes.",
+   "courses": [
+    {
+     "slug": "introduction-a-l-ia",
+     "title": "Introduction à l'IA : comprendre l'IA sans jargon"
+    },
+    {
+     "slug": "bien-formuler-ses-demandes-a-l-ia",
+     "title": "Bien formuler ses demandes à l'IA"
+    }
+   ]
+  },
+  {
+   "max": 11,
+   "title": "Pratique",
+   "text": "Vous utilisez déjà l'IA : apprenez à obtenir des résultats fiables et professionnels.",
+   "courses": [
+    {
+     "slug": "bien-formuler-ses-demandes-a-l-ia",
+     "title": "Bien formuler ses demandes à l'IA"
+    },
+    {
+     "slug": "verifier-ce-que-dit-l-ia",
+     "title": "Vérifier ce que dit l'IA"
+    }
+   ]
+  },
+  {
+   "max": 99,
+   "title": "Avancé",
+   "text": "Vous êtes à l'aise : passez à l'automatisation et aux usages à fort impact.",
+   "courses": [
+    {
+     "slug": "ia-confidentialite-et-ethique-au-travail",
+     "title": "IA, confidentialité et éthique au travail"
+    }
+   ]
+  }
+ ],
+ "recommendations": {
+  "carriere": {
+   "title": "Carrière",
+   "text": "Votre priorité : mettre l'IA au service de votre employabilité.",
+   "courses": [
+    {
+     "slug": "image-professionnelle-cv-linkedin-portfolio",
+     "title": "Construire son image professionnelle avec l'IA"
+    },
+    {
+     "slug": "reussir-entretiens-et-tests-de-recrutement",
+     "title": "Réussir ses entretiens et tests de recrutement avec l'IA"
+    },
+    {
+     "slug": "productivite-professionnelle-office-et-ia",
+     "title": "Productivité professionnelle : Word, Excel et PowerPoint augmentés par l'IA"
+    }
+   ],
+   "tools": [
+    "cv-lettre",
+    "tests-recrutement",
+    "bibliotheque-prompts"
+   ]
+  },
+  "entrepreneuriat": {
+   "title": "Entrepreneuriat",
+   "text": "Votre priorité : transformer votre idée en activité rentable, avec l'IA comme associée.",
+   "courses": [
+    {
+     "slug": "de-l-ia-a-un-business-rentable",
+     "title": "De l'IA à un business rentable"
+    },
+    {
+     "slug": "du-concept-au-plan-d-affaires",
+     "title": "Du concept au plan d'affaires avec l'IA"
+    },
+    {
+     "slug": "prix-marges-et-tresorerie",
+     "title": "Prix, marges et trésorerie : piloter ses finances avec l'IA"
+    }
+   ],
+   "tools": [
+    "plan-affaires",
+    "calculateur-prix-marge",
+    "bibliotheque-prompts"
+   ]
+  },
+  "organisations": {
+   "title": "Organisations",
+   "text": "Votre priorité : gagner du temps en équipe et réussir l'adoption de l'IA.",
+   "courses": [
+    {
+     "slug": "automatiser-les-taches-administratives",
+     "title": "Automatiser les tâches administratives avec l'IA et le no-code"
+    },
+    {
+     "slug": "rapports-appels-d-offres-propositions",
+     "title": "Rédiger rapports, appels d'offres et propositions avec l'IA"
+    },
+    {
+     "slug": "strategie-ia-adoption-en-organisation",
+     "title": "Stratégie IA : réussir l'adoption de l'IA dans son organisation"
+    }
+   ],
+   "tools": [
+    "assistant-redaction",
+    "bibliotheque-prompts",
+    "diagnostic-ia"
+   ]
+  }
+ }
+}

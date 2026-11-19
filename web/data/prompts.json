@@ -1,0 +1,146 @@
+[
+ {
+  "category": "Recherche d'emploi",
+  "title": "Adapter son CV à une offre",
+  "prompt": "Voici une offre d'emploi :\n[collez l'offre]\n\nEt voici mon CV :\n[collez votre CV]\n\nAgis comme un recruteur. Liste les 5 compétences les plus importantes de l'offre, indique celles qui apparaissent déjà dans mon CV, puis propose une nouvelle version de mon profil (3 lignes) et de mes expériences qui mette en avant ce que l'offre demande, sans rien inventer.",
+  "tip": "Gardez toujours vos vraies expériences : l'IA reformule, elle ne doit pas embellir."
+ },
+ {
+  "category": "Recherche d'emploi",
+  "title": "Préparer un entretien",
+  "prompt": "Je passe un entretien pour le poste de [poste] chez [entreprise], dans le secteur [secteur]. Pose-moi les 10 questions les plus probables, une par une. Après chacune de mes réponses, donne-moi une note sur 10, ce qui était bien, et une version améliorée de ma réponse.",
+  "tip": "Répondez à voix haute avant d'écrire : c'est plus proche de l'entretien réel."
+ },
+ {
+  "category": "Recherche d'emploi",
+  "title": "Message de relance après un entretien",
+  "prompt": "Rédige un court e-mail de remerciement et de relance, à envoyer à [nom du recruteur] deux jours après mon entretien pour le poste de [poste]. Rappelle en une phrase ce qui m'a motivé pendant l'échange : [détail marquant]. Ton professionnel et chaleureux, 120 mots maximum.",
+  "tip": ""
+ },
+ {
+  "category": "Recherche d'emploi",
+  "title": "Optimiser son profil LinkedIn",
+  "prompt": "Voici les informations de mon profil LinkedIn : [titre actuel, résumé, expériences]. Je vise des postes de [poste visé] en [pays ou ville]. Propose 3 titres de profil percutants (moins de 220 caractères), puis un résumé « Infos » de 150 mots à la première personne, avec les mots-clés que les recruteurs recherchent.",
+  "tip": ""
+ },
+ {
+  "category": "Entrepreneuriat",
+  "title": "Tester une idée d'entreprise",
+  "prompt": "J'ai une idée d'entreprise : [décrivez l'idée]. Mes clients cibles sont [clients] à [ville]. Joue le rôle d'un investisseur exigeant : pose-moi les 7 questions qui pourraient faire échouer ce projet, puis propose 3 façons de tester l'idée en moins de deux semaines avec moins de 100 USD.",
+  "tip": "Un test rapide sur le terrain vaut mieux qu'un long plan."
+ },
+ {
+  "category": "Entrepreneuriat",
+  "title": "Trouver un nom d'entreprise",
+  "prompt": "Propose 15 noms pour une entreprise de [activité] qui s'adresse à [clients]. Les noms doivent être courts, faciles à prononcer en français [et en lingala / swahili / wolof, si utile], et disponibles idéalement en nom de domaine. Classe-les en trois styles : sérieux, moderne, chaleureux.",
+  "tip": "Vérifiez ensuite la disponibilité du nom auprès du registre du commerce et sur les réseaux sociaux."
+ },
+ {
+  "category": "Entrepreneuriat",
+  "title": "Préparer un pitch de 2 minutes",
+  "prompt": "Aide-moi à préparer un pitch de 2 minutes pour présenter [projet] à [jury, banque, partenaire]. Structure : problème, solution, clients, modèle économique, ce que je demande. Ton confiant, phrases courtes, un chiffre marquant si j'en fournis : [chiffres].",
+  "tip": ""
+ },
+ {
+  "category": "Commerce et vente",
+  "title": "Publication pour les réseaux sociaux",
+  "prompt": "Rédige 3 versions d'une publication Facebook et Instagram pour présenter [produit ou service] à [clients]. Prix : [prix]. Livraison : [conditions]. Chaque version : une accroche forte, 3 avantages concrets, un appel à commander par WhatsApp au [numéro]. Ajoute 5 hashtags pertinents.",
+  "tip": ""
+ },
+ {
+  "category": "Commerce et vente",
+  "title": "Répondre à un client mécontent",
+  "prompt": "Un client m'a écrit ce message : [collez le message]. Rédige une réponse polie et rassurante, qui reconnaît le problème sans accuser personne, propose une solution concrète ([solution possible]) et garde le client. 100 mots maximum, ton chaleureux.",
+  "tip": ""
+ },
+ {
+  "category": "Commerce et vente",
+  "title": "Script de vente par téléphone ou WhatsApp",
+  "prompt": "Écris un script court pour présenter [offre] à un prospect qui ne me connaît pas. Inclus : une ouverture de 2 phrases, 3 questions pour comprendre son besoin, la présentation de l'offre en lien avec ses réponses, et des réponses aux objections « c'est trop cher » et « je vais réfléchir ».",
+  "tip": ""
+ },
+ {
+  "category": "Communication",
+  "title": "Simplifier un texte compliqué",
+  "prompt": "Réécris le texte suivant pour qu'il soit compris par un public non spécialiste, en gardant toutes les informations importantes. Phrases courtes, mots simples, pas de jargon. Ajoute un résumé en 3 points à la fin.\n\n[collez le texte]",
+  "tip": ""
+ },
+ {
+  "category": "Communication",
+  "title": "Préparer un discours",
+  "prompt": "Rédige un discours de [durée] minutes pour [occasion] devant [public]. Messages clés à faire passer : [messages]. Commence par une anecdote ou une image forte, termine par un appel à l'action. Ton : [solennel, chaleureux, motivant].",
+  "tip": ""
+ },
+ {
+  "category": "Communication",
+  "title": "Communiqué de presse",
+  "prompt": "Rédige un communiqué de presse d'une page pour annoncer [événement ou nouvelle] le [date] à [lieu]. Inclus un titre accrocheur, un premier paragraphe qui répond à qui, quoi, quand, où, pourquoi, une citation de [nom, fonction] et un paragraphe « À propos de [organisation] ».",
+  "tip": ""
+ },
+ {
+  "category": "Administration et bureau",
+  "title": "Compte rendu de réunion",
+  "prompt": "Voici mes notes brutes d'une réunion : [collez vos notes]. Transforme-les en compte rendu professionnel : participants, points abordés, décisions prises, actions à mener (qui, quoi, pour quand). Présente les actions sous forme de tableau.",
+  "tip": ""
+ },
+ {
+  "category": "Administration et bureau",
+  "title": "Courrier administratif",
+  "prompt": "Rédige un courrier administratif adressé à [destinataire et fonction] pour [objet de la demande]. Contexte : [contexte]. Pièces jointes : [liste]. Respecte la présentation officielle : lieu et date, objet, formule d'appel, corps en trois paragraphes, formule de politesse.",
+  "tip": ""
+ },
+ {
+  "category": "Administration et bureau",
+  "title": "Organiser sa semaine",
+  "prompt": "Voici mes tâches de la semaine avec leur échéance : [liste]. Je travaille de [heure] à [heure], avec [contraintes]. Propose un planning jour par jour, en commençant par ce qui est urgent et important, et signale ce que je pourrais déléguer ou reporter.",
+  "tip": ""
+ },
+ {
+  "category": "Ressources humaines",
+  "title": "Fiche de poste",
+  "prompt": "Rédige une fiche de poste pour un(e) [intitulé] dans une [type d'organisation] de [taille] personnes à [ville]. Inclus : mission principale, 6 à 8 activités, compétences requises, profil recherché, conditions. Langage inclusif et attractif.",
+  "tip": ""
+ },
+ {
+  "category": "Ressources humaines",
+  "title": "Questions d'entretien pour recruter",
+  "prompt": "Je recrute un(e) [poste]. Propose 10 questions d'entretien : 4 sur les compétences techniques, 4 sur le comportement (avec la méthode STAR), 2 sur la motivation. Pour chaque question, indique ce qu'une bonne réponse doit contenir.",
+  "tip": ""
+ },
+ {
+  "category": "Finance et gestion",
+  "title": "Expliquer ses chiffres",
+  "prompt": "Voici les chiffres de mon activité sur les 6 derniers mois : [ventes, dépenses par mois]. Explique-moi en langage simple ce qui va bien, ce qui m'inquiète, et propose 3 actions concrètes pour améliorer ma trésorerie le mois prochain.",
+  "tip": "Ne partagez pas d'informations bancaires confidentielles avec un assistant IA."
+ },
+ {
+  "category": "Finance et gestion",
+  "title": "Préparer un budget d'événement",
+  "prompt": "Aide-moi à préparer le budget d'un [événement] pour [nombre] personnes à [ville]. Liste tous les postes de dépense à prévoir, propose une fourchette de coût pour chacun en [devise] avec la méthode d'estimation, et ajoute une marge de sécurité de 10 %.",
+  "tip": "Les prix proposés par l'IA sont des estimations : demandez toujours des devis réels."
+ },
+ {
+  "category": "Étudiants",
+  "title": "Comprendre un cours difficile",
+  "prompt": "Explique-moi [notion] comme si j'étais en première année d'université. Utilise un exemple tiré de la vie quotidienne en Afrique, puis pose-moi 3 questions pour vérifier que j'ai compris. Corrige mes réponses.",
+  "tip": ""
+ },
+ {
+  "category": "Étudiants",
+  "title": "Plan de mémoire",
+  "prompt": "Mon sujet de mémoire est : [sujet], en [discipline]. Propose une problématique claire, trois hypothèses, et un plan détaillé en deux ou trois parties. Indique pour chaque partie le type de sources à consulter. Ne rédige pas le mémoire à ma place.",
+  "tip": "L'IA aide à structurer ; la rédaction et les sources restent votre travail."
+ },
+ {
+  "category": "Étudiants",
+  "title": "Réviser un examen",
+  "prompt": "Voici le plan de mon cours de [matière] : [plan]. Prépare-moi une fiche de révision d'une page, puis 10 questions d'examen de difficulté croissante. Donne les corrections seulement quand je te le demande.",
+  "tip": ""
+ },
+ {
+  "category": "Enseignement et formation",
+  "title": "Préparer une séance de formation",
+  "prompt": "Prépare une séance de formation de [durée] sur [thème] pour [public]. Inclus : objectifs, déroulé minute par minute, une activité pratique en groupe, et un quiz final de 5 questions avec les réponses.",
+  "tip": ""
+ }
+]

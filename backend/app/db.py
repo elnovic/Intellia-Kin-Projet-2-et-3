@@ -1,0 +1,31 @@
+"""Connexion à la base de données."""
+
+from collections.abc import Iterator
+
+from sqlalchemy import Engine, create_engine
+from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
+
+from .config import get_settings
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+def make_engine(url: str) -> Engine:
+    options: dict = {"pool_pre_ping": True}
+    if url.startswith("sqlite"):
+        options["connect_args"] = {"check_same_thread": False}
+    return create_engine(url, **options)
+
+
+engine = make_engine(get_settings().database_url)
+SessionLocal = sessionmaker(bind=engine, autoflush=False)
+
+
+def get_db() -> Iterator[Session]:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
