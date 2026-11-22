@@ -48,7 +48,7 @@ function connectionPanel(connection) {
     L'identifiant du compte Instagram n'est à remplir que si la connexion le demande.</p></div>
     <form data-connect class="inline-form">
       <input name="access_token" type="password" placeholder="Jeton d'accès Instagram" autocomplete="off" required minlength="20">
-      <input name="instagram_id" type="text" inputmode="numeric" pattern="\d*" placeholder="ID du compte Instagram (facultatif)" autocomplete="off">
+      <input name="instagram_id" type="text" inputmode="numeric" placeholder="ID du compte Instagram (facultatif)" autocomplete="off">
       <button class="ik-bouton" type="submit">Connecter</button>
     </form>
   </div>`;
@@ -120,7 +120,7 @@ export async function publicationsList(el) {
   box.querySelector("[data-connect]")?.addEventListener("submit", (event) => {
     event.preventDefault();
     const token = event.currentTarget.access_token.value.trim();
-    const instagramId = event.currentTarget.instagram_id.value.trim();
+    const instagramId = event.currentTarget.instagram_id.value.replace(/\D/g, "");
     withBusy(event.currentTarget.querySelector("button"), async () => {
       const result = await api("/admin/instagram/connection", { method: "PUT", body: { access_token: token, instagram_id: instagramId || null } });
       toast(`Compte @${result.username} connecté.`, "success");
