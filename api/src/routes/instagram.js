@@ -15,12 +15,24 @@ import {
   THEMES,
   writeText,
 } from "../instagram.js";
-import { arr, datetime, isUuid, oneOf, parseObject, str } from "../validate.js";
+import {
+  connectFacebook,
+  facebookOut,
+  facebookPostOut,
+  getFacebook,
+  publishFacebook,
+  removeFacebook,
+} from "../facebook.js";
+import { arr, bool, datetime, isUuid, obj, oneOf, parseObject, str } from "../validate.js";
 
 // Colonnes sans les images, pour les listes.
-const LIGHT = `id, theme, topic_ref, headline, caption, hashtags, status, scheduled_at, published_at,
-  ig_media_id, permalink, error, created_at, updated_at,
-  background IS NOT NULL AS has_background, image IS NOT NULL AS has_image`;
+// Chaque proposition est lue avec son éventuelle publication Facebook.
+const LIGHT = `p.id, p.theme, p.topic_ref, p.headline, p.caption, p.hashtags, p.status, p.scheduled_at, p.published_at,
+  p.ig_media_id, p.permalink, p.error, p.created_at, p.updated_at,
+  p.background IS NOT NULL AS has_background, p.image IS NOT NULL AS has_image,
+  f.post_id AS fb_post, f.caption AS fb_caption, f.status AS fb_status, f.permalink AS fb_permalink,
+  f.error AS fb_error, f.published_at AS fb_published_at`;
+const FROM = `instagram_posts p LEFT JOIN facebook_posts f ON f.post_id = p.id`;
 
 const EDITABLE = ["proposed", "approved", "failed"];
 const MAX_IMAGE = 1_400_000; // caractères base64, environ 1 Mo
@@ -41,13 +53,19 @@ function postOut(p) {
     error: p.error ?? null,
     has_background: Boolean(p.has_background),
     has_image: Boolean(p.has_image),
+    facebook: facebookPostOut(
+      p.fb_post
+        ? { caption: p.fb_caption, status: p.fb_status, permalink: p.fb_permalink, error: p.fb_error, published_at: p.fb_published_at }
+        : null,
+      p,
+    ),
     created_at: p.created_at,
     updated_at: p.updated_at,
   };
 }
 
 async function load(db, id) {
-  const post = isUuid(id) ? await db.first(`SELECT ${LIGHT} FROM instagram_posts WHERE id = ?`, id) : null;
+  const post = isUuid(id) ? await db.first(`SELECT ${LIGHT} FROM ${FROM} WHERE p.id = ?`, id) : null;
   if (!post) throw notFound("Publication introuvable.");
   return post;
 }
@@ -77,6 +95,23 @@ async function applyText(db, post, body) {
 
 const jpeg = (bytes, cache = "private, max-age=300") =>
   new Response(bytes, { headers: { "Content-Type": "image/jpeg", "Cache-Control": cache, "X-Content-Type-Options": "nosniff" } });
+
+/** Prévoit (ou retire) la publication Facebook d'une proposition approuvée. */
+async function setFacebook(db, postId, { enabled, caption }) {
+  if (!enabled) {
+    await db.run(`DELETE FROM facebook_posts WHERE post_id = ? AND status <> 'published'`, postId);
+    return;
+  }
+  if (caption.length < 20) throw new HttpError(422, "Le texte Facebook doit faire au moins 20 caractères.");
+  await db.run(
+    `INSERT INTO facebook_posts (post_id, caption, status, updated_at) VALUES (?, ?, 'pending', ?)
+     ON CONFLICT(post_id) DO UPDATE SET
+       caption = CASE WHEN facebook_posts.status = 'published' THEN facebook_posts.caption ELSE excluded.caption END,
+       status = CASE WHEN facebook_posts.status = 'published' THEN 'published' ELSE 'pending' END,
+       error = NULL, updated_at = excluded.updated_at`,
+    postId, caption, now(),
+  );
+}
 
 export function instagramRoutes(router) {
   // Image finale, lue par Instagram au moment de la publication (adresse impossible à deviner).
@@ -110,13 +145,34 @@ export function instagramRoutes(router) {
     return noContent();
   });
 
+  // --- Connexion de la Page Facebook --------------------------------------------------
+  router.get("/admin/facebook/connection", async (ctx) => {
+    await requireAdmin(ctx);
+    return json(facebookOut(await getFacebook(ctx.db, ctx.config)));
+  });
+
+  router.put("/admin/facebook/connection", async (ctx) => {
+    await requireAdmin(ctx);
+    const { access_token, page_id } = parseObject({
+      access_token: str({ min: 20, max: 1000 }),
+      page_id: str({ max: 30, pattern: /^\d*$/, default: null }),
+    }, await readJson(ctx.request));
+    return json(facebookOut(await connectFacebook(ctx.db, ctx.config, access_token, page_id || null)));
+  });
+
+  router.delete("/admin/facebook/connection", async (ctx) => {
+    await requireAdmin(ctx);
+    await removeFacebook(ctx.db);
+    return noContent();
+  });
+
   // --- Propositions -------------------------------------------------------------------
   router.get("/admin/instagram/posts", async (ctx) => {
     await requireAdmin(ctx);
     const rows = await ctx.db.all(
-      `SELECT ${LIGHT} FROM instagram_posts ORDER BY
-         CASE status WHEN 'proposed' THEN 0 WHEN 'failed' THEN 1 WHEN 'approved' THEN 2 WHEN 'publishing' THEN 3 ELSE 4 END,
-         COALESCE(scheduled_at, created_at) DESC LIMIT 60`,
+      `SELECT ${LIGHT} FROM ${FROM} ORDER BY
+         CASE p.status WHEN 'proposed' THEN 0 WHEN 'failed' THEN 1 WHEN 'approved' THEN 2 WHEN 'publishing' THEN 3 ELSE 4 END,
+         COALESCE(p.scheduled_at, p.created_at) DESC LIMIT 60`,
     );
     return json(rows.map(postOut));
   });
@@ -186,6 +242,7 @@ export function instagramRoutes(router) {
         ...textSchema,
         image: str({ min: 1000, max: MAX_IMAGE + 30, trim: false }),
         scheduled_at: datetime({ default: null }),
+        facebook: obj({ enabled: bool(), caption: str({ max: 5000, default: "" }) }, { optional: true }),
       },
       body,
     );
@@ -205,6 +262,7 @@ export function instagramRoutes(router) {
       `UPDATE instagram_posts SET image = ?, status = 'approved', scheduled_at = ?, error = NULL, ig_container_id = NULL, updated_at = ? WHERE id = ?`,
       match[1], data.scheduled_at || now(), now(), post.id,
     );
+    if (data.facebook) await setFacebook(ctx.db, post.id, data.facebook);
     return json(postOut(await load(ctx.db, post.id)));
   });
 
@@ -214,6 +272,21 @@ export function instagramRoutes(router) {
     if (!["approved", "publishing"].includes(post.status)) throw conflict("Approuvez d'abord la publication.");
     const full = await ctx.db.first(`SELECT * FROM instagram_posts WHERE id = ?`, post.id);
     await publishPost(ctx.db, ctx.config, full);
+    if (post.fb_status === "pending") await publishFacebook(ctx.db, ctx.config, post.id);
+    return json(postOut(await load(ctx.db, post.id)));
+  });
+
+  // Publication (ou nouvel essai) sur Facebook seulement, par exemple après un échec.
+  router.post("/admin/instagram/posts/:id/facebook", async (ctx) => {
+    await requireAdmin(ctx);
+    const post = await load(ctx.db, ctx.params.id);
+    if (!post.fb_post) throw conflict("Cette publication n'est pas prévue sur Facebook.");
+    if (post.fb_status === "published") throw conflict("Cette publication est déjà en ligne sur Facebook.");
+    if (!post.has_image || !["approved", "publishing", "published", "failed"].includes(post.status)) {
+      throw conflict("Approuvez d'abord la publication.");
+    }
+    await ctx.db.run(`UPDATE facebook_posts SET status = 'pending', error = NULL, updated_at = ? WHERE post_id = ?`, now(), post.id);
+    await publishFacebook(ctx.db, ctx.config, post.id);
     return json(postOut(await load(ctx.db, post.id)));
   });
 
@@ -236,8 +309,13 @@ export function instagramRoutes(router) {
   router.delete("/admin/instagram/posts/:id", async (ctx) => {
     await requireAdmin(ctx);
     const post = await load(ctx.db, ctx.params.id);
-    if (["published", "publishing"].includes(post.status)) throw conflict("Une publication en ligne ne se supprime pas ici.");
-    await ctx.db.run(`DELETE FROM instagram_posts WHERE id = ?`, post.id);
+    if (["published", "publishing"].includes(post.status) || post.fb_status === "published") {
+      throw conflict("Une publication en ligne ne se supprime pas ici.");
+    }
+    await ctx.db.batch([
+      ctx.db.stmt(`DELETE FROM facebook_posts WHERE post_id = ?`, post.id),
+      ctx.db.stmt(`DELETE FROM instagram_posts WHERE id = ?`, post.id),
+    ]);
     return noContent();
   });
 }

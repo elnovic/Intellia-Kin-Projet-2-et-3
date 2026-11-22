@@ -8,7 +8,7 @@ const LINKS = [
   ["tableau", "#/", "Tableau de bord"],
   ["cours", "#/cours", "Cours"],
   ["annonces", "#/annonces", "Annonces et événements"],
-  ["publications", "#/publications", "Publications Instagram"],
+  ["publications", "#/publications", "Publications Instagram et Facebook"],
 ];
 
 export function navigate(path, { force = false } = {}) {

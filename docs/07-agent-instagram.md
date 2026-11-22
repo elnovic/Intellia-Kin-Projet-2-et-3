@@ -1,4 +1,4 @@
-# Agent Instagram
+# Agent Instagram (et Page Facebook)
 
 L'agent prépare chaque jour une publication Instagram pour Intellia Kin. Rien ne
 part sans la validation d'un membre de l'équipe dans le centre de contrôle.
@@ -71,6 +71,28 @@ Le jeton est chiffré dans la base et n'est plus jamais affiché.
 
 Les anciens jetons « Instagram Login » (commençant par `IG`) restent acceptés :
 ils durent 60 jours et l'API les prolonge automatiquement chaque jour.
+
+### 4. Page Facebook (facultatif)
+
+Les propositions de l'agent peuvent aussi partir sur la Page Facebook d'Intellia
+Kin, avec le même visuel et un texte adapté (liens cliquables, trois hashtags).
+
+1. Dans le portefeuille business (business.facebook.com, **Paramètres**) :
+   **Utilisateurs**, **Utilisateurs système**, **Ajouter** (rôle administrateur).
+2. **Attribuer des éléments** : la Page Intellia Kin (contrôle total) et
+   l'application `Intellia Kin Agent`.
+3. **Générer un nouveau token** : application `Intellia Kin Agent`, expiration
+   « Jamais », autorisations `pages_show_list`, `pages_read_engagement`,
+   `pages_manage_posts`. Copier le jeton, ne jamais l'envoyer par message.
+4. Centre de contrôle, **Publications Instagram et Facebook**, cadre « Page
+   Facebook » : coller le jeton, **Connecter**. Si plusieurs Pages sont
+   accessibles, l'API demande l'ID de la Page à utiliser.
+
+Dans chaque proposition, la case **Aussi sur la Page Facebook** (cochée d'office
+quand la Page est connectée) et le **Texte Facebook** se valident en même temps
+que la publication Instagram. Les deux publications sont indépendantes : un échec
+sur l'une n'empêche pas l'autre, et le bouton **Réessayer sur Facebook** relance
+la Page seule.
 
 ## Limites et précautions
 

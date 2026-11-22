@@ -46,6 +46,10 @@ h2.inline { display: inline; }
 /* Publications Instagram */
 .ig-connection { display: flex; gap: var(--ik-espace-4); align-items: center; justify-content: space-between; flex-wrap: wrap; background: #fff; border: 1px solid var(--ik-bordure); border-left: 4px solid #f59e0b; border-radius: var(--ik-rayon); padding: var(--ik-espace-4); margin-bottom: var(--ik-espace-6); }
 .ig-connection.ig-ok { border-left-color: var(--ik-cyan-tech); }
+.ig-connection > div { flex: 1 1 420px; }
+.ig-connection + .ig-connection { margin-top: calc(-1 * var(--ik-espace-4)); }
+.ig-facebook { border: 1px solid var(--ik-bordure); border-radius: var(--ik-rayon); padding: var(--ik-espace-4); display: grid; gap: var(--ik-espace-3); }
+.ig-facebook .check { display: flex; gap: 0.5rem; align-items: center; font-weight: 600; }
 .ig-connection .inline-form { flex: 1 1 360px; margin-top: 0; }
 .inline-field { display: inline-grid; gap: 0.2rem; }
 .inline-field select { font: inherit; padding: 0.5rem 0.8rem; border: 1px solid #cbd5e1; border-radius: var(--ik-rayon-petit); }

@@ -12,6 +12,7 @@
 import { AIUnavailable, complete } from "./ai.js";
 import { newId, now } from "./db.js";
 import { HttpError } from "./http.js";
+import { publishFacebookDue } from "./facebook.js";
 
 export const THEMES = {
   cours: "Cours de l'Académie",
@@ -74,13 +75,13 @@ export function fromBase64(text) {
   return bytes;
 }
 
-async function seal(value, secret) {
+export async function seal(value, secret) {
   const iv = crypto.getRandomValues(new Uint8Array(12));
   const data = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, await tokenKey(secret), enc.encode(JSON.stringify(value)));
   return `${toBase64(iv)}.${toBase64(data)}`;
 }
 
-async function unseal(text, secret) {
+export async function unseal(text, secret) {
   try {
     const [iv, data] = text.split(".");
     const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: fromBase64(iv) }, await tokenKey(secret), fromBase64(data));
@@ -129,7 +130,7 @@ export function connectionOut(connection) {
 const apiOf = (connection) => connection?.api || "instagram";
 const hostOf = (config, api) => (api === "facebook" ? config.facebookGraphUrl : config.instagramGraphUrl);
 
-async function graph(config, method, path, params, api = "instagram") {
+export async function graph(config, method, path, params, api = "instagram", label = "Instagram") {
   const url = new URL(`${hostOf(config, api)}/${config.instagramApiVersion}/${path}`);
   const init = { method, signal: AbortSignal.timeout(30_000) };
   if (method === "GET") for (const [k, v] of Object.entries(params)) url.searchParams.set(k, String(v));
@@ -138,12 +139,12 @@ async function graph(config, method, path, params, api = "instagram") {
   try {
     response = await (config.fetch || fetch)(url.toString(), init);
   } catch (err) {
-    throw new HttpError(502, `Instagram ne répond pas : ${err.message}`);
+    throw new HttpError(502, `${label} ne répond pas : ${err.message}`);
   }
   const data = await response.json().catch(() => ({}));
   if (!response.ok || data.error) {
     const message = data.error?.error_user_msg || data.error?.message || `HTTP ${response.status}`;
-    throw new HttpError(502, `Instagram a refusé la demande : ${message}`);
+    throw new HttpError(502, `${label} a refusé la demande : ${message}`);
   }
   return data;
 }
@@ -494,19 +495,21 @@ export async function publishPost(db, config, post) {
 
 /** Publie les messages approuvés dont l'heure est venue (appelé toutes les 15 minutes). */
 export async function publishDue(db, config) {
-  // Sans compte connecté, les messages attendent : ils partiront après la connexion.
-  if (!(await db.value(`SELECT COUNT(*) FROM meta WHERE key = 'instagram'`))) return {};
-  const due = await db.all(
-    `SELECT * FROM instagram_posts WHERE (status = 'approved' AND scheduled_at <= ?) OR status = 'publishing'
-     ORDER BY scheduled_at LIMIT 3`,
-    now(),
-  );
   const report = {};
-  for (const post of due) report[post.id] = await publishPost(db, config, post);
+  // Sans compte connecté, les messages attendent : ils partiront après la connexion.
+  if (await db.value(`SELECT COUNT(*) FROM meta WHERE key = 'instagram'`)) {
+    const due = await db.all(
+      `SELECT * FROM instagram_posts WHERE (status = 'approved' AND scheduled_at <= ?) OR status = 'publishing'
+       ORDER BY scheduled_at LIMIT 3`,
+      now(),
+    );
+    for (const post of due) report[post.id] = await publishPost(db, config, post);
+  }
+  const facebook = await publishFacebookDue(db, config);
+  for (const [id, result] of Object.entries(facebook)) report[`facebook:${id}`] = result;
   return report;
 }
 
-/** Proposition du jour, sauf si une proposition a déjà été faite aujourd'hui. */
 export async function dailyProposal(db, env, config) {
   const today = new Date();
   today.setUTCHours(0, 0, 0, 0);
