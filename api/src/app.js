@@ -44,6 +44,7 @@ export function readConfig(env) {
     aiDailyLimit: Number(env.AI_DAILY_LIMIT || 3),
     publicApiUrl: (env.PUBLIC_API_URL || "").replace(/\/$/, ""),
     instagramGraphUrl: env.INSTAGRAM_GRAPH_URL || "https://graph.instagram.com",
+    facebookGraphUrl: env.FACEBOOK_GRAPH_URL || "https://graph.facebook.com",
     instagramApiVersion: env.INSTAGRAM_API_VERSION || "v25.0",
     fetch: env.FETCH,
   };

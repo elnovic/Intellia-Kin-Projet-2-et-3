@@ -36,23 +36,41 @@ C'est gratuit et réversible.
 
 ### 2. Créer l'application Meta
 
-1. Sur developers.facebook.com, se connecter et créer un compte développeur si besoin.
-2. **Créer une application**. Cas d'utilisation : gérer les messages et le contenu
-   sur Instagram. Nom : `Intellia Kin Agent`.
-3. Dans l'application : **Instagram**, **Configuration de l'API avec connexion Instagram**.
-4. Section **Générer des tokens d'accès** : **Ajouter un compte**, se connecter avec
-   le compte Instagram d'Intellia Kin et accepter les autorisations.
-5. **Générer le token** et le copier. Ne jamais l'envoyer par message.
+Depuis fin 2026, Meta ne propose plus la « connexion Instagram » aux nouvelles
+applications : elles passent par la **connexion unifiée** (Facebook Login for
+Business) avec un **jeton d'utilisateur système**, qui n'expire jamais.
 
-L'application ne sert qu'au compte d'Intellia Kin : l'accès standard suffit et
+Prérequis : un **portefeuille business** Meta (business.facebook.com) et une
+**Page Facebook** d'Intellia Kin reliée au compte Instagram professionnel
+(Page Facebook, Paramètres, Comptes liés, Instagram).
+
+1. Sur developers.facebook.com, créer l'application (`Intellia Kin Agent`) avec le
+   cas d'utilisation Instagram, et l'associer au portefeuille business.
+2. **Configurez votre application**, **Créer une nouvelle configuration** :
+   jeton d'utilisateur système, expiration « Jamais ». Autorisations à cocher :
+   `instagram_basic`, `instagram_content_publish`, `pages_show_list`,
+   `pages_read_engagement`, `business_management`, et `pages_manage_posts`
+   (pour la future publication sur la Page Facebook). Les autorisations de
+   publicité et de messages ne sont pas nécessaires. L'URL de redirection peut
+   rester vide.
+3. Dans le portefeuille business, **Utilisateurs système** : créer un utilisateur
+   système administrateur, lui attribuer la Page et le compte Instagram (contrôle
+   total) et l'application, puis **Générer un token** avec cette configuration.
+4. Copier le jeton. Ne jamais l'envoyer par message.
+
+L'application ne sert qu'aux comptes d'Intellia Kin : l'accès standard suffit et
 aucune vérification par Meta (« App Review ») n'est nécessaire.
 
 ### 3. Connecter le compte dans le centre de contrôle
 
 Rubrique **Publications Instagram**, coller le jeton dans le champ prévu, puis
-**Connecter**. Le jeton est vérifié auprès d'Instagram, chiffré dans la base et
-n'est plus jamais affiché. Il est valable 60 jours et prolongé automatiquement
-chaque jour par l'API.
+**Connecter**. L'API retrouve d'elle-même la Page Facebook et le compte Instagram
+qui lui est relié. Si elle n'y parvient pas, elle le dit : remplir alors le champ
+**ID du compte Instagram** (affiché dans le tableau de bord Meta) et recommencer.
+Le jeton est chiffré dans la base et n'est plus jamais affiché.
+
+Les anciens jetons « Instagram Login » (commençant par `IG`) restent acceptés :
+ils durent 60 jours et l'API les prolonge automatiquement chaque jour.
 
 ## Limites et précautions
 

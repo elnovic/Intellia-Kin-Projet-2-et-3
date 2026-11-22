@@ -110,15 +110,27 @@ export function connectionOut(connection) {
     connected: true,
     username: connection.username,
     user_id: connection.user_id,
+    mode: apiOf(connection),
+    page_name: connection.page_name || null,
     connected_at: connection.connected_at,
     expires_at: connection.expires_at,
   };
 }
 
-// --- API Instagram (Instagram API with Instagram Login) --------------------------
+// --- API Instagram -----------------------------------------------------------------------
+//
+// Deux modes de connexion, reconnus à la forme du jeton :
+// - « facebook » (connexion unifiée, Facebook Login for Business — le seul proposé aux
+//   nouvelles applications Meta) : hôte graph.facebook.com, jeton d'utilisateur système
+//   qui n'expire pas, compte Instagram professionnel relié à une Page Facebook ;
+// - « instagram » (Instagram Login, jetons commençant par « IG ») : hôte graph.instagram.com,
+//   jeton de 60 jours prolongé automatiquement.
 
-async function graph(config, method, path, params) {
-  const url = new URL(`${config.instagramGraphUrl}/${config.instagramApiVersion}/${path}`);
+const apiOf = (connection) => connection?.api || "instagram";
+const hostOf = (config, api) => (api === "facebook" ? config.facebookGraphUrl : config.instagramGraphUrl);
+
+async function graph(config, method, path, params, api = "instagram") {
+  const url = new URL(`${hostOf(config, api)}/${config.instagramApiVersion}/${path}`);
   const init = { method, signal: AbortSignal.timeout(30_000) };
   if (method === "GET") for (const [k, v] of Object.entries(params)) url.searchParams.set(k, String(v));
   else init.body = new URLSearchParams(Object.entries(params).map(([k, v]) => [k, String(v)]));
@@ -136,16 +148,54 @@ async function graph(config, method, path, params) {
   return data;
 }
 
+/** Connexion unifiée : retrouve le compte Instagram (et sa Page Facebook) accessible au jeton. */
+async function connectFacebook(config, accessToken, igUserId) {
+  const auth = { access_token: accessToken };
+  if (igUserId) {
+    const ig = await graph(config, "GET", igUserId, { fields: "id,username", ...auth }, "facebook");
+    return { user_id: String(ig.id), username: ig.username };
+  }
+  let pages;
+  try {
+    pages = await graph(config, "GET", "me/accounts", {
+      fields: "id,name,access_token,instagram_business_account{id,username}",
+      limit: 100,
+      ...auth,
+    }, "facebook");
+  } catch (err) {
+    throw new HttpError(422, `Impossible de lister les Pages de ce jeton (${err.message}). Indiquez l'identifiant du compte Instagram, affiché dans le tableau de bord Meta.`);
+  }
+  const page = (pages.data || []).find((p) => p.instagram_business_account?.id);
+  if (!page) {
+    throw new HttpError(422, "Aucune Page Facebook reliée à un compte Instagram professionnel n'est accessible avec ce jeton. Indiquez l'identifiant du compte Instagram, affiché dans le tableau de bord Meta.");
+  }
+  return {
+    user_id: String(page.instagram_business_account.id),
+    username: page.instagram_business_account.username,
+    // Conservés pour la future publication sur la Page Facebook.
+    page_id: String(page.id),
+    page_name: page.name,
+    page_token: page.access_token || null,
+  };
+}
+
 /** Vérifie un jeton d'accès et enregistre la connexion. */
-export async function connect(db, config, accessToken) {
-  const me = await graph(config, "GET", "me", { fields: "user_id,username", access_token: accessToken });
+export async function connect(db, config, accessToken, igUserId = null) {
+  const api = accessToken.startsWith("IG") ? "instagram" : "facebook";
+  let account;
+  if (api === "facebook") {
+    account = await connectFacebook(config, accessToken, igUserId);
+  } else {
+    const me = await graph(config, "GET", "me", { fields: "user_id,username", access_token: accessToken });
+    account = { user_id: String(me.user_id || me.id), username: me.username };
+  }
   const connection = {
+    api,
     token: accessToken,
-    user_id: String(me.user_id || me.id),
-    username: me.username,
+    ...account,
     connected_at: now(),
-    // Jeton longue durée : 60 jours, prolongé automatiquement chaque jour.
-    expires_at: new Date(Date.now() + 60 * 86400_000).toISOString(),
+    // Jeton Instagram Login : 60 jours, prolongé chaque jour. Jeton système : sans expiration.
+    expires_at: api === "instagram" ? new Date(Date.now() + 60 * 86400_000).toISOString() : null,
   };
   await saveConnection(db, config, connection);
   return connection;
@@ -155,6 +205,7 @@ export async function connect(db, config, accessToken) {
 export async function refreshToken(db, config) {
   const connection = await getConnection(db, config);
   if (!connection) return "non connecté";
+  if (apiOf(connection) !== "instagram" || !connection.expires_at) return "inutile";
   if (Date.parse(connection.expires_at) - Date.now() > 30 * 86400_000) return "inutile";
   const url = new URL(`${config.instagramGraphUrl}/refresh_access_token`);
   url.searchParams.set("grant_type", "ig_refresh_token");
@@ -394,30 +445,40 @@ export async function publishPost(db, config, post) {
   const connection = await getConnection(db, config);
   if (!connection) return fail(db, post, "Compte Instagram non connecté.");
   const auth = { access_token: connection.token };
+  const api = apiOf(connection);
+  const call = (method, path, params) => graph(config, method, path, { ...params, ...auth }, api);
   try {
     let container = post.ig_container_id;
     if (!container) {
-      const created = await graph(config, "POST", `${connection.user_id}/media`, {
+      const params = {
         image_url: `${config.publicApiUrl}/instagram/media/${post.id}.jpg`,
         caption: fullCaption(post),
         is_ai_generated: "true",
-        ...auth,
-      });
+      };
+      let created;
+      try {
+        created = await call("POST", `${connection.user_id}/media`, params);
+      } catch (err) {
+        // Si l'API refuse l'étiquette IA comme paramètre, on publie sans (la légende reste honnête).
+        if (!/is_ai_generated/i.test(err.message)) throw err;
+        delete params.is_ai_generated;
+        created = await call("POST", `${connection.user_id}/media`, params);
+      }
       container = created.id;
       await db.run(
         `UPDATE instagram_posts SET status = 'publishing', ig_container_id = ?, error = NULL, updated_at = ? WHERE id = ?`,
         container, now(), post.id,
       );
     }
-    const state = await graph(config, "GET", container, { fields: "status_code", ...auth });
+    const state = await call("GET", container, { fields: "status_code" });
     if (state.status_code === "IN_PROGRESS") return "en cours";
     if (state.status_code && state.status_code !== "FINISHED") {
       return fail(db, post, `Instagram n'a pas pu traiter l'image (${state.status_code}).`);
     }
-    const published = await graph(config, "POST", `${connection.user_id}/media_publish`, { creation_id: container, ...auth });
+    const published = await call("POST", `${connection.user_id}/media_publish`, { creation_id: container });
     let permalink = null;
     try {
-      permalink = (await graph(config, "GET", published.id, { fields: "permalink", ...auth })).permalink || null;
+      permalink = (await call("GET", published.id, { fields: "permalink" })).permalink || null;
     } catch {
       /* le lien est un plus : la publication a réussi */
     }

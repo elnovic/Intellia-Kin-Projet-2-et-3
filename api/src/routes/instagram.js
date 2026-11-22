@@ -97,8 +97,11 @@ export function instagramRoutes(router) {
 
   router.put("/admin/instagram/connection", async (ctx) => {
     await requireAdmin(ctx);
-    const { access_token } = parseObject({ access_token: str({ min: 20, max: 1000 }) }, await readJson(ctx.request));
-    return json(connectionOut(await connect(ctx.db, ctx.config, access_token)));
+    const { access_token, instagram_id } = parseObject({
+      access_token: str({ min: 20, max: 1000 }),
+      instagram_id: str({ max: 30, pattern: /^\d*$/, default: null }),
+    }, await readJson(ctx.request));
+    return json(connectionOut(await connect(ctx.db, ctx.config, access_token.trim(), instagram_id || null)));
   });
 
   router.delete("/admin/instagram/connection", async (ctx) => {

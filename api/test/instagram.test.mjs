@@ -24,12 +24,19 @@ function fakeServices({ instagram = {} } = {}) {
       });
       return new Response(JSON.stringify({ choices: [{ message: { content } }] }), { status: 200 });
     }
-    if (u.hostname === "graph.instagram.com") {
+    if (u.hostname === "graph.instagram.com" || u.hostname === "graph.facebook.com") {
       const params = init.body ? Object.fromEntries(new URLSearchParams(init.body)) : Object.fromEntries(u.searchParams);
-      calls.instagram.push({ method: init.method || "GET", path: u.pathname, params });
+      calls.instagram.push({ host: u.hostname, method: init.method || "GET", path: u.pathname, params });
       const route = `${init.method || "GET"} ${u.pathname}`;
       const custom = instagram[route];
       if (custom) return custom(params);
+      if (u.pathname.endsWith("/me/accounts")) {
+        return Response.json({ data: [
+          { id: "100", name: "Page sans Instagram", access_token: "page-a" },
+          { id: "200", name: "Intellia Kin", access_token: "page-b", instagram_business_account: { id: "17841499999999999", username: "intellia_kin" } },
+        ] });
+      }
+      if (u.pathname.endsWith("/17841488888888888")) return Response.json({ id: "17841488888888888", username: "compte_direct" });
       if (u.pathname.endsWith("/me")) return Response.json({ user_id: "17841400000000000", username: "intelliakin" });
       if (u.pathname.endsWith("/media")) return Response.json({ id: "container-1" });
       if (u.pathname.endsWith("/container-1")) return Response.json({ status_code: "FINISHED" });
@@ -157,7 +164,7 @@ describe("agent Instagram", () => {
     assert.equal(noAccount.body.status, "failed");
     assert.match(noAccount.body.error, /non connecté/);
 
-    const connected = await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "jeton-instagram-0123456789" } });
+    const connected = await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "IGjeton-instagram-0123456789" } });
     assert.equal(connected.status, 200, JSON.stringify(connected.body));
     assert.equal(connected.body.username, "intelliakin");
     assert.equal(JSON.stringify(connected.body).includes("jeton"), false, "le jeton n'est jamais renvoyé");
@@ -185,7 +192,7 @@ describe("agent Instagram", () => {
     const { t, admin, calls } = await instagramSetup({
       instagram: { "GET /v25.0/container-1": () => Response.json({ status_code: state }) },
     });
-    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "jeton-instagram-0123456789" } });
+    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "IGjeton-instagram-0123456789" } });
     const post = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: {} })).body;
     await t.call("POST", `/admin/instagram/posts/${post.id}/approve`, { token: admin, body: { image: COMPOSED } });
 
@@ -204,7 +211,7 @@ describe("agent Instagram", () => {
           Response.json({ error: { message: "Invalid image aspect ratio" } }, { status: 400 }),
       },
     });
-    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "jeton-instagram-0123456789" } });
+    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "IGjeton-instagram-0123456789" } });
     const post = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: {} })).body;
     await t.call("POST", `/admin/instagram/posts/${post.id}/approve`, { token: admin, body: { image: COMPOSED } });
     const r = await t.call("POST", `/admin/instagram/posts/${post.id}/publish`, { token: admin });
@@ -238,7 +245,7 @@ describe("agent Instagram", () => {
 
   test("proposition quotidienne unique et prolongation du jeton", async () => {
     const { t, admin, calls } = await instagramSetup();
-    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "jeton-instagram-0123456789" } });
+    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "IGjeton-instagram-0123456789" } });
     await t.app.scheduled({ cron: DAILY_CRON }, t.env);
     await t.app.scheduled({ cron: DAILY_CRON }, t.env);
     assert.equal((await t.call("GET", "/admin/instagram/posts", { token: admin })).body.length, 1);
@@ -259,5 +266,60 @@ describe("agent Instagram", () => {
     const r = await t.call("POST", "/admin/instagram/posts", { token: await t.admin(), body: {} });
     assert.equal(r.status, 503);
     assert.match(r.body.detail, /indisponible/);
+  });
+
+  test("connexion unifiée (Facebook Login for Business) : jeton système sans expiration", async () => {
+    const { t, admin, calls } = await instagramSetup();
+    const connected = await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789" } });
+    assert.equal(connected.status, 200, JSON.stringify(connected.body));
+    assert.equal(connected.body.username, "intellia_kin");
+    assert.equal(connected.body.mode, "facebook");
+    assert.equal(connected.body.page_name, "Intellia Kin");
+    assert.equal(connected.body.expires_at, null);
+    assert.equal(JSON.stringify(connected.body).includes("page-b"), false, "le jeton de Page n'est jamais renvoyé");
+
+    // Publication via graph.facebook.com sur l'identifiant du compte Instagram.
+    const post = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: { theme: "conseil" } })).body;
+    await t.call("POST", `/admin/instagram/posts/${post.id}/approve`, { token: admin, body: { image: COMPOSED } });
+    const published = await t.call("POST", `/admin/instagram/posts/${post.id}/publish`, { token: admin });
+    assert.equal(published.body.status, "published", JSON.stringify(published.body));
+    const create = calls.instagram.find((c) => c.path.endsWith("/media"));
+    assert.equal(create.host, "graph.facebook.com");
+    assert.equal(create.path, "/v25.0/17841499999999999/media");
+
+    // Jeton sans expiration : aucune prolongation.
+    await t.app.scheduled({ cron: DAILY_CRON }, t.env);
+    assert.equal(calls.instagram.some((c) => c.path === "/refresh_access_token"), false);
+
+    // Identifiant fourni à la main quand le jeton ne peut pas lister les Pages.
+    const direct = await t.call("PUT", "/admin/instagram/connection", {
+      token: admin, body: { access_token: "EAAjeton-systeme-0123456789", instagram_id: "17841488888888888" },
+    });
+    assert.equal(direct.body.username, "compte_direct");
+  });
+
+  test("connexion unifiée : message clair si aucun compte n'est trouvé", async () => {
+    const { t, admin } = await instagramSetup({
+      instagram: { "GET /v25.0/me/accounts": () => Response.json({ error: { message: "(#100) Missing permission" } }, { status: 400 }) },
+    });
+    const r = await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789" } });
+    assert.equal(r.status, 422);
+    assert.match(r.body.detail || JSON.stringify(r.body), /identifiant du compte Instagram/);
+  });
+
+  test("étiquette IA refusée : nouvel essai sans le paramètre", async () => {
+    const { t, admin, calls } = await instagramSetup({
+      instagram: {
+        "POST /v25.0/17841499999999999/media": (params) => params.is_ai_generated
+          ? Response.json({ error: { message: "Invalid parameter is_ai_generated" } }, { status: 400 })
+          : Response.json({ id: "container-1" }),
+      },
+    });
+    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789" } });
+    const post = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: { theme: "conseil" } })).body;
+    await t.call("POST", `/admin/instagram/posts/${post.id}/approve`, { token: admin, body: { image: COMPOSED } });
+    const published = await t.call("POST", `/admin/instagram/posts/${post.id}/publish`, { token: admin });
+    assert.equal(published.body.status, "published", JSON.stringify(published.body));
+    assert.equal(calls.instagram.filter((c) => c.path.endsWith("/media")).length, 2);
   });
 });

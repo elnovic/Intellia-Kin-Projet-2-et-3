@@ -35,16 +35,20 @@ function connectionPanel(connection) {
   if (connection.connected) {
     return `<div class="ig-connection ig-ok">
       <div><strong>Compte connecté : @${esc(connection.username)}</strong>
-      <p class="small">Accès valable jusqu'au ${esc(formatDate(connection.expires_at))}, prolongé automatiquement chaque jour.</p></div>
+      <p class="small">${connection.expires_at
+        ? `Accès valable jusqu'au ${esc(formatDate(connection.expires_at))}, prolongé automatiquement chaque jour.`
+        : `Accès permanent (jeton d'utilisateur système)${connection.page_name ? ` · Page Facebook : ${esc(connection.page_name)}` : ""}.`}</p></div>
       <button class="ik-bouton ik-bouton-secondaire" data-disconnect>Déconnecter</button>
     </div>`;
   }
   return `<div class="ig-connection">
     <div><strong>Aucun compte Instagram connecté</strong>
     <p class="small">Les propositions peuvent déjà être préparées et validées ; la publication attend la connexion du compte.
-    Collez ici le jeton d'accès généré dans le tableau de bord Meta (Instagram, « Generate token »). Il est vérifié puis chiffré, et ne s'affiche plus ensuite.</p></div>
+    Collez ici le jeton d'accès généré dans le tableau de bord Meta. Il est vérifié puis chiffré, et ne s'affiche plus ensuite.
+    L'identifiant du compte Instagram n'est à remplir que si la connexion le demande.</p></div>
     <form data-connect class="inline-form">
       <input name="access_token" type="password" placeholder="Jeton d'accès Instagram" autocomplete="off" required minlength="20">
+      <input name="instagram_id" type="text" inputmode="numeric" pattern="\d*" placeholder="ID du compte Instagram (facultatif)" autocomplete="off">
       <button class="ik-bouton" type="submit">Connecter</button>
     </form>
   </div>`;
@@ -116,8 +120,9 @@ export async function publicationsList(el) {
   box.querySelector("[data-connect]")?.addEventListener("submit", (event) => {
     event.preventDefault();
     const token = event.currentTarget.access_token.value.trim();
+    const instagramId = event.currentTarget.instagram_id.value.trim();
     withBusy(event.currentTarget.querySelector("button"), async () => {
-      const result = await api("/admin/instagram/connection", { method: "PUT", body: { access_token: token } });
+      const result = await api("/admin/instagram/connection", { method: "PUT", body: { access_token: token, instagram_id: instagramId || null } });
       toast(`Compte @${result.username} connecté.`, "success");
       publicationsList(el);
     }).catch((error) => toast(error.message, "error"));
