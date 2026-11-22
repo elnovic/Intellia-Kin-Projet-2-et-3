@@ -10,7 +10,10 @@ import { announcementRoutes } from "./routes/announcements.js";
 import { authRoutes, ensureAdmin } from "./routes/auth.js";
 import { courseRoutes } from "./routes/courses.js";
 import { toolRoutes } from "./routes/tools.js";
+import { instagramRoutes } from "./routes/instagram.js";
+import { dailyProposal, publishDue, refreshToken } from "./instagram.js";
 
+export const DAILY_CRON = "0 5 * * *";
 const DEV_SECRET = "cle-de-developpement-a-remplacer-avant-la-production";
 
 function list(value, fallback) {
@@ -39,6 +42,9 @@ export function readConfig(env) {
     groqBaseUrl: env.GROQ_BASE_URL || "https://api.groq.com/openai/v1",
     groqModels: list(env.GROQ_MODELS, ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]),
     aiDailyLimit: Number(env.AI_DAILY_LIMIT || 3),
+    publicApiUrl: (env.PUBLIC_API_URL || "").replace(/\/$/, ""),
+    instagramGraphUrl: env.INSTAGRAM_GRAPH_URL || "https://graph.instagram.com",
+    instagramApiVersion: env.INSTAGRAM_API_VERSION || "v25.0",
     fetch: env.FETCH,
   };
 }
@@ -56,6 +62,7 @@ export function createApp(bundle) {
   announcementRoutes(router);
   toolRoutes(router);
   adminRoutes(router);
+  instagramRoutes(router);
   router.get("/health", async () => json({ status: "ok" }));
   router.get("/", async () => json({ service: "API de l'Académie Intellia Kin", status: "ok" }));
   router.get("/media/cours/:slug/images/:file", async (ctx) => {
@@ -117,6 +124,7 @@ export function createApp(bundle) {
       const match = router.match(request.method, url.pathname);
       if (!match) throw new HttpError(404, "Adresse introuvable.");
       if (match.notAllowed) throw new HttpError(405, "Méthode non autorisée.");
+      if (!config.publicApiUrl) config.publicApiUrl = url.origin;
       response = await match.handler({ request, env, url, params: match.params, db, config });
     } catch (err) {
       response = errorResponse(err);
@@ -126,5 +134,28 @@ export function createApp(bundle) {
     return new Response(request.method === "HEAD" ? null : response.body, { status: response.status, headers });
   }
 
-  return { handle, prepare, reset: () => (ready = null) };
+  // Tâches planifiées : proposition Instagram du jour (6 h à Kinshasa) et
+  // publication des messages approuvés (toutes les 15 minutes).
+  async function scheduled(event, env) {
+    const config = readConfig(env);
+    const db = new Db(env.DB);
+    if (!ready) ready = prepare(db, config).catch((err) => {
+      ready = null;
+      throw err;
+    });
+    await ready;
+    if (event.cron === DAILY_CRON) {
+      console.log(`Jeton Instagram : ${await refreshToken(db, config)}`);
+      try {
+        console.log(`Proposition Instagram du jour : ${await dailyProposal(db, env, config)}`);
+      } catch (err) {
+        console.error(`Proposition Instagram impossible : ${err.message}`);
+      }
+    } else {
+      const report = await publishDue(db, config);
+      if (Object.keys(report).length) console.log(`Publications Instagram : ${JSON.stringify(report)}`);
+    }
+  }
+
+  return { handle, prepare, scheduled, reset: () => (ready = null) };
 }

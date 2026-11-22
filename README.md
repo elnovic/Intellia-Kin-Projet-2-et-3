@@ -36,6 +36,7 @@ Servir `web/` sur le port 8080 et `admin/dist` (après `bash admin/build.sh`) su
 4. [Feuille de route](docs/04-feuille-de-route.md)
 5. [Déploiement pas à pas](docs/05-deploiement.md)
 6. [Programme des 20 cours](docs/06-programme-des-cours.md)
+7. [Agent Instagram](docs/07-agent-instagram.md)
 
 ## Méthode de travail
 

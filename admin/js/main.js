@@ -4,6 +4,7 @@ import { api, refreshUser, session } from "./api.js";
 import { announcementForm, announcementsList } from "./annonces.js";
 import { courseEditor, courseForm, coursesList, lessonEditor } from "./cours.js";
 import { navigate, PUBLIC_SITE, shell } from "./layout.js";
+import { publicationEditor, publicationsList } from "./publications.js";
 import { errorBox, esc, formData, loading, toast, withBusy } from "./ui.js";
 
 const routes = [
@@ -15,7 +16,8 @@ const routes = [
   ["/annonces", announcementsList],
   ["/annonces/nouvelle", announcementForm],
   ["/annonces/:id", announcementForm],
-  ["/publications", publications],
+  ["/publications", publicationsList],
+  ["/publications/:id", publicationEditor],
 ];
 
 function match(path) {
@@ -76,16 +78,6 @@ async function dashboard(el) {
     <div class="md-table"><table><thead><tr><th>Cours</th><th>Inscrits</th><th>Attestations</th></tr></thead><tbody>${stats.courses
       .map((c) => `<tr><td><a href="${PUBLIC_SITE}/cours/${esc(c.slug)}" target="_blank" rel="noopener">${esc(c.title)}</a></td><td>${c.enrollments}</td><td>${c.certificates}</td></tr>`)
       .join("")}</tbody></table></div>`;
-}
-
-async function publications(el) {
-  shell(
-    el,
-    "publications",
-    "Publications Instagram",
-    `<div class="notice notice-info"><p>L'agent qui préparera chaque jour une publication Instagram sera ajouté ici après le lancement de l'Académie.
-    Vous pourrez relire chaque proposition, la modifier, puis la valider avant publication.</p></div>`
-  );
 }
 
 async function render() {

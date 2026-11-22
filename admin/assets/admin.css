@@ -42,3 +42,22 @@ h2.inline { display: inline; }
   .control-nav { position: static; height: auto; }
   .control-main { padding: var(--ik-espace-6) var(--ik-espace-4); }
 }
+
+/* Publications Instagram */
+.ig-connection { display: flex; gap: var(--ik-espace-4); align-items: center; justify-content: space-between; flex-wrap: wrap; background: #fff; border: 1px solid var(--ik-bordure); border-left: 4px solid #f59e0b; border-radius: var(--ik-rayon); padding: var(--ik-espace-4); margin-bottom: var(--ik-espace-6); }
+.ig-connection.ig-ok { border-left-color: var(--ik-cyan-tech); }
+.ig-connection .inline-form { flex: 1 1 360px; margin-top: 0; }
+.inline-field { display: inline-grid; gap: 0.2rem; }
+.inline-field select { font: inherit; padding: 0.5rem 0.8rem; border: 1px solid #cbd5e1; border-radius: var(--ik-rayon-petit); }
+.ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--ik-espace-4); }
+.ig-card { display: block; background: #fff; border: 1px solid var(--ik-bordure); border-radius: var(--ik-rayon); overflow: hidden; color: inherit; text-decoration: none; }
+.ig-card:hover { border-color: var(--ik-action); }
+.ig-thumb { aspect-ratio: 4 / 5; background: var(--ik-bleu-nuit) center / cover no-repeat; }
+.ig-card-body { padding: var(--ik-espace-3) var(--ik-espace-4) var(--ik-espace-4); }
+.ig-card-body h3 { font-size: 1rem; margin: 0 0 0.3rem; }
+.ig-error { color: var(--ik-erreur); }
+.ig-editor { display: grid; grid-template-columns: minmax(260px, 420px) minmax(0, 1fr); gap: var(--ik-espace-8); align-items: start; }
+.ig-preview canvas { width: 100%; height: auto; border-radius: var(--ik-rayon); box-shadow: var(--ik-ombre); background: var(--ik-bleu-nuit); }
+.badge-danger { background: #fdecec; color: var(--ik-erreur); }
+.link-button.danger { color: var(--ik-erreur); }
+@media (max-width: 900px) { .ig-editor { grid-template-columns: 1fr; } }

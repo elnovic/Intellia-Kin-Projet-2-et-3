@@ -4,7 +4,7 @@
 // l'ordre alphabétique est alors l'ordre chronologique.
 // Les champs JSON sont stockés en texte ; les booléens en 0 ou 1.
 
-export const SCHEMA_VERSION = "1";
+export const SCHEMA_VERSION = "2";
 
 export const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)`,
@@ -153,6 +153,29 @@ export const SCHEMA = [
     created_at TEXT NOT NULL
   )`,
   `CREATE INDEX IF NOT EXISTS tool_usage_user ON tool_usage(user_id, created_at)`,
+  // Agent Instagram : propositions, validation, publication.
+  `CREATE TABLE IF NOT EXISTS instagram_posts (
+    id TEXT PRIMARY KEY,
+    theme TEXT NOT NULL,
+    topic_ref TEXT NOT NULL,
+    topic_data TEXT NOT NULL DEFAULT '{}',
+    headline TEXT NOT NULL,
+    caption TEXT NOT NULL,
+    hashtags TEXT NOT NULL DEFAULT '[]',
+    image_prompt TEXT NOT NULL DEFAULT '',
+    background TEXT,
+    image TEXT,
+    status TEXT NOT NULL DEFAULT 'proposed',
+    scheduled_at TEXT,
+    published_at TEXT,
+    ig_container_id TEXT,
+    ig_media_id TEXT,
+    permalink TEXT,
+    error TEXT,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS instagram_posts_status ON instagram_posts(status, scheduled_at)`,
 ];
 
 export const now = () => new Date().toISOString();

@@ -23,6 +23,17 @@ ENVIRONMENT = "production"
 CORS_ORIGINS = '["https://academie.intelliakin.com","https://intellia-academie.pages.dev","https://intellia-controle.pages.dev"]'
 ADMIN_NAME = "Elnovic NTEDIKA"
 AI_DAILY_LIMIT = "3"
+PUBLIC_API_URL = "https://intellia-academie-api.intelliakin.workers.dev"
+INSTAGRAM_API_VERSION = "v25.0"
+
+# Génération des visuels de l'agent Instagram (Workers AI, offre gratuite).
+[ai]
+binding = "AI"
+
+# Agent Instagram : proposition du jour à 5 h UTC (6 h à Kinshasa),
+# publication des messages approuvés toutes les 15 minutes.
+[triggers]
+crons = ["0 5 * * *", "*/15 * * * *"]
 
 # Valeurs secrètes, saisies dans le tableau de bord Cloudflare
 # (Worker > Settings > Variables and Secrets), jamais dans ce fichier :

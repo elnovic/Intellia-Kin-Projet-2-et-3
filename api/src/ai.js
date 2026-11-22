@@ -6,7 +6,7 @@
 
 export class AIUnavailable extends Error {}
 
-function payload(model, system, user, maxTokens) {
+function payload(model, system, user, maxTokens, json) {
   const body = {
     model,
     messages: [
@@ -18,11 +18,13 @@ function payload(model, system, user, maxTokens) {
   };
   // Raisonnement court : réponses plus rapides, quota mieux préservé.
   if (model.startsWith("openai/gpt-oss")) body.reasoning_effort = "low";
+  // Réponse sous forme d'objet JSON (agent Instagram).
+  if (json) body.response_format = { type: "json_object" };
   return body;
 }
 
 /** Renvoie [texte, modèle utilisé]. Lève AIUnavailable si tout échoue. */
-export async function complete(config, system, user, maxTokens = 2500) {
+export async function complete(config, system, user, maxTokens = 2500, { json = false } = {}) {
   const fetchFn = config.fetch || fetch;
   if (!config.groqApiKey) throw new AIUnavailable("Aucune clé d'API configurée.");
   const url = `${config.groqBaseUrl.replace(/\/$/, "")}/chat/completions`;
@@ -32,7 +34,7 @@ export async function complete(config, system, user, maxTokens = 2500) {
       response = await fetchFn(url, {
         method: "POST",
         headers: { Authorization: `Bearer ${config.groqApiKey}`, "Content-Type": "application/json" },
-        body: JSON.stringify(payload(model, system, user, maxTokens)),
+        body: JSON.stringify(payload(model, system, user, maxTokens, json)),
         signal: AbortSignal.timeout(90_000),
       });
     } catch (err) {
