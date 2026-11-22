@@ -15,7 +15,7 @@ command = "node scripts/build-content.mjs"
 [[d1_databases]]
 binding = "DB"
 database_name = "intellia-academie"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "5231934f-a9e4-45d4-94a3-16d2b4295a4d"
 
 [vars]
 ENVIRONMENT = "production"
