@@ -8,7 +8,7 @@ extérieur gratuit, Groq.
 | Élément | Service | Adresse |
 |---|---|---|
 | Base de données | Cloudflare D1 | (privée) |
-| API | Cloudflare Workers | `https://intellia-academie-api.<compte>.workers.dev` |
+| API | Cloudflare Workers | `https://intellia-academie-api.intelliakin.workers.dev` |
 | Académie (public) | Cloudflare Pages | `https://academie.intelliakin.com` |
 | Centre de contrôle (équipe) | Cloudflare Pages, sans domaine | `https://intellia-controle.pages.dev` |
 | Modèle d'IA des outils | Groq, offre gratuite | — |
