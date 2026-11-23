@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Généré par api/scripts/build-sitemap.mjs : ne pas modifier à la main. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://academie.intelliakin.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/analyse-de-donnees-et-aide-a-la-decision</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/automatiser-les-taches-administratives</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/bien-formuler-ses-demandes-a-l-ia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/creer-des-assistants-et-agents-ia-sans-coder</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/de-l-ia-a-un-business-rentable</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/du-concept-au-plan-d-affaires</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/etude-de-marche-et-veille-concurrentielle</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/freelancing-vendre-ses-competences-en-ligne</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/ia-confidentialite-et-ethique-au-travail</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/image-professionnelle-cv-linkedin-portfolio</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/introduction-a-l-ia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/l-ia-sur-telephone-avec-peu-de-data</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/marketing-digital-et-creation-de-contenu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/prix-marges-et-tresorerie</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/productivite-professionnelle-office-et-ia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/rapports-appels-d-offres-propositions</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/reussir-entretiens-et-tests-de-recrutement</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/strategie-ia-adoption-en-organisation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/vente-relation-client-et-automatisation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/cours/verifier-ce-que-dit-l-ia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/cv-lettre</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/assistant-redaction</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/plan-affaires</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/generateur-publications</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/simulateur-entretien</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/coach-memoire</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/calculateur-prix-marge</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/tests-recrutement</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/bibliotheque-prompts</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/outils/diagnostic-ia</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://academie.intelliakin.com/annonces</loc><changefreq>daily</changefreq><priority>0.6</priority></url>
+</urlset>

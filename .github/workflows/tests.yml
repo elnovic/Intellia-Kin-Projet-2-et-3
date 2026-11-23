@@ -24,5 +24,7 @@ jobs:
           node-version: "22"
       - name: Vérifier les cours du dépôt
         run: node scripts/build-content.mjs --check
+      - name: Vérifier le plan du site (web/sitemap.xml)
+        run: node scripts/build-sitemap.mjs --check
       - name: Lancer les tests
         run: node scripts/build-content.mjs && node --test --no-warnings test/*.test.mjs

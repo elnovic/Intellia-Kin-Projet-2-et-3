@@ -1,0 +1,9 @@
+# Académie Intellia Kin : tout le contenu public peut être indexé.
+User-agent: *
+Allow: /
+Disallow: /mon-espace
+Disallow: /connexion
+Disallow: /inscription
+Disallow: /mot-de-passe-oublie
+
+Sitemap: https://academie.intelliakin.com/sitemap.xml
