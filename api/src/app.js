@@ -11,6 +11,7 @@ import { authRoutes, ensureAdmin } from "./routes/auth.js";
 import { courseRoutes } from "./routes/courses.js";
 import { toolRoutes } from "./routes/tools.js";
 import { instagramRoutes } from "./routes/instagram.js";
+import { passwordRoutes } from "./routes/password.js";
 import { dailyProposal, publishDue, refreshToken } from "./instagram.js";
 
 export const DAILY_CRON = "0 5 * * *";
@@ -46,6 +47,9 @@ export function readConfig(env) {
     instagramGraphUrl: env.INSTAGRAM_GRAPH_URL || "https://graph.instagram.com",
     facebookGraphUrl: env.FACEBOOK_GRAPH_URL || "https://graph.facebook.com",
     instagramApiVersion: env.INSTAGRAM_API_VERSION || "v25.0",
+    resendApiKey: env.RESEND_API_KEY || "",
+    emailFrom: env.EMAIL_FROM || "Académie Intellia Kin <noreply@academie.intelliakin.com>",
+    academyUrl: (env.ACADEMY_URL || "https://academie.intelliakin.com").replace(/\/$/, ""),
     fetch: env.FETCH,
   };
 }
@@ -64,6 +68,7 @@ export function createApp(bundle) {
   toolRoutes(router);
   adminRoutes(router);
   instagramRoutes(router);
+  passwordRoutes(router);
   router.get("/health", async () => json({ status: "ok" }));
   router.get("/", async () => json({ service: "API de l'Académie Intellia Kin", status: "ok" }));
   router.get("/media/cours/:slug/images/:file", async (ctx) => {

@@ -205,6 +205,10 @@ function nextUrl() {
 
 async function signIn(email, password) {
   const { access_token } = await api("/auth/login", { method: "POST", body: { email, password }, auth: false });
+  return openSession(access_token);
+}
+
+async function openSession(access_token) {
   session.set(access_token, null);
   const user = await api("/auth/me");
   session.set(access_token, user);
@@ -222,6 +226,7 @@ export async function loginPage(root, _, { navigate }) {
       <label class="field"><span>Mot de passe</span><input name="password" type="password" required autocomplete="current-password"></label>
       <button class="ik-bouton" type="submit">Se connecter</button>
     </form>
+    <p><a href="/mot-de-passe-oublie${suite ? `?suite=${encodeURIComponent(suite)}` : ""}">Mot de passe oublié ?</a></p>
     <p>Pas encore de compte ? <a href="/inscription${suite ? `?suite=${encodeURIComponent(suite)}` : ""}">Créez-le gratuitement</a>.</p>
   </div></section>`;
   root.querySelector("[data-login]").addEventListener("submit", (event) => {
@@ -233,6 +238,122 @@ export async function loginPage(root, _, { navigate }) {
       navigate(nextUrl(), { replace: true });
     }).catch((error) => toast(error.message, "error"));
   });
+}
+
+// --- Mot de passe oublié ----------------------------------------------------
+
+const CONTACT_URL = "https://intelliakin.com/contact.html";
+
+function newPasswordFields() {
+  return `<label class="field"><span>Nouveau mot de passe (8 caractères minimum)</span>
+      <input name="password" type="password" required minlength="8" maxlength="128" autocomplete="new-password"></label>
+    <label class="field"><span>Confirmez le nouveau mot de passe</span>
+      <input name="confirm" type="password" required minlength="8" maxlength="128" autocomplete="new-password"></label>`;
+}
+
+function checkedPassword(form) {
+  if (form.password.value !== form.confirm.value) throw new Error("Les deux mots de passe ne correspondent pas.");
+  return form.password.value;
+}
+
+export async function forgotPasswordPage(root, _, { navigate }) {
+  setTitle("Mot de passe oublié");
+  const params = new URLSearchParams(location.search);
+  const link = params.get("lien");
+  const done = async (access_token) => {
+    const user = await openSession(access_token);
+    toast(`Mot de passe changé. Bienvenue, ${user.full_name.split(" ")[0]} !`, "success");
+    navigate(nextUrl(), { replace: true });
+  };
+
+  // Lien transmis par l'équipe Intellia Kin.
+  if (link) {
+    root.innerHTML = `<section class="page"><div class="container auth-box">
+      <h1>Choisir un nouveau mot de passe</h1>
+      <p>Ce lien vous a été envoyé par l'équipe Intellia Kin. Il ne sert qu'une fois.</p>
+      <form data-link class="form-stack">${newPasswordFields()}
+        <button class="ik-bouton" type="submit">Enregistrer et me connecter</button>
+      </form>
+    </div></section>`;
+    root.querySelector("[data-link]").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      withBusy(form.querySelector("button"), async () => {
+        const password = checkedPassword(form);
+        const { access_token } = await api("/auth/password/reset", { method: "POST", body: { token: link, password }, auth: false });
+        await done(access_token);
+      }).catch((error) => toast(error.message, "error"));
+    });
+    return;
+  }
+
+  root.innerHTML = `<section class="page"><div class="container auth-box">${loading()}</div></section>`;
+  const box = root.querySelector(".auth-box");
+  const { email: byEmail } = await api("/auth/password/options", { auth: false });
+  const teamHelp = `<div class="notice notice-info"><p>Contactez l'équipe Intellia Kin depuis
+    <a href="${CONTACT_URL}" target="_blank" rel="noopener">la page Contact</a>, en indiquant l'adresse e-mail de votre compte.
+    Après vérification de votre identité, elle vous enverra un lien pour choisir un nouveau mot de passe.</p></div>`;
+
+  if (!byEmail) {
+    box.innerHTML = `<h1>Mot de passe oublié</h1>${teamHelp}<p><a href="/connexion">← Retour à la connexion</a></p>`;
+    return;
+  }
+
+  const askCode = (initial = "") => {
+    box.innerHTML = `<h1>Mot de passe oublié</h1>
+      <p>Indiquez l'adresse e-mail de votre compte : nous vous enverrons un code à 6 chiffres.</p>
+      <form data-ask class="form-stack">
+        <label class="field"><span>E-mail</span><input name="email" type="email" required autocomplete="email" value="${esc(initial)}"></label>
+        <button class="ik-bouton" type="submit">Recevoir un code</button>
+      </form>
+      <p><a href="/connexion">← Retour à la connexion</a></p>`;
+    box.querySelector("[data-ask]").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const address = event.currentTarget.email.value.trim();
+      withBusy(event.currentTarget.querySelector("button"), async () => {
+        const result = await api("/auth/password/forgot", { method: "POST", body: { email: address }, auth: false });
+        if (result.method === "equipe") {
+          box.innerHTML = `<h1>Mot de passe oublié</h1>${teamHelp}`;
+          return;
+        }
+        enterCode(address);
+      }).catch((error) => toast(error.message, "error"));
+    });
+  };
+
+  const enterCode = (address) => {
+    box.innerHTML = `<h1>Entrez votre code</h1>
+      <div class="notice notice-info"><p>Si un compte existe pour <strong>${esc(address)}</strong>, un code à 6 chiffres vient d'y être envoyé.
+      Il est valable 15 minutes. Pensez à regarder dans les courriers indésirables (spam).</p></div>
+      <form data-reset class="form-stack">
+        <label class="field"><span>Code reçu par e-mail</span>
+          <input name="code" required inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" placeholder="123456"></label>
+        ${newPasswordFields()}
+        <button class="ik-bouton" type="submit">Changer mon mot de passe</button>
+      </form>
+      <p class="small"><button class="link-button" type="button" data-again>Renvoyer un code</button> ·
+        <button class="link-button" type="button" data-other>Changer d'adresse</button> ·
+        <a href="${CONTACT_URL}" target="_blank" rel="noopener">Aucun e-mail reçu ? Contactez l'équipe</a></p>`;
+    box.querySelector("[data-reset]").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      withBusy(form.querySelector("button"), async () => {
+        const password = checkedPassword(form);
+        const code = form.code.value.replace(/\D/g, "");
+        const { access_token } = await api("/auth/password/reset", { method: "POST", body: { email: address, code, password }, auth: false });
+        await done(access_token);
+      }).catch((error) => toast(error.message, "error"));
+    });
+    box.querySelector("[data-again]").addEventListener("click", (event) =>
+      withBusy(event.currentTarget, async () => {
+        await api("/auth/password/forgot", { method: "POST", body: { email: address }, auth: false });
+        toast("Un nouveau code a été envoyé. L'ancien ne fonctionne plus.", "success");
+      }).catch((error) => toast(error.message, "error")),
+    );
+    box.querySelector("[data-other]").addEventListener("click", () => askCode(address));
+  };
+
+  askCode();
 }
 
 export async function registerPage(root, _, { navigate }) {

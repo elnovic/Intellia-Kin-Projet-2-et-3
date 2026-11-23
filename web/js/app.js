@@ -4,7 +4,7 @@ import { refreshUser, session } from "./api.js";
 import * as community from "./pages-community.js";
 import * as courses from "./pages-courses.js";
 import * as tools from "./pages-tools.js";
-import { errorBox, esc } from "./ui.js";
+import { errorBox, esc, icon } from "./ui.js";
 
 const routes = [
   ["/", community.home],
@@ -19,6 +19,7 @@ const routes = [
   ["/outils/:slug", tools.toolPage],
   ["/connexion", community.loginPage],
   ["/inscription", community.registerPage],
+  ["/mot-de-passe-oublie", community.forgotPasswordPage],
   ["/mon-espace", community.mySpace],
 ];
 
@@ -117,6 +118,27 @@ document.addEventListener("click", (event) => {
     document.body.classList.toggle("menu-open");
   }
 });
+
+// Image introuvable (adresse erronée, page web au lieu d'une image…) : dans une
+// carte d'annonce, le visuel par défaut prend sa place ; ailleurs,
+// l'image est simplement retirée.
+document.addEventListener(
+  "error",
+  (event) => {
+    const img = event.target;
+    if (!(img instanceof HTMLImageElement) || img.dataset.failed) return;
+    img.dataset.failed = "1";
+    if (img.closest(".announcement-card")) {
+      const placeholder = document.createElement("div");
+      placeholder.className = "announcement-placeholder";
+      placeholder.innerHTML = icon("spark");
+      img.replaceWith(placeholder);
+    } else {
+      img.remove();
+    }
+  },
+  true,
+);
 
 window.addEventListener("popstate", render);
 window.addEventListener("ik:session", updateNav);

@@ -52,15 +52,23 @@ export async function sha256Hex(text) {
 
 // --- Jetons (JWT HS256) ------------------------------------------------------
 
-export async function createToken(userId, secret, minutes) {
+/**
+ * Version du mot de passe, glissée dans chaque session : quand le mot de passe
+ * change, les sessions ouvertes avec l'ancien deviennent invalides.
+ */
+export const passwordVersion = async (passwordHash) => (await sha256Hex(`session|${passwordHash}`)).slice(0, 16);
+
+export async function createToken(userId, secret, minutes, version = null) {
   const issued = Math.floor(Date.now() / 1000);
   const header = b64url(enc.encode(JSON.stringify({ alg: "HS256", typ: "JWT" })));
-  const payload = b64url(enc.encode(JSON.stringify({ sub: userId, iat: issued, exp: issued + minutes * 60 })));
+  const claims = { sub: userId, iat: issued, exp: issued + minutes * 60 };
+  if (version) claims.pv = version;
+  const payload = b64url(enc.encode(JSON.stringify(claims)));
   const signature = await crypto.subtle.sign("HMAC", await hmacKey(secret), enc.encode(`${header}.${payload}`));
   return `${header}.${payload}.${b64url(signature)}`;
 }
 
-/** Identifiant de l'utilisateur, ou null si le jeton est invalide ou expiré. */
+/** Contenu du jeton ({ sub, pv }), ou null si le jeton est invalide ou expiré. */
 export async function readToken(token, secret) {
   try {
     const [header, payload, signature] = token.split(".");
@@ -71,7 +79,7 @@ export async function readToken(token, secret) {
     if (!ok) return null;
     const claims = JSON.parse(new TextDecoder().decode(unb64url(payload)));
     if (typeof claims.exp !== "number" || claims.exp < Date.now() / 1000) return null;
-    return typeof claims.sub === "string" ? claims.sub : null;
+    return typeof claims.sub === "string" ? { sub: claims.sub, pv: typeof claims.pv === "string" ? claims.pv : null } : null;
   } catch {
     return null;
   }
@@ -90,10 +98,13 @@ export async function optionalUser(ctx) {
     ctx._user = null;
     return null;
   }
-  const userId = await readToken(match[1].trim(), ctx.config.secretKey);
-  if (!userId) throw unauthorized("Session invalide ou expirée. Reconnectez-vous.");
-  const user = await ctx.db.first(`SELECT * FROM users WHERE id = ?`, userId);
+  const claims = await readToken(match[1].trim(), ctx.config.secretKey);
+  if (!claims) throw unauthorized("Session invalide ou expirée. Reconnectez-vous.");
+  const user = await ctx.db.first(`SELECT * FROM users WHERE id = ?`, claims.sub);
   if (!user || !user.is_active) throw unauthorized("Compte introuvable ou désactivé.");
+  if (claims.pv && claims.pv !== (await passwordVersion(user.password_hash))) {
+    throw unauthorized("Le mot de passe a changé. Reconnectez-vous.");
+  }
   ctx._user = user;
   return user;
 }

@@ -101,6 +101,38 @@ Les tables sont créées automatiquement par l'API à son premier démarrage, et
    le vérifier sur l'Académie, puis le supprimer.
 4. Créer un compte apprenant, suivre une leçon, essayer un outil IA.
 
+## Étape 7 — E-mails « mot de passe oublié » (Resend, facultatif)
+
+Sur la page « Mot de passe oublié » de l'Académie, l'apprenant reçoit un code à
+6 chiffres par e-mail (valable 15 minutes, 5 essais, 3 demandes par heure).
+L'envoi passe par **Resend**, offre gratuite sans carte : 3 000 e-mails par mois,
+100 par jour. (L'envoi d'e-mails de Cloudflare n'est gratuit que vers des
+adresses vérifiées à l'avance, pas vers les apprenants.)
+
+1. Créer un compte sur resend.com.
+2. **Domains**, **Add domain** : `academie.intelliakin.com`. Resend affiche
+   quelques enregistrements DNS (DKIM, SPF, MX sur des sous-noms comme
+   `resend._domainkey.academie` et `send.academie`). Les ajouter dans Cloudflare
+   (DNS de intelliakin.com), ou laisser Resend le faire s'il propose la connexion
+   à Cloudflare. Ils ne touchent ni au site intelliakin.com ni à l'Académie.
+3. Attendre que le domaine soit **Verified**.
+4. **API Keys**, **Create API key** : accès « Sending access », limité au domaine.
+   Copier la clé (commence par `re_`), sans l'envoyer par message.
+5. Cloudflare, Worker `intellia-academie-api`, **Settings**, **Variables and
+   Secrets** : ajouter le secret `RESEND_API_KEY` avec cette clé.
+
+L'expéditeur est `Académie Intellia Kin <noreply@academie.intelliakin.com>`
+(variable `EMAIL_FROM` de `api/wrangler.toml`).
+
+**Sans clé Resend**, ou si un apprenant ne reçoit rien : il contacte l'équipe.
+Dans le centre de contrôle, rubrique **Apprenants**, on retrouve son compte, on
+vérifie son identité, puis **Lien de réinitialisation** crée un lien valable
+24 heures et une seule fois, à lui transmettre (bouton WhatsApp si son numéro est
+connu). Changer de mot de passe ferme toutes ses sessions ouvertes.
+
+L'administrateur, lui, peut aussi changer son mot de passe en modifiant le secret
+`ADMIN_PASSWORD` du Worker.
+
 ## Mettre à jour la plateforme
 
 - **Cours du dépôt** : modifier les fichiers de `contenu/cours/`, envoyer sur `main`.

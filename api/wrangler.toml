@@ -25,6 +25,8 @@ ADMIN_NAME = "Elnovic NTEDIKA"
 AI_DAILY_LIMIT = "3"
 PUBLIC_API_URL = "https://intellia-academie-api.intelliakin.workers.dev"
 INSTAGRAM_API_VERSION = "v25.0"
+ACADEMY_URL = "https://academie.intelliakin.com"
+EMAIL_FROM = "Académie Intellia Kin <noreply@academie.intelliakin.com>"
 
 # Génération des visuels de l'agent Instagram (Workers AI, offre gratuite).
 [ai]
@@ -41,6 +43,9 @@ crons = ["0 5 * * *", "*/15 * * * *"]
 #   ADMIN_EMAIL      e-mail du compte administrateur
 #   ADMIN_PASSWORD   mot de passe administrateur (12 caractères ou plus)
 #   GROQ_API_KEY     clé Groq des outils IA (commence par gsk_)
+#   RESEND_API_KEY   clé Resend pour les codes « mot de passe oublié » (commence par re_) ;
+#                    sans elle, l'Académie invite à contacter l'équipe
+#                    (lien de réinitialisation créé dans le centre de contrôle)
 
 [observability]
 enabled = true

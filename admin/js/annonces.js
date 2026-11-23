@@ -77,7 +77,8 @@ export async function announcementForm(root, { id }, { navigate }) {
       ${editing ? `<label class="field"><span>Adresse de la page (slug)</span><input name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" value="${val("slug")}"></label>` : ""}
       <label class="field"><span>Résumé (160 caractères max, affiché dans les listes et les partages) <span class="small" data-count></span></span><textarea name="summary" required minlength="10" maxlength="160" rows="2">${val("summary")}</textarea></label>
       <label class="field"><span>Contenu (Markdown : **gras**, listes avec -, titres avec ##)</span><textarea name="body" rows="10">${val("body")}</textarea></label>
-      <label class="field"><span>Image de couverture (adresse https, format 1200 × 630 conseillé)</span><input name="cover_image" type="url" value="${val("cover_image")}"></label>
+      <label class="field"><span>Image de couverture (adresse https de l'image elle-même, format 1200 × 630 conseillé)</span><input name="cover_image" type="url" value="${val("cover_image")}"></label>
+      <div data-cover-preview class="cover-preview" hidden></div>
       <label class="checkbox"><input type="checkbox" name="pinned" ${v.pinned ? "checked" : ""}> Mettre à la une (en tête de liste et sur l'accueil)</label>
     </fieldset>
     <fieldset data-when><legend>Date et lieu</legend>
@@ -117,8 +118,46 @@ export async function announcementForm(root, { id }, { navigate }) {
   form.summary.addEventListener("input", updateCount);
   updateCount();
 
+  // Aperçu de l'image de couverture : prévient si l'adresse ne mène pas à une image.
+  const preview = box.querySelector("[data-cover-preview]");
+  let coverOk = true;
+  let coverTimer;
+  const checkCover = () => {
+    const address = form.cover_image.value.trim();
+    coverOk = true;
+    if (!address) {
+      preview.hidden = true;
+      preview.innerHTML = "";
+      return;
+    }
+    preview.hidden = false;
+    preview.innerHTML = `<p class="small">Vérification de l'image…</p>`;
+    const img = new Image();
+    img.alt = "Aperçu de l'image de couverture";
+    img.onload = () => {
+      if (form.cover_image.value.trim() !== address) return;
+      preview.innerHTML = "";
+      preview.append(img);
+    };
+    img.onerror = () => {
+      if (form.cover_image.value.trim() !== address) return;
+      coverOk = false;
+      preview.innerHTML = `<div class="notice notice-error"><p><strong>Cette adresse ne mène pas à une image.</strong>
+        Ouvrez l'image elle-même dans votre navigateur (clic droit sur l'image, « Ouvrir l'image dans un nouvel onglet »)
+        et copiez l'adresse de cet onglet : elle se termine souvent par .jpg, .png ou .webp.
+        Sans image valide, l'Académie affiche le visuel par défaut.</p></div>`;
+    };
+    img.src = address;
+  };
+  form.cover_image.addEventListener("input", () => {
+    clearTimeout(coverTimer);
+    coverTimer = setTimeout(checkCover, 500);
+  });
+  checkCover();
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (!coverOk && !confirm("L'image de couverture ne se charge pas : l'Académie affichera le visuel par défaut. Enregistrer quand même ?")) return;
     const publish = event.submitter?.value === "publish";
     const raw = formData(form);
     const zone = raw.timezone || "Africa/Kinshasa";

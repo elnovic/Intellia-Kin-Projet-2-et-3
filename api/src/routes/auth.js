@@ -1,6 +1,6 @@
 // Inscription, connexion et profil.
 
-import { createToken, currentUser, hashPassword, userOut, verifyPassword } from "../auth.js";
+import { createToken, currentUser, hashPassword, passwordVersion, userOut, verifyPassword } from "../auth.js";
 import { conflict, HttpError, json, readJson } from "../http.js";
 import { newId, now } from "../db.js";
 import { email, oneOf, parseObject, phone, str } from "../validate.js";
@@ -56,7 +56,7 @@ export function authRoutes(router) {
     // Même message dans tous les cas, pour ne pas révéler quels comptes existent.
     const ok = user && user.is_active && (await verifyPassword(data.password, user.password_hash, ctx.config.secretKey));
     if (!ok) throw new HttpError(401, "Adresse e-mail ou mot de passe incorrect.");
-    const token = await createToken(user.id, ctx.config.secretKey, ctx.config.tokenMinutes);
+    const token = await createToken(user.id, ctx.config.secretKey, ctx.config.tokenMinutes, await passwordVersion(user.password_hash));
     return json({ access_token: token, token_type: "bearer" });
   });
 

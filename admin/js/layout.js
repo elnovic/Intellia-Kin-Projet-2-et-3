@@ -8,6 +8,7 @@ const LINKS = [
   ["tableau", "#/", "Tableau de bord"],
   ["cours", "#/cours", "Cours"],
   ["annonces", "#/annonces", "Annonces et événements"],
+  ["apprenants", "#/apprenants", "Apprenants"],
   ["publications", "#/publications", "Publications Instagram"],
 ];
 

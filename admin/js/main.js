@@ -2,6 +2,7 @@
 
 import { api, refreshUser, session } from "./api.js";
 import { announcementForm, announcementsList } from "./annonces.js";
+import { learnersPage } from "./apprenants.js";
 import { courseEditor, courseForm, coursesList, lessonEditor } from "./cours.js";
 import { navigate, PUBLIC_SITE, shell } from "./layout.js";
 import { publicationEditor, publicationsList } from "./publications.js";
@@ -16,6 +17,7 @@ const routes = [
   ["/annonces", announcementsList],
   ["/annonces/nouvelle", announcementForm],
   ["/annonces/:id", announcementForm],
+  ["/apprenants", learnersPage],
   ["/publications", publicationsList],
   ["/publications/:id", publicationEditor],
 ];

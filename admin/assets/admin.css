@@ -61,3 +61,10 @@ h2.inline { display: inline; }
 .badge-danger { background: #fdecec; color: var(--ik-erreur); }
 .link-button.danger { color: var(--ik-erreur); }
 @media (max-width: 900px) { .ig-editor { grid-template-columns: 1fr; } }
+
+/* Image de couverture des annonces */
+.cover-preview img { max-width: 360px; width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: var(--ik-rayon-petit); border: 1px solid var(--ik-bordure); }
+
+/* Apprenants */
+.reset-link { display: grid; gap: var(--ik-espace-3); }
+.reset-link input { font: inherit; width: 100%; padding: 0.5rem 0.8rem; border: 1px solid #cbd5e1; border-radius: var(--ik-rayon-petit); background: #f8fafc; }

@@ -4,7 +4,7 @@
 // l'ordre alphabétique est alors l'ordre chronologique.
 // Les champs JSON sont stockés en texte ; les booléens en 0 ou 1.
 
-export const SCHEMA_VERSION = "4";
+export const SCHEMA_VERSION = "5";
 
 export const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)`,
@@ -178,6 +178,19 @@ export const SCHEMA = [
   `CREATE INDEX IF NOT EXISTS instagram_posts_status ON instagram_posts(status, scheduled_at)`,
   // Version 4 : retrait de la publication Facebook essayée en version 3 (table vide).
   `DROP TABLE IF EXISTS facebook_posts`,
+  // Version 5 : mot de passe oublié (code par e-mail, ou lien créé par l'équipe).
+  `CREATE TABLE IF NOT EXISTS password_resets (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    kind TEXT NOT NULL,
+    secret_hash TEXT NOT NULL,
+    attempts INTEGER NOT NULL DEFAULT 0,
+    expires_at TEXT NOT NULL,
+    used_at TEXT,
+    created_by TEXT,
+    created_at TEXT NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS password_resets_user ON password_resets(user_id, created_at)`,
 ];
 
 export const now = () => new Date().toISOString();
