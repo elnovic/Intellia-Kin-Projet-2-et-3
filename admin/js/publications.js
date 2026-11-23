@@ -1,4 +1,4 @@
-// Publications Instagram et Facebook : l'agent propose, l'équipe relit, compose et valide.
+// Publications Instagram : l'agent propose, l'équipe relit, compose et valide.
 
 import { api } from "./api.js";
 import { navigate, shell } from "./layout.js";
@@ -22,26 +22,6 @@ const WIDTH = 1080;
 const HEIGHT = 1350; // format portrait 4:5, le mieux affiché sur Instagram
 
 const statusBadge = (s) => badge(...(STATUS[s] || [s, "neutral"]));
-const FB_STATUS = {
-  pending: ["Facebook : prévu", "formation"],
-  published: ["Facebook : publié", "success"],
-  failed: ["Facebook : échec", "danger"],
-};
-const fbBadge = (fb) => (fb?.enabled ? badge(...(FB_STATUS[fb.status] || [`Facebook : ${fb.status}`, "neutral"])) : "");
-
-const ACADEMY_URL = "https://academie.intelliakin.com";
-
-/** Texte Facebook proposé à partir de la légende Instagram (même règle que l'API). */
-function facebookText(caption, hashtags) {
-  let text = String(caption || "")
-    .replace(/\s*\((?:le\s+)?lien (?:est )?en bio\)/gi, "")
-    .replace(/(?:le\s+)?lien en bio/gi, ACADEMY_URL)
-    .trim();
-  if (!text.includes("academie.intelliakin.com")) text += `\n\n👉 ${ACADEMY_URL}`;
-  else text = text.replace(/(^|[^/])academie\.intelliakin\.com/g, `$1${ACADEMY_URL}`);
-  const tags = hashtags.slice(0, 3).join(" ");
-  return `${text}${tags ? `\n\n${tags}` : ""}`.slice(0, 5000);
-}
 
 async function imageBlob(id, kind) {
   const response = await api(`/admin/instagram/posts/${id}/${kind}`, { raw: true });
@@ -74,26 +54,6 @@ function connectionPanel(connection) {
   </div>`;
 }
 
-function facebookPanel(connection) {
-  if (connection.connected) {
-    return `<div class="ig-connection ig-ok">
-      <div><strong>Page Facebook connectée : ${esc(connection.page_name)}</strong>
-      <p class="small">Accès permanent (jeton d'utilisateur système). Cochez « Aussi sur la Page Facebook » dans une proposition pour la publier sur la Page.</p></div>
-      <button class="ik-bouton ik-bouton-secondaire" data-fb-disconnect>Déconnecter</button>
-    </div>`;
-  }
-  return `<div class="ig-connection">
-    <div><strong>Aucune Page Facebook connectée</strong>
-    <p class="small">Collez le jeton de l'utilisateur système (portefeuille business Meta, autorisations pages_show_list, pages_read_engagement et pages_manage_posts).
-    L'ID de la Page n'est à remplir que si la connexion le demande.</p></div>
-    <form data-fb-connect class="inline-form">
-      <input name="access_token" type="password" placeholder="Jeton d'accès (utilisateur système)" autocomplete="off" required minlength="20">
-      <input name="page_id" type="text" inputmode="numeric" placeholder="ID de la Page (facultatif)" autocomplete="off">
-      <button class="ik-bouton" type="submit">Connecter</button>
-    </form>
-  </div>`;
-}
-
 function postCard(p) {
   const when =
     p.status === "published"
@@ -104,23 +64,18 @@ function postCard(p) {
   return `<a class="ig-card" href="#/publications/${p.id}">
     <div class="ig-thumb" data-thumb="${p.id}" data-kind="${p.has_image ? "visuel" : "fond"}"></div>
     <div class="ig-card-body">
-      <div class="badges">${statusBadge(p.status)}${fbBadge(p.facebook)}${badge(p.theme_label, "neutral")}</div>
+      <div class="badges">${statusBadge(p.status)}${badge(p.theme_label, "neutral")}</div>
       <h3>${esc(p.headline)}</h3>
       <p class="small">${esc(when)}</p>
       ${p.error ? `<p class="small ig-error">${esc(p.error)}</p>` : ""}
-      ${p.facebook?.error ? `<p class="small ig-error">Facebook : ${esc(p.facebook.error)}</p>` : ""}
     </div>
   </a>`;
 }
 
 export async function publicationsList(el) {
-  const box = shell(el, "publications", "Publications Instagram et Facebook", loading());
-  const [connection, facebook, posts] = await Promise.all([
-    api("/admin/instagram/connection"),
-    api("/admin/facebook/connection"),
-    api("/admin/instagram/posts"),
-  ]);
-  box.innerHTML = `${connectionPanel(connection)}${facebookPanel(facebook)}
+  const box = shell(el, "publications", "Publications Instagram", loading());
+  const [connection, posts] = await Promise.all([api("/admin/instagram/connection"), api("/admin/instagram/posts")]);
+  box.innerHTML = `${connectionPanel(connection)}
     <form data-generate class="editor-bar">
       <label class="field inline-field"><span>Thème</span>
         <select name="theme">
@@ -177,25 +132,6 @@ export async function publicationsList(el) {
     if (!confirm("Déconnecter le compte Instagram ? Les publications programmées ne partiront plus.")) return;
     withBusy(event.currentTarget, async () => {
       await api("/admin/instagram/connection", { method: "DELETE" });
-      publicationsList(el);
-    }).catch((error) => toast(error.message, "error"));
-  });
-
-  box.querySelector("[data-fb-connect]")?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const body = { access_token: form.access_token.value.trim(), page_id: form.page_id.value.replace(/\D/g, "") || null };
-    withBusy(form.querySelector("button"), async () => {
-      const result = await api("/admin/facebook/connection", { method: "PUT", body });
-      toast(`Page « ${result.page_name} » connectée.`, "success");
-      publicationsList(el);
-    }).catch((error) => toast(error.message, "error"));
-  });
-
-  box.querySelector("[data-fb-disconnect]")?.addEventListener("click", (event) => {
-    if (!confirm("Déconnecter la Page Facebook ? Les publications Facebook prévues ne partiront plus.")) return;
-    withBusy(event.currentTarget, async () => {
-      await api("/admin/facebook/connection", { method: "DELETE" });
       publicationsList(el);
     }).catch((error) => toast(error.message, "error"));
   });
@@ -344,18 +280,9 @@ function toLocalInput(date) {
 }
 
 export async function publicationEditor(el, { id }) {
-  const box = shell(el, "publications", "Publication", loading());
-  const [post, connection, facebook] = await Promise.all([
-    api(`/admin/instagram/posts/${id}`),
-    api("/admin/instagram/connection"),
-    api("/admin/facebook/connection"),
-  ]);
+  const box = shell(el, "publications", "Publication Instagram", loading());
+  const [post, connection] = await Promise.all([api(`/admin/instagram/posts/${id}`), api("/admin/instagram/connection")]);
   const editable = ["proposed", "approved", "failed"].includes(post.status);
-  const fb = post.facebook;
-  const fbLocked = fb.status === "published";
-  // Coché d'office pour une nouvelle proposition quand la Page est connectée.
-  const fbChecked = fb.enabled || (post.status === "proposed" && facebook.connected);
-  const fbRetry = fb.enabled && !fbLocked && post.has_image && ["approved", "publishing", "published", "failed"].includes(post.status);
   let background = null;
   try {
     background = await createImageBitmap(await imageBlob(id, "fond"));
@@ -364,11 +291,9 @@ export async function publicationEditor(el, { id }) {
   }
 
   box.innerHTML = `<p><a href="#/publications">← Toutes les publications</a></p>
-    <div class="badges">${statusBadge(post.status)}${fbBadge(fb)}${badge(post.theme_label, "neutral")}</div>
-    ${post.error ? `<div class="notice notice-error"><p>Instagram : ${esc(post.error)}</p></div>` : ""}
-    ${fb.error ? `<div class="notice notice-error"><p>Facebook : ${esc(fb.error)}</p></div>` : ""}
+    <div class="badges">${statusBadge(post.status)}${badge(post.theme_label, "neutral")}</div>
+    ${post.error ? `<div class="notice notice-error"><p>${esc(post.error)}</p></div>` : ""}
     ${post.permalink ? `<div class="notice notice-success"><p>En ligne : <a href="${esc(post.permalink)}" target="_blank" rel="noopener">voir sur Instagram ↗</a></p></div>` : ""}
-    ${fb.permalink ? `<div class="notice notice-success"><p>En ligne : <a href="${esc(fb.permalink)}" target="_blank" rel="noopener">voir sur Facebook ↗</a></p></div>` : ""}
     <div class="ig-editor">
       <div class="ig-preview"><canvas data-canvas aria-label="Aperçu du visuel"></canvas>
         <p class="small">Aperçu du visuel publié (1080 × 1350). Le fond est généré par IA : la publication portera l'étiquette « IA » d'Instagram.</p>
@@ -384,15 +309,6 @@ export async function publicationEditor(el, { id }) {
           <textarea name="caption" rows="12" maxlength="2000" required ${editable ? "" : "disabled"}>${esc(post.caption)}</textarea></label>
         <label class="field"><span>Hashtags (séparés par des espaces)</span>
           <input name="hashtags" value="${esc(post.hashtags.join(" "))}" ${editable ? "" : "disabled"}></label>
-        <fieldset class="ig-facebook">
-          <label class="check"><input type="checkbox" name="fb_enabled" ${fbChecked ? "checked" : ""} ${editable && !fbLocked ? "" : "disabled"}>
-            Aussi sur la Page Facebook</label>
-          <label class="field" data-fb-text><span>Texte Facebook <span class="small">(liens cliquables ; proposé à partir de la légende)</span></span>
-            <textarea name="fb_caption" rows="8" maxlength="5000" ${editable && !fbLocked ? "" : "disabled"}>${esc(fb.caption)}</textarea></label>
-          ${editable && !fbLocked ? `<div><button class="link-button" type="button" data-fb-copy>Recopier depuis la légende Instagram</button></div>` : ""}
-          ${facebook.connected ? "" : `<p class="small">Aucune Page Facebook n'est connectée : la publication Facebook partira dès sa connexion.</p>`}
-          ${fbRetry ? `<div><button class="ik-bouton ik-bouton-secondaire" type="button" data-fb-publish ${facebook.connected ? "" : "disabled"}>${fb.status === "failed" ? "Réessayer sur Facebook" : "Publier sur Facebook maintenant"}</button></div>` : ""}
-        </fieldset>
         ${editable ? `<label class="field"><span>Date et heure de publication</span>
           <input name="scheduled_at" type="datetime-local" required value="${toLocalInput(post.scheduled_at ? new Date(post.scheduled_at) : defaultSchedule())}"></label>` : ""}
         ${
@@ -439,23 +355,6 @@ export async function publicationEditor(el, { id }) {
   form.caption.addEventListener("input", recount);
   form.hashtags.addEventListener("input", recount);
 
-  // Texte Facebook : suit la légende Instagram tant qu'il n'a pas été retouché.
-  const fbText = form.fb_caption;
-  const fbToggle = () => (box.querySelector("[data-fb-text]").hidden = !form.fb_enabled.checked);
-  let fbTouched = fb.enabled;
-  const mirror = () => {
-    if (!fbTouched && !fbText.disabled) fbText.value = facebookText(form.caption.value.trim(), hashtagsOf());
-  };
-  fbToggle();
-  form.fb_enabled.addEventListener("change", fbToggle);
-  fbText.addEventListener("input", () => (fbTouched = true));
-  form.caption.addEventListener("input", mirror);
-  form.hashtags.addEventListener("input", mirror);
-  box.querySelector("[data-fb-copy]")?.addEventListener("click", () => {
-    fbTouched = false;
-    mirror();
-  });
-
   const textBody = () => ({ headline: form.headline.value.trim(), caption: form.caption.value.trim(), hashtags: hashtagsOf() });
   const reload = () => publicationEditor(el, { id });
   const action = (button, task, message) =>
@@ -474,12 +373,7 @@ export async function publicationEditor(el, { id }) {
         await redraw();
         await api(`/admin/instagram/posts/${id}/approve`, {
           method: "POST",
-          body: {
-            ...textBody(),
-            image: canvasToDataUrl(canvas),
-            scheduled_at: when.toISOString(),
-            ...(fbLocked ? {} : { facebook: { enabled: form.fb_enabled.checked, caption: fbText.value.trim() } }),
-          },
+          body: { ...textBody(), image: canvasToDataUrl(canvas), scheduled_at: when.toISOString() },
         });
       },
       `Publication programmée le ${formatDate(when, true)}.`,
@@ -496,20 +390,11 @@ export async function publicationEditor(el, { id }) {
     });
   }
   box.querySelector("[data-publish]")?.addEventListener("click", (event) => {
-    const both = fb.enabled && fb.status === "pending";
-    if (!confirm(both ? "Publier maintenant sur Instagram et sur Facebook ?" : "Publier maintenant sur Instagram ?")) return;
+    if (!confirm("Publier maintenant sur Instagram ?")) return;
     action(event.currentTarget, async () => {
       const result = await api(`/admin/instagram/posts/${id}/publish`, { method: "POST" });
-      if (result.status === "failed") throw new Error(result.error || "La publication Instagram a échoué.");
-      if (result.facebook.status === "failed") throw new Error(`Facebook : ${result.facebook.error || "la publication a échoué."}`);
-    }, both ? "Publication envoyée à Instagram et Facebook." : "Publication envoyée à Instagram.");
-  });
-  box.querySelector("[data-fb-publish]")?.addEventListener("click", (event) => {
-    if (!confirm("Publier maintenant sur la Page Facebook ?")) return;
-    action(event.currentTarget, async () => {
-      const result = await api(`/admin/instagram/posts/${id}/facebook`, { method: "POST" });
-      if (result.facebook.status === "failed") throw new Error(`Facebook : ${result.facebook.error || "la publication a échoué."}`);
-    }, "Publication envoyée à Facebook.");
+      if (result.status === "failed") throw new Error(result.error || "La publication a échoué.");
+    }, "Publication envoyée à Instagram.");
   });
   for (const button of box.querySelectorAll("[data-unapprove]")) {
     button.addEventListener("click", (event) => action(event.currentTarget, () => api(`/admin/instagram/posts/${id}/unapprove`, { method: "POST" })));

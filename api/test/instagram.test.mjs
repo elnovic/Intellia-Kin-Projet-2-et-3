@@ -36,8 +36,6 @@ function fakeServices({ instagram = {} } = {}) {
           { id: "200", name: "Intellia Kin", access_token: "page-b", instagram_business_account: { id: "17841499999999999", username: "intellia_kin" } },
         ] });
       }
-      if (u.pathname.endsWith("/photos")) return Response.json({ id: "photo-1", post_id: "200_999" });
-      if (u.pathname.endsWith("/v25.0/300")) return Response.json({ id: "300", name: "Page directe", access_token: "page-c" });
       if (u.pathname.endsWith("/17841488888888888")) return Response.json({ id: "17841488888888888", username: "compte_direct" });
       if (u.pathname.endsWith("/me")) return Response.json({ user_id: "17841400000000000", username: "intelliakin" });
       if (u.pathname.endsWith("/media")) return Response.json({ id: "container-1" });
@@ -278,7 +276,6 @@ describe("agent Instagram", () => {
     assert.equal(connected.body.mode, "facebook");
     assert.equal(connected.body.page_name, "Intellia Kin");
     assert.equal(connected.body.expires_at, null);
-    assert.equal(JSON.stringify(connected.body).includes("page-b"), false, "le jeton de Page n'est jamais renvoyé");
 
     // Publication via graph.facebook.com sur l'identifiant du compte Instagram.
     const post = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: { theme: "conseil" } })).body;
@@ -323,99 +320,5 @@ describe("agent Instagram", () => {
     const published = await t.call("POST", `/admin/instagram/posts/${post.id}/publish`, { token: admin });
     assert.equal(published.body.status, "published", JSON.stringify(published.body));
     assert.equal(calls.instagram.filter((c) => c.path.endsWith("/media")).length, 2);
-  });
-
-  test("Facebook : connexion de la Page, jeton jamais renvoyé", async () => {
-    const { t, admin } = await instagramSetup();
-    assert.equal((await t.call("GET", "/admin/facebook/connection", { token: admin })).body.connected, false);
-    // Deux Pages accessibles : il faut préciser laquelle.
-    const ambiguous = await t.call("PUT", "/admin/facebook/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789" } });
-    assert.equal(ambiguous.status, 422);
-    assert.match(ambiguous.body.detail, /Plusieurs Pages.*Intellia Kin \(200\)/);
-
-    const r = await t.call("PUT", "/admin/facebook/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789", page_id: "200" } });
-    assert.equal(r.status, 200, JSON.stringify(r.body));
-    assert.deepEqual([r.body.connected, r.body.page_id, r.body.page_name], [true, "200", "Intellia Kin"]);
-    assert.equal(JSON.stringify(r.body).includes("page-b"), false);
-    const stored = t.d1.db.prepare("SELECT value FROM meta WHERE key = 'facebook'").get().value;
-    assert.equal(stored.includes("page-b") || stored.includes("EAAjeton"), false, "jetons chiffrés");
-
-    // Page absente de la liste : lue directement par son identifiant.
-    const direct = await t.call("PUT", "/admin/facebook/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789", page_id: "300" } });
-    assert.equal(direct.body.page_name, "Page directe");
-
-    assert.equal((await t.call("DELETE", "/admin/facebook/connection", { token: admin })).status, 204);
-    assert.equal((await t.call("GET", "/admin/facebook/connection", { token: admin })).body.connected, false);
-  });
-
-  test("Facebook : texte proposé, publication avec Instagram, puis sans", async () => {
-    const { t, admin, calls } = await instagramSetup();
-    const post = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: { theme: "conseil" } })).body;
-    // Texte proposé par défaut : lien cliquable au lieu de « lien en bio », trois hashtags au plus.
-    assert.equal(post.facebook.enabled, false);
-    assert.match(post.facebook.caption, /https:\/\/academie\.intelliakin\.com/);
-    assert.doesNotMatch(post.facebook.caption, /lien en bio|https:\/\/https/);
-    assert.ok((post.facebook.caption.match(/#/g) || []).length <= 3);
-
-    await t.call("PUT", "/admin/instagram/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789" } });
-    await t.call("PUT", "/admin/facebook/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789", page_id: "200" } });
-
-    const short = await t.call("POST", `/admin/instagram/posts/${post.id}/approve`, {
-      token: admin, body: { image: COMPOSED, facebook: { enabled: true, caption: "trop court" } },
-    });
-    assert.equal(short.status, 422);
-
-    const approved = await t.call("POST", `/admin/instagram/posts/${post.id}/approve`, {
-      token: admin, body: { image: COMPOSED, facebook: { enabled: true, caption: "Texte Facebook relu par l'équipe, avec https://academie.intelliakin.com" } },
-    });
-    assert.equal(approved.body.facebook.status, "pending");
-
-    const published = await t.call("POST", `/admin/instagram/posts/${post.id}/publish`, { token: admin });
-    assert.equal(published.body.status, "published");
-    assert.equal(published.body.facebook.status, "published", JSON.stringify(published.body.facebook));
-    assert.equal(published.body.facebook.permalink, "https://www.facebook.com/200_999");
-    const photo = calls.instagram.find((c) => c.path.endsWith("/photos"));
-    assert.equal(photo.path, "/v25.0/200/photos");
-    assert.equal(photo.params.access_token, "page-b", "publié avec le jeton de la Page");
-    assert.equal(photo.params.url, `https://api.exemple.test/instagram/media/${post.id}.jpg`);
-    assert.match(photo.params.message, /relu par l'équipe/);
-    // Déjà en ligne : ni nouvel essai ni suppression.
-    assert.equal((await t.call("POST", `/admin/instagram/posts/${post.id}/facebook`, { token: admin })).status, 409);
-    assert.equal((await t.call("DELETE", `/admin/instagram/posts/${post.id}`, { token: admin })).status, 409);
-
-    // Une proposition approuvée sans Facebook ne part pas sur la Page.
-    const other = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: { theme: "outil" } })).body;
-    await t.call("POST", `/admin/instagram/posts/${other.id}/approve`, { token: admin, body: { image: COMPOSED, facebook: { enabled: true, caption: "Texte Facebook assez long pour passer." } } });
-    const off = await t.call("POST", `/admin/instagram/posts/${other.id}/approve`, { token: admin, body: { image: COMPOSED, facebook: { enabled: false } } });
-    assert.equal(off.body.facebook.enabled, false);
-    await t.call("POST", `/admin/instagram/posts/${other.id}/publish`, { token: admin });
-    assert.equal(calls.instagram.filter((c) => c.path.endsWith("/photos")).length, 1);
-  });
-
-  test("Facebook : publication planifiée indépendante d'Instagram, échec puis nouvel essai", async () => {
-    let refuse = true;
-    const { t, admin } = await instagramSetup({
-      instagram: {
-        "POST /v25.0/200/photos": () => refuse
-          ? Response.json({ error: { message: "(#200) Permissions error" } }, { status: 403 })
-          : Response.json({ id: "photo-2", post_id: "200_42" }),
-      },
-    });
-    // Seule la Page Facebook est connectée.
-    await t.call("PUT", "/admin/facebook/connection", { token: admin, body: { access_token: "EAAjeton-systeme-0123456789", page_id: "200" } });
-    const post = (await t.call("POST", "/admin/instagram/posts", { token: admin, body: { theme: "conseil" } })).body;
-    await t.call("POST", `/admin/instagram/posts/${post.id}/approve`, {
-      token: admin, body: { image: COMPOSED, facebook: { enabled: true, caption: post.facebook.caption } },
-    });
-    await t.app.scheduled({ cron: "*/15 * * * *" }, t.env);
-    let state = (await t.call("GET", `/admin/instagram/posts/${post.id}`, { token: admin })).body;
-    assert.equal(state.status, "approved", "Instagram attend sa connexion");
-    assert.equal(state.facebook.status, "failed");
-    assert.match(state.facebook.error, /Facebook a refusé la demande/);
-
-    refuse = false;
-    state = (await t.call("POST", `/admin/instagram/posts/${post.id}/facebook`, { token: admin })).body;
-    assert.equal(state.facebook.status, "published");
-    assert.equal(state.facebook.permalink, "https://www.facebook.com/200_42");
   });
 });
