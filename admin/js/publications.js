@@ -362,7 +362,12 @@ export async function publicationEditor(el, { id }) {
       await task();
       if (message) toast(message, "success");
       reload();
-    }).catch((error) => toast(error.message, "error"));
+    }).catch((error) => {
+      toast(error.message, "error");
+      // La publication a changé entre-temps (autre onglet, publication planifiée…) :
+      // on affiche son état réel.
+      if (error.status === 409) reload();
+    });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();

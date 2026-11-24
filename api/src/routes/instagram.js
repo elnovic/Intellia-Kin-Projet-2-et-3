@@ -211,7 +211,15 @@ export function instagramRoutes(router) {
   router.post("/admin/instagram/posts/:id/publish", async (ctx) => {
     await requireAdmin(ctx);
     const post = await load(ctx.db, ctx.params.id);
-    if (!["approved", "publishing"].includes(post.status)) throw conflict("Approuvez d'abord la publication.");
+    if (!["approved", "publishing"].includes(post.status)) {
+      const why = {
+        published: "Cette publication est déjà en ligne sur Instagram.",
+        proposed: "Cette publication n'est plus approuvée (elle a été modifiée entre-temps, par exemple avec une nouvelle image) : vérifiez-la puis approuvez-la à nouveau.",
+        failed: "La dernière tentative a échoué : vérifiez la publication, puis approuvez-la à nouveau.",
+        rejected: "Cette publication a été refusée.",
+      };
+      throw conflict(why[post.status] || "Approuvez d'abord la publication.");
+    }
     const full = await ctx.db.first(`SELECT * FROM instagram_posts WHERE id = ?`, post.id);
     await publishPost(ctx.db, ctx.config, full);
     return json(postOut(await load(ctx.db, post.id)));
